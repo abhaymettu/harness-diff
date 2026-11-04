@@ -1,0 +1,22 @@
+{
+ "schema": 1,
+ "experiment": "2026-11-04",
+ "model": "haiku",
+ "arm": "probe-only",
+ "arm_sha256": "1bf5e65637574e8529518fc6ac70d7444cf18e4b1517f49638199bac11537c98",
+ "task": "fix_dedupe",
+ "category": "codefix",
+ "run": 3,
+ "round": 3,
+ "slot": 0,
+ "battery": "v1",
+ "battery_sha256": "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe",
+ "max_turns": 4,
+ "repo_commit": "861e6d3b80ad1bd29a1ef103ac7c818890f4552c",
+ "python": "3.14.7",
+ "started_utc": "2026-11-04T07:45:15+00:00",
+ "outcome": "infra_error",
+ "error": "claude -p timed out after 180 s",
+ "cost_usd": 0.0,
+ "attempts": 1
+}

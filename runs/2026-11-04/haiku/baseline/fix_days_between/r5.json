@@ -1,0 +1,278 @@
+{
+ "schema": 1,
+ "experiment": "2026-11-04",
+ "model": "haiku",
+ "arm": "baseline",
+ "arm_sha256": null,
+ "task": "fix_days_between",
+ "category": "codefix",
+ "run": 5,
+ "round": 1,
+ "slot": 2,
+ "battery": "v1",
+ "battery_sha256": "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe",
+ "max_turns": 4,
+ "repo_commit": "861e6d3b80ad1bd29a1ef103ac7c818890f4552c",
+ "python": "3.14.7",
+ "started_utc": "2026-11-04T07:19:03+00:00",
+ "outcome": "pass",
+ "check_detail": "6 cases pass",
+ "ended": "finish",
+ "turns_used": 4,
+ "cost_usd": 0.00071414,
+ "written_bytes": 210,
+ "py_written": 1,
+ "py_with_probe": 0,
+ "finished_utc": "2026-11-04T07:19:16+00:00",
+ "calls": [
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 595,
+    "cache_read_input_tokens": 552,
+    "output_tokens": 19,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 595
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 19,
+      "cache_read_input_tokens": 552,
+      "cache_creation_input_tokens": 595,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 595,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1247,
+     "outputTokens": 38,
+     "cacheReadInputTokens": 552,
+     "cacheCreationInputTokens": 595,
+     "webSearchRequests": 0,
+     "costUSD": 0.00022359500000000002,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "thinkingTokens": 0,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.00022359500000000002,
+   "session_id": "9ba2c614-50a6-4995-a956-8efafc75d66f",
+   "duration_ms": 1345,
+   "cost_usd": 0.00022359500000000002
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 779,
+    "cache_read_input_tokens": 552,
+    "output_tokens": 267,
+    "output_tokens_details": {
+     "thinking_tokens": 143
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 779
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 267,
+      "cache_read_input_tokens": 552,
+      "cache_creation_input_tokens": 779,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 779,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1249,
+     "outputTokens": 305,
+     "thinkingTokens": 143,
+     "cacheReadInputTokens": 1104,
+     "cacheCreationInputTokens": 1374,
+     "webSearchRequests": 0,
+     "costUSD": 0.00046018999999999997,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.00046018999999999997,
+   "session_id": "9ba2c614-50a6-4995-a956-8efafc75d66f",
+   "duration_ms": 3977,
+   "cost_usd": 0.00023659499999999995
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 318,
+    "cache_read_input_tokens": 1331,
+    "output_tokens": 210,
+    "output_tokens_details": {
+     "thinking_tokens": 89
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 318
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 210,
+      "cache_read_input_tokens": 1331,
+      "cache_creation_input_tokens": 318,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 318,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1251,
+     "outputTokens": 515,
+     "thinkingTokens": 232,
+     "cacheReadInputTokens": 2435,
+     "cacheCreationInputTokens": 1692,
+     "webSearchRequests": 0,
+     "costUSD": 0.00061845,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.00061845,
+   "session_id": "9ba2c614-50a6-4995-a956-8efafc75d66f",
+   "duration_ms": 2089,
+   "cost_usd": 0.00015826000000000002
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 264,
+    "cache_read_input_tokens": 1649,
+    "output_tokens": 92,
+    "output_tokens_details": {
+     "thinking_tokens": 78
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 264
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 92,
+      "cache_read_input_tokens": 1649,
+      "cache_creation_input_tokens": 264,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 264,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1253,
+     "outputTokens": 607,
+     "thinkingTokens": 310,
+     "cacheReadInputTokens": 4084,
+     "cacheCreationInputTokens": 1956,
+     "webSearchRequests": 0,
+     "costUSD": 0.00071414,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.00071414,
+   "session_id": "9ba2c614-50a6-4995-a956-8efafc75d66f",
+   "duration_ms": 1939,
+   "cost_usd": 9.569000000000005e-05
+  }
+ ],
+ "transcript": [
+  {
+   "turn": 1,
+   "reply": "{\"action\": \"read\", \"path\": \"dates.py\"}",
+   "result": "DAYS = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]\n\n\ndef _ordinal(s):\n    y, m, d = map(int, s.split('-'))\n    return y * 365 + sum(DAYS[: m - 1]) + d\n\n\ndef days_between(a, b):\n    return _ordinal(b) - _ordinal(a)\n"
+  },
+  {
+   "turn": 2,
+   "reply": "\n{\"action\": \"write\", \"path\": \"dates.py\", \"content\": \"from datetime import date\\n\\n\\ndef days_between(a, b):\\n    \\\"\\\"\\\"Return the number of days from ISO date a to ISO date b (negative if b is earlier).\\\"\\\"\\\"\\n    return (date.fromisoformat(b) - date.fromisoformat(a)).days\\n\"}",
+   "result": "wrote dates.py (210 chars)"
+  },
+  {
+   "turn": 3,
+   "reply": "\n{\"action\": \"run\", \"args\": [\"-c\", \"from dates import days_between as d; print(d('2024-02-28','2024-03-01'), d('2023-02-28','2023-03-01'), d('2024-03-01','2024-02-28'), d('2000-02-28','2000-03-01'), d('1900-02-28','1900-03-01'))\"]}",
+   "result": "exit code 0\n2 1 -2 2 1\n"
+  },
+  {
+   "turn": 4,
+   "reply": "\n{\"action\": \"finish\"}",
+   "result": null
+  }
+ ],
+ "files": {
+  "dates.py": "from datetime import date\n\n\ndef days_between(a, b):\n    \"\"\"Return the number of days from ISO date a to ISO date b (negative if b is earlier).\"\"\"\n    return (date.fromisoformat(b) - date.fromisoformat(a)).days\n"
+ }
+}

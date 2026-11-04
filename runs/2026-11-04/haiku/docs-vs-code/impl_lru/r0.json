@@ -1,0 +1,278 @@
+{
+ "schema": 1,
+ "experiment": "2026-11-04",
+ "model": "haiku",
+ "arm": "docs-vs-code",
+ "arm_sha256": "05397f4ceb09b6a1cc1b721d008bbb3d01f33bc4d6a8a00cb6e8c78c89fc37e6",
+ "task": "impl_lru",
+ "category": "implement",
+ "run": 0,
+ "round": 0,
+ "slot": 0,
+ "battery": "v1",
+ "battery_sha256": "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe",
+ "max_turns": 4,
+ "repo_commit": "861e6d3b80ad1bd29a1ef103ac7c818890f4552c",
+ "python": "3.14.7",
+ "started_utc": "2026-11-04T07:08:29+00:00",
+ "outcome": "pass",
+ "check_detail": "4 cases pass",
+ "ended": "finish",
+ "turns_used": 4,
+ "cost_usd": 0.0007470549999999999,
+ "written_bytes": 723,
+ "py_written": 1,
+ "py_with_probe": 0,
+ "finished_utc": "2026-11-04T07:08:42+00:00",
+ "calls": [
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1272,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 64,
+    "output_tokens_details": {
+     "thinking_tokens": 46
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 1272
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 64,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 1272,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 1272,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1373,
+     "outputTokens": 83,
+     "cacheReadInputTokens": 0,
+     "cacheCreationInputTokens": 1272,
+     "webSearchRequests": 0,
+     "costUSD": 0.00033779999999999997,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "thinkingTokens": 46,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.00033779999999999997,
+   "session_id": "cf9d5f49-3121-4395-b110-36ec99cac653",
+   "duration_ms": 3048,
+   "cost_usd": 0.00033779999999999997
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 106,
+    "cache_read_input_tokens": 1272,
+    "output_tokens": 297,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 106
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 297,
+      "cache_read_input_tokens": 1272,
+      "cache_creation_input_tokens": 106,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 106,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1375,
+     "outputTokens": 380,
+     "thinkingTokens": 46,
+     "cacheReadInputTokens": 1272,
+     "cacheCreationInputTokens": 1378,
+     "webSearchRequests": 0,
+     "costUSD": 0.00051247,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.00051247,
+   "session_id": "cf9d5f49-3121-4395-b110-36ec99cac653",
+   "duration_ms": 2657,
+   "cost_usd": 0.00017467000000000003
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 350,
+    "cache_read_input_tokens": 1378,
+    "output_tokens": 237,
+    "output_tokens_details": {
+     "thinking_tokens": 67
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 350
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 237,
+      "cache_read_input_tokens": 1378,
+      "cache_creation_input_tokens": 350,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 350,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1377,
+     "outputTokens": 617,
+     "thinkingTokens": 113,
+     "cacheReadInputTokens": 2650,
+     "cacheCreationInputTokens": 1728,
+     "webSearchRequests": 0,
+     "costUSD": 0.0006887,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.0006887,
+   "session_id": "cf9d5f49-3121-4395-b110-36ec99cac653",
+   "duration_ms": 2082,
+   "cost_usd": 0.00017622999999999998
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 283,
+    "cache_read_input_tokens": 1728,
+    "output_tokens": 11,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 283
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 11,
+      "cache_read_input_tokens": 1728,
+      "cache_creation_input_tokens": 283,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 283,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1379,
+     "outputTokens": 628,
+     "thinkingTokens": 113,
+     "cacheReadInputTokens": 4378,
+     "cacheCreationInputTokens": 2011,
+     "webSearchRequests": 0,
+     "costUSD": 0.0007470549999999999,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.0007470549999999999,
+   "session_id": "cf9d5f49-3121-4395-b110-36ec99cac653",
+   "duration_ms": 1187,
+   "cost_usd": 5.835499999999995e-05
+  }
+ ],
+ "transcript": [
+  {
+   "turn": 1,
+   "reply": "\n{\"action\": \"list\", \"path\": \".\"}",
+   "result": "(empty)"
+  },
+  {
+   "turn": 2,
+   "reply": "{\"action\": \"write\", \"path\": \"lru.py\", \"content\": \"from collections import OrderedDict\\n\\n\\nclass LRUCache:\\n    def __init__(self, capacity):\\n        if capacity < 1:\\n            raise ValueError(\\\"capacity must be at least 1\\\")\\n        self.capacity = capacity\\n        self._data = OrderedDict()\\n\\n    def get(self, key):\\n        if key not in self._data:\\n            return None\\n        self._data.move_to_end(key)\\n        return self._data[key]\\n\\n    def put(self, key, value):\\n        if key in self._data:\\n            self._data[key] = value\\n            self._data.move_to_end(key)\\n            return\\n        if len(self._data) >= self.capacity:\\n            self._data.popitem(last=False)\\n        self._data[key] = value\\n\\n    def __len__(self):\\n        return len(self._data)\\n\"}",
+   "result": "wrote lru.py (723 chars)"
+  },
+  {
+   "turn": 3,
+   "reply": "\n{\"action\": \"run\", \"args\": [\"-c\", \"from lru import LRUCache\\nc = LRUCache(2)\\nc.put('a', 1)\\nc.put('b', 2)\\nassert c.get('a') == 1\\nc.put('c', 3)\\nassert c.get('b') is None\\nassert c.get('a') == 1 and c.get('c') == 3\\nc.put('a', 10)\\nassert c.get('a') == 10\\nassert len(c) == 2\\nprint('ok')\"]}",
+   "result": "exit code 0\nok\n"
+  },
+  {
+   "turn": 4,
+   "reply": "{\"action\": \"finish\"}",
+   "result": null
+  }
+ ],
+ "files": {
+  "lru.py": "from collections import OrderedDict\n\n\nclass LRUCache:\n    def __init__(self, capacity):\n        if capacity < 1:\n            raise ValueError(\"capacity must be at least 1\")\n        self.capacity = capacity\n        self._data = OrderedDict()\n\n    def get(self, key):\n        if key not in self._data:\n            return None\n        self._data.move_to_end(key)\n        return self._data[key]\n\n    def put(self, key, value):\n        if key in self._data:\n            self._data[key] = value\n            self._data.move_to_end(key)\n            return\n        if len(self._data) >= self.capacity:\n            self._data.popitem(last=False)\n        self._data[key] = value\n\n    def __len__(self):\n        return len(self._data)\n"
+ }
+}

@@ -1,0 +1,278 @@
+{
+ "schema": 1,
+ "experiment": "2026-11-04",
+ "model": "haiku",
+ "arm": "docs-vs-code",
+ "arm_sha256": "05397f4ceb09b6a1cc1b721d008bbb3d01f33bc4d6a8a00cb6e8c78c89fc37e6",
+ "task": "data_markdown_table",
+ "category": "data",
+ "run": 1,
+ "round": 1,
+ "slot": 0,
+ "battery": "v1",
+ "battery_sha256": "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe",
+ "max_turns": 4,
+ "repo_commit": "861e6d3b80ad1bd29a1ef103ac7c818890f4552c",
+ "python": "3.14.7",
+ "started_utc": "2026-11-04T07:24:22+00:00",
+ "outcome": "pass",
+ "check_detail": "table.md matches",
+ "ended": "finish",
+ "turns_used": 4,
+ "cost_usd": 0.0016387349999999999,
+ "written_bytes": 350,
+ "py_written": 0,
+ "py_with_probe": 0,
+ "finished_utc": "2026-11-04T07:24:39+00:00",
+ "calls": [
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1360,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 245,
+    "output_tokens_details": {
+     "thinking_tokens": 226
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 1360
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 245,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 1360,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 1360,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1459,
+     "outputTokens": 266,
+     "cacheReadInputTokens": 0,
+     "cacheCreationInputTokens": 1360,
+     "webSearchRequests": 0,
+     "costUSD": 0.0004489,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "thinkingTokens": 226,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.0004489,
+   "session_id": "803ebc77-2f1d-4bd7-9aa3-c55591085097",
+   "duration_ms": 2736,
+   "cost_usd": 0.0004489
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 399,
+    "cache_read_input_tokens": 1360,
+    "output_tokens": 1581,
+    "output_tokens_details": {
+     "thinking_tokens": 1342
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 399
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 1581,
+      "cache_read_input_tokens": 1360,
+      "cache_creation_input_tokens": 399,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 399,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1461,
+     "outputTokens": 1847,
+     "thinkingTokens": 1568,
+     "cacheReadInputTokens": 1360,
+     "cacheCreationInputTokens": 1759,
+     "webSearchRequests": 0,
+     "costUSD": 0.001303075,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.001303075,
+   "session_id": "803ebc77-2f1d-4bd7-9aa3-c55591085097",
+   "duration_ms": 7757,
+   "cost_usd": 0.0008541749999999999
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1633,
+    "cache_read_input_tokens": 1759,
+    "output_tokens": 109,
+    "output_tokens_details": {
+     "thinking_tokens": 94
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 1633
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 109,
+      "cache_read_input_tokens": 1759,
+      "cache_creation_input_tokens": 1633,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 1633,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1463,
+     "outputTokens": 1956,
+     "thinkingTokens": 1662,
+     "cacheReadInputTokens": 3119,
+     "cacheCreationInputTokens": 3392,
+     "webSearchRequests": 0,
+     "costUSD": 0.0015794899999999998,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.0015794899999999998,
+   "session_id": "803ebc77-2f1d-4bd7-9aa3-c55591085097",
+   "duration_ms": 1651,
+   "cost_usd": 0.0002764149999999999
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 157,
+    "cache_read_input_tokens": 3392,
+    "output_tokens": 11,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 157
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 11,
+      "cache_read_input_tokens": 3392,
+      "cache_creation_input_tokens": 157,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 157,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1465,
+     "outputTokens": 1967,
+     "thinkingTokens": 1662,
+     "cacheReadInputTokens": 6511,
+     "cacheCreationInputTokens": 3549,
+     "webSearchRequests": 0,
+     "costUSD": 0.0016387349999999999,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.0016387349999999999,
+   "session_id": "803ebc77-2f1d-4bd7-9aa3-c55591085097",
+   "duration_ms": 1365,
+   "cost_usd": 5.924500000000009e-05
+  }
+ ],
+ "transcript": [
+  {
+   "turn": 1,
+   "reply": "{\"action\": \"read\", \"path\": \"table.csv\"}",
+   "result": "item,qty,price,note\nitem-1,10,99.27,x|y\nitem-2,476,54.95,x|y\nitem-3,384,87.39,fragile\nitem-4,339,0.32,x|y\nitem-5,454,86.43,x|y\nitem-6,429,50.10,\nitem-7,251,76.58,\nitem-8,325,11.21,fragile\n"
+  },
+  {
+   "turn": 2,
+   "reply": "{\"action\": \"write\", \"path\": \"table.md\", \"content\": \"| item   | qty | price | note    |\\n| ------ | --: | ----: | ------- |\\n| item-1 |  10 | 99.27 | x\\\\|y    |\\n| item-2 | 476 | 54.95 | x\\\\|y    |\\n| item-3 | 384 | 87.39 | fragile |\\n| item-4 | 339 |  0.32 | x\\\\|y    |\\n| item-5 | 454 | 86.43 | x\\\\|y    |\\n| item-6 | 429 | 50.10 |         |\\n| item-7 | 251 | 76.58 |         |\\n| item-8 | 325 | 11.21 | fragile |\\n\"}",
+   "result": "wrote table.md (350 chars)"
+  },
+  {
+   "turn": 3,
+   "reply": "{\"action\": \"list\", \"path\": \".\"}",
+   "result": "table.csv\ntable.md"
+  },
+  {
+   "turn": 4,
+   "reply": "{\"action\": \"finish\"}",
+   "result": null
+  }
+ ],
+ "files": {
+  "table.md": "| item   | qty | price | note    |\n| ------ | --: | ----: | ------- |\n| item-1 |  10 | 99.27 | x\\|y    |\n| item-2 | 476 | 54.95 | x\\|y    |\n| item-3 | 384 | 87.39 | fragile |\n| item-4 | 339 |  0.32 | x\\|y    |\n| item-5 | 454 | 86.43 | x\\|y    |\n| item-6 | 429 | 50.10 |         |\n| item-7 | 251 | 76.58 |         |\n| item-8 | 325 | 11.21 | fragile |\n"
+ }
+}

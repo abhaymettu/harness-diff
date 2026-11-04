@@ -1,0 +1,217 @@
+{
+ "schema": 1,
+ "experiment": "2026-11-04",
+ "model": "haiku",
+ "arm": "secondary-labels",
+ "arm_sha256": "63fe178250a4d9840342a73347f78bf4db983ceb94d2e1b2afd119577ac758f7",
+ "task": "impl_duration",
+ "category": "implement",
+ "run": 1,
+ "round": 1,
+ "slot": 0,
+ "battery": "v1",
+ "battery_sha256": "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe",
+ "max_turns": 4,
+ "repo_commit": "861e6d3b80ad1bd29a1ef103ac7c818890f4552c",
+ "python": "3.14.7",
+ "started_utc": "2026-11-04T07:25:36+00:00",
+ "outcome": "pass",
+ "check_detail": "11 cases pass",
+ "ended": "finish",
+ "turns_used": 3,
+ "cost_usd": 0.0011388900000000003,
+ "written_bytes": 379,
+ "py_written": 1,
+ "py_with_probe": 0,
+ "finished_utc": "2026-11-04T07:25:47+00:00",
+ "calls": [
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1289,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 1038,
+    "output_tokens_details": {
+     "thinking_tokens": 793
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 1289
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 1038,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 1289,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 1289,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1388,
+     "outputTokens": 1058,
+     "cacheReadInputTokens": 0,
+     "cacheCreationInputTokens": 1289,
+     "webSearchRequests": 0,
+     "costUSD": 0.0008289250000000001,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "thinkingTokens": 793,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.0008289250000000001,
+   "session_id": "2d605a07-bc06-4b04-808b-8ce16b2a7094",
+   "duration_ms": 5690,
+   "cost_usd": 0.0008289250000000001
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1091,
+    "cache_read_input_tokens": 1289,
+    "output_tokens": 200,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 1091
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 200,
+      "cache_read_input_tokens": 1289,
+      "cache_creation_input_tokens": 1091,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 1091,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1390,
+     "outputTokens": 1258,
+     "thinkingTokens": 793,
+     "cacheReadInputTokens": 1289,
+     "cacheCreationInputTokens": 2380,
+     "webSearchRequests": 0,
+     "costUSD": 0.0010783900000000003,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.0010783900000000003,
+   "session_id": "2d605a07-bc06-4b04-808b-8ce16b2a7094",
+   "duration_ms": 1738,
+   "cost_usd": 0.00024946500000000015
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 248,
+    "cache_read_input_tokens": 2380,
+    "output_tokens": 11,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 248
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 11,
+      "cache_read_input_tokens": 2380,
+      "cache_creation_input_tokens": 248,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 248,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1392,
+     "outputTokens": 1269,
+     "thinkingTokens": 793,
+     "cacheReadInputTokens": 3669,
+     "cacheCreationInputTokens": 2628,
+     "webSearchRequests": 0,
+     "costUSD": 0.0011388900000000003,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.0011388900000000003,
+   "session_id": "2d605a07-bc06-4b04-808b-8ce16b2a7094",
+   "duration_ms": 1153,
+   "cost_usd": 6.050000000000001e-05
+  }
+ ],
+ "transcript": [
+  {
+   "turn": 1,
+   "reply": "{\"action\": \"write\", \"path\": \"duration.py\", \"content\": \"import re\\n\\n_PATTERN = re.compile(r\\\"(?:([0-9]+)d)?(?:([0-9]+)h)?(?:([0-9]+)m)?(?:([0-9]+)s)?\\\")\\n_UNITS = (86400, 3600, 60, 1)\\n\\n\\ndef parse_duration(s):\\n    match = _PATTERN.fullmatch(s.strip())\\n    if not match or not any(match.groups()):\\n        raise ValueError(f\\\"invalid duration: {s!r}\\\")\\n    return sum(int(g) * unit for g, unit in zip(match.groups(), _UNITS) if g is not None)\\n\"}",
+   "result": "wrote duration.py (379 chars)"
+  },
+  {
+   "turn": 2,
+   "reply": "{\"action\": \"run\", \"args\": [\"-c\", \"from duration import parse_duration as p\\nassert p('1h30m')==5400\\nassert p('45s')==45\\nassert p('2h5s')==7205\\nassert p('1d2h')==93600\\nassert p('  3m ')==180\\nfor bad in ['', '5', '1h1h', '1m1h', '1h 30m', 'x', '1x', '-1s']:\\n    try:\\n        p(bad)\\n    except ValueError:\\n        continue\\n    raise SystemExit('no error for %r' % bad)\\nprint('ok')\"]}",
+   "result": "exit code 0\nok\n"
+  },
+  {
+   "turn": 3,
+   "reply": "{\"action\": \"finish\"}",
+   "result": null
+  }
+ ],
+ "files": {
+  "duration.py": "import re\n\n_PATTERN = re.compile(r\"(?:([0-9]+)d)?(?:([0-9]+)h)?(?:([0-9]+)m)?(?:([0-9]+)s)?\")\n_UNITS = (86400, 3600, 60, 1)\n\n\ndef parse_duration(s):\n    match = _PATTERN.fullmatch(s.strip())\n    if not match or not any(match.groups()):\n        raise ValueError(f\"invalid duration: {s!r}\")\n    return sum(int(g) * unit for g, unit in zip(match.groups(), _UNITS) if g is not None)\n"
+ }
+}

@@ -1,0 +1,217 @@
+{
+ "schema": 1,
+ "experiment": "2026-11-04",
+ "model": "haiku",
+ "arm": "baseline",
+ "arm_sha256": null,
+ "task": "data_find_todos",
+ "category": "data",
+ "run": 3,
+ "round": 1,
+ "slot": 0,
+ "battery": "v1",
+ "battery_sha256": "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe",
+ "max_turns": 4,
+ "repo_commit": "861e6d3b80ad1bd29a1ef103ac7c818890f4552c",
+ "python": "3.14.7",
+ "started_utc": "2026-11-04T07:23:01+00:00",
+ "outcome": "pass",
+ "check_detail": "todos.txt matches",
+ "ended": "finish",
+ "turns_used": 3,
+ "cost_usd": 0.001488565,
+ "written_bytes": 274,
+ "py_written": 0,
+ "py_with_probe": 0,
+ "finished_utc": "2026-11-04T07:23:16+00:00",
+ "calls": [
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 595,
+    "cache_read_input_tokens": 587,
+    "output_tokens": 1816,
+    "output_tokens_details": {
+     "thinking_tokens": 1442
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 595
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 1816,
+      "cache_read_input_tokens": 587,
+      "cache_creation_input_tokens": 595,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 595,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1282,
+     "outputTokens": 1834,
+     "cacheReadInputTokens": 587,
+     "cacheCreationInputTokens": 595,
+     "webSearchRequests": 0,
+     "costUSD": 0.001125445,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "thinkingTokens": 1442,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.001125445,
+   "session_id": "f62ace69-79ea-4d3a-ae2f-44c182715211",
+   "duration_ms": 9473,
+   "cost_usd": 0.001125445
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1858,
+    "cache_read_input_tokens": 1182,
+    "output_tokens": 86,
+    "output_tokens_details": {
+     "thinking_tokens": 63
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 1858
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 86,
+      "cache_read_input_tokens": 1182,
+      "cache_creation_input_tokens": 1858,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 1858,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1284,
+     "outputTokens": 1920,
+     "thinkingTokens": 1505,
+     "cacheReadInputTokens": 1769,
+     "cacheCreationInputTokens": 2453,
+     "webSearchRequests": 0,
+     "costUSD": 0.0014127150000000002,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.0014127150000000002,
+   "session_id": "f62ace69-79ea-4d3a-ae2f-44c182715211",
+   "duration_ms": 1487,
+   "cost_usd": 0.00028727000000000006
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 310,
+    "cache_read_input_tokens": 3040,
+    "output_tokens": 13,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 310
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 13,
+      "cache_read_input_tokens": 3040,
+      "cache_creation_input_tokens": 310,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 310,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1286,
+     "outputTokens": 1933,
+     "thinkingTokens": 1505,
+     "cacheReadInputTokens": 4809,
+     "cacheCreationInputTokens": 2763,
+     "webSearchRequests": 0,
+     "costUSD": 0.001488565,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.001488565,
+   "session_id": "f62ace69-79ea-4d3a-ae2f-44c182715211",
+   "duration_ms": 1814,
+   "cost_usd": 7.584999999999992e-05
+  }
+ ],
+ "transcript": [
+  {
+   "turn": 1,
+   "reply": "\n<container>\n{\"action\": \"run\", \"args\": [\"-c\", \"import os,tokenize\\nres=set()\\nfor root,dirs,files in os.walk('.'):\\n    dirs[:]=[d for d in dirs if d!='.git']\\n    for f in files:\\n        if not f.endswith('.py'): continue\\n        p=os.path.join(root,f)\\n        rel=os.path.normpath(p).replace(os.sep,'/')\\n        try:\\n            with open(p,'rb') as fh:\\n                for tok in tokenize.tokenize(fh.readline):\\n                    if tok.type==tokenize.COMMENT and 'TODO' in tok.string:\\n                        res.add((rel,tok.start[0]))\\n        except (tokenize.TokenError,SyntaxError,UnicodeDecodeError) as e:\\n            print('skip',rel,e)\\nrows=sorted(res)\\nwith open('todos.txt','w') as out:\\n    for r,l in rows:\\n        out.write(r+':'+str(l)+chr(10))\\nprint(len(rows))\\n\"]}",
+   "result": "exit code 0\n17\n"
+  },
+  {
+   "turn": 2,
+   "reply": "\n{\"action\": \"read\", \"path\": \"todos.txt\"}",
+   "result": "app/core/mod2.py:2\napp/core/mod2.py:11\napp/core/mod2.py:16\napp/mod1.py:10\napp/mod2.py:9\napp/mod2.py:17\nlib/mod0.py:8\nlib/mod0.py:10\nlib/mod0.py:14\nlib/mod2.py:3\nlib/mod2.py:13\ntests/mod0.py:9\ntests/mod1.py:3\ntests/mod1.py:5\ntests/mod1.py:14\ntests/mod2.py:2\ntests/mod2.py:15\n"
+  },
+  {
+   "turn": 3,
+   "reply": "{\"action\": \"finish\"}",
+   "result": null
+  }
+ ],
+ "files": {
+  "todos.txt": "app/core/mod2.py:2\napp/core/mod2.py:11\napp/core/mod2.py:16\napp/mod1.py:10\napp/mod2.py:9\napp/mod2.py:17\nlib/mod0.py:8\nlib/mod0.py:10\nlib/mod0.py:14\nlib/mod2.py:3\nlib/mod2.py:13\ntests/mod0.py:9\ntests/mod1.py:3\ntests/mod1.py:5\ntests/mod1.py:14\ntests/mod2.py:2\ntests/mod2.py:15\n"
+ }
+}

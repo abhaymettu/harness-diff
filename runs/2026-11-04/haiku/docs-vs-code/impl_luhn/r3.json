@@ -1,0 +1,278 @@
+{
+ "schema": 1,
+ "experiment": "2026-11-04",
+ "model": "haiku",
+ "arm": "docs-vs-code",
+ "arm_sha256": "05397f4ceb09b6a1cc1b721d008bbb3d01f33bc4d6a8a00cb6e8c78c89fc37e6",
+ "task": "impl_luhn",
+ "category": "implement",
+ "run": 3,
+ "round": 3,
+ "slot": 0,
+ "battery": "v1",
+ "battery_sha256": "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe",
+ "max_turns": 4,
+ "repo_commit": "861e6d3b80ad1bd29a1ef103ac7c818890f4552c",
+ "python": "3.14.7",
+ "started_utc": "2026-11-04T07:47:29+00:00",
+ "outcome": "pass",
+ "check_detail": "9 cases pass",
+ "ended": "finish",
+ "turns_used": 4,
+ "cost_usd": 0.00099847,
+ "written_bytes": 716,
+ "py_written": 1,
+ "py_with_probe": 0,
+ "finished_utc": "2026-11-04T07:47:45+00:00",
+ "calls": [
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1260,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 58,
+    "output_tokens_details": {
+     "thinking_tokens": 40
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 1260
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 58,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 1260,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 1260,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1359,
+     "outputTokens": 75,
+     "cacheReadInputTokens": 0,
+     "cacheCreationInputTokens": 1260,
+     "webSearchRequests": 0,
+     "costUSD": 0.00033089999999999997,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "thinkingTokens": 40,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.00033089999999999997,
+   "session_id": "c17a5343-1abf-4f2b-80a8-65265dbe601e",
+   "duration_ms": 1981,
+   "cost_usd": 0.00033089999999999997
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 100,
+    "cache_read_input_tokens": 1260,
+    "output_tokens": 515,
+    "output_tokens_details": {
+     "thinking_tokens": 167
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 100
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 515,
+      "cache_read_input_tokens": 1260,
+      "cache_creation_input_tokens": 100,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 100,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1361,
+     "outputTokens": 590,
+     "thinkingTokens": 207,
+     "cacheReadInputTokens": 1260,
+     "cacheCreationInputTokens": 1360,
+     "webSearchRequests": 0,
+     "costUSD": 0.0006137,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.0006137,
+   "session_id": "c17a5343-1abf-4f2b-80a8-65265dbe601e",
+   "duration_ms": 4492,
+   "cost_usd": 0.00028280000000000004
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 567,
+    "cache_read_input_tokens": 1360,
+    "output_tokens": 242,
+    "output_tokens_details": {
+     "thinking_tokens": 138
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 567
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 242,
+      "cache_read_input_tokens": 1360,
+      "cache_creation_input_tokens": 567,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 567,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1363,
+     "outputTokens": 832,
+     "thinkingTokens": 345,
+     "cacheReadInputTokens": 2620,
+     "cacheCreationInputTokens": 1927,
+     "webSearchRequests": 0,
+     "costUSD": 0.000819375,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.000819375,
+   "session_id": "c17a5343-1abf-4f2b-80a8-65265dbe601e",
+   "duration_ms": 3623,
+   "cost_usd": 0.000205675
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 293,
+    "cache_read_input_tokens": 1927,
+    "output_tokens": 246,
+    "output_tokens_details": {
+     "thinking_tokens": 208
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 293
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 246,
+      "cache_read_input_tokens": 1927,
+      "cache_creation_input_tokens": 293,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 293,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1365,
+     "outputTokens": 1078,
+     "thinkingTokens": 553,
+     "cacheReadInputTokens": 4547,
+     "cacheCreationInputTokens": 2220,
+     "webSearchRequests": 0,
+     "costUSD": 0.00099847,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.00099847,
+   "session_id": "c17a5343-1abf-4f2b-80a8-65265dbe601e",
+   "duration_ms": 2635,
+   "cost_usd": 0.000179095
+  }
+ ],
+ "transcript": [
+  {
+   "turn": 1,
+   "reply": "\n{\"action\": \"list\", \"path\": \".\"}",
+   "result": "(empty)"
+  },
+  {
+   "turn": 2,
+   "reply": "\n{\"action\": \"write\", \"path\": \"luhn.py\", \"content\": \"\\\"\\\"\\\"Validate card numbers with the Luhn algorithm.\\\"\\\"\\\"\\n\\nDIGITS = \\\"0123456789\\\"\\n\\n\\ndef valid(number):\\n    \\\"\\\"\\\"Return True if `number` is a valid Luhn card number, else False.\\n\\n    Spaces are removed before checking. The remaining string must contain\\n    at least two characters, all of which are ASCII digits 0-9.\\n    \\\"\\\"\\\"\\n    stripped = number.replace(\\\" \\\", \\\"\\\")\\n    if len(stripped) < 2:\\n        return False\\n    if any(ch not in DIGITS for ch in stripped):\\n        return False\\n\\n    total = 0\\n    for index, ch in enumerate(reversed(stripped)):\\n        digit = int(ch)\\n        if index % 2 == 1:\\n            digit *= 2\\n            if digit > 9:\\n                digit -= 9\\n        total += digit\\n    return total % 10 == 0\\n\"}",
+   "result": "wrote luhn.py (716 chars)"
+  },
+  {
+   "turn": 3,
+   "reply": "\n{\"action\": \"run\", \"args\": [\"-c\", \"from luhn import valid; print(valid('4539 3195 0343 6467'), valid('8273 1232 7352 0569'), valid('0'), valid('0 0'), valid('a0'), valid('59'), valid(' 1  2 '))\"]}",
+   "result": "exit code 0\nTrue False False True False True False\n"
+  },
+  {
+   "turn": 4,
+   "reply": "\n<invoke_info>\n{\"action\": \"finish\"}\n</invoke_info>",
+   "result": null
+  }
+ ],
+ "files": {
+  "luhn.py": "\"\"\"Validate card numbers with the Luhn algorithm.\"\"\"\n\nDIGITS = \"0123456789\"\n\n\ndef valid(number):\n    \"\"\"Return True if `number` is a valid Luhn card number, else False.\n\n    Spaces are removed before checking. The remaining string must contain\n    at least two characters, all of which are ASCII digits 0-9.\n    \"\"\"\n    stripped = number.replace(\" \", \"\")\n    if len(stripped) < 2:\n        return False\n    if any(ch not in DIGITS for ch in stripped):\n        return False\n\n    total = 0\n    for index, ch in enumerate(reversed(stripped)):\n        digit = int(ch)\n        if index % 2 == 1:\n            digit *= 2\n            if digit > 9:\n                digit -= 9\n        total += digit\n    return total % 10 == 0\n"
+ }
+}

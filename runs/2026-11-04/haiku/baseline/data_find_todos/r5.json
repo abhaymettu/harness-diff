@@ -1,0 +1,279 @@
+{
+ "schema": 1,
+ "experiment": "2026-11-04",
+ "model": "haiku",
+ "arm": "baseline",
+ "arm_sha256": null,
+ "task": "data_find_todos",
+ "category": "data",
+ "run": 5,
+ "round": 1,
+ "slot": 2,
+ "battery": "v1",
+ "battery_sha256": "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe",
+ "max_turns": 4,
+ "repo_commit": "861e6d3b80ad1bd29a1ef103ac7c818890f4552c",
+ "python": "3.14.7",
+ "started_utc": "2026-11-04T07:21:17+00:00",
+ "outcome": "pass",
+ "check_detail": "todos.txt matches",
+ "ended": "finish",
+ "turns_used": 4,
+ "cost_usd": 0.001527535,
+ "written_bytes": 1217,
+ "py_written": 1,
+ "py_with_probe": 0,
+ "finished_utc": "2026-11-04T07:21:35+00:00",
+ "calls": [
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1185,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 1714,
+    "output_tokens_details": {
+     "thinking_tokens": 1257
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 1185
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 1714,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 1185,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 1185,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1282,
+     "outputTokens": 1732,
+     "cacheReadInputTokens": 0,
+     "cacheCreationInputTokens": 1185,
+     "webSearchRequests": 0,
+     "costUSD": 0.001142325,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "thinkingTokens": 1257,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.001142325,
+   "session_id": "a0bf45d3-8a14-42ed-b000-da5ebb7b7662",
+   "duration_ms": 8561,
+   "cost_usd": 0.001142325
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1767,
+    "cache_read_input_tokens": 1185,
+    "output_tokens": 23,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 1767
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 23,
+      "cache_read_input_tokens": 1185,
+      "cache_creation_input_tokens": 1767,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 1767,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1284,
+     "outputTokens": 1755,
+     "thinkingTokens": 1257,
+     "cacheReadInputTokens": 1185,
+     "cacheCreationInputTokens": 2952,
+     "webSearchRequests": 0,
+     "costUSD": 0.00138675,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.00138675,
+   "session_id": "a0bf45d3-8a14-42ed-b000-da5ebb7b7662",
+   "duration_ms": 2262,
+   "cost_usd": 0.00024442499999999994
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 72,
+    "cache_read_input_tokens": 2952,
+    "output_tokens": 61,
+    "output_tokens_details": {
+     "thinking_tokens": 38
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 72
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 61,
+      "cache_read_input_tokens": 2952,
+      "cache_creation_input_tokens": 72,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 72,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1286,
+     "outputTokens": 1816,
+     "thinkingTokens": 1295,
+     "cacheReadInputTokens": 4137,
+     "cacheCreationInputTokens": 3024,
+     "webSearchRequests": 0,
+     "costUSD": 0.00145597,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.00145597,
+   "session_id": "a0bf45d3-8a14-42ed-b000-da5ebb7b7662",
+   "duration_ms": 1871,
+   "cost_usd": 6.922000000000005e-05
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 285,
+    "cache_read_input_tokens": 3024,
+    "output_tokens": 11,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 285
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 11,
+      "cache_read_input_tokens": 3024,
+      "cache_creation_input_tokens": 285,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 285,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1288,
+     "outputTokens": 1827,
+     "thinkingTokens": 1295,
+     "cacheReadInputTokens": 7161,
+     "cacheCreationInputTokens": 3309,
+     "webSearchRequests": 0,
+     "costUSD": 0.001527535,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.001527535,
+   "session_id": "a0bf45d3-8a14-42ed-b000-da5ebb7b7662",
+   "duration_ms": 1566,
+   "cost_usd": 7.1565e-05
+  }
+ ],
+ "transcript": [
+  {
+   "turn": 1,
+   "reply": "\n{\"action\": \"write\", \"path\": \"find_todos.py\", \"content\": \"import os\\nimport io\\nimport sys\\nimport tokenize\\n\\nroot = '.'\\nresults = []\\n\\nfor dp, dns, fns in os.walk(root):\\n    dns[:] = [d for d in dns if d != '.git']\\n    for fn in fns:\\n        if not fn.endswith('.py'):\\n            continue\\n        full = os.path.join(dp, fn)\\n        rel = os.path.relpath(full, root).replace(os.sep, '/')\\n        try:\\n            with tokenize.open(full) as f:\\n                src = f.read()\\n            for t in tokenize.generate_tokens(io.StringIO(src).readline):\\n                if t.type == tokenize.COMMENT and 'TODO' in t.string:\\n                    results.append((rel, t.start[0]))\\n        except (tokenize.TokenError, SyntaxError, UnicodeDecodeError, OSError) as e:\\n            print('skipped %s: %s' % (rel, e), file=sys.stderr)\\n\\nresults = sorted(set(results))\\nwith open('todos.txt', 'w', encoding='utf-8') as out:\\n    for p, l in results:\\n        out.write('%s:%d\\\\n' % (p, l))\\nprint('found %d' % len(results))\\n\"}",
+   "result": "wrote find_todos.py (943 chars)"
+  },
+  {
+   "turn": 2,
+   "reply": "{\"action\": \"run\", \"args\": [\"find_todos.py\"]}",
+   "result": "exit code 0\nfound 17\n"
+  },
+  {
+   "turn": 3,
+   "reply": "\n{\"action\": \"read\", \"path\": \"todos.txt\"}",
+   "result": "app/core/mod2.py:2\napp/core/mod2.py:11\napp/core/mod2.py:16\napp/mod1.py:10\napp/mod2.py:9\napp/mod2.py:17\nlib/mod0.py:8\nlib/mod0.py:10\nlib/mod0.py:14\nlib/mod2.py:3\nlib/mod2.py:13\ntests/mod0.py:9\ntests/mod1.py:3\ntests/mod1.py:5\ntests/mod1.py:14\ntests/mod2.py:2\ntests/mod2.py:15\n"
+  },
+  {
+   "turn": 4,
+   "reply": "{\"action\": \"finish\"}",
+   "result": null
+  }
+ ],
+ "files": {
+  "find_todos.py": "import os\nimport io\nimport sys\nimport tokenize\n\nroot = '.'\nresults = []\n\nfor dp, dns, fns in os.walk(root):\n    dns[:] = [d for d in dns if d != '.git']\n    for fn in fns:\n        if not fn.endswith('.py'):\n            continue\n        full = os.path.join(dp, fn)\n        rel = os.path.relpath(full, root).replace(os.sep, '/')\n        try:\n            with tokenize.open(full) as f:\n                src = f.read()\n            for t in tokenize.generate_tokens(io.StringIO(src).readline):\n                if t.type == tokenize.COMMENT and 'TODO' in t.string:\n                    results.append((rel, t.start[0]))\n        except (tokenize.TokenError, SyntaxError, UnicodeDecodeError, OSError) as e:\n            print('skipped %s: %s' % (rel, e), file=sys.stderr)\n\nresults = sorted(set(results))\nwith open('todos.txt', 'w', encoding='utf-8') as out:\n    for p, l in results:\n        out.write('%s:%d\\n' % (p, l))\nprint('found %d' % len(results))\n",
+  "todos.txt": "app/core/mod2.py:2\napp/core/mod2.py:11\napp/core/mod2.py:16\napp/mod1.py:10\napp/mod2.py:9\napp/mod2.py:17\nlib/mod0.py:8\nlib/mod0.py:10\nlib/mod0.py:14\nlib/mod2.py:3\nlib/mod2.py:13\ntests/mod0.py:9\ntests/mod1.py:3\ntests/mod1.py:5\ntests/mod1.py:14\ntests/mod2.py:2\ntests/mod2.py:15\n"
+ }
+}

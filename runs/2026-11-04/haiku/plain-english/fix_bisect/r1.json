@@ -1,0 +1,217 @@
+{
+ "schema": 1,
+ "experiment": "2026-11-04",
+ "model": "haiku",
+ "arm": "plain-english",
+ "arm_sha256": "842d7fda154d64eb1db004d0d3829ee9d77afae6a0c5d17cdbc8070ac7b5d3e3",
+ "task": "fix_bisect",
+ "category": "codefix",
+ "run": 1,
+ "round": 1,
+ "slot": 0,
+ "battery": "v1",
+ "battery_sha256": "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe",
+ "max_turns": 4,
+ "repo_commit": "861e6d3b80ad1bd29a1ef103ac7c818890f4552c",
+ "python": "3.14.7",
+ "started_utc": "2026-11-04T07:25:23+00:00",
+ "outcome": "fail",
+ "check_detail": "checker script failed (exit 1): Traceback (most recent call last):\n  File \"<string>\", line 5, in <module>\n    assert 'bisect' not in pathlib.Path('search.py').read_text()\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+ "ended": "finish",
+ "turns_used": 3,
+ "cost_usd": 0.000514535,
+ "written_bytes": 314,
+ "py_written": 1,
+ "py_with_probe": 0,
+ "finished_utc": "2026-11-04T07:25:32+00:00",
+ "calls": [
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1613,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 71,
+    "output_tokens_details": {
+     "thinking_tokens": 53
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 1613
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 71,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 1613,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 1613,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 2,
+     "outputTokens": 71,
+     "cacheReadInputTokens": 0,
+     "cacheCreationInputTokens": 1613,
+     "webSearchRequests": 0,
+     "costUSD": 0.000237325,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "thinkingTokens": 53,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.000237325,
+   "session_id": "883b00c8-c861-4b51-93e5-85ebe1b84e96",
+   "duration_ms": 1107,
+   "cost_usd": 0.000237325
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 205,
+    "cache_read_input_tokens": 1613,
+    "output_tokens": 203,
+    "output_tokens_details": {
+     "thinking_tokens": 34
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 205
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 203,
+      "cache_read_input_tokens": 1613,
+      "cache_creation_input_tokens": 205,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 205,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 4,
+     "outputTokens": 274,
+     "thinkingTokens": 87,
+     "cacheReadInputTokens": 1613,
+     "cacheCreationInputTokens": 1818,
+     "webSearchRequests": 0,
+     "costUSD": 0.00038078000000000005,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.00038078000000000005,
+   "session_id": "883b00c8-c861-4b51-93e5-85ebe1b84e96",
+   "duration_ms": 2697,
+   "cost_usd": 0.00014345500000000004
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 255,
+    "cache_read_input_tokens": 1818,
+    "output_tokens": 167,
+    "output_tokens_details": {
+     "thinking_tokens": 156
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 255
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 167,
+      "cache_read_input_tokens": 1818,
+      "cache_creation_input_tokens": 255,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 255,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 6,
+     "outputTokens": 441,
+     "thinkingTokens": 243,
+     "cacheReadInputTokens": 3431,
+     "cacheCreationInputTokens": 2073,
+     "webSearchRequests": 0,
+     "costUSD": 0.000514535,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.000514535,
+   "session_id": "883b00c8-c861-4b51-93e5-85ebe1b84e96",
+   "duration_ms": 2079,
+   "cost_usd": 0.00013375499999999994
+  }
+ ],
+ "transcript": [
+  {
+   "turn": 1,
+   "reply": "{\"action\": \"read\", \"path\": \"search.py\"}",
+   "result": "def insertion_point(xs, x):\n    lo, hi = 0, len(xs) - 1\n    while lo < hi:\n        mid = (lo + hi) // 2\n        if xs[mid] <= x:\n            lo = mid + 1\n        else:\n            hi = mid\n    return lo\n"
+  },
+  {
+   "turn": 2,
+   "reply": "{\"action\": \"write\", \"path\": \"search.py\", \"content\": \"def insertion_point(xs, x):\\n    # Return the leftmost index where x can be inserted to keep xs sorted.\\n    # Same result as bisect.bisect_left.\\n    lo, hi = 0, len(xs)\\n    while lo < hi:\\n        mid = (lo + hi) // 2\\n        if xs[mid] < x:\\n            lo = mid + 1\\n        else:\\n            hi = mid\\n    return lo\\n\"}",
+   "result": "wrote search.py (314 chars)"
+  },
+  {
+   "turn": 3,
+   "reply": "{\"action\": \"finish\"}",
+   "result": null
+  }
+ ],
+ "files": {
+  "search.py": "def insertion_point(xs, x):\n    # Return the leftmost index where x can be inserted to keep xs sorted.\n    # Same result as bisect.bisect_left.\n    lo, hi = 0, len(xs)\n    while lo < hi:\n        mid = (lo + hi) // 2\n        if xs[mid] < x:\n            lo = mid + 1\n        else:\n            hi = mid\n    return lo\n"
+ }
+}

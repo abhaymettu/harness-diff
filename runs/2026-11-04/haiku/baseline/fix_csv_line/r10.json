@@ -1,0 +1,217 @@
+{
+ "schema": 1,
+ "experiment": "2026-11-04",
+ "model": "haiku",
+ "arm": "baseline",
+ "arm_sha256": null,
+ "task": "fix_csv_line",
+ "category": "codefix",
+ "run": 10,
+ "round": 3,
+ "slot": 1,
+ "battery": "v1",
+ "battery_sha256": "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe",
+ "max_turns": 4,
+ "repo_commit": "861e6d3b80ad1bd29a1ef103ac7c818890f4552c",
+ "python": "3.14.7",
+ "started_utc": "2026-11-04T07:49:07+00:00",
+ "outcome": "pass",
+ "check_detail": "6 cases pass",
+ "ended": "finish",
+ "turns_used": 3,
+ "cost_usd": 0.00078592,
+ "written_bytes": 720,
+ "py_written": 1,
+ "py_with_probe": 0,
+ "finished_utc": "2026-11-04T07:49:17+00:00",
+ "calls": [
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 601,
+    "cache_read_input_tokens": 586,
+    "output_tokens": 40,
+    "output_tokens_details": {
+     "thinking_tokens": 18
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 601
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 40,
+      "cache_read_input_tokens": 586,
+      "cache_creation_input_tokens": 601,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 601,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1281,
+     "outputTokens": 62,
+     "cacheReadInputTokens": 586,
+     "cacheCreationInputTokens": 601,
+     "webSearchRequests": 0,
+     "costUSD": 0.000240085,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "thinkingTokens": 18,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.000240085,
+   "session_id": "cd44a17b-eb8a-4b77-a4df-10f3dbbb2e1d",
+   "duration_ms": 1941,
+   "cost_usd": 0.000240085
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 107,
+    "cache_read_input_tokens": 1187,
+    "output_tokens": 791,
+    "output_tokens_details": {
+     "thinking_tokens": 509
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 107
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 791,
+      "cache_read_input_tokens": 1187,
+      "cache_creation_input_tokens": 107,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 107,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1283,
+     "outputTokens": 853,
+     "thinkingTokens": 527,
+     "cacheReadInputTokens": 1773,
+     "cacheCreationInputTokens": 708,
+     "webSearchRequests": 0,
+     "costUSD": 0.00066103,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.00066103,
+   "session_id": "cd44a17b-eb8a-4b77-a4df-10f3dbbb2e1d",
+   "duration_ms": 4124,
+   "cost_usd": 0.00042094499999999993
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 842,
+    "cache_read_input_tokens": 1294,
+    "output_tokens": 13,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 842
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 13,
+      "cache_read_input_tokens": 1294,
+      "cache_creation_input_tokens": 842,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 842,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1285,
+     "outputTokens": 866,
+     "thinkingTokens": 527,
+     "cacheReadInputTokens": 3067,
+     "cacheCreationInputTokens": 1550,
+     "webSearchRequests": 0,
+     "costUSD": 0.00078592,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.00078592,
+   "session_id": "cd44a17b-eb8a-4b77-a4df-10f3dbbb2e1d",
+   "duration_ms": 1897,
+   "cost_usd": 0.00012489
+  }
+ ],
+ "transcript": [
+  {
+   "turn": 1,
+   "reply": "\n{\"action\": \"read\", \"path\": \"parse.py\"}",
+   "result": "def split_csv(line):\n    return [f.strip('\"') for f in line.split(',')]\n"
+  },
+  {
+   "turn": 2,
+   "reply": "\n{\"action\": \"write\", \"path\": \"parse.py\", \"content\": \"def split_csv(line):\\n    fields = []\\n    current = []\\n    in_quotes = False\\n    i = 0\\n    n = len(line)\\n    while i < n:\\n        c = line[i]\\n        if in_quotes:\\n            if c == '\\\"':\\n                if i + 1 < n and line[i + 1] == '\\\"':\\n                    current.append('\\\"')\\n                    i += 2\\n                    continue\\n                in_quotes = False\\n            else:\\n                current.append(c)\\n        else:\\n            if c == '\\\"':\\n                in_quotes = True\\n            elif c == ',':\\n                fields.append(''.join(current))\\n                current = []\\n            else:\\n                current.append(c)\\n        i += 1\\n    fields.append(''.join(current))\\n    return fields\\n\"}",
+   "result": "wrote parse.py (720 chars)"
+  },
+  {
+   "turn": 3,
+   "reply": "{\"action\": \"finish\"}",
+   "result": null
+  }
+ ],
+ "files": {
+  "parse.py": "def split_csv(line):\n    fields = []\n    current = []\n    in_quotes = False\n    i = 0\n    n = len(line)\n    while i < n:\n        c = line[i]\n        if in_quotes:\n            if c == '\"':\n                if i + 1 < n and line[i + 1] == '\"':\n                    current.append('\"')\n                    i += 2\n                    continue\n                in_quotes = False\n            else:\n                current.append(c)\n        else:\n            if c == '\"':\n                in_quotes = True\n            elif c == ',':\n                fields.append(''.join(current))\n                current = []\n            else:\n                current.append(c)\n        i += 1\n    fields.append(''.join(current))\n    return fields\n"
+ }
+}

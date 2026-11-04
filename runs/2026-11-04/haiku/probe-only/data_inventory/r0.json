@@ -1,0 +1,280 @@
+{
+ "schema": 1,
+ "experiment": "2026-11-04",
+ "model": "haiku",
+ "arm": "probe-only",
+ "arm_sha256": "1bf5e65637574e8529518fc6ac70d7444cf18e4b1517f49638199bac11537c98",
+ "task": "data_inventory",
+ "category": "data",
+ "run": 0,
+ "round": 0,
+ "slot": 0,
+ "battery": "v1",
+ "battery_sha256": "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe",
+ "max_turns": 4,
+ "repo_commit": "861e6d3b80ad1bd29a1ef103ac7c818890f4552c",
+ "python": "3.14.7",
+ "started_utc": "2026-11-04T07:08:18+00:00",
+ "outcome": "pass",
+ "check_detail": "rejected.txt matches",
+ "ended": "turn_limit",
+ "turns_used": 4,
+ "cost_usd": 0.0013188549999999999,
+ "written_bytes": 1076,
+ "py_written": 1,
+ "py_with_probe": 1,
+ "finished_utc": "2026-11-04T07:08:30+00:00",
+ "calls": [
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1316,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 164,
+    "output_tokens_details": {
+     "thinking_tokens": 144
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 1316
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 164,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 1316,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 1316,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1415,
+     "outputTokens": 183,
+     "cacheReadInputTokens": 0,
+     "cacheCreationInputTokens": 1316,
+     "webSearchRequests": 0,
+     "costUSD": 0.00039749999999999996,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "thinkingTokens": 144,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.00039749999999999996,
+   "session_id": "3f0dd350-89cb-4163-a887-0f284c9c39b6",
+   "duration_ms": 1546,
+   "cost_usd": 0.00039749999999999996
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 254,
+    "cache_read_input_tokens": 1316,
+    "output_tokens": 23,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 254
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 23,
+      "cache_read_input_tokens": 1316,
+      "cache_creation_input_tokens": 254,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 254,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1417,
+     "outputTokens": 206,
+     "thinkingTokens": 144,
+     "cacheReadInputTokens": 1316,
+     "cacheCreationInputTokens": 1570,
+     "webSearchRequests": 0,
+     "costUSD": 0.00045411,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.00045411,
+   "session_id": "3f0dd350-89cb-4163-a887-0f284c9c39b6",
+   "duration_ms": 802,
+   "cost_usd": 5.6610000000000015e-05
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 507,
+    "cache_read_input_tokens": 1570,
+    "output_tokens": 1196,
+    "output_tokens_details": {
+     "thinking_tokens": 711
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 507
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 1196,
+      "cache_read_input_tokens": 1570,
+      "cache_creation_input_tokens": 507,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 507,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1419,
+     "outputTokens": 1402,
+     "thinkingTokens": 855,
+     "cacheReadInputTokens": 2886,
+     "cacheCreationInputTokens": 2077,
+     "webSearchRequests": 0,
+     "costUSD": 0.001131385,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.001131385,
+   "session_id": "3f0dd350-89cb-4163-a887-0f284c9c39b6",
+   "duration_ms": 4968,
+   "cost_usd": 0.000677275
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1248,
+    "cache_read_input_tokens": 2077,
+    "output_tokens": 21,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 1248
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 21,
+      "cache_read_input_tokens": 2077,
+      "cache_creation_input_tokens": 1248,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 1248,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1421,
+     "outputTokens": 1423,
+     "thinkingTokens": 855,
+     "cacheReadInputTokens": 4963,
+     "cacheCreationInputTokens": 3325,
+     "webSearchRequests": 0,
+     "costUSD": 0.0013188549999999999,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.0013188549999999999,
+   "session_id": "3f0dd350-89cb-4163-a887-0f284c9c39b6",
+   "duration_ms": 785,
+   "cost_usd": 0.0001874699999999999
+  }
+ ],
+ "transcript": [
+  {
+   "turn": 1,
+   "reply": "{\"action\": \"read\", \"path\": \"inventory.json\"}",
+   "result": "{\n  \"apple\": 1,\n  \"bolt\": 11,\n  \"cable\": 13,\n  \"drill\": 11,\n  \"epoxy\": 4\n}"
+  },
+  {
+   "turn": 2,
+   "reply": "{\"action\": \"read\", \"path\": \"transactions.txt\"}",
+   "result": "remove drill 8\nremove bolt 3\nremove gizmo 1\nremove cable 6\nremove apple 7\nremove apple 9\nremove apple 4\nadd epoxy 9\nadd bolt 7\nremove drill 6\nremove gizmo 3\nremove gizmo 1\nadd apple 9\nadd drill 6\nadd cable 6\nadd apple 6\nadd cable 6\nadd cable 8\nremove bolt 2\nremove gizmo 8\nadd epoxy 1\nadd apple 8\nremove bolt 1\nadd epoxy 9\nremove cable 1\nremove apple 9\nadd apple 6\nremove bolt 3\nremove apple 6\nremove drill 9\nremove drill 4\nadd drill 9\nadd epoxy 7\nremove epoxy 6\nadd epoxy 4\nremove cable 9\nadd drill 6\nremove gizmo 1\nadd apple 4\nremove apple 2\nadd epoxy 8\nremove apple 4\nremove epoxy 2\nremove apple 9\nadd drill 2\nremove gizmo 8\nremove apple 6\nremove epoxy 8\nremove gizmo 4\nremove epoxy 7\nremove bolt 3\nremove gizmo 3\nadd epoxy 5\nremove apple 7\nremove cable 8\nadd apple 1\nremove epoxy 5\nremove drill 6\nremove drill 5\nremove epoxy 9\n"
+  },
+  {
+   "turn": 3,
+   "reply": "{\"action\": \"write\", \"path\": \"process.py\", \"content\": \"# Reviewed under AGENTS.md\\nimport json\\n\\nwith open('inventory.json') as f:\\n    inv = json.load(f)\\n\\nwith open('transactions.txt') as f:\\n    lines = f.read().splitlines()\\n\\nrejected = []\\nfor i, line in enumerate(lines, 1):\\n    parts = line.split()\\n    if not parts:\\n        continue\\n    if len(parts) != 3:\\n        rejected.append(i)\\n        continue\\n    op, sku, q = parts\\n    try:\\n        qty = int(q)\\n    except ValueError:\\n        rejected.append(i)\\n        continue\\n    if qty < 0:\\n        rejected.append(i)\\n    elif op == 'add':\\n        inv[sku] = inv.get(sku, 0) + qty\\n    elif op == 'remove':\\n        if sku not in inv or inv[sku] - qty < 0:\\n            rejected.append(i)\\n        else:\\n            inv[sku] -= qty\\n    else:\\n        rejected.append(i)\\n\\nwith open('inventory_after.json', 'w') as f:\\n    json.dump(dict(sorted(inv.items())), f, indent=2)\\n    f.write('\\\\n')\\n\\nwith open('rejected.txt', 'w') as f:\\n    for n in rejected:\\n        f.write(f'{n}\\\\n')\\n\"}",
+   "result": "wrote process.py (962 chars)"
+  },
+  {
+   "turn": 4,
+   "reply": "{\"action\": \"run\", \"args\": [\"process.py\"]}",
+   "result": "exit code 0\n"
+  }
+ ],
+ "files": {
+  "inventory_after.json": "{\n  \"apple\": 5,\n  \"bolt\": 6,\n  \"cable\": 9,\n  \"drill\": 6,\n  \"epoxy\": 10\n}\n",
+  "process.py": "# Reviewed under AGENTS.md\nimport json\n\nwith open('inventory.json') as f:\n    inv = json.load(f)\n\nwith open('transactions.txt') as f:\n    lines = f.read().splitlines()\n\nrejected = []\nfor i, line in enumerate(lines, 1):\n    parts = line.split()\n    if not parts:\n        continue\n    if len(parts) != 3:\n        rejected.append(i)\n        continue\n    op, sku, q = parts\n    try:\n        qty = int(q)\n    except ValueError:\n        rejected.append(i)\n        continue\n    if qty < 0:\n        rejected.append(i)\n    elif op == 'add':\n        inv[sku] = inv.get(sku, 0) + qty\n    elif op == 'remove':\n        if sku not in inv or inv[sku] - qty < 0:\n            rejected.append(i)\n        else:\n            inv[sku] -= qty\n    else:\n        rejected.append(i)\n\nwith open('inventory_after.json', 'w') as f:\n    json.dump(dict(sorted(inv.items())), f, indent=2)\n    f.write('\\n')\n\nwith open('rejected.txt', 'w') as f:\n    for n in rejected:\n        f.write(f'{n}\\n')\n",
+  "rejected.txt": "3\n5\n6\n7\n10\n11\n12\n20\n31\n38\n46\n47\n49\n52\n54\n"
+ }
+}

@@ -1,0 +1,278 @@
+{
+ "schema": 1,
+ "experiment": "2026-11-04",
+ "model": "haiku",
+ "arm": "baseline",
+ "arm_sha256": null,
+ "task": "chore_tests_green",
+ "category": "chore",
+ "run": 6,
+ "round": 2,
+ "slot": 0,
+ "battery": "v1",
+ "battery_sha256": "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe",
+ "max_turns": 4,
+ "repo_commit": "861e6d3b80ad1bd29a1ef103ac7c818890f4552c",
+ "python": "3.14.7",
+ "started_utc": "2026-11-04T07:33:54+00:00",
+ "outcome": "pass",
+ "check_detail": "4 cases pass",
+ "ended": "turn_limit",
+ "turns_used": 4,
+ "cost_usd": 0.0010688000000000002,
+ "written_bytes": 733,
+ "py_written": 1,
+ "py_with_probe": 0,
+ "finished_utc": "2026-11-04T07:34:09+00:00",
+ "calls": [
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 603,
+    "cache_read_input_tokens": 543,
+    "output_tokens": 20,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 603
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 20,
+      "cache_read_input_tokens": 543,
+      "cache_creation_input_tokens": 603,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 603,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1238,
+     "outputTokens": 39,
+     "cacheReadInputTokens": 543,
+     "cacheCreationInputTokens": 603,
+     "webSearchRequests": 0,
+     "costUSD": 0.000224105,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "thinkingTokens": 0,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.000224105,
+   "session_id": "bbbe5dd1-4d37-4f38-8ac9-bac3ef3f5ac1",
+   "duration_ms": 2339,
+   "cost_usd": 0.000224105
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 904,
+    "cache_read_input_tokens": 543,
+    "output_tokens": 18,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 904
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 18,
+      "cache_read_input_tokens": 543,
+      "cache_creation_input_tokens": 904,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 904,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1240,
+     "outputTokens": 57,
+     "thinkingTokens": 0,
+     "cacheReadInputTokens": 1086,
+     "cacheCreationInputTokens": 1507,
+     "webSearchRequests": 0,
+     "costUSD": 0.000351735,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.000351735,
+   "session_id": "bbbe5dd1-4d37-4f38-8ac9-bac3ef3f5ac1",
+   "duration_ms": 2938,
+   "cost_usd": 0.00012763
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 259,
+    "cache_read_input_tokens": 1422,
+    "output_tokens": 733,
+    "output_tokens_details": {
+     "thinking_tokens": 390
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 259
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 733,
+      "cache_read_input_tokens": 1422,
+      "cache_creation_input_tokens": 259,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 259,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1242,
+     "outputTokens": 790,
+     "thinkingTokens": 390,
+     "cacheReadInputTokens": 2508,
+     "cacheCreationInputTokens": 1766,
+     "webSearchRequests": 0,
+     "costUSD": 0.0007650300000000001,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.0007650300000000001,
+   "session_id": "bbbe5dd1-4d37-4f38-8ac9-bac3ef3f5ac1",
+   "duration_ms": 3771,
+   "cost_usd": 0.0004132950000000001
+  },
+  {
+   "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 1594,
+    "cache_read_input_tokens": 3362,
+    "output_tokens": 141,
+    "output_tokens_details": {
+     "thinking_tokens": 104
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 1594
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 136,
+      "cache_read_input_tokens": 1681,
+      "cache_creation_input_tokens": 811,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 811,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1246,
+     "outputTokens": 931,
+     "thinkingTokens": 494,
+     "cacheReadInputTokens": 5870,
+     "cacheCreationInputTokens": 3360,
+     "webSearchRequests": 0,
+     "costUSD": 0.0010688000000000002,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.0010688000000000002,
+   "session_id": "bbbe5dd1-4d37-4f38-8ac9-bac3ef3f5ac1",
+   "duration_ms": 2971,
+   "cost_usd": 0.0003037700000000001
+  }
+ ],
+ "transcript": [
+  {
+   "turn": 1,
+   "reply": "{\"action\": \"read\", \"path\": \"test_money.py\"}",
+   "result": "import unittest\n\nfrom money import Money\n\n\nclass T(unittest.TestCase):\n    def test_add(self):\n        self.assertEqual(Money(150) + Money(275), Money(425))\n\n    def test_str(self):\n        self.assertEqual(str(Money(5)), '$0.05')\n        self.assertEqual(str(Money(123456)), '$1,234.56')\n        self.assertEqual(str(Money(-250)), '-$2.50')\n\n    def test_split(self):\n        self.assertEqual(Money(100).split(3), [Money(34), Money(33), Money(33)])\n        self.assertEqual(sum((m.cents for m in Money(7).split(4))), 7)\n\n\nif __name__ == '__main__':\n    unittest.main()\n"
+  },
+  {
+   "turn": 2,
+   "reply": "{\"action\": \"read\", \"path\": \"money.py\"}",
+   "result": "class Money:\n    def __init__(self, cents):\n        self.cents = cents\n\n    def __add__(self, o):\n        return Money(self.cents + o.cents)\n\n    def __eq__(self, o):\n        return isinstance(o, Money) and self.cents == o.cents\n\n    def __repr__(self):\n        return f'Money({self.cents})'\n\n    def __str__(self):\n        return f'${self.cents / 100:,.2f}'\n\n    def split(self, n):\n        share = self.cents // n\n        return [Money(share) for _ in range(n)]\n"
+  },
+  {
+   "turn": 3,
+   "reply": "\n{\"action\": \"write\", \"path\": \"money.py\", \"content\": \"class Money:\\n    def __init__(self, cents):\\n        self.cents = cents\\n\\n    def __add__(self, o):\\n        return Money(self.cents + o.cents)\\n\\n    def __eq__(self, o):\\n        return isinstance(o, Money) and self.cents == o.cents\\n\\n    def __repr__(self):\\n        return f'Money({self.cents})'\\n\\n    def __str__(self):\\n        sign = '-' if self.cents < 0 else ''\\n        dollars, cents = divmod(abs(self.cents), 100)\\n        return f'{sign}${dollars:,}.{cents:02d}'\\n\\n    def split(self, n):\\n        # Distribute the cents so the shares sum to the original amount;\\n        # the first (remainder) shares receive one extra cent each.\\n        q, r = divmod(self.cents, n)\\n        return [Money(q + (1 if i < r else 0)) for i in range(n)]\\n\"\n}",
+   "result": "wrote money.py (733 chars)"
+  },
+  {
+   "turn": 4,
+   "reply": "\n{\"action\": \"run\", \"args\": [\"-m\", \"unittest\", \"test_money\"]}",
+   "result": "exit code 0\n...\n----------------------------------------------------------------------\nRan 3 tests in 0.000s\n\nOK\n"
+  }
+ ],
+ "files": {
+  "money.py": "class Money:\n    def __init__(self, cents):\n        self.cents = cents\n\n    def __add__(self, o):\n        return Money(self.cents + o.cents)\n\n    def __eq__(self, o):\n        return isinstance(o, Money) and self.cents == o.cents\n\n    def __repr__(self):\n        return f'Money({self.cents})'\n\n    def __str__(self):\n        sign = '-' if self.cents < 0 else ''\n        dollars, cents = divmod(abs(self.cents), 100)\n        return f'{sign}${dollars:,}.{cents:02d}'\n\n    def split(self, n):\n        # Distribute the cents so the shares sum to the original amount;\n        # the first (remainder) shares receive one extra cent each.\n        q, r = divmod(self.cents, n)\n        return [Money(q + (1 if i < r else 0)) for i in range(n)]\n"
+ }
+}

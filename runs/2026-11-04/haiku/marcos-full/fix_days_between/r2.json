@@ -1,0 +1,217 @@
+{
+ "schema": 1,
+ "experiment": "2026-11-04",
+ "model": "haiku",
+ "arm": "marcos-full",
+ "arm_sha256": "3d8d5da954c2ea27f9e4b1474bb59b837685908b00d3c0bcb5f8efb0f3edb8fd",
+ "task": "fix_days_between",
+ "category": "codefix",
+ "run": 2,
+ "round": 2,
+ "slot": 0,
+ "battery": "v1",
+ "battery_sha256": "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe",
+ "max_turns": 4,
+ "repo_commit": "861e6d3b80ad1bd29a1ef103ac7c818890f4552c",
+ "python": "3.14.7",
+ "started_utc": "2026-11-04T07:31:23+00:00",
+ "outcome": "pass",
+ "check_detail": "6 cases pass",
+ "ended": "finish",
+ "turns_used": 3,
+ "cost_usd": 0.00051264,
+ "written_bytes": 116,
+ "py_written": 1,
+ "py_with_probe": 0,
+ "finished_utc": "2026-11-04T07:31:29+00:00",
+ "calls": [
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 597,
+    "cache_read_input_tokens": 911,
+    "output_tokens": 21,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 597
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 21,
+      "cache_read_input_tokens": 911,
+      "cache_creation_input_tokens": 597,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 597,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1606,
+     "outputTokens": 43,
+     "cacheReadInputTokens": 911,
+     "cacheCreationInputTokens": 597,
+     "webSearchRequests": 0,
+     "costUSD": 0.00026583499999999996,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "thinkingTokens": 0,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.00026583499999999996,
+   "session_id": "91acb4ca-7f3d-45b8-95fb-54bacd7de238",
+   "duration_ms": 1019,
+   "cost_usd": 0.00026583499999999996
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 781,
+    "cache_read_input_tokens": 911,
+    "output_tokens": 177,
+    "output_tokens_details": {
+     "thinking_tokens": 99
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 781
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 177,
+      "cache_read_input_tokens": 911,
+      "cache_creation_input_tokens": 781,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 781,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1608,
+     "outputTokens": 220,
+     "thinkingTokens": 99,
+     "cacheReadInputTokens": 1822,
+     "cacheCreationInputTokens": 1378,
+     "webSearchRequests": 0,
+     "costUSD": 0.00046126999999999995,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.00046126999999999995,
+   "session_id": "91acb4ca-7f3d-45b8-95fb-54bacd7de238",
+   "duration_ms": 1314,
+   "cost_usd": 0.000195435
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 230,
+    "cache_read_input_tokens": 1692,
+    "output_tokens": 11,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 230
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 11,
+      "cache_read_input_tokens": 1692,
+      "cache_creation_input_tokens": 230,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 230,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1610,
+     "outputTokens": 231,
+     "thinkingTokens": 99,
+     "cacheReadInputTokens": 3514,
+     "cacheCreationInputTokens": 1608,
+     "webSearchRequests": 0,
+     "costUSD": 0.00051264,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.00051264,
+   "session_id": "91acb4ca-7f3d-45b8-95fb-54bacd7de238",
+   "duration_ms": 1038,
+   "cost_usd": 5.137000000000002e-05
+  }
+ ],
+ "transcript": [
+  {
+   "turn": 1,
+   "reply": "{\"action\": \"read\", \"path\": \"dates.py\"}",
+   "result": "DAYS = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]\n\n\ndef _ordinal(s):\n    y, m, d = map(int, s.split('-'))\n    return y * 365 + sum(DAYS[: m - 1]) + d\n\n\ndef days_between(a, b):\n    return _ordinal(b) - _ordinal(a)\n"
+  },
+  {
+   "turn": 2,
+   "reply": "{\"action\": \"write\", \"path\": \"dates.py\", \"content\": \"from datetime import date\\n\\n\\ndef days_between(a, b):\\n    return (date.fromisoformat(b) - date.fromisoformat(a)).days\\n\"}",
+   "result": "wrote dates.py (116 chars)"
+  },
+  {
+   "turn": 3,
+   "reply": "{\"action\": \"finish\"}",
+   "result": null
+  }
+ ],
+ "files": {
+  "dates.py": "from datetime import date\n\n\ndef days_between(a, b):\n    return (date.fromisoformat(b) - date.fromisoformat(a)).days\n"
+ }
+}

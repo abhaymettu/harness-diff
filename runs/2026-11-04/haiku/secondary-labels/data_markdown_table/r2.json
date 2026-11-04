@@ -1,0 +1,278 @@
+{
+ "schema": 1,
+ "experiment": "2026-11-04",
+ "model": "haiku",
+ "arm": "secondary-labels",
+ "arm_sha256": "63fe178250a4d9840342a73347f78bf4db983ceb94d2e1b2afd119577ac758f7",
+ "task": "data_markdown_table",
+ "category": "data",
+ "run": 2,
+ "round": 2,
+ "slot": 0,
+ "battery": "v1",
+ "battery_sha256": "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe",
+ "max_turns": 4,
+ "repo_commit": "861e6d3b80ad1bd29a1ef103ac7c818890f4552c",
+ "python": "3.14.7",
+ "started_utc": "2026-11-04T07:30:31+00:00",
+ "outcome": "pass",
+ "check_detail": "table.md matches",
+ "ended": "finish",
+ "turns_used": 4,
+ "cost_usd": 0.0025970999999999998,
+ "written_bytes": 350,
+ "py_written": 0,
+ "py_with_probe": 0,
+ "finished_utc": "2026-11-04T07:30:53+00:00",
+ "calls": [
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1336,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 82,
+    "output_tokens_details": {
+     "thinking_tokens": 63
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 1336
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 82,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 1336,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 1336,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1435,
+     "outputTokens": 103,
+     "cacheReadInputTokens": 0,
+     "cacheCreationInputTokens": 1336,
+     "webSearchRequests": 0,
+     "costUSD": 0.000362,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "thinkingTokens": 63,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.000362,
+   "session_id": "e0ac319d-6586-4b61-ab93-c9e72a527b15",
+   "duration_ms": 2083,
+   "cost_usd": 0.000362
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 236,
+    "cache_read_input_tokens": 1336,
+    "output_tokens": 2773,
+    "output_tokens_details": {
+     "thinking_tokens": 2534
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 236
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 2773,
+      "cache_read_input_tokens": 1336,
+      "cache_creation_input_tokens": 236,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 236,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1437,
+     "outputTokens": 2876,
+     "thinkingTokens": 2597,
+     "cacheReadInputTokens": 1336,
+     "cacheCreationInputTokens": 1572,
+     "webSearchRequests": 0,
+     "costUSD": 0.0017915599999999998,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.0017915599999999998,
+   "session_id": "e0ac319d-6586-4b61-ab93-c9e72a527b15",
+   "duration_ms": 12283,
+   "cost_usd": 0.0014295599999999999
+  },
+  {
+   "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 5678,
+    "cache_read_input_tokens": 3144,
+    "output_tokens": 12,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 5678
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 3,
+      "cache_read_input_tokens": 1572,
+      "cache_creation_input_tokens": 2853,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 2853,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1441,
+     "outputTokens": 2888,
+     "thinkingTokens": 2597,
+     "cacheReadInputTokens": 4480,
+     "cacheCreationInputTokens": 7250,
+     "webSearchRequests": 0,
+     "costUSD": 0.0025391499999999996,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.0025391499999999996,
+   "session_id": "e0ac319d-6586-4b61-ab93-c9e72a527b15",
+   "duration_ms": 2739,
+   "cost_usd": 0.0007475899999999998
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 64,
+    "cache_read_input_tokens": 4425,
+    "output_tokens": 11,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 64
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 11,
+      "cache_read_input_tokens": 4425,
+      "cache_creation_input_tokens": 64,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 64,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1443,
+     "outputTokens": 2899,
+     "thinkingTokens": 2597,
+     "cacheReadInputTokens": 8905,
+     "cacheCreationInputTokens": 7314,
+     "webSearchRequests": 0,
+     "costUSD": 0.0025970999999999998,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.0025970999999999998,
+   "session_id": "e0ac319d-6586-4b61-ab93-c9e72a527b15",
+   "duration_ms": 1393,
+   "cost_usd": 5.795000000000019e-05
+  }
+ ],
+ "transcript": [
+  {
+   "turn": 1,
+   "reply": "{\"action\": \"read\", \"path\": \"table.csv\"}",
+   "result": "item,qty,price,note\nitem-1,10,99.27,x|y\nitem-2,476,54.95,x|y\nitem-3,384,87.39,fragile\nitem-4,339,0.32,x|y\nitem-5,454,86.43,x|y\nitem-6,429,50.10,\nitem-7,251,76.58,\nitem-8,325,11.21,fragile\n"
+  },
+  {
+   "turn": 2,
+   "reply": "{\"action\": \"write\", \"path\": \"table.md\", \"content\": \"| item   | qty | price | note    |\\n| ------ | --: | ----: | ------- |\\n| item-1 |  10 | 99.27 | x\\\\|y    |\\n| item-2 | 476 | 54.95 | x\\\\|y    |\\n| item-3 | 384 | 87.39 | fragile |\\n| item-4 | 339 |  0.32 | x\\\\|y    |\\n| item-5 | 454 | 86.43 | x\\\\|y    |\\n| item-6 | 429 | 50.10 |         |\\n| item-7 | 251 | 76.58 |         |\\n| item-8 | 325 | 11.21 | fragile |\\n\"}",
+   "result": "wrote table.md (350 chars)"
+  },
+  {
+   "turn": 3,
+   "reply": "",
+   "result": "error: reply was not a JSON object with an \"action\" key"
+  },
+  {
+   "turn": 4,
+   "reply": "{\"action\": \"finish\"}",
+   "result": null
+  }
+ ],
+ "files": {
+  "table.md": "| item   | qty | price | note    |\n| ------ | --: | ----: | ------- |\n| item-1 |  10 | 99.27 | x\\|y    |\n| item-2 | 476 | 54.95 | x\\|y    |\n| item-3 | 384 | 87.39 | fragile |\n| item-4 | 339 |  0.32 | x\\|y    |\n| item-5 | 454 | 86.43 | x\\|y    |\n| item-6 | 429 | 50.10 |         |\n| item-7 | 251 | 76.58 |         |\n| item-8 | 325 | 11.21 | fragile |\n"
+ }
+}

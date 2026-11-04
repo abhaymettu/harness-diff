@@ -1,0 +1,279 @@
+{
+ "schema": 1,
+ "experiment": "2026-11-04",
+ "model": "haiku",
+ "arm": "docs-vs-code",
+ "arm_sha256": "05397f4ceb09b6a1cc1b721d008bbb3d01f33bc4d6a8a00cb6e8c78c89fc37e6",
+ "task": "chore_split_module",
+ "category": "chore",
+ "run": 3,
+ "round": 3,
+ "slot": 0,
+ "battery": "v1",
+ "battery_sha256": "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe",
+ "max_turns": 4,
+ "repo_commit": "861e6d3b80ad1bd29a1ef103ac7c818890f4552c",
+ "python": "3.14.7",
+ "started_utc": "2026-11-04T07:45:13+00:00",
+ "outcome": "pass",
+ "check_detail": "3 cases pass",
+ "ended": "turn_limit",
+ "turns_used": 4,
+ "cost_usd": 0.001227335,
+ "written_bytes": 600,
+ "py_written": 2,
+ "py_with_probe": 0,
+ "finished_utc": "2026-11-04T07:45:28+00:00",
+ "calls": [
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 601,
+    "cache_read_input_tokens": 636,
+    "output_tokens": 560,
+    "output_tokens_details": {
+     "thinking_tokens": 512
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 601
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 560,
+      "cache_read_input_tokens": 636,
+      "cache_creation_input_tokens": 601,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 601,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1331,
+     "outputTokens": 582,
+     "cacheReadInputTokens": 636,
+     "cacheCreationInputTokens": 601,
+     "webSearchRequests": 0,
+     "costUSD": 0.000505585,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "thinkingTokens": 512,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.000505585,
+   "session_id": "cdb5e0ad-b2c5-47be-8d7f-b22e3f033ed8",
+   "duration_ms": 3481,
+   "cost_usd": 0.000505585
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 826,
+    "cache_read_input_tokens": 1237,
+    "output_tokens": 500,
+    "output_tokens_details": {
+     "thinking_tokens": 346
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 826
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 500,
+      "cache_read_input_tokens": 1237,
+      "cache_creation_input_tokens": 826,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 826,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1333,
+     "outputTokens": 1082,
+     "thinkingTokens": 858,
+     "cacheReadInputTokens": 1873,
+     "cacheCreationInputTokens": 1427,
+     "webSearchRequests": 0,
+     "costUSD": 0.000871405,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.000871405,
+   "session_id": "cdb5e0ad-b2c5-47be-8d7f-b22e3f033ed8",
+   "duration_ms": 3608,
+   "cost_usd": 0.00036582
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 552,
+    "cache_read_input_tokens": 2063,
+    "output_tokens": 138,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 552
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 138,
+      "cache_read_input_tokens": 2063,
+      "cache_creation_input_tokens": 552,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 552,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1335,
+     "outputTokens": 1220,
+     "thinkingTokens": 858,
+     "cacheReadInputTokens": 3936,
+     "cacheCreationInputTokens": 1979,
+     "webSearchRequests": 0,
+     "costUSD": 0.001030235,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.001030235,
+   "session_id": "cdb5e0ad-b2c5-47be-8d7f-b22e3f033ed8",
+   "duration_ms": 1032,
+   "cost_usd": 0.00015883
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 194,
+    "cache_read_input_tokens": 2615,
+    "output_tokens": 293,
+    "output_tokens_details": {
+     "thinking_tokens": 53
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 194
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 293,
+      "cache_read_input_tokens": 2615,
+      "cache_creation_input_tokens": 194,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 194,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1337,
+     "outputTokens": 1513,
+     "thinkingTokens": 911,
+     "cacheReadInputTokens": 6551,
+     "cacheCreationInputTokens": 2173,
+     "webSearchRequests": 0,
+     "costUSD": 0.001227335,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.001227335,
+   "session_id": "cdb5e0ad-b2c5-47be-8d7f-b22e3f033ed8",
+   "duration_ms": 2959,
+   "cost_usd": 0.00019709999999999997
+  }
+ ],
+ "transcript": [
+  {
+   "turn": 1,
+   "reply": "\n<invoke_action>\n{\"action\": \"read\", \"path\": \"geom/shapes.py\"}\n</invoke_action>",
+   "result": "import math\n\n\nclass Vec:\n    def __init__(self, x, y):\n        self.x, self.y = x, y\n\n    def __add__(self, o):\n        return Vec(self.x + o.x, self.y + o.y)\n\n    def norm(self):\n        return math.hypot(self.x, self.y)\n\n\ndef area(points):\n    \"\"\"Shoelace area of a polygon given as Vecs.\"\"\"\n    s = 0.0\n    for a, b in zip(points, points[1:] + points[:1]):\n        s += a.x * b.y - b.x * a.y\n    return abs(s) / 2\n\n\ndef centroid(points):\n    n = len(points)\n    return Vec(sum(p.x for p in points) / n, sum(p.y for p in points) / n)\n"
+  },
+  {
+   "turn": 2,
+   "reply": "\n<invoke_action>\n{\"action\": \"write\", \"path\": \"geom/vec.py\", \"content\": \"import math\n\n\nclass Vec:\\n    def __init__(self, x, y):\\n        self.x, self.y = x, y\\n\\n    def __add__(self, o):\\n        return Vec(self.x + o.x, self.y + o.y)\\n\\n    def norm(self):\\n        return math.hypot(self.x, self.y)\\n\"}\n</invoke_action>",
+   "result": "error: reply was not a JSON object with an \"action\" key"
+  },
+  {
+   "turn": 3,
+   "reply": "{\"action\": \"write\", \"path\": \"geom/vec.py\", \"content\": \"import math\\n\\n\\nclass Vec:\\n    def __init__(self, x, y):\\n        self.x, self.y = x, y\\n\\n    def __add__(self, o):\\n        return Vec(self.x + o.x, self.y + o.y)\\n\\n    def norm(self):\\n        return math.hypot(self.x, self.y)\\n\"}",
+   "result": "wrote geom/vec.py (222 chars)"
+  },
+  {
+   "turn": 4,
+   "reply": "{\"action\": \"write\", \"path\": \"geom/shapes.py\", \"content\": \"from geom.vec import Vec\\n\\n__all__ = [\\\"Vec\\\", \\\"area\\\", \\\"centroid\\\"]\\n\\n\\ndef area(points):\\n    \\\"\\\"\\\"Shoelace area of a polygon given as Vecs.\\\"\\\"\\\"\\n    s = 0.0\\n    for a, b in zip(points, points[1:] + points[:1]):\\n        s += a.x * b.y - b.x * a.y\\n    return abs(s) / 2\\n\\n\\ndef centroid(points):\\n    n = len(points)\\n    return Vec(sum(p.x for p in points) / n, sum(p.y for p in points) / n)\\n\"}",
+   "result": "wrote geom/shapes.py (378 chars)"
+  }
+ ],
+ "files": {
+  "geom/shapes.py": "from geom.vec import Vec\n\n__all__ = [\"Vec\", \"area\", \"centroid\"]\n\n\ndef area(points):\n    \"\"\"Shoelace area of a polygon given as Vecs.\"\"\"\n    s = 0.0\n    for a, b in zip(points, points[1:] + points[:1]):\n        s += a.x * b.y - b.x * a.y\n    return abs(s) / 2\n\n\ndef centroid(points):\n    n = len(points)\n    return Vec(sum(p.x for p in points) / n, sum(p.y for p in points) / n)\n",
+  "geom/vec.py": "import math\n\n\nclass Vec:\n    def __init__(self, x, y):\n        self.x, self.y = x, y\n\n    def __add__(self, o):\n        return Vec(self.x + o.x, self.y + o.y)\n\n    def norm(self):\n        return math.hypot(self.x, self.y)\n"
+ }
+}

@@ -1,0 +1,278 @@
+{
+ "schema": 1,
+ "experiment": "2026-11-04",
+ "model": "haiku",
+ "arm": "docs-vs-code",
+ "arm_sha256": "05397f4ceb09b6a1cc1b721d008bbb3d01f33bc4d6a8a00cb6e8c78c89fc37e6",
+ "task": "impl_duration",
+ "category": "implement",
+ "run": 0,
+ "round": 0,
+ "slot": 0,
+ "battery": "v1",
+ "battery_sha256": "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe",
+ "max_turns": 4,
+ "repo_commit": "861e6d3b80ad1bd29a1ef103ac7c818890f4552c",
+ "python": "3.14.7",
+ "started_utc": "2026-11-04T07:08:30+00:00",
+ "outcome": "pass",
+ "check_detail": "11 cases pass",
+ "ended": "finish",
+ "turns_used": 4,
+ "cost_usd": 0.0013953150000000003,
+ "written_bytes": 1149,
+ "py_written": 1,
+ "py_with_probe": 0,
+ "finished_utc": "2026-11-04T07:08:46+00:00",
+ "calls": [
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1314,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 51,
+    "output_tokens_details": {
+     "thinking_tokens": 36
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 1314
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 51,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 1314,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 1314,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1412,
+     "outputTokens": 71,
+     "cacheReadInputTokens": 0,
+     "cacheCreationInputTokens": 1314,
+     "webSearchRequests": 0,
+     "costUSD": 0.00034095,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "thinkingTokens": 36,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.00034095,
+   "session_id": "c10e2400-ea7f-4767-84bb-1d46575ef9d0",
+   "duration_ms": 1770,
+   "cost_usd": 0.00034095
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 95,
+    "cache_read_input_tokens": 1314,
+    "output_tokens": 1303,
+    "output_tokens_details": {
+     "thinking_tokens": 741
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 95
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 1303,
+      "cache_read_input_tokens": 1314,
+      "cache_creation_input_tokens": 95,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 95,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1414,
+     "outputTokens": 1374,
+     "thinkingTokens": 777,
+     "cacheReadInputTokens": 1314,
+     "cacheCreationInputTokens": 1409,
+     "webSearchRequests": 0,
+     "costUSD": 0.001017665,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.001017665,
+   "session_id": "c10e2400-ea7f-4767-84bb-1d46575ef9d0",
+   "duration_ms": 6848,
+   "cost_usd": 0.000676715
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1357,
+    "cache_read_input_tokens": 1409,
+    "output_tokens": 247,
+    "output_tokens_details": {
+     "thinking_tokens": 20
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 1357
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 247,
+      "cache_read_input_tokens": 1409,
+      "cache_creation_input_tokens": 1357,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 1357,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1416,
+     "outputTokens": 1621,
+     "thinkingTokens": 797,
+     "cacheReadInputTokens": 2723,
+     "cacheCreationInputTokens": 2766,
+     "webSearchRequests": 0,
+     "costUSD": 0.0013250800000000002,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.0013250800000000002,
+   "session_id": "c10e2400-ea7f-4767-84bb-1d46575ef9d0",
+   "duration_ms": 2578,
+   "cost_usd": 0.0003074150000000001
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 295,
+    "cache_read_input_tokens": 2766,
+    "output_tokens": 11,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 295
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 11,
+      "cache_read_input_tokens": 2766,
+      "cache_creation_input_tokens": 295,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 295,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1418,
+     "outputTokens": 1632,
+     "thinkingTokens": 797,
+     "cacheReadInputTokens": 5489,
+     "cacheCreationInputTokens": 3061,
+     "webSearchRequests": 0,
+     "costUSD": 0.0013953150000000003,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.0013953150000000003,
+   "session_id": "c10e2400-ea7f-4767-84bb-1d46575ef9d0",
+   "duration_ms": 1454,
+   "cost_usd": 7.023500000000009e-05
+  }
+ ],
+ "transcript": [
+  {
+   "turn": 1,
+   "reply": "{\"action\": \"list\", \"path\": \".\"}",
+   "result": "(empty)"
+  },
+  {
+   "turn": 2,
+   "reply": "{\"action\": \"write\", \"path\": \"duration.py\", \"content\": \"\\\"\\\"\\\"Parse compact duration strings such as '1h30m' into seconds.\\\"\\\"\\\"\\n\\nimport re\\n\\n# Each unit appears at most once and must be in this order: d, h, m, s.\\n# Amounts are plain ASCII digits, so no sign, decimal point or other characters.\\n_PATTERN = re.compile(\\n    r\\\"(?:([0-9]+)d)?(?:([0-9]+)h)?(?:([0-9]+)m)?(?:([0-9]+)s)?\\\"\\n)\\n_UNIT_SECONDS = (86400, 3600, 60, 1)\\n\\n\\ndef parse_duration(s):\\n    \\\"\\\"\\\"Return the number of seconds (int) described by the duration string ``s``.\\n\\n    Accepts units d, h, m and s, each at most once and in that order, with\\n    non-negative integer amounts. Surrounding whitespace is ignored.\\n    Raises ValueError for anything else, including an empty string or a bare number.\\n    \\\"\\\"\\\"\\n    if not isinstance(s, str):\\n        raise ValueError(f\\\"duration must be a string, got {type(s).__name__}\\\")\\n\\n    text = s.strip()\\n    match = _PATTERN.fullmatch(text)\\n    if match is None or not any(match.groups()):\\n        raise ValueError(f\\\"invalid duration: {s!r}\\\")\\n\\n    total = 0\\n    for amount, multiplier in zip(match.groups(), _UNIT_SECONDS):\\n        if amount is not None:\\n            total += int(amount) * multiplier\\n    return total\\n\"}",
+   "result": "wrote duration.py (1149 chars)"
+  },
+  {
+   "turn": 3,
+   "reply": "{\"action\": \"run\", \"args\": [\"-c\", \"from duration import parse_duration as p\\nassert p('1h30m')==5400\\nassert p('45s')==45\\nassert p('2h5s')==7205\\nassert p('1d2h')==93600\\nassert p(' 1d ')==86400\\nassert p('0s')==0\\nfor bad in ['', ' ', '90', '1h1h', '1m1h', '1h 30m', '-1h', '1.5h', '1x', 'h', '1H']:\\n    try:\\n        p(bad)\\n    except ValueError:\\n        continue\\n    raise SystemExit('no error for %r' % bad)\\nprint('ok')\"]}",
+   "result": "exit code 0\nok\n"
+  },
+  {
+   "turn": 4,
+   "reply": "{\"action\": \"finish\"}",
+   "result": null
+  }
+ ],
+ "files": {
+  "duration.py": "\"\"\"Parse compact duration strings such as '1h30m' into seconds.\"\"\"\n\nimport re\n\n# Each unit appears at most once and must be in this order: d, h, m, s.\n# Amounts are plain ASCII digits, so no sign, decimal point or other characters.\n_PATTERN = re.compile(\n    r\"(?:([0-9]+)d)?(?:([0-9]+)h)?(?:([0-9]+)m)?(?:([0-9]+)s)?\"\n)\n_UNIT_SECONDS = (86400, 3600, 60, 1)\n\n\ndef parse_duration(s):\n    \"\"\"Return the number of seconds (int) described by the duration string ``s``.\n\n    Accepts units d, h, m and s, each at most once and in that order, with\n    non-negative integer amounts. Surrounding whitespace is ignored.\n    Raises ValueError for anything else, including an empty string or a bare number.\n    \"\"\"\n    if not isinstance(s, str):\n        raise ValueError(f\"duration must be a string, got {type(s).__name__}\")\n\n    text = s.strip()\n    match = _PATTERN.fullmatch(text)\n    if match is None or not any(match.groups()):\n        raise ValueError(f\"invalid duration: {s!r}\")\n\n    total = 0\n    for amount, multiplier in zip(match.groups(), _UNIT_SECONDS):\n        if amount is not None:\n            total += int(amount) * multiplier\n    return total\n"
+ }
+}

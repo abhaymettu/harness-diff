@@ -1,0 +1,217 @@
+{
+ "schema": 1,
+ "experiment": "2026-11-04",
+ "model": "haiku",
+ "arm": "baseline",
+ "arm_sha256": null,
+ "task": "impl_duration",
+ "category": "implement",
+ "run": 4,
+ "round": 1,
+ "slot": 1,
+ "battery": "v1",
+ "battery_sha256": "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe",
+ "max_turns": 4,
+ "repo_commit": "861e6d3b80ad1bd29a1ef103ac7c818890f4552c",
+ "python": "3.14.7",
+ "started_utc": "2026-11-04T07:20:54+00:00",
+ "outcome": "pass",
+ "check_detail": "11 cases pass",
+ "ended": "finish",
+ "turns_used": 3,
+ "cost_usd": 0.00106303,
+ "written_bytes": 882,
+ "py_written": 1,
+ "py_with_probe": 0,
+ "finished_utc": "2026-11-04T07:21:04+00:00",
+ "calls": [
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 599,
+    "cache_read_input_tokens": 620,
+    "output_tokens": 452,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 599
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 452,
+      "cache_read_input_tokens": 620,
+      "cache_creation_input_tokens": 599,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 599,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1315,
+     "outputTokens": 470,
+     "cacheReadInputTokens": 620,
+     "cacheCreationInputTokens": 599,
+     "webSearchRequests": 0,
+     "costUSD": 0.00044757499999999997,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "thinkingTokens": 0,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.00044757499999999997,
+   "session_id": "2b60fbf0-1cbe-471f-ad2d-7369a5e6695a",
+   "duration_ms": 2366,
+   "cost_usd": 0.00044757499999999997
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1103,
+    "cache_read_input_tokens": 620,
+    "output_tokens": 707,
+    "output_tokens_details": {
+     "thinking_tokens": 250
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 1103
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 707,
+      "cache_read_input_tokens": 620,
+      "cache_creation_input_tokens": 1103,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 1103,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1317,
+     "outputTokens": 1177,
+     "thinkingTokens": 250,
+     "cacheReadInputTokens": 1240,
+     "cacheCreationInputTokens": 1702,
+     "webSearchRequests": 0,
+     "costUSD": 0.00094535,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.00094535,
+   "session_id": "2b60fbf0-1cbe-471f-ad2d-7369a5e6695a",
+   "duration_ms": 3621,
+   "cost_usd": 0.000497775
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 758,
+    "cache_read_input_tokens": 1723,
+    "output_tokens": 11,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 758
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 11,
+      "cache_read_input_tokens": 1723,
+      "cache_creation_input_tokens": 758,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 758,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1319,
+     "outputTokens": 1188,
+     "thinkingTokens": 250,
+     "cacheReadInputTokens": 2963,
+     "cacheCreationInputTokens": 2460,
+     "webSearchRequests": 0,
+     "costUSD": 0.00106303,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.00106303,
+   "session_id": "2b60fbf0-1cbe-471f-ad2d-7369a5e6695a",
+   "duration_ms": 1273,
+   "cost_usd": 0.00011768
+  }
+ ],
+ "transcript": [
+  {
+   "turn": 1,
+   "reply": "{\"action\": \"write\", \"path\": \"duration.py\", \"content\": \"import re\\n\\n_PATTERN = re.compile(r'^(?:(\\\\d+)d)?(?:(\\\\d+)h)?(?:(\\\\d+)m)?(?:(\\\\d+)s)?$')\\n\\n_MULTIPLIERS = (86400, 3600, 60, 1)\\n\\n\\ndef parse_duration(s):\\n    \\\"\\\"\\\"Convert a duration string like '1h30m', '45s', '2h5s' or '1d2h' to seconds.\\n\\n    Units d, h, m, s may each appear at most once and must be in that order.\\n    Each amount is a non-negative integer. Surrounding whitespace is allowed.\\n    Raises ValueError for anything else.\\n    \\\"\\\"\\\"\\n    if not isinstance(s, str):\\n        raise ValueError(f\\\"expected a string, got {type(s).__name__}\\\")\\n    text = s.strip()\\n    match = _PATTERN.fullmatch(text) if text else None\\n    if match is None or not any(match.groups()):\\n        raise ValueError(f\\\"invalid duration: {s!r}\\\")\\n    total = 0\\n    for group, mult in zip(match.groups(), _MULTIPLIERS):\\n        if group is not None:\\n            total += int(group) * mult\\n    return total\\n\"}",
+   "result": "wrote duration.py (872 chars)"
+  },
+  {
+   "turn": 2,
+   "reply": "\n{\"action\": \"write\", \"path\": \"duration.py\", \"content\": \"import re\\n\\n_PATTERN = re.compile(r'(?:([0-9]+)d)?(?:([0-9]+)h)?(?:([0-9]+)m)?(?:([0-9]+)s)?')\\n\\n_MULTIPLIERS = (86400, 3600, 60, 1)\\n\\n\\ndef parse_duration(s):\\n    \\\"\\\"\\\"Convert a duration string like '1h30m', '45s', '2h5s' or '1d2h' to seconds.\\n\\n    Units d, h, m, s may each appear at most once and must be in that order.\\n    Each amount is a non-negative integer. Surrounding whitespace is allowed.\\n    Raises ValueError for anything else.\\n    \\\"\\\"\\\"\\n    if not isinstance(s, str):\\n        raise ValueError(f\\\"expected a string, got {type(s).__name__}\\\")\\n    text = s.strip()\\n    match = _PATTERN.fullmatch(text) if text else None\\n    if match is None or not any(match.groups()):\\n        raise ValueError(f\\\"invalid duration: {s!r}\\\")\\n    total = 0\\n    for group, mult in zip(match.groups(), _MULTIPLIERS):\\n        if group is not None:\\n            total += int(group) * mult\\n    return total\\n\"}",
+   "result": "wrote duration.py (882 chars)"
+  },
+  {
+   "turn": 3,
+   "reply": "{\"action\": \"finish\"}",
+   "result": null
+  }
+ ],
+ "files": {
+  "duration.py": "import re\n\n_PATTERN = re.compile(r'(?:([0-9]+)d)?(?:([0-9]+)h)?(?:([0-9]+)m)?(?:([0-9]+)s)?')\n\n_MULTIPLIERS = (86400, 3600, 60, 1)\n\n\ndef parse_duration(s):\n    \"\"\"Convert a duration string like '1h30m', '45s', '2h5s' or '1d2h' to seconds.\n\n    Units d, h, m, s may each appear at most once and must be in that order.\n    Each amount is a non-negative integer. Surrounding whitespace is allowed.\n    Raises ValueError for anything else.\n    \"\"\"\n    if not isinstance(s, str):\n        raise ValueError(f\"expected a string, got {type(s).__name__}\")\n    text = s.strip()\n    match = _PATTERN.fullmatch(text) if text else None\n    if match is None or not any(match.groups()):\n        raise ValueError(f\"invalid duration: {s!r}\")\n    total = 0\n    for group, mult in zip(match.groups(), _MULTIPLIERS):\n        if group is not None:\n            total += int(group) * mult\n    return total\n"
+ }
+}

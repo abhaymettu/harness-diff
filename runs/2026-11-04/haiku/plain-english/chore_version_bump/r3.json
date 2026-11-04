@@ -1,0 +1,281 @@
+{
+ "schema": 1,
+ "experiment": "2026-11-04",
+ "model": "haiku",
+ "arm": "plain-english",
+ "arm_sha256": "842d7fda154d64eb1db004d0d3829ee9d77afae6a0c5d17cdbc8070ac7b5d3e3",
+ "task": "chore_version_bump",
+ "category": "chore",
+ "run": 3,
+ "round": 3,
+ "slot": 0,
+ "battery": "v1",
+ "battery_sha256": "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe",
+ "max_turns": 4,
+ "repo_commit": "861e6d3b80ad1bd29a1ef103ac7c818890f4552c",
+ "python": "3.14.7",
+ "started_utc": "2026-11-04T07:47:40+00:00",
+ "outcome": "pass",
+ "check_detail": "all checks pass",
+ "ended": "finish",
+ "turns_used": 4,
+ "cost_usd": 0.002108215,
+ "written_bytes": 401,
+ "py_written": 1,
+ "py_with_probe": 0,
+ "finished_utc": "2026-11-04T07:48:04+00:00",
+ "calls": [
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1634,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 136,
+    "output_tokens_details": {
+     "thinking_tokens": 114
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 1634
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 136,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 1634,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 1634,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1734,
+     "outputTokens": 154,
+     "cacheReadInputTokens": 0,
+     "cacheCreationInputTokens": 1634,
+     "webSearchRequests": 0,
+     "costUSD": 0.00045465,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "thinkingTokens": 114,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.00045465,
+   "session_id": "281012cb-5472-4478-9813-60ebb9c2e5ee",
+   "duration_ms": 4037,
+   "cost_usd": 0.00045465
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 228,
+    "cache_read_input_tokens": 1634,
+    "output_tokens": 911,
+    "output_tokens_details": {
+     "thinking_tokens": 817
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 228
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 911,
+      "cache_read_input_tokens": 1634,
+      "cache_creation_input_tokens": 228,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 228,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1736,
+     "outputTokens": 1065,
+     "thinkingTokens": 931,
+     "cacheReadInputTokens": 1634,
+     "cacheCreationInputTokens": 1862,
+     "webSearchRequests": 0,
+     "costUSD": 0.0009551900000000001,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.0009551900000000001,
+   "session_id": "281012cb-5472-4478-9813-60ebb9c2e5ee",
+   "duration_ms": 6117,
+   "cost_usd": 0.0005005400000000001
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1126,
+    "cache_read_input_tokens": 1862,
+    "output_tokens": 1480,
+    "output_tokens_details": {
+     "thinking_tokens": 1154
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 1126
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 1480,
+      "cache_read_input_tokens": 1862,
+      "cache_creation_input_tokens": 1126,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 1126,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1738,
+     "outputTokens": 2545,
+     "thinkingTokens": 2085,
+     "cacheReadInputTokens": 3496,
+     "cacheCreationInputTokens": 2988,
+     "webSearchRequests": 0,
+     "costUSD": 0.00185476,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.00185476,
+   "session_id": "281012cb-5472-4478-9813-60ebb9c2e5ee",
+   "duration_ms": 7957,
+   "cost_usd": 0.0008995699999999999
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1527,
+    "cache_read_input_tokens": 2988,
+    "output_tokens": 65,
+    "output_tokens_details": {
+     "thinking_tokens": 54
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 1527
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 65,
+      "cache_read_input_tokens": 2988,
+      "cache_creation_input_tokens": 1527,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 1527,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1740,
+     "outputTokens": 2610,
+     "thinkingTokens": 2139,
+     "cacheReadInputTokens": 6484,
+     "cacheCreationInputTokens": 4515,
+     "webSearchRequests": 0,
+     "costUSD": 0.002108215,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.002108215,
+   "session_id": "281012cb-5472-4478-9813-60ebb9c2e5ee",
+   "duration_ms": 2290,
+   "cost_usd": 0.0002534550000000001
+  }
+ ],
+ "transcript": [
+  {
+   "turn": 1,
+   "reply": "{\"action\": \"read\", \"path\": \"pyproject.toml\"}",
+   "result": "[project]\nname = \"fmt\"\nversion = \"1.4.2\"\nrequires-python = \">=3.10\"\ndependencies = [\"click>=1.4.2\"]\n"
+  },
+  {
+   "turn": 2,
+   "reply": "{\"action\": \"run\", \"args\": [\"-c\", \"for f in ['src/fmt/__init__.py', 'README.md', 'CHANGELOG.md']:\\n    print('=== ' + f + ' ===')\\n    print(open(f, encoding='utf-8').read())\"]}",
+   "result": "exit code 0\n=== src/fmt/__init__.py ===\n__version__ = \"1.4.2\"\nMIN_SCHEMA = \"1.4.2\"  # schema version, not the package\n\n=== README.md ===\n# fmt\n\nCurrent version: 1.4.2\n\nRequires click 1.4.2 or newer.\n\n=== CHANGELOG.md ===\n# Changelog\n\n## 1.4.2 - 2026-09-30\n\n- Fix a crash on empty input.\n\n## 1.4.1 - 2026-08-02\n\n- First public release.\n\n"
+  },
+  {
+   "turn": 3,
+   "reply": "{\"action\": \"run\", \"args\": [\"-c\", \"def rep(path, old, new):\\n    s = open(path, encoding='utf-8').read()\\n    assert s.count(old) == 1, (path, s.count(old))\\n    open(path, 'w', encoding='utf-8').write(s.replace(old, new))\\nrep('pyproject.toml', 'version = \\\"1.4.2\\\"', 'version = \\\"1.5.0\\\"')\\nrep('src/fmt/__init__.py', '__version__ = \\\"1.4.2\\\"', '__version__ = \\\"1.5.0\\\"')\\nrep('README.md', 'Current version: 1.4.2', 'Current version: 1.5.0')\\nrep('CHANGELOG.md', '## 1.4.2 - 2026-09-30', '## 1.5.0 - 2026-11-04\\\\n\\\\n- Add the --json flag.\\\\n\\\\n## 1.4.2 - 2026-09-30')\\nprint('done')\"]}",
+   "result": "exit code 0\ndone\n"
+  },
+  {
+   "turn": 4,
+   "reply": "{\"action\": \"finish\"}",
+   "result": null
+  }
+ ],
+ "files": {
+  "CHANGELOG.md": "# Changelog\n\n## 1.5.0 - 2026-11-04\n\n- Add the --json flag.\n\n## 1.4.2 - 2026-09-30\n\n- Fix a crash on empty input.\n\n## 1.4.1 - 2026-08-02\n\n- First public release.\n",
+  "README.md": "# fmt\n\nCurrent version: 1.5.0\n\nRequires click 1.4.2 or newer.\n",
+  "pyproject.toml": "[project]\nname = \"fmt\"\nversion = \"1.5.0\"\nrequires-python = \">=3.10\"\ndependencies = [\"click>=1.4.2\"]\n",
+  "src/fmt/__init__.py": "__version__ = \"1.5.0\"\nMIN_SCHEMA = \"1.4.2\"  # schema version, not the package\n"
+ }
+}

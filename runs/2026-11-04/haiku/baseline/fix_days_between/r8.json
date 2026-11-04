@@ -1,0 +1,279 @@
+{
+ "schema": 1,
+ "experiment": "2026-11-04",
+ "model": "haiku",
+ "arm": "baseline",
+ "arm_sha256": null,
+ "task": "fix_days_between",
+ "category": "codefix",
+ "run": 8,
+ "round": 2,
+ "slot": 2,
+ "battery": "v1",
+ "battery_sha256": "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe",
+ "max_turns": 4,
+ "repo_commit": "861e6d3b80ad1bd29a1ef103ac7c818890f4552c",
+ "python": "3.14.7",
+ "started_utc": "2026-11-04T07:30:56+00:00",
+ "outcome": "pass",
+ "check_detail": "6 cases pass",
+ "ended": "turn_limit",
+ "turns_used": 4,
+ "cost_usd": 0.001108125,
+ "written_bytes": 999,
+ "py_written": 2,
+ "py_with_probe": 0,
+ "finished_utc": "2026-11-04T07:31:10+00:00",
+ "calls": [
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 594,
+    "cache_read_input_tokens": 552,
+    "output_tokens": 21,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 594
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 21,
+      "cache_read_input_tokens": 552,
+      "cache_creation_input_tokens": 594,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 594,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1247,
+     "outputTokens": 40,
+     "cacheReadInputTokens": 552,
+     "cacheCreationInputTokens": 594,
+     "webSearchRequests": 0,
+     "costUSD": 0.00022447,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "thinkingTokens": 0,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.00022447,
+   "session_id": "406600c5-ad47-4a63-b613-4883249d4f6e",
+   "duration_ms": 2124,
+   "cost_usd": 0.00022447
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 778,
+    "cache_read_input_tokens": 552,
+    "output_tokens": 405,
+    "output_tokens_details": {
+     "thinking_tokens": 91
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 778
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 405,
+      "cache_read_input_tokens": 552,
+      "cache_creation_input_tokens": 778,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 778,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1249,
+     "outputTokens": 445,
+     "thinkingTokens": 91,
+     "cacheReadInputTokens": 1104,
+     "cacheCreationInputTokens": 1372,
+     "webSearchRequests": 0,
+     "costUSD": 0.00052994,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.00052994,
+   "session_id": "406600c5-ad47-4a63-b613-4883249d4f6e",
+   "duration_ms": 2763,
+   "cost_usd": 0.00030547
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 456,
+    "cache_read_input_tokens": 1330,
+    "output_tokens": 560,
+    "output_tokens_details": {
+     "thinking_tokens": 222
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 456
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 560,
+      "cache_read_input_tokens": 1330,
+      "cache_creation_input_tokens": 456,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 456,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1251,
+     "outputTokens": 1005,
+     "thinkingTokens": 313,
+     "cacheReadInputTokens": 2434,
+     "cacheCreationInputTokens": 1828,
+     "webSearchRequests": 0,
+     "costUSD": 0.00088044,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.00088044,
+   "session_id": "406600c5-ad47-4a63-b613-4883249d4f6e",
+   "duration_ms": 3720,
+   "cost_usd": 0.0003505
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 613,
+    "cache_read_input_tokens": 1786,
+    "output_tokens": 266,
+    "output_tokens_details": {
+     "thinking_tokens": 242
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 613
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 266,
+      "cache_read_input_tokens": 1786,
+      "cache_creation_input_tokens": 613,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 613,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1253,
+     "outputTokens": 1271,
+     "thinkingTokens": 555,
+     "cacheReadInputTokens": 4220,
+     "cacheCreationInputTokens": 2441,
+     "webSearchRequests": 0,
+     "costUSD": 0.001108125,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.001108125,
+   "session_id": "406600c5-ad47-4a63-b613-4883249d4f6e",
+   "duration_ms": 2160,
+   "cost_usd": 0.00022768499999999993
+  }
+ ],
+ "transcript": [
+  {
+   "turn": 1,
+   "reply": "{\"action\": \"read\", \"path\": \"dates.py\"}",
+   "result": "DAYS = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]\n\n\ndef _ordinal(s):\n    y, m, d = map(int, s.split('-'))\n    return y * 365 + sum(DAYS[: m - 1]) + d\n\n\ndef days_between(a, b):\n    return _ordinal(b) - _ordinal(a)\n"
+  },
+  {
+   "turn": 2,
+   "reply": "\n{\"action\": \"write\", \"path\": \"dates.py\", \"content\": \"DAYS = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]\\n\\n\\ndef _is_leap(y):\\n    return y % 4 == 0 and (y % 100 != 0 or y % 400 == 0)\\n\\n\\ndef _ordinal(s):\\n    y, m, d = map(int, s.split('-'))\\n    prev = y - 1\\n    # Days in all complete years before year y (Gregorian rules).\\n    days = prev * 365 + prev // 4 - prev // 100 + prev // 400\\n    for i in range(m - 1):\\n        days += DAYS[i]\\n        if i == 1 and _is_leap(y):\\n            days += 1\\n    return days + d\\n\\n\\ndef days_between(a, b):\\n    return _ordinal(b) - _ordinal(a)\\n\"}",
+   "result": "wrote dates.py (524 chars)"
+  },
+  {
+   "turn": 3,
+   "reply": "\n{\"action\": \"write\", \"path\": \"check_dates.py\", \"content\": \"from dates import days_between\\n\\ncases = [\\n    ((\\\"2024-02-28\\\", \\\"2024-03-01\\\"), 2),\\n    ((\\\"2023-02-28\\\", \\\"2023-03-01\\\"), 1),\\n    ((\\\"2000-02-28\\\", \\\"2000-03-01\\\"), 2),\\n    ((\\\"1900-02-28\\\", \\\"1900-03-01\\\"), 1),\\n    ((\\\"2023-01-01\\\", \\\"2024-01-01\\\"), 365),\\n    ((\\\"2024-01-01\\\", \\\"2025-01-01\\\"), 366),\\n    ((\\\"2024-03-01\\\", \\\"2024-02-28\\\"), -2),\\n    ((\\\"2024-01-15\\\", \\\"2024-01-15\\\"), 0),\\n]\\nfor (a, b), want in cases:\\n    got = days_between(a, b)\\n    assert got == want, (a, b, got, want)\\nprint(\\\"all ok\\\")\\n\"}",
+   "result": "wrote check_dates.py (475 chars)"
+  },
+  {
+   "turn": 4,
+   "reply": "{\"action\": \"run\", \"args\": [\"check_dates.py\"]}",
+   "result": "exit code 0\nall ok\n"
+  }
+ ],
+ "files": {
+  "check_dates.py": "from dates import days_between\n\ncases = [\n    ((\"2024-02-28\", \"2024-03-01\"), 2),\n    ((\"2023-02-28\", \"2023-03-01\"), 1),\n    ((\"2000-02-28\", \"2000-03-01\"), 2),\n    ((\"1900-02-28\", \"1900-03-01\"), 1),\n    ((\"2023-01-01\", \"2024-01-01\"), 365),\n    ((\"2024-01-01\", \"2025-01-01\"), 366),\n    ((\"2024-03-01\", \"2024-02-28\"), -2),\n    ((\"2024-01-15\", \"2024-01-15\"), 0),\n]\nfor (a, b), want in cases:\n    got = days_between(a, b)\n    assert got == want, (a, b, got, want)\nprint(\"all ok\")\n",
+  "dates.py": "DAYS = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]\n\n\ndef _is_leap(y):\n    return y % 4 == 0 and (y % 100 != 0 or y % 400 == 0)\n\n\ndef _ordinal(s):\n    y, m, d = map(int, s.split('-'))\n    prev = y - 1\n    # Days in all complete years before year y (Gregorian rules).\n    days = prev * 365 + prev // 4 - prev // 100 + prev // 400\n    for i in range(m - 1):\n        days += DAYS[i]\n        if i == 1 and _is_leap(y):\n            days += 1\n    return days + d\n\n\ndef days_between(a, b):\n    return _ordinal(b) - _ordinal(a)\n"
+ }
+}

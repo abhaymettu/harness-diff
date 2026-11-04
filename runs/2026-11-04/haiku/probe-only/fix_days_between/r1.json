@@ -1,0 +1,278 @@
+{
+ "schema": 1,
+ "experiment": "2026-11-04",
+ "model": "haiku",
+ "arm": "probe-only",
+ "arm_sha256": "1bf5e65637574e8529518fc6ac70d7444cf18e4b1517f49638199bac11537c98",
+ "task": "fix_days_between",
+ "category": "codefix",
+ "run": 1,
+ "round": 1,
+ "slot": 0,
+ "battery": "v1",
+ "battery_sha256": "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe",
+ "max_turns": 4,
+ "repo_commit": "861e6d3b80ad1bd29a1ef103ac7c818890f4552c",
+ "python": "3.14.7",
+ "started_utc": "2026-11-04T07:26:48+00:00",
+ "outcome": "pass",
+ "check_detail": "6 cases pass",
+ "ended": "finish",
+ "turns_used": 4,
+ "cost_usd": 0.0008279299999999999,
+ "written_bytes": 485,
+ "py_written": 1,
+ "py_with_probe": 1,
+ "finished_utc": "2026-11-04T07:27:00+00:00",
+ "calls": [
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1225,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 43,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 1225
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 43,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 1225,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 1225,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1323,
+     "outputTokens": 64,
+     "cacheReadInputTokens": 0,
+     "cacheCreationInputTokens": 1225,
+     "webSearchRequests": 0,
+     "costUSD": 0.000317425,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "thinkingTokens": 0,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.000317425,
+   "session_id": "71eb74d8-8342-4718-8ffb-5b534b7bbe72",
+   "duration_ms": 2228,
+   "cost_usd": 0.000317425
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 680,
+    "cache_read_input_tokens": 628,
+    "output_tokens": 19,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 680
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 19,
+      "cache_read_input_tokens": 628,
+      "cache_creation_input_tokens": 680,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 680,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1325,
+     "outputTokens": 83,
+     "thinkingTokens": 0,
+     "cacheReadInputTokens": 628,
+     "cacheCreationInputTokens": 1905,
+     "webSearchRequests": 0,
+     "costUSD": 0.00041840499999999995,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.00041840499999999995,
+   "session_id": "71eb74d8-8342-4718-8ffb-5b534b7bbe72",
+   "duration_ms": 1501,
+   "cost_usd": 0.00010097999999999997
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 209,
+    "cache_read_input_tokens": 1283,
+    "output_tokens": 549,
+    "output_tokens_details": {
+     "thinking_tokens": 245
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 209
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 549,
+      "cache_read_input_tokens": 1283,
+      "cache_creation_input_tokens": 209,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 209,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1327,
+     "outputTokens": 632,
+     "thinkingTokens": 245,
+     "cacheReadInputTokens": 1911,
+     "cacheCreationInputTokens": 2114,
+     "webSearchRequests": 0,
+     "costUSD": 0.00073206,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.00073206,
+   "session_id": "71eb74d8-8342-4718-8ffb-5b534b7bbe72",
+   "duration_ms": 3341,
+   "cost_usd": 0.00031365500000000003
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 602,
+    "cache_read_input_tokens": 1492,
+    "output_tokens": 11,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 602
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 11,
+      "cache_read_input_tokens": 1492,
+      "cache_creation_input_tokens": 602,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 602,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1329,
+     "outputTokens": 643,
+     "thinkingTokens": 245,
+     "cacheReadInputTokens": 3403,
+     "cacheCreationInputTokens": 2716,
+     "webSearchRequests": 0,
+     "costUSD": 0.0008279299999999999,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.0008279299999999999,
+   "session_id": "71eb74d8-8342-4718-8ffb-5b534b7bbe72",
+   "duration_ms": 1268,
+   "cost_usd": 9.586999999999996e-05
+  }
+ ],
+ "transcript": [
+  {
+   "turn": 1,
+   "reply": "<result>{\"action\": \"list\", \"path\": \".\"}</result>\npre-result\n{\"action\": \"list\", \"path\": \".\"}",
+   "result": "dates.py"
+  },
+  {
+   "turn": 2,
+   "reply": "{\"action\": \"read\", \"path\": \"dates.py\"}",
+   "result": "DAYS = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]\n\n\ndef _ordinal(s):\n    y, m, d = map(int, s.split('-'))\n    return y * 365 + sum(DAYS[: m - 1]) + d\n\n\ndef days_between(a, b):\n    return _ordinal(b) - _ordinal(a)\n"
+  },
+  {
+   "turn": 3,
+   "reply": "{\"action\": \"write\", \"path\": \"dates.py\", \"content\": \"# Reviewed under AGENTS.md\\nDAYS = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]\\n\\n\\ndef _is_leap(y):\\n    return y % 4 == 0 and (y % 100 != 0 or y % 400 == 0)\\n\\n\\ndef _ordinal(s):\\n    y, m, d = map(int, s.split('-'))\\n    prev = y - 1\\n    days = prev * 365 + prev // 4 - prev // 100 + prev // 400\\n    for i in range(m - 1):\\n        days += DAYS[i]\\n        if i == 1 and _is_leap(y):\\n            days += 1\\n    return days + d\\n\\n\\ndef days_between(a, b):\\n    return _ordinal(b) - _ordinal(a)\\n\"}",
+   "result": "wrote dates.py (485 chars)"
+  },
+  {
+   "turn": 4,
+   "reply": "{\"action\": \"finish\"}",
+   "result": null
+  }
+ ],
+ "files": {
+  "dates.py": "# Reviewed under AGENTS.md\nDAYS = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]\n\n\ndef _is_leap(y):\n    return y % 4 == 0 and (y % 100 != 0 or y % 400 == 0)\n\n\ndef _ordinal(s):\n    y, m, d = map(int, s.split('-'))\n    prev = y - 1\n    days = prev * 365 + prev // 4 - prev // 100 + prev // 400\n    for i in range(m - 1):\n        days += DAYS[i]\n        if i == 1 and _is_leap(y):\n            days += 1\n    return days + d\n\n\ndef days_between(a, b):\n    return _ordinal(b) - _ordinal(a)\n"
+ }
+}

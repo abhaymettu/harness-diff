@@ -1,0 +1,278 @@
+{
+ "schema": 1,
+ "experiment": "2026-11-04",
+ "model": "haiku",
+ "arm": "baseline",
+ "arm_sha256": null,
+ "task": "fix_csv_line",
+ "category": "codefix",
+ "run": 4,
+ "round": 1,
+ "slot": 1,
+ "battery": "v1",
+ "battery_sha256": "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe",
+ "max_turns": 4,
+ "repo_commit": "861e6d3b80ad1bd29a1ef103ac7c818890f4552c",
+ "python": "3.14.7",
+ "started_utc": "2026-11-04T07:22:16+00:00",
+ "outcome": "pass",
+ "check_detail": "6 cases pass",
+ "ended": "finish",
+ "turns_used": 4,
+ "cost_usd": 0.000623275,
+ "written_bytes": 723,
+ "py_written": 1,
+ "py_with_probe": 0,
+ "finished_utc": "2026-11-04T07:22:28+00:00",
+ "calls": [
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 597,
+    "cache_read_input_tokens": 586,
+    "output_tokens": 42,
+    "output_tokens_details": {
+     "thinking_tokens": 23
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 597
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 42,
+      "cache_read_input_tokens": 586,
+      "cache_creation_input_tokens": 597,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 597,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1281,
+     "outputTokens": 64,
+     "cacheReadInputTokens": 586,
+     "cacheCreationInputTokens": 597,
+     "webSearchRequests": 0,
+     "costUSD": 0.00024058499999999997,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "thinkingTokens": 23,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.00024058499999999997,
+   "session_id": "8e9c4379-58b7-46ef-9dee-6372bf741ad1",
+   "duration_ms": 3538,
+   "cost_usd": 0.00024058499999999997
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 111,
+    "cache_read_input_tokens": 1183,
+    "output_tokens": 287,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 111
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 287,
+      "cache_read_input_tokens": 1183,
+      "cache_creation_input_tokens": 111,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 111,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1283,
+     "outputTokens": 351,
+     "thinkingTokens": 23,
+     "cacheReadInputTokens": 1769,
+     "cacheCreationInputTokens": 708,
+     "webSearchRequests": 0,
+     "costUSD": 0.00040998999999999994,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.00040998999999999994,
+   "session_id": "8e9c4379-58b7-46ef-9dee-6372bf741ad1",
+   "duration_ms": 2098,
+   "cost_usd": 0.00016940499999999997
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 338,
+    "cache_read_input_tokens": 1294,
+    "output_tokens": 204,
+    "output_tokens_details": {
+     "thinking_tokens": 144
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 338
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 204,
+      "cache_read_input_tokens": 1294,
+      "cache_creation_input_tokens": 338,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 338,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1285,
+     "outputTokens": 555,
+     "thinkingTokens": 167,
+     "cacheReadInputTokens": 3063,
+     "cacheCreationInputTokens": 1046,
+     "webSearchRequests": 0,
+     "costUSD": 0.0005673799999999999,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.0005673799999999999,
+   "session_id": "8e9c4379-58b7-46ef-9dee-6372bf741ad1",
+   "duration_ms": 2230,
+   "cost_usd": 0.00015738999999999998
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 271,
+    "cache_read_input_tokens": 1632,
+    "output_tokens": 11,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 271
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 11,
+      "cache_read_input_tokens": 1632,
+      "cache_creation_input_tokens": 271,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 271,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1287,
+     "outputTokens": 566,
+     "thinkingTokens": 167,
+     "cacheReadInputTokens": 4695,
+     "cacheCreationInputTokens": 1317,
+     "webSearchRequests": 0,
+     "costUSD": 0.000623275,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.000623275,
+   "session_id": "8e9c4379-58b7-46ef-9dee-6372bf741ad1",
+   "duration_ms": 1416,
+   "cost_usd": 5.589500000000003e-05
+  }
+ ],
+ "transcript": [
+  {
+   "turn": 1,
+   "reply": "{\"action\": \"read\", \"path\": \"parse.py\"}",
+   "result": "def split_csv(line):\n    return [f.strip('\"') for f in line.split(',')]\n"
+  },
+  {
+   "turn": 2,
+   "reply": "{\"action\": \"write\", \"path\": \"parse.py\", \"content\": \"def split_csv(line):\\n    fields = []\\n    current = []\\n    in_quotes = False\\n    i = 0\\n    n = len(line)\\n    while i < n:\\n        ch = line[i]\\n        if in_quotes:\\n            if ch == '\\\"':\\n                if i + 1 < n and line[i + 1] == '\\\"':\\n                    current.append('\\\"')\\n                    i += 1\\n                else:\\n                    in_quotes = False\\n            else:\\n                current.append(ch)\\n        else:\\n            if ch == '\\\"':\\n                in_quotes = True\\n            elif ch == ',':\\n                fields.append(''.join(current))\\n                current = []\\n            else:\\n                current.append(ch)\\n        i += 1\\n    fields.append(''.join(current))\\n    return fields\\n\"}",
+   "result": "wrote parse.py (723 chars)"
+  },
+  {
+   "turn": 3,
+   "reply": "{\"action\": \"run\", \"args\": [\"-c\", \"from parse import split_csv; print(split_csv('a,\\\"b,c\\\",\\\"d\\\"\\\"e\\\",,f'))\"]}",
+   "result": "exit code 0\n['a', 'b,c', 'd\"e', '', 'f']\n"
+  },
+  {
+   "turn": 4,
+   "reply": "{\"action\": \"finish\"}",
+   "result": null
+  }
+ ],
+ "files": {
+  "parse.py": "def split_csv(line):\n    fields = []\n    current = []\n    in_quotes = False\n    i = 0\n    n = len(line)\n    while i < n:\n        ch = line[i]\n        if in_quotes:\n            if ch == '\"':\n                if i + 1 < n and line[i + 1] == '\"':\n                    current.append('\"')\n                    i += 1\n                else:\n                    in_quotes = False\n            else:\n                current.append(ch)\n        else:\n            if ch == '\"':\n                in_quotes = True\n            elif ch == ',':\n                fields.append(''.join(current))\n                current = []\n            else:\n                current.append(ch)\n        i += 1\n    fields.append(''.join(current))\n    return fields\n"
+ }
+}

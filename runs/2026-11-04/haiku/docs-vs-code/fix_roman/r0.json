@@ -1,0 +1,278 @@
+{
+ "schema": 1,
+ "experiment": "2026-11-04",
+ "model": "haiku",
+ "arm": "docs-vs-code",
+ "arm_sha256": "05397f4ceb09b6a1cc1b721d008bbb3d01f33bc4d6a8a00cb6e8c78c89fc37e6",
+ "task": "fix_roman",
+ "category": "codefix",
+ "run": 0,
+ "round": 0,
+ "slot": 0,
+ "battery": "v1",
+ "battery_sha256": "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe",
+ "max_turns": 4,
+ "repo_commit": "861e6d3b80ad1bd29a1ef103ac7c818890f4552c",
+ "python": "3.14.7",
+ "started_utc": "2026-11-04T07:06:21+00:00",
+ "outcome": "pass",
+ "check_detail": "10 cases pass",
+ "ended": "finish",
+ "turns_used": 4,
+ "cost_usd": 0.00105806,
+ "written_bytes": 403,
+ "py_written": 1,
+ "py_with_probe": 0,
+ "finished_utc": "2026-11-04T07:06:31+00:00",
+ "calls": [
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1275,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 19,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 1275
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 19,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 1275,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 1275,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1374,
+     "outputTokens": 42,
+     "cacheReadInputTokens": 0,
+     "cacheCreationInputTokens": 1275,
+     "webSearchRequests": 0,
+     "costUSD": 0.000317775,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "thinkingTokens": 0,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.000317775,
+   "session_id": "8ef8055b-b002-462d-bb46-3bb5f66da19d",
+   "duration_ms": 758,
+   "cost_usd": 0.000317775
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 771,
+    "cache_read_input_tokens": 679,
+    "output_tokens": 472,
+    "output_tokens_details": {
+     "thinking_tokens": 222
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 771
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 472,
+      "cache_read_input_tokens": 679,
+      "cache_creation_input_tokens": 771,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 771,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1376,
+     "outputTokens": 514,
+     "thinkingTokens": 222,
+     "cacheReadInputTokens": 679,
+     "cacheCreationInputTokens": 2046,
+     "webSearchRequests": 0,
+     "costUSD": 0.0006571400000000001,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.0006571400000000001,
+   "session_id": "8ef8055b-b002-462d-bb46-3bb5f66da19d",
+   "duration_ms": 2532,
+   "cost_usd": 0.00033936500000000006
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 527,
+    "cache_read_input_tokens": 1450,
+    "output_tokens": 460,
+    "output_tokens_details": {
+     "thinking_tokens": 203
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 527
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 460,
+      "cache_read_input_tokens": 1450,
+      "cache_creation_input_tokens": 527,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 527,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1378,
+     "outputTokens": 974,
+     "thinkingTokens": 425,
+     "cacheReadInputTokens": 2129,
+     "cacheCreationInputTokens": 2573,
+     "webSearchRequests": 0,
+     "costUSD": 0.0009677150000000001,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.0009677150000000001,
+   "session_id": "8ef8055b-b002-462d-bb46-3bb5f66da19d",
+   "duration_ms": 2159,
+   "cost_usd": 0.000310575
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 511,
+    "cache_read_input_tokens": 1977,
+    "output_tokens": 13,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 511
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 13,
+      "cache_read_input_tokens": 1977,
+      "cache_creation_input_tokens": 511,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 511,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1380,
+     "outputTokens": 987,
+     "thinkingTokens": 425,
+     "cacheReadInputTokens": 4106,
+     "cacheCreationInputTokens": 3084,
+     "webSearchRequests": 0,
+     "costUSD": 0.00105806,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.00105806,
+   "session_id": "8ef8055b-b002-462d-bb46-3bb5f66da19d",
+   "duration_ms": 682,
+   "cost_usd": 9.034499999999992e-05
+  }
+ ],
+ "transcript": [
+  {
+   "turn": 1,
+   "reply": "{\"action\": \"read\", \"path\": \"roman.py\"}",
+   "result": "PAIRS = [(1000, 'M'), (500, 'D'), (100, 'C'), (50, 'L'), (10, 'X'), (5, 'V'), (1, 'I')]\n\n\ndef to_roman(n):\n    out = ''\n    for value, sym in PAIRS:\n        while n >= value:\n            out += sym\n            n -= value\n    return out\n"
+  },
+  {
+   "turn": 2,
+   "reply": "\n{\"action\": \"write\", \"path\": \"roman.py\", \"content\": \"PAIRS = [(1000, 'M'), (900, 'CM'), (500, 'D'), (400, 'CD'), (100, 'C'), (90, 'XC'), (50, 'L'), (40, 'XL'), (10, 'X'), (9, 'IX'), (5, 'V'), (4, 'IV'), (1, 'I')]\n\n\ndef to_roman(n):\n    if not 1 <= n <= 3999:\\n        raise ValueError(f\\\"number out of range (1-3999): {n}\\\")\\n    out = ''\\n    for value, sym in PAIRS:\\n        while n >= value:\\n            out += sym\\n            n -= value\\n    return out\\n\"}",
+   "result": "error: reply was not a JSON object with an \"action\" key"
+  },
+  {
+   "turn": 3,
+   "reply": "\n{\"action\": \"write\", \"path\": \"roman.py\", \"content\": \"PAIRS = [(1000, 'M'), (900, 'CM'), (500, 'D'), (400, 'CD'), (100, 'C'), (90, 'XC'), (50, 'L'), (40, 'XL'), (10, 'X'), (9, 'IX'), (5, 'V'), (4, 'IV'), (1, 'I')]\\n\\n\\ndef to_roman(n):\\n    if not 1 <= n <= 3999:\\n        raise ValueError('number out of range (1-3999): %r' % (n,))\\n    out = ''\\n    for value, sym in PAIRS:\\n        while n >= value:\\n            out += sym\\n            n -= value\\n    return out\\n\"}",
+   "result": "wrote roman.py (403 chars)"
+  },
+  {
+   "turn": 4,
+   "reply": "{\"action\": \"finish\"}",
+   "result": null
+  }
+ ],
+ "files": {
+  "roman.py": "PAIRS = [(1000, 'M'), (900, 'CM'), (500, 'D'), (400, 'CD'), (100, 'C'), (90, 'XC'), (50, 'L'), (40, 'XL'), (10, 'X'), (9, 'IX'), (5, 'V'), (4, 'IV'), (1, 'I')]\n\n\ndef to_roman(n):\n    if not 1 <= n <= 3999:\n        raise ValueError('number out of range (1-3999): %r' % (n,))\n    out = ''\n    for value, sym in PAIRS:\n        while n >= value:\n            out += sym\n            n -= value\n    return out\n"
+ }
+}

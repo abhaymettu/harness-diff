@@ -1,0 +1,278 @@
+{
+ "schema": 1,
+ "experiment": "2026-11-04",
+ "model": "haiku",
+ "arm": "baseline",
+ "arm_sha256": null,
+ "task": "fix_csv_line",
+ "category": "codefix",
+ "run": 11,
+ "round": 3,
+ "slot": 2,
+ "battery": "v1",
+ "battery_sha256": "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe",
+ "max_turns": 4,
+ "repo_commit": "861e6d3b80ad1bd29a1ef103ac7c818890f4552c",
+ "python": "3.14.7",
+ "started_utc": "2026-11-04T07:48:04+00:00",
+ "outcome": "pass",
+ "check_detail": "6 cases pass",
+ "ended": "finish",
+ "turns_used": 4,
+ "cost_usd": 0.00044567,
+ "written_bytes": 723,
+ "py_written": 1,
+ "py_with_probe": 0,
+ "finished_utc": "2026-11-04T07:48:15+00:00",
+ "calls": [
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 597,
+    "cache_read_input_tokens": 586,
+    "output_tokens": 40,
+    "output_tokens_details": {
+     "thinking_tokens": 18
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 597
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 40,
+      "cache_read_input_tokens": 586,
+      "cache_creation_input_tokens": 597,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 597,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 2,
+     "outputTokens": 40,
+     "cacheReadInputTokens": 586,
+     "cacheCreationInputTokens": 597,
+     "webSearchRequests": 0,
+     "costUSD": 0.000100685,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "thinkingTokens": 18,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.000100685,
+   "session_id": "cc038bc5-e3fe-492c-a8ab-be6b44f26689",
+   "duration_ms": 908,
+   "cost_usd": 0.000100685
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 107,
+    "cache_read_input_tokens": 1183,
+    "output_tokens": 287,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 107
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 287,
+      "cache_read_input_tokens": 1183,
+      "cache_creation_input_tokens": 107,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 107,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 4,
+     "outputTokens": 327,
+     "thinkingTokens": 18,
+     "cacheReadInputTokens": 1769,
+     "cacheCreationInputTokens": 704,
+     "webSearchRequests": 0,
+     "costUSD": 0.00026959,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.00026959,
+   "session_id": "cc038bc5-e3fe-492c-a8ab-be6b44f26689",
+   "duration_ms": 2147,
+   "cost_usd": 0.000168905
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 338,
+    "cache_read_input_tokens": 1290,
+    "output_tokens": 145,
+    "output_tokens_details": {
+     "thinking_tokens": 78
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 338
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 145,
+      "cache_read_input_tokens": 1290,
+      "cache_creation_input_tokens": 338,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 338,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 6,
+     "outputTokens": 472,
+     "thinkingTokens": 96,
+     "cacheReadInputTokens": 3059,
+     "cacheCreationInputTokens": 1042,
+     "webSearchRequests": 0,
+     "costUSD": 0.00039744,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.00039744,
+   "session_id": "cc038bc5-e3fe-492c-a8ab-be6b44f26689",
+   "duration_ms": 1647,
+   "cost_usd": 0.00012785
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 210,
+    "cache_read_input_tokens": 1628,
+    "output_tokens": 11,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 210
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 11,
+      "cache_read_input_tokens": 1628,
+      "cache_creation_input_tokens": 210,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 210,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 8,
+     "outputTokens": 483,
+     "thinkingTokens": 96,
+     "cacheReadInputTokens": 4687,
+     "cacheCreationInputTokens": 1252,
+     "webSearchRequests": 0,
+     "costUSD": 0.00044567,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.00044567,
+   "session_id": "cc038bc5-e3fe-492c-a8ab-be6b44f26689",
+   "duration_ms": 2422,
+   "cost_usd": 4.823000000000002e-05
+  }
+ ],
+ "transcript": [
+  {
+   "turn": 1,
+   "reply": "\n{\"action\": \"read\", \"path\": \"parse.py\"}",
+   "result": "def split_csv(line):\n    return [f.strip('\"') for f in line.split(',')]\n"
+  },
+  {
+   "turn": 2,
+   "reply": "{\"action\": \"write\", \"path\": \"parse.py\", \"content\": \"def split_csv(line):\\n    fields = []\\n    current = []\\n    in_quotes = False\\n    i = 0\\n    n = len(line)\\n    while i < n:\\n        ch = line[i]\\n        if in_quotes:\\n            if ch == '\\\"':\\n                if i + 1 < n and line[i + 1] == '\\\"':\\n                    current.append('\\\"')\\n                    i += 1\\n                else:\\n                    in_quotes = False\\n            else:\\n                current.append(ch)\\n        else:\\n            if ch == '\\\"':\\n                in_quotes = True\\n            elif ch == ',':\\n                fields.append(''.join(current))\\n                current = []\\n            else:\\n                current.append(ch)\\n        i += 1\\n    fields.append(''.join(current))\\n    return fields\\n\"}",
+   "result": "wrote parse.py (723 chars)"
+  },
+  {
+   "turn": 3,
+   "reply": "\n{\"action\": \"run\", \"args\": [\"-c\", \"from parse import split_csv; print(split_csv('a,\\\"b,c\\\",\\\"say \\\"\\\"hi\\\"\\\"\\\",d'))\"]}",
+   "result": "exit code 0\n['a', 'b,c', 'say \"hi\"', 'd']\n"
+  },
+  {
+   "turn": 4,
+   "reply": "{\"action\": \"finish\"}",
+   "result": null
+  }
+ ],
+ "files": {
+  "parse.py": "def split_csv(line):\n    fields = []\n    current = []\n    in_quotes = False\n    i = 0\n    n = len(line)\n    while i < n:\n        ch = line[i]\n        if in_quotes:\n            if ch == '\"':\n                if i + 1 < n and line[i + 1] == '\"':\n                    current.append('\"')\n                    i += 1\n                else:\n                    in_quotes = False\n            else:\n                current.append(ch)\n        else:\n            if ch == '\"':\n                in_quotes = True\n            elif ch == ',':\n                fields.append(''.join(current))\n                current = []\n            else:\n                current.append(ch)\n        i += 1\n    fields.append(''.join(current))\n    return fields\n"
+ }
+}

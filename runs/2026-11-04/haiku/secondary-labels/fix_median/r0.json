@@ -1,0 +1,217 @@
+{
+ "schema": 1,
+ "experiment": "2026-11-04",
+ "model": "haiku",
+ "arm": "secondary-labels",
+ "arm_sha256": "63fe178250a4d9840342a73347f78bf4db983ceb94d2e1b2afd119577ac758f7",
+ "task": "fix_median",
+ "category": "codefix",
+ "run": 0,
+ "round": 0,
+ "slot": 0,
+ "battery": "v1",
+ "battery_sha256": "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe",
+ "max_turns": 4,
+ "repo_commit": "861e6d3b80ad1bd29a1ef103ac7c818890f4552c",
+ "python": "3.14.7",
+ "started_utc": "2026-11-04T07:04:58+00:00",
+ "outcome": "pass",
+ "check_detail": "7 cases pass",
+ "ended": "finish",
+ "turns_used": 3,
+ "cost_usd": 0.00056278,
+ "written_bytes": 222,
+ "py_written": 1,
+ "py_with_probe": 0,
+ "finished_utc": "2026-11-04T07:05:08+00:00",
+ "calls": [
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1230,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 19,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 1230
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 19,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 1230,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 1230,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1331,
+     "outputTokens": 35,
+     "cacheReadInputTokens": 0,
+     "cacheCreationInputTokens": 1230,
+     "webSearchRequests": 0,
+     "costUSD": 0.00030435,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "thinkingTokens": 0,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.00030435,
+   "session_id": "ee15db62-f858-4b72-9980-23945e15ea6d",
+   "duration_ms": 2259,
+   "cost_usd": 0.00030435
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 681,
+    "cache_read_input_tokens": 636,
+    "output_tokens": 226,
+    "output_tokens_details": {
+     "thinking_tokens": 84
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 681
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 226,
+      "cache_read_input_tokens": 636,
+      "cache_creation_input_tokens": 681,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 681,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1333,
+     "outputTokens": 261,
+     "thinkingTokens": 84,
+     "cacheReadInputTokens": 636,
+     "cacheCreationInputTokens": 1911,
+     "webSearchRequests": 0,
+     "costUSD": 0.000509035,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.000509035,
+   "session_id": "ee15db62-f858-4b72-9980-23945e15ea6d",
+   "duration_ms": 2706,
+   "cost_usd": 0.00020468500000000002
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 279,
+    "cache_read_input_tokens": 1317,
+    "output_tokens": 11,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 279
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 11,
+      "cache_read_input_tokens": 1317,
+      "cache_creation_input_tokens": 279,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 279,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1335,
+     "outputTokens": 272,
+     "thinkingTokens": 84,
+     "cacheReadInputTokens": 1953,
+     "cacheCreationInputTokens": 2190,
+     "webSearchRequests": 0,
+     "costUSD": 0.00056278,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.00056278,
+   "session_id": "ee15db62-f858-4b72-9980-23945e15ea6d",
+   "duration_ms": 2348,
+   "cost_usd": 5.374500000000001e-05
+  }
+ ],
+ "transcript": [
+  {
+   "turn": 1,
+   "reply": "{\"action\": \"read\", \"path\": \"stats.py\"}",
+   "result": "def median(xs):\n    xs.sort()\n    return xs[len(xs) // 2]\n"
+  },
+  {
+   "turn": 2,
+   "reply": "{\"action\": \"write\", \"path\": \"stats.py\", \"content\": \"def median(xs):\\n    if not xs:\\n        raise ValueError(\\\"median() arg is an empty sequence\\\")\\n    ys = sorted(xs)\\n    n = len(ys)\\n    mid = n // 2\\n    if n % 2:\\n        return ys[mid]\\n    return (ys[mid - 1] + ys[mid]) / 2\\n\"}",
+   "result": "wrote stats.py (222 chars)"
+  },
+  {
+   "turn": 3,
+   "reply": "{\"action\": \"finish\"}",
+   "result": null
+  }
+ ],
+ "files": {
+  "stats.py": "def median(xs):\n    if not xs:\n        raise ValueError(\"median() arg is an empty sequence\")\n    ys = sorted(xs)\n    n = len(ys)\n    mid = n // 2\n    if n % 2:\n        return ys[mid]\n    return (ys[mid - 1] + ys[mid]) / 2\n"
+ }
+}

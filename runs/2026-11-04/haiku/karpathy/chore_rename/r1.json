@@ -1,0 +1,283 @@
+{
+ "schema": 1,
+ "experiment": "2026-11-04",
+ "model": "haiku",
+ "arm": "karpathy",
+ "arm_sha256": "694a2d721e41c385f3db492838c23299826df5ba9809e3b0721aac70021e196a",
+ "task": "chore_rename",
+ "category": "chore",
+ "run": 1,
+ "round": 1,
+ "slot": 0,
+ "battery": "v1",
+ "battery_sha256": "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe",
+ "max_turns": 4,
+ "repo_commit": "861e6d3b80ad1bd29a1ef103ac7c818890f4552c",
+ "python": "3.14.7",
+ "started_utc": "2026-11-04T07:18:21+00:00",
+ "outcome": "pass",
+ "check_detail": "all checks pass",
+ "ended": "finish",
+ "turns_used": 4,
+ "cost_usd": 0.00263779,
+ "written_bytes": 2796,
+ "py_written": 3,
+ "py_with_probe": 0,
+ "finished_utc": "2026-11-04T07:18:43+00:00",
+ "calls": [
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 2033,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 87,
+    "output_tokens_details": {
+     "thinking_tokens": 69
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 2033
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 87,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 2033,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 2033,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 2134,
+     "outputTokens": 115,
+     "cacheReadInputTokens": 0,
+     "cacheCreationInputTokens": 2033,
+     "webSearchRequests": 0,
+     "costUSD": 0.000525025,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "thinkingTokens": 69,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.000525025,
+   "session_id": "f809314f-5515-4304-ba3c-31e9308f54e9",
+   "duration_ms": 1481,
+   "cost_usd": 0.000525025
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 161,
+    "cache_read_input_tokens": 2033,
+    "output_tokens": 25,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 161
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 25,
+      "cache_read_input_tokens": 2033,
+      "cache_creation_input_tokens": 161,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 161,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 2136,
+     "outputTokens": 140,
+     "thinkingTokens": 69,
+     "cacheReadInputTokens": 2033,
+     "cacheCreationInputTokens": 2194,
+     "webSearchRequests": 0,
+     "costUSD": 0.0005781800000000001,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.0005781800000000001,
+   "session_id": "f809314f-5515-4304-ba3c-31e9308f54e9",
+   "duration_ms": 723,
+   "cost_usd": 5.315500000000004e-05
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 133,
+    "cache_read_input_tokens": 2194,
+    "output_tokens": 2866,
+    "output_tokens_details": {
+     "thinking_tokens": 2567
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 133
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 2866,
+      "cache_read_input_tokens": 2194,
+      "cache_creation_input_tokens": 133,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 133,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 2138,
+     "outputTokens": 3006,
+     "thinkingTokens": 2636,
+     "cacheReadInputTokens": 4227,
+     "cacheCreationInputTokens": 2327,
+     "webSearchRequests": 0,
+     "costUSD": 0.002049945,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.002049945,
+   "session_id": "f809314f-5515-4304-ba3c-31e9308f54e9",
+   "duration_ms": 13686,
+   "cost_usd": 0.0014717649999999999
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 3051,
+    "cache_read_input_tokens": 2327,
+    "output_tokens": 366,
+    "output_tokens_details": {
+     "thinking_tokens": 44
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 3051
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 366,
+      "cache_read_input_tokens": 2327,
+      "cache_creation_input_tokens": 3051,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 3051,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 2140,
+     "outputTokens": 3372,
+     "thinkingTokens": 2680,
+     "cacheReadInputTokens": 6554,
+     "cacheCreationInputTokens": 5378,
+     "webSearchRequests": 0,
+     "costUSD": 0.00263779,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.00263779,
+   "session_id": "f809314f-5515-4304-ba3c-31e9308f54e9",
+   "duration_ms": 2990,
+   "cost_usd": 0.000587845
+  }
+ ],
+ "transcript": [
+  {
+   "turn": 1,
+   "reply": "\n{\"action\": \"list\", \"path\": \".\"}",
+   "result": "main.py\nshop/__init__.py\nshop/cart.py\nshop/pricing.py\nshop/report.py"
+  },
+  {
+   "turn": 2,
+   "reply": "{\"action\": \"read\", \"path\": \"shop/pricing.py\"}",
+   "result": "def calc(items, tax=0.0):\n    \"\"\"Total of (price, qty) pairs plus tax.\"\"\"\n    sub = sum(p * q for p, q in items)\n    return round(sub * (1 + tax), 2)\n"
+  },
+  {
+   "turn": 3,
+   "reply": "\n{\"action\": \"run\", \"args\": [\"-c\", \"import re,os,py_compile\\npat=re.compile(r'(?:(?<![\\\\w.])|(?<=pricing\\\\.))calc\\\\b')\\nfor root,dirs,files in os.walk('.'):\\n dirs[:]=[d for d in dirs if d not in ('.git','.state','__pycache__')]\\n for f in files:\\n  if not f.endswith('.py'): continue\\n  p=os.path.join(root,f)\\n  s=open(p).read()\\n  n=pat.sub('compute_total',s)\\n  if n!=s:\\n   open(p,'w').write(n); py_compile.compile(p,doraise=True); print('changed',p)\\n  for i,l in enumerate(n.splitlines(),1):\\n   if 'calc' in l or 'compute_total' in l: print(p,i,l)\\n\"]}",
+   "result": "exit code 0\nchanged ./shop/cart.py\n./shop/cart.py 1 from shop.pricing import compute_total\n./shop/cart.py 12         return compute_total(self.items, tax)\nchanged ./shop/pricing.py\n./shop/pricing.py 1 def compute_total(items, tax=0.0):\nchanged ./shop/report.py\n./shop/report.py 5     return f'total={pricing.compute_total(items)}'\n"
+  },
+  {
+   "turn": 4,
+   "reply": "The rename is done, and no `calc` references remain in the project. I'm finishing here, so I haven't run the project's code end to end.\n\nChanges:\n- `shop/pricing.py`: `def calc` is now `def compute_total`. There is no alias under the old name.\n- `shop/cart.py`: the import and the call inside the method now use `compute_total`.\n- `shop/report.py`: the call `pricing.compute_total(items)` now uses the new name.\n\n`main.py` and `shop/__init__.py` had no references to `calc`, so I left them alone. Every changed `.py` file compiled cleanly with `py_compile`.\n\nI only read `shop/pricing.py` in full. I didn't read `cart.py` or `report.py` before the script changed them, so I'm relying on the script's output for those. The regex matched `calc` only as a bare identifier or as `pricing.calc`, so an unrelated method or string named `calc` would not have been caught.\n\n\n{\"action\": \"finish\"}",
+   "result": null
+  }
+ ],
+ "files": {
+  "shop/__pycache__/cart.cpython-314.pyc": "+\u000e\n\u0000\u0000\u0000\u0000O\ufffd\ufffdj\ufffd\u0000\u0000\u0000\ufffd\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0004\u0000\u0000\u0000\u0000\u0000\u0000\u0000\ufffd&\u0000\u0000\u0000\ufffd\u0000^\u0000R\u0001I\u0000H\u0001t\u0001\u001f\u0000\u0015\u0000!\u0000R\u0002\u0017\u0000R\u00034\u0002\u0000\u0000\u0000\u0000\u0000\u0000t\u0002R\u0004#\u0000)\u0005\ufffd\u0000\u0000\u0000\u0000)\u0001\ufffd\ncompute_totalc\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0002\u0000\u0000\u0000\u0000\u0000\u0000\u0000\ufffd:\u0000\u0000\u0000a\u0000\ufffd\u0000]\u0000t\u0001R\u0000t\u0002^\u0004t\u0003\u0016\u0000o\u0000R\u0001\u0017\u0000t\u0004R\u0006R\u0002\u0017\u0000l\u0001t\u0005R\u0007R\u0003\u0017\u0000l\u0001t\u0006R\u0004t\u0007V\u0000t\bR\u0005#\u0000)\b\ufffd\u0004Cartc\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0002\u0000\u0000\u0000\u0003\u0000\u0000\b\ufffd\u0014\u0000\u0000\u0000\ufffd\u0000.\u0000V\u0000n\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000R\u0000#\u0000\ufffd\u0001N\ufffd\u0001\ufffd\u0005items)\u0001\ufffd\u0004selfs\u0001\u0000\u0000\u0000&\ufffd\u000e./shop/cart.py\ufffd\b__init__\ufffd\nCart.__init__\u0005\u0000\u0000\u0000s\t\u0000\u0000\u0000\ufffd\u0000\ufffd\u0015\u0017\ufffd\u0004\ufffd\n\ufffd\u0000\u0000\u0000\u0000c\u0003\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0004\u0000\u0000\u0000\u0003\u0000\u0000\b\ufffd>\u0000\u0000\u0000\ufffd\u0000V\u0000P\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000P\u0003\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000W\u00123\u00024\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u001f\u0000R\u0000#\u0000r\u0007\u0000\u0000\u0000)\u0002r\t\u0000\u0000\u0000\ufffd\u0006append)\u0003r\n\u0000\u0000\u0000\ufffd\u0005price\ufffd\u0003qtys\u0003\u0000\u0000\u0000&&&r\u000b\u0000\u0000\u0000\ufffd\u0003add\ufffd\bCart.add\b\u0000\u0000\u0000s\u0016\u0000\u0000\u0000\ufffd\u0000\ufffd\b\f\ufffd\n\ufffd\n\ufffd\b\u0019\ufffd\b\u0019\ufffd5\ufffd,\ufffd\b'r\u000e\u0000\u0000\u0000c\u0002\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0004\u0000\u0000\u0000\u0003\u0000\u0000\b\ufffd.\u0000\u0000\u0000\ufffd\u0000\\\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000V\u0000P\u0002\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000V\u00014\u0002\u0000\u0000\u0000\u0000\u0000\u0000#\u0000r\u0007\u0000\u0000\u0000)\u0002r\u0003\u0000\u0000\u0000r\t\u0000\u0000\u0000)\u0002r\n\u0000\u0000\u0000\ufffd\u0003taxs\u0002\u0000\u0000\u0000&&r\u000b\u0000\u0000\u0000\ufffd\u0005total\ufffd\nCart.total\u000b\u0000\u0000\u0000s\u0013\u0000\u0000\u0000\ufffd\u0000\ufffd\u000f\u001c\ufffdT\ufffdZ\ufffdZ\ufffd\u0013\ufffd\u000f-\ufffd\b-r\u000e\u0000\u0000\u0000r\b\u0000\u0000\u0000N)\u0001\ufffd\u0001\u0000\u0000\u0000)\u0001g\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000)\t\ufffd\b__name__\ufffd\n__module__\ufffd\f__qualname__\ufffd\u000f__firstlineno__r\f\u0000\u0000\u0000r\u0013\u0000\u0000\u0000r\u0017\u0000\u0000\u0000\ufffd\u0015__static_attributes__\ufffd\u0011__classdictcell__)\u0001\ufffd\n__classdict__s\u0001\u0000\u0000\u0000@r\u000b\u0000\u0000\u0000r\u0005\u0000\u0000\u0000r\u0005\u0000\u0000\u0000\u0004\u0000\u0000\u0000s\u0019\u0000\u0000\u0000\ufffd\ufffd\u0000\ufffd\u0000\ufffd\u0002\u0001\u0005\u0018\ufffd\u0006\u0001\u0005(\ufffd\u0006\u0001\u0005.\ufffd\u0000\u0001\u0005.r\u000e\u0000\u0000\u0000r\u0005\u0000\u0000\u0000N)\u0003\ufffd\fshop.pricingr\u0003\u0000\u0000\u0000r\u0005\u0000\u0000\u0000\ufffd\u0000r\u000e\u0000\u0000\u0000r\u000b\u0000\u0000\u0000\ufffd\b<module>r#\u0000\u0000\u0000\u0001\u0000\u0000\u0000s\u0012\u0000\u0000\u0000\ufffd\u0003\u0001\u0001\u0001\ufffd\u0000&\ufffd\u0006\b\u0001.\ufffd\u0000\b\u0001.r\u000e\u0000\u0000\u0000",
+  "shop/__pycache__/pricing.cpython-314.pyc": "+\u000e\n\u0000\u0000\u0000\u0000O\ufffd\ufffdj\ufffd\u0000\u0000\u0000\ufffd\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0002\u0000\u0000\u0000\u0000\u0000\u0000\u0000\ufffd\u0010\u0000\u0000\u0000\ufffd\u0000R\u0003R\u0001\u0017\u0000l\u0001t\u0000R\u0002#\u0000)\u0004\ufffd\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000c\u0002\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0005\u0000\u0000\u0000\u0003\u0000\u0000\u0004\ufffdZ\u0000\u0000\u0000\ufffd\u0000\\\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000R\u0001\u0017\u0000V\u0000\u0010\u00004\u0000\u0000\u0000\u0000\u0000\u0000\u00004\u0001\u0000\u0000\u0000\u0000\u0000\u0000p\u0002\\\u0003\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000V\u0002^\u0001V\u0001,\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000,\u0005\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000^\u00024\u0002\u0000\u0000\u0000\u0000\u0000\u0000#\u0000)\u0002z%Total of (price, qty) pairs plus tax.c\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0003\u0000\u0000\u00003\u0000\u0000\u0000\ufffd6\u0000\u0000\u0000\"\u0000\u001f\u0000\ufffd\u0000T\u0000F\u000f\u0000\u0000w\u0002\u0000\u0000r\u0012W\u0012,\u0005\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000x\u0000\ufffd\u0005\u001f\u0000K\u0011\u0000\u0000\t\u0000\u001e\u0000R\u0000#\u00005\u0003i\u0001)\u0001N\ufffd\u0000)\u0003\ufffd\u0002.0\ufffd\u0001p\ufffd\u0001qs\u0003\u0000\u0000\u0000&  \ufffd\u0011./shop/pricing.py\ufffd\t<genexpr>\ufffd compute_total.<locals>.<genexpr>\u0003\u0000\u0000\u0000s\u0016\u0000\u0000\u0000\ufffd\u0000\ufffd\u0000\ufffd\n&\ufffd\u0005\ufffd\u0004\ufffd\u0001\ufffda\ufffde\ufffde\ufffd\u0005\ufffds\u0004\u0000\u0000\u0000\ufffd\u0017\u0019\u0001)\u0002\ufffd\u0003sum\ufffd\u0005round)\u0003\ufffd\u0005items\ufffd\u0003tax\ufffd\u0003subs\u0003\u0000\u0000\u0000&& r\t\u0000\u0000\u0000\ufffd\ncompute_totalr\u0011\u0000\u0000\u0000\u0001\u0000\u0000\u0000s'\u0000\u0000\u0000\ufffd\u0000\ufffd\n\n\ufffd\n&\ufffd\u0005\ufffd\n&\ufffd\n&\ufffdC\ufffd\u000b\u0010\ufffd\u0013\ufffd\u0001\ufffdC\ufffd\u0007\ufffd\u001f\ufffd!\ufffd\u000b$\ufffd\u0004$\ufffd\u0000\u0000\u0000\u0000N)\u0001r\u0002\u0000\u0000\u0000)\u0001r\u0011\u0000\u0000\u0000r\u0005\u0000\u0000\u0000r\u0012\u0000\u0000\u0000r\t\u0000\u0000\u0000\ufffd\b<module>r\u0013\u0000\u0000\u0000\u0001\u0000\u0000\u0000s\n\u0000\u0000\u0000\ufffd\u0003\u0001\u0001\u0001\ufffd\u0002\u0003\u0001%r\u0012\u0000\u0000\u0000",
+  "shop/__pycache__/report.cpython-314.pyc": "+\u000e\n\u0000\u0000\u0000\u0000O\ufffd\ufffdj_\u0000\u0000\u0000\ufffd\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0002\u0000\u0000\u0000\u0000\u0000\u0000\u0000\ufffd\u0018\u0000\u0000\u0000\ufffd\u0000^\u0000R\u0001I\u0000H\u0001t\u0001\u001f\u0000R\u0002\u0017\u0000t\u0002R\u0003#\u0000)\u0004\ufffd\u0000\u0000\u0000\u0000)\u0001\ufffd\u0007pricingc\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0004\u0000\u0000\u0000\u0003\u0000\u0000\u0000\ufffd4\u0000\u0000\u0000\ufffd\u0000R\u0000\\\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000P\u0002\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000!\u0000V\u00004\u0001\u0000\u0000\u0000\u0000\u0000\u0000\f\u00002\u0002#\u0000)\u0001z\u0006total=)\u0002r\u0003\u0000\u0000\u0000\ufffd\ncompute_total)\u0001\ufffd\u0005itemss\u0001\u0000\u0000\u0000&\ufffd\u0010./shop/report.py\ufffd\u0004liner\b\u0000\u0000\u0000\u0004\u0000\u0000\u0000s\u001b\u0000\u0000\u0000\ufffd\u0000\ufffd\n\u0013\ufffdG\ufffd\u0014)\ufffd\u0014)\ufffd%\ufffd\u00140\ufffd\u00131\ufffd\u000b2\ufffd\u00042\ufffd\u0000\u0000\u0000\u0000N)\u0003\ufffd\u0004shopr\u0003\u0000\u0000\u0000r\b\u0000\u0000\u0000\ufffd\u0000r\t\u0000\u0000\u0000r\u0007\u0000\u0000\u0000\ufffd\b<module>r\f\u0000\u0000\u0000\u0001\u0000\u0000\u0000s\n\u0000\u0000\u0000\ufffd\u0003\u0001\u0001\u0001\ufffd\u0000\u0018\ufffd\u0006\u0001\u00013r\t\u0000\u0000\u0000",
+  "shop/cart.py": "from shop.pricing import compute_total\n\n\nclass Cart:\n    def __init__(self):\n        self.items = []\n\n    def add(self, price, qty=1):\n        self.items.append((price, qty))\n\n    def total(self, tax=0.0):\n        return compute_total(self.items, tax)\n",
+  "shop/pricing.py": "def compute_total(items, tax=0.0):\n    \"\"\"Total of (price, qty) pairs plus tax.\"\"\"\n    sub = sum(p * q for p, q in items)\n    return round(sub * (1 + tax), 2)\n",
+  "shop/report.py": "from shop import pricing\n\n\ndef line(items):\n    return f'total={pricing.compute_total(items)}'\n"
+ }
+}

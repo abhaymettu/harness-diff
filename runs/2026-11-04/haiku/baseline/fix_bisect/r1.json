@@ -1,0 +1,217 @@
+{
+ "schema": 1,
+ "experiment": "2026-11-04",
+ "model": "haiku",
+ "arm": "baseline",
+ "arm_sha256": null,
+ "task": "fix_bisect",
+ "category": "codefix",
+ "run": 1,
+ "round": 0,
+ "slot": 1,
+ "battery": "v1",
+ "battery_sha256": "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe",
+ "max_turns": 4,
+ "repo_commit": "861e6d3b80ad1bd29a1ef103ac7c818890f4552c",
+ "python": "3.14.7",
+ "started_utc": "2026-11-04T07:13:13+00:00",
+ "outcome": "pass",
+ "check_detail": "10 cases pass",
+ "ended": "finish",
+ "turns_used": 3,
+ "cost_usd": 0.00049101,
+ "written_bytes": 198,
+ "py_written": 1,
+ "py_with_probe": 0,
+ "finished_utc": "2026-11-04T07:13:22+00:00",
+ "calls": [
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 597,
+    "cache_read_input_tokens": 576,
+    "output_tokens": 18,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 597
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 18,
+      "cache_read_input_tokens": 576,
+      "cache_creation_input_tokens": 597,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 597,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1271,
+     "outputTokens": 35,
+     "cacheReadInputTokens": 576,
+     "cacheCreationInputTokens": 597,
+     "webSearchRequests": 0,
+     "costUSD": 0.00022498499999999997,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "thinkingTokens": 0,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.00022498499999999997,
+   "session_id": "2c92a351-8f37-442b-a2d5-3f78a883cb0d",
+   "duration_ms": 1523,
+   "cost_usd": 0.00022498499999999997
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 748,
+    "cache_read_input_tokens": 576,
+    "output_tokens": 167,
+    "output_tokens_details": {
+     "thinking_tokens": 41
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 748
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 167,
+      "cache_read_input_tokens": 576,
+      "cache_creation_input_tokens": 748,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 748,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1273,
+     "outputTokens": 202,
+     "thinkingTokens": 41,
+     "cacheReadInputTokens": 1152,
+     "cacheCreationInputTokens": 1345,
+     "webSearchRequests": 0,
+     "costUSD": 0.00040794499999999994,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.00040794499999999994,
+   "session_id": "2c92a351-8f37-442b-a2d5-3f78a883cb0d",
+   "duration_ms": 3018,
+   "cost_usd": 0.00018295999999999997
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 217,
+    "cache_read_input_tokens": 1324,
+    "output_tokens": 85,
+    "output_tokens_details": {
+     "thinking_tokens": 71
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 217
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 85,
+      "cache_read_input_tokens": 1324,
+      "cache_creation_input_tokens": 217,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 217,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1275,
+     "outputTokens": 287,
+     "thinkingTokens": 112,
+     "cacheReadInputTokens": 2476,
+     "cacheCreationInputTokens": 1562,
+     "webSearchRequests": 0,
+     "costUSD": 0.00049101,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.00049101,
+   "session_id": "2c92a351-8f37-442b-a2d5-3f78a883cb0d",
+   "duration_ms": 1793,
+   "cost_usd": 8.3065e-05
+  }
+ ],
+ "transcript": [
+  {
+   "turn": 1,
+   "reply": "{\"action\": \"read\", \"path\": \"search.py\"}",
+   "result": "def insertion_point(xs, x):\n    lo, hi = 0, len(xs) - 1\n    while lo < hi:\n        mid = (lo + hi) // 2\n        if xs[mid] <= x:\n            lo = mid + 1\n        else:\n            hi = mid\n    return lo\n"
+  },
+  {
+   "turn": 2,
+   "reply": "\n{\"action\": \"write\", \"path\": \"search.py\", \"content\": \"def insertion_point(xs, x):\\n    lo, hi = 0, len(xs)\\n    while lo < hi:\\n        mid = (lo + hi) // 2\\n        if xs[mid] < x:\\n            lo = mid + 1\\n        else:\\n            hi = mid\\n    return lo\\n\"}",
+   "result": "wrote search.py (198 chars)"
+  },
+  {
+   "turn": 3,
+   "reply": "\n{\"action\": \"finish\"}",
+   "result": null
+  }
+ ],
+ "files": {
+  "search.py": "def insertion_point(xs, x):\n    lo, hi = 0, len(xs)\n    while lo < hi:\n        mid = (lo + hi) // 2\n        if xs[mid] < x:\n            lo = mid + 1\n        else:\n            hi = mid\n    return lo\n"
+ }
+}

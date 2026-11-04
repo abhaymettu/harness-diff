@@ -1,0 +1,278 @@
+{
+ "schema": 1,
+ "experiment": "2026-11-04",
+ "model": "haiku",
+ "arm": "baseline",
+ "arm_sha256": null,
+ "task": "chore_version_bump",
+ "category": "chore",
+ "run": 4,
+ "round": 1,
+ "slot": 1,
+ "battery": "v1",
+ "battery_sha256": "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe",
+ "max_turns": 4,
+ "repo_commit": "861e6d3b80ad1bd29a1ef103ac7c818890f4552c",
+ "python": "3.14.7",
+ "started_utc": "2026-11-04T07:18:00+00:00",
+ "outcome": "fail",
+ "check_detail": "src/fmt/__init__.py differs from expected",
+ "ended": "finish",
+ "turns_used": 4,
+ "cost_usd": 0.0007322,
+ "written_bytes": 100,
+ "py_written": 0,
+ "py_with_probe": 0,
+ "finished_utc": "2026-11-04T07:18:13+00:00",
+ "calls": [
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 597,
+    "cache_read_input_tokens": 598,
+    "output_tokens": 81,
+    "output_tokens_details": {
+     "thinking_tokens": 66
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 597
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 81,
+      "cache_read_input_tokens": 598,
+      "cache_creation_input_tokens": 597,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 597,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1293,
+     "outputTokens": 100,
+     "cacheReadInputTokens": 598,
+     "cacheCreationInputTokens": 597,
+     "webSearchRequests": 0,
+     "costUSD": 0.000259905,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "thinkingTokens": 66,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.000259905,
+   "session_id": "24e8655f-0c79-4c73-b784-1f5b4bf083d3",
+   "duration_ms": 1643,
+   "cost_usd": 0.000259905
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 154,
+    "cache_read_input_tokens": 1195,
+    "output_tokens": 22,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 154
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 22,
+      "cache_read_input_tokens": 1195,
+      "cache_creation_input_tokens": 154,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 154,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1295,
+     "outputTokens": 122,
+     "thinkingTokens": 66,
+     "cacheReadInputTokens": 1793,
+     "cacheCreationInputTokens": 751,
+     "webSearchRequests": 0,
+     "costUSD": 0.000302305,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.000302305,
+   "session_id": "24e8655f-0c79-4c73-b784-1f5b4bf083d3",
+   "duration_ms": 1455,
+   "cost_usd": 4.24e-05
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 114,
+    "cache_read_input_tokens": 1349,
+    "output_tokens": 473,
+    "output_tokens_details": {
+     "thinking_tokens": 379
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 114
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 473,
+      "cache_read_input_tokens": 1349,
+      "cache_creation_input_tokens": 114,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 114,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1297,
+     "outputTokens": 595,
+     "thinkingTokens": 445,
+     "cacheReadInputTokens": 3142,
+     "cacheCreationInputTokens": 865,
+     "webSearchRequests": 0,
+     "costUSD": 0.000566745,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.000566745,
+   "session_id": "24e8655f-0c79-4c73-b784-1f5b4bf083d3",
+   "duration_ms": 3704,
+   "cost_usd": 0.00026444
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 529,
+    "cache_read_input_tokens": 1463,
+    "output_tokens": 169,
+    "output_tokens_details": {
+     "thinking_tokens": 158
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 529
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 169,
+      "cache_read_input_tokens": 1463,
+      "cache_creation_input_tokens": 529,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 529,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1299,
+     "outputTokens": 764,
+     "thinkingTokens": 603,
+     "cacheReadInputTokens": 4605,
+     "cacheCreationInputTokens": 1394,
+     "webSearchRequests": 0,
+     "costUSD": 0.0007322,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.0007322,
+   "session_id": "24e8655f-0c79-4c73-b784-1f5b4bf083d3",
+   "duration_ms": 2170,
+   "cost_usd": 0.000165455
+  }
+ ],
+ "transcript": [
+  {
+   "turn": 1,
+   "reply": "{\"action\": \"list\", \"path\": \".\"}",
+   "result": "CHANGELOG.md\nREADME.md\npyproject.toml\nsrc/fmt/__init__.py"
+  },
+  {
+   "turn": 2,
+   "reply": "{\"action\": \"read\", \"path\": \"pyproject.toml\"}",
+   "result": "[project]\nname = \"fmt\"\nversion = \"1.4.2\"\nrequires-python = \">=3.10\"\ndependencies = [\"click>=1.4.2\"]\n"
+  },
+  {
+   "turn": 3,
+   "reply": "{\"action\": \"write\", \"path\": \"pyproject.toml\", \"content\": \"[project]\\nname = \\\"fmt\\\"\\nversion = \\\"1.5.0\\\"\\nrequires-python = \\\">=3.10\\\"\\ndependencies = [\\\"click>=1.4.2\\\"]\\n\"}",
+   "result": "wrote pyproject.toml (100 chars)"
+  },
+  {
+   "turn": 4,
+   "reply": "{\"action\": \"finish\"}",
+   "result": null
+  }
+ ],
+ "files": {
+  "pyproject.toml": "[project]\nname = \"fmt\"\nversion = \"1.5.0\"\nrequires-python = \">=3.10\"\ndependencies = [\"click>=1.4.2\"]\n"
+ }
+}

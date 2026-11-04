@@ -1,0 +1,156 @@
+{
+ "schema": 1,
+ "experiment": "2026-11-04",
+ "model": "haiku",
+ "arm": "secondary-labels",
+ "arm_sha256": "63fe178250a4d9840342a73347f78bf4db983ceb94d2e1b2afd119577ac758f7",
+ "task": "impl_luhn",
+ "category": "implement",
+ "run": 3,
+ "round": 3,
+ "slot": 0,
+ "battery": "v1",
+ "battery_sha256": "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe",
+ "max_turns": 4,
+ "repo_commit": "861e6d3b80ad1bd29a1ef103ac7c818890f4552c",
+ "python": "3.14.7",
+ "started_utc": "2026-11-04T07:52:52+00:00",
+ "outcome": "pass",
+ "check_detail": "9 cases pass",
+ "ended": "finish",
+ "turns_used": 2,
+ "cost_usd": 0.000523225,
+ "written_bytes": 442,
+ "py_written": 1,
+ "py_with_probe": 0,
+ "finished_utc": "2026-11-04T07:52:59+00:00",
+ "calls": [
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1240,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 212,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 1240
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 212,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 1240,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 1240,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1335,
+     "outputTokens": 229,
+     "cacheReadInputTokens": 0,
+     "cacheCreationInputTokens": 1240,
+     "webSearchRequests": 0,
+     "costUSD": 0.00040300000000000004,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "thinkingTokens": 0,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.00040300000000000004,
+   "session_id": "f86c3aef-0b5f-4232-aaf5-8d0ffe8d2567",
+   "duration_ms": 3504,
+   "cost_usd": 0.00040300000000000004
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 865,
+    "cache_read_input_tokens": 640,
+    "output_tokens": 11,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 865
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 11,
+      "cache_read_input_tokens": 640,
+      "cache_creation_input_tokens": 865,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 865,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1337,
+     "outputTokens": 240,
+     "thinkingTokens": 0,
+     "cacheReadInputTokens": 640,
+     "cacheCreationInputTokens": 2105,
+     "webSearchRequests": 0,
+     "costUSD": 0.000523225,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.000523225,
+   "session_id": "f86c3aef-0b5f-4232-aaf5-8d0ffe8d2567",
+   "duration_ms": 1861,
+   "cost_usd": 0.00012022499999999995
+  }
+ ],
+ "transcript": [
+  {
+   "turn": 1,
+   "reply": "{\"action\": \"write\", \"path\": \"luhn.py\", \"content\": \"def valid(number):\\n    if not isinstance(number, str):\\n        return False\\n    digits = number.replace(\\\" \\\", \\\"\\\")\\n    if len(digits) < 2:\\n        return False\\n    if not all(c in \\\"0123456789\\\" for c in digits):\\n        return False\\n\\n    total = 0\\n    for i, c in enumerate(reversed(digits)):\\n        d = int(c)\\n        if i % 2 == 1:\\n            d *= 2\\n            if d > 9:\\n                d -= 9\\n        total += d\\n    return total % 10 == 0\\n\"}",
+   "result": "wrote luhn.py (442 chars)"
+  },
+  {
+   "turn": 2,
+   "reply": "{\"action\": \"finish\"}",
+   "result": null
+  }
+ ],
+ "files": {
+  "luhn.py": "def valid(number):\n    if not isinstance(number, str):\n        return False\n    digits = number.replace(\" \", \"\")\n    if len(digits) < 2:\n        return False\n    if not all(c in \"0123456789\" for c in digits):\n        return False\n\n    total = 0\n    for i, c in enumerate(reversed(digits)):\n        d = int(c)\n        if i % 2 == 1:\n            d *= 2\n            if d > 9:\n                d -= 9\n        total += d\n    return total % 10 == 0\n"
+ }
+}

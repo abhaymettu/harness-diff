@@ -1,0 +1,220 @@
+{
+ "schema": 1,
+ "experiment": "2026-11-04",
+ "model": "haiku",
+ "arm": "baseline",
+ "arm_sha256": null,
+ "task": "chore_version_bump",
+ "category": "chore",
+ "run": 8,
+ "round": 2,
+ "slot": 2,
+ "battery": "v1",
+ "battery_sha256": "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe",
+ "max_turns": 4,
+ "repo_commit": "861e6d3b80ad1bd29a1ef103ac7c818890f4552c",
+ "python": "3.14.7",
+ "started_utc": "2026-11-04T07:35:56+00:00",
+ "outcome": "pass",
+ "check_detail": "all checks pass",
+ "ended": "finish",
+ "turns_used": 3,
+ "cost_usd": 0.001693085,
+ "written_bytes": 401,
+ "py_written": 1,
+ "py_with_probe": 0,
+ "finished_utc": "2026-11-04T07:36:12+00:00",
+ "calls": [
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 598,
+    "cache_read_input_tokens": 598,
+    "output_tokens": 1556,
+    "output_tokens_details": {
+     "thinking_tokens": 1274
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 598
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 1556,
+      "cache_read_input_tokens": 598,
+      "cache_creation_input_tokens": 598,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 598,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1293,
+     "outputTokens": 1577,
+     "cacheReadInputTokens": 598,
+     "cacheCreationInputTokens": 598,
+     "webSearchRequests": 0,
+     "costUSD": 0.00099853,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "thinkingTokens": 1274,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.00099853,
+   "session_id": "441e2e7f-5e53-4097-b0cc-0dd587ff87ec",
+   "duration_ms": 8530,
+   "cost_usd": 0.00099853
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1836,
+    "cache_read_input_tokens": 1196,
+    "output_tokens": 639,
+    "output_tokens_details": {
+     "thinking_tokens": 249
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 1836
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 639,
+      "cache_read_input_tokens": 1196,
+      "cache_creation_input_tokens": 1836,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 1836,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1295,
+     "outputTokens": 2216,
+     "thinkingTokens": 1523,
+     "cacheReadInputTokens": 1794,
+     "cacheCreationInputTokens": 2434,
+     "webSearchRequests": 0,
+     "costUSD": 0.00155969,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.00155969,
+   "session_id": "441e2e7f-5e53-4097-b0cc-0dd587ff87ec",
+   "duration_ms": 3539,
+   "cost_usd": 0.00056116
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 771,
+    "cache_read_input_tokens": 3032,
+    "output_tokens": 13,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 771
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 13,
+      "cache_read_input_tokens": 3032,
+      "cache_creation_input_tokens": 771,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 771,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1297,
+     "outputTokens": 2229,
+     "thinkingTokens": 1523,
+     "cacheReadInputTokens": 4826,
+     "cacheCreationInputTokens": 3205,
+     "webSearchRequests": 0,
+     "costUSD": 0.001693085,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.001693085,
+   "session_id": "441e2e7f-5e53-4097-b0cc-0dd587ff87ec",
+   "duration_ms": 1478,
+   "cost_usd": 0.0001333949999999999
+  }
+ ],
+ "transcript": [
+  {
+   "turn": 1,
+   "reply": "\n<invoke/>\n{\"action\": \"run\", \"args\": [\"-c\", \"import re,pathlib\\nprint('== pyproject.toml ==')\\nprint(pathlib.Path('pyproject.toml').read_text())\\nprint('== src/fmt/__init__.py ==')\\nprint(pathlib.Path('src/fmt/__init__.py').read_text())\\nprint('== README.md lines with version-like tokens ==')\\nfor i,l in enumerate(pathlib.Path('README.md').read_text().splitlines(),1):\\n    if re.search(r'\\\\d+\\\\.\\\\d+', l): print(i, l)\\nprint('== CHANGELOG.md head ==')\\nprint('\\\\n'.join(pathlib.Path('CHANGELOG.md').read_text().splitlines()[:25]))\"]}",
+   "result": "exit code 0\n== pyproject.toml ==\n[project]\nname = \"fmt\"\nversion = \"1.4.2\"\nrequires-python = \">=3.10\"\ndependencies = [\"click>=1.4.2\"]\n\n== src/fmt/__init__.py ==\n__version__ = \"1.4.2\"\nMIN_SCHEMA = \"1.4.2\"  # schema version, not the package\n\n== README.md lines with version-like tokens ==\n3 Current version: 1.4.2\n5 Requires click 1.4.2 or newer.\n== CHANGELOG.md head ==\n# Changelog\n\n## 1.4.2 - 2026-09-30\n\n- Fix a crash on empty input.\n\n## 1.4.1 - 2026-08-02\n\n- First public release.\n"
+  },
+  {
+   "turn": 2,
+   "reply": "\n{\"action\": \"run\", \"args\": [\"-c\", \"import pathlib\\ndef rep(path, old, new, count=1):\\n    p=pathlib.Path(path); s=p.read_text()\\n    assert s.count(old)==count, (path, old, s.count(old))\\n    p.write_text(s.replace(old,new))\\nrep('pyproject.toml','[project]\\\\nname = \\\"fmt\\\"\\\\nversion = \\\"1.4.2\\\"','[project]\\\\nname = \\\"fmt\\\"\\\\nversion = \\\"1.5.0\\\"')\\nrep('src/fmt/__init__.py','__version__ = \\\"1.4.2\\\"','__version__ = \\\"1.5.0\\\"')\\nrep('README.md','Current version: 1.4.2','Current version: 1.5.0')\\nrep('CHANGELOG.md','## 1.4.2 - 2026-09-30','## 1.5.0 - 2026-11-04\\\\n\\\\n- Add the --json flag.\\\\n\\\\n## 1.4.2 - 2026-09-30')\\nprint('ok')\\nprint(pathlib.Path('CHANGELOG.md').read_text()[:200])\"]}",
+   "result": "exit code 0\nok\n# Changelog\n\n## 1.5.0 - 2026-11-04\n\n- Add the --json flag.\n\n## 1.4.2 - 2026-09-30\n\n- Fix a crash on empty input.\n\n## 1.4.1 - 2026-08-02\n\n- First public release.\n\n"
+  },
+  {
+   "turn": 3,
+   "reply": "{\"action\": \"finish\"}",
+   "result": null
+  }
+ ],
+ "files": {
+  "CHANGELOG.md": "# Changelog\n\n## 1.5.0 - 2026-11-04\n\n- Add the --json flag.\n\n## 1.4.2 - 2026-09-30\n\n- Fix a crash on empty input.\n\n## 1.4.1 - 2026-08-02\n\n- First public release.\n",
+  "README.md": "# fmt\n\nCurrent version: 1.5.0\n\nRequires click 1.4.2 or newer.\n",
+  "pyproject.toml": "[project]\nname = \"fmt\"\nversion = \"1.5.0\"\nrequires-python = \">=3.10\"\ndependencies = [\"click>=1.4.2\"]\n",
+  "src/fmt/__init__.py": "__version__ = \"1.5.0\"\nMIN_SCHEMA = \"1.4.2\"  # schema version, not the package\n"
+ }
+}

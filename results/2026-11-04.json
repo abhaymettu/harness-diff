@@ -1,0 +1,230 @@
+{
+ "haiku": {
+  "model": "haiku",
+  "complete_rounds": [
+   0,
+   1,
+   2
+  ],
+  "runs": 900,
+  "served": [
+   "claude-haiku-5-5"
+  ],
+  "cost_usd": 1.0988,
+  "z_rows": 2.6382572734767513,
+  "rows": [
+   {
+    "id": "secondary-labels",
+    "control": "baseline",
+    "treatment": "secondary-labels",
+    "outcome": "pass",
+    "tasks": 30,
+    "runs_control": 270,
+    "runs_treatment": 90,
+    "rate_control": 0.9592592592592593,
+    "rate_treatment": 1.0,
+    "effect": 0.040740740740740716,
+    "lo": -0.03665265950317689,
+    "hi": 0.11813414098465833,
+    "verdict": "too small to see",
+    "turns": [
+     0.04074074074074076,
+     -0.039848634846141345,
+     0.12133011632762286
+    ],
+    "written_bytes": [
+     -121.99259259259254,
+     -194.22061665800328,
+     -49.76456852718182
+    ]
+   },
+   {
+    "id": "ux-dx-ax",
+    "control": "baseline",
+    "treatment": "ux-dx-ax",
+    "outcome": "pass",
+    "tasks": 30,
+    "runs_control": 270,
+    "runs_treatment": 90,
+    "rate_control": 0.9592592592592593,
+    "rate_treatment": 0.9777777777777777,
+    "effect": 0.01851851851851845,
+    "lo": -0.06145967730494985,
+    "hi": 0.09849671434198674,
+    "verdict": "too small to see",
+    "turns": [
+     -0.037037037037037056,
+     -0.1336816049643115,
+     0.0596075308902374
+    ],
+    "written_bytes": [
+     -124.7925925925926,
+     -187.57764090259644,
+     -62.00754428258877
+    ]
+   },
+   {
+    "id": "marcos-full",
+    "control": "baseline",
+    "treatment": "marcos-full",
+    "outcome": "pass",
+    "tasks": 30,
+    "runs_control": 270,
+    "runs_treatment": 90,
+    "rate_control": 0.9592592592592593,
+    "rate_treatment": 0.9666666666666667,
+    "effect": 0.007407407407407381,
+    "lo": -0.0732040381734932,
+    "hi": 0.08801885298830796,
+    "verdict": "too small to see",
+    "turns": [
+     -0.04814814814814817,
+     -0.11595397943061386,
+     0.01965768313431753
+    ],
+    "written_bytes": [
+     -125.00370370370369,
+     -192.26152235868943,
+     -57.74588504871794
+    ]
+   },
+   {
+    "id": "docs-vs-code",
+    "control": "baseline",
+    "treatment": "docs-vs-code",
+    "outcome": "pass",
+    "tasks": 30,
+    "runs_control": 270,
+    "runs_treatment": 90,
+    "rate_control": 0.9592592592592593,
+    "rate_treatment": 0.9666666666666667,
+    "effect": 0.007407407407407381,
+    "lo": -0.07141812002209497,
+    "hi": 0.08623293483690972,
+    "verdict": "too small to see",
+    "turns": [
+     0.6185185185185186,
+     0.5621725494548562,
+     0.674864487582181
+    ],
+    "written_bytes": [
+     -6.437037037037036,
+     -97.83294965080118,
+     84.95887557672712
+    ]
+   },
+   {
+    "id": "plain-english",
+    "control": "baseline",
+    "treatment": "plain-english",
+    "outcome": "pass",
+    "tasks": 30,
+    "runs_control": 270,
+    "runs_treatment": 90,
+    "rate_control": 0.9592592592592593,
+    "rate_treatment": 0.9444444444444443,
+    "effect": -0.014814814814815,
+    "lo": -0.09815541659504269,
+    "hi": 0.06852578696541269,
+    "verdict": "too small to see",
+    "turns": [
+     0.19629629629629625,
+     0.10213729070227338,
+     0.2904553018903191
+    ],
+    "written_bytes": [
+     90.51851851851853,
+     -21.14778772411185,
+     202.18482476114892
+    ]
+   },
+   {
+    "id": "karpathy",
+    "control": "baseline",
+    "treatment": "karpathy",
+    "outcome": "pass",
+    "tasks": 30,
+    "runs_control": 270,
+    "runs_treatment": 90,
+    "rate_control": 0.9592592592592593,
+    "rate_treatment": 0.9666666666666667,
+    "effect": 0.007407407407407381,
+    "lo": -0.07141812002209497,
+    "hi": 0.08623293483690972,
+    "verdict": "too small to see",
+    "turns": [
+     0.1851851851851852,
+     0.10170523769551625,
+     0.26866513267485415
+    ],
+    "written_bytes": [
+     -69.50370370370369,
+     -167.11860466338294,
+     28.111197255975554
+    ]
+   }
+  ],
+  "controls": [
+   {
+    "id": "placebo",
+    "control": "baseline@0",
+    "treatment": "baseline@1",
+    "outcome": "pass",
+    "tasks": 30,
+    "runs_control": 90,
+    "runs_treatment": 90,
+    "rate_control": 0.9666666666666667,
+    "rate_treatment": 0.9444444444444444,
+    "effect": -0.02222222222222226,
+    "lo": -0.10960906384905345,
+    "hi": 0.06516461940460894,
+    "verdict": "too small to see",
+    "turns": [
+     -0.011111111111111101,
+     -0.11779803725234017,
+     0.09557581503011797
+    ],
+    "written_bytes": [
+     111.30000000000001,
+     -15.55531815681158,
+     238.1553181568116
+    ]
+   },
+   {
+    "id": "probe",
+    "outcome": "probe",
+    "control": "baseline",
+    "treatment": "probe-only",
+    "tasks": 29,
+    "runs_control": 232,
+    "runs_treatment": 82,
+    "rate_control": 0.0,
+    "rate_treatment": 0.9655172413793104,
+    "effect": 0.9655172413793104,
+    "lo": 0.8477971887333047,
+    "hi": 1.083237294025316,
+    "verdict": "helps",
+    "turns": [
+     0.09629629629629628,
+     0.01870510296812783,
+     0.17388748962446474
+    ],
+    "written_bytes": [
+     38.962962962963,
+     -61.90586080097413,
+     139.83178672690013
+    ]
+   }
+  ]
+ },
+ "deepseek-flash": {
+  "model": "deepseek-flash",
+  "complete_rounds": [],
+  "runs": 0,
+  "served": [],
+  "cost_usd": 0,
+  "z_rows": 2.7729212946086625,
+  "rows": [],
+  "controls": []
+ }
+}

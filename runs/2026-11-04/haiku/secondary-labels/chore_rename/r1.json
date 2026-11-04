@@ -1,0 +1,280 @@
+{
+ "schema": 1,
+ "experiment": "2026-11-04",
+ "model": "haiku",
+ "arm": "secondary-labels",
+ "arm_sha256": "63fe178250a4d9840342a73347f78bf4db983ceb94d2e1b2afd119577ac758f7",
+ "task": "chore_rename",
+ "category": "chore",
+ "run": 1,
+ "round": 1,
+ "slot": 0,
+ "battery": "v1",
+ "battery_sha256": "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe",
+ "max_turns": 4,
+ "repo_commit": "861e6d3b80ad1bd29a1ef103ac7c818890f4552c",
+ "python": "3.14.7",
+ "started_utc": "2026-11-04T07:27:09+00:00",
+ "outcome": "pass",
+ "check_detail": "all checks pass",
+ "ended": "finish",
+ "turns_used": 4,
+ "cost_usd": 0.00108537,
+ "written_bytes": 506,
+ "py_written": 3,
+ "py_with_probe": 0,
+ "finished_utc": "2026-11-04T07:27:20+00:00",
+ "calls": [
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1201,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 44,
+    "output_tokens_details": {
+     "thinking_tokens": 26
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 1201
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 44,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 1201,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 1201,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1298,
+     "outputTokens": 67,
+     "cacheReadInputTokens": 0,
+     "cacheCreationInputTokens": 1201,
+     "webSearchRequests": 0,
+     "costUSD": 0.000313425,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "thinkingTokens": 26,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.000313425,
+   "session_id": "969e139e-5c2a-4c0e-854d-c2bb6e5bd301",
+   "duration_ms": 1175,
+   "cost_usd": 0.000313425
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 118,
+    "cache_read_input_tokens": 1201,
+    "output_tokens": 23,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 118
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 23,
+      "cache_read_input_tokens": 1201,
+      "cache_creation_input_tokens": 118,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 118,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1300,
+     "outputTokens": 90,
+     "thinkingTokens": 26,
+     "cacheReadInputTokens": 1201,
+     "cacheCreationInputTokens": 1319,
+     "webSearchRequests": 0,
+     "costUSD": 0.00035188499999999997,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.00035188499999999997,
+   "session_id": "969e139e-5c2a-4c0e-854d-c2bb6e5bd301",
+   "duration_ms": 613,
+   "cost_usd": 3.845999999999998e-05
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 133,
+    "cache_read_input_tokens": 1319,
+    "output_tokens": 990,
+    "output_tokens_details": {
+     "thinking_tokens": 792
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 133
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 990,
+      "cache_read_input_tokens": 1319,
+      "cache_creation_input_tokens": 133,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 133,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1302,
+     "outputTokens": 1080,
+     "thinkingTokens": 818,
+     "cacheReadInputTokens": 2520,
+     "cacheCreationInputTokens": 1452,
+     "webSearchRequests": 0,
+     "costUSD": 0.0008769000000000001,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.0008769000000000001,
+   "session_id": "969e139e-5c2a-4c0e-854d-c2bb6e5bd301",
+   "duration_ms": 4915,
+   "cost_usd": 0.0005250150000000002
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1174,
+    "cache_read_input_tokens": 1452,
+    "output_tokens": 94,
+    "output_tokens_details": {
+     "thinking_tokens": 80
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 1174
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 94,
+      "cache_read_input_tokens": 1452,
+      "cache_creation_input_tokens": 1174,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 1174,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1304,
+     "outputTokens": 1174,
+     "thinkingTokens": 898,
+     "cacheReadInputTokens": 3972,
+     "cacheCreationInputTokens": 2626,
+     "webSearchRequests": 0,
+     "costUSD": 0.00108537,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.00108537,
+   "session_id": "969e139e-5c2a-4c0e-854d-c2bb6e5bd301",
+   "duration_ms": 901,
+   "cost_usd": 0.00020846999999999988
+  }
+ ],
+ "transcript": [
+  {
+   "turn": 1,
+   "reply": "\n{\"action\": \"list\", \"path\": \".\"}",
+   "result": "main.py\nshop/__init__.py\nshop/cart.py\nshop/pricing.py\nshop/report.py"
+  },
+  {
+   "turn": 2,
+   "reply": "{\"action\": \"read\", \"path\": \"shop/pricing.py\"}",
+   "result": "def calc(items, tax=0.0):\n    \"\"\"Total of (price, qty) pairs plus tax.\"\"\"\n    sub = sum(p * q for p, q in items)\n    return round(sub * (1 + tax), 2)\n"
+  },
+  {
+   "turn": 3,
+   "reply": "\n{\"action\": \"run\", \"args\": [\"-c\", \"import re,glob,pathlib\\nfor f in sorted(glob.glob('**/*.py', recursive=True)):\\n    p=pathlib.Path(f); s=p.read_text(); n=re.sub(r'\\\\bcalc\\\\b','compute_total',s)\\n    if n!=s:\\n        p.write_text(n); print('UPDATED',f)\\n    for i,l in enumerate(n.splitlines(),1):\\n        if 'compute_total' in l or 'calc' in l: print(f,i,l)\\n\"]}",
+   "result": "exit code 0\nUPDATED shop/cart.py\nshop/cart.py 1 from shop.pricing import compute_total\nshop/cart.py 12         return compute_total(self.items, tax)\nUPDATED shop/pricing.py\nshop/pricing.py 1 def compute_total(items, tax=0.0):\nUPDATED shop/report.py\nshop/report.py 5     return f'total={pricing.compute_total(items)}'\n"
+  },
+  {
+   "turn": 4,
+   "reply": "\n{\"action\": \"finish\"}",
+   "result": null
+  }
+ ],
+ "files": {
+  "shop/cart.py": "from shop.pricing import compute_total\n\n\nclass Cart:\n    def __init__(self):\n        self.items = []\n\n    def add(self, price, qty=1):\n        self.items.append((price, qty))\n\n    def total(self, tax=0.0):\n        return compute_total(self.items, tax)\n",
+  "shop/pricing.py": "def compute_total(items, tax=0.0):\n    \"\"\"Total of (price, qty) pairs plus tax.\"\"\"\n    sub = sum(p * q for p, q in items)\n    return round(sub * (1 + tax), 2)\n",
+  "shop/report.py": "from shop import pricing\n\n\ndef line(items):\n    return f'total={pricing.compute_total(items)}'\n"
+ }
+}

@@ -1,0 +1,278 @@
+{
+ "schema": 1,
+ "experiment": "2026-11-04",
+ "model": "haiku",
+ "arm": "baseline",
+ "arm_sha256": null,
+ "task": "impl_duration",
+ "category": "implement",
+ "run": 9,
+ "round": 3,
+ "slot": 0,
+ "battery": "v1",
+ "battery_sha256": "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe",
+ "max_turns": 4,
+ "repo_commit": "861e6d3b80ad1bd29a1ef103ac7c818890f4552c",
+ "python": "3.14.7",
+ "started_utc": "2026-11-04T07:47:10+00:00",
+ "outcome": "pass",
+ "check_detail": "11 cases pass",
+ "ended": "finish",
+ "turns_used": 4,
+ "cost_usd": 0.0018748699999999998,
+ "written_bytes": 1489,
+ "py_written": 1,
+ "py_with_probe": 0,
+ "finished_utc": "2026-11-04T07:47:29+00:00",
+ "calls": [
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 596,
+    "cache_read_input_tokens": 620,
+    "output_tokens": 1338,
+    "output_tokens_details": {
+     "thinking_tokens": 586
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 596
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 1338,
+      "cache_read_input_tokens": 620,
+      "cache_creation_input_tokens": 596,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 596,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1315,
+     "outputTokens": 1356,
+     "cacheReadInputTokens": 620,
+     "cacheCreationInputTokens": 596,
+     "webSearchRequests": 0,
+     "costUSD": 0.0008902000000000001,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "thinkingTokens": 586,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.0008902000000000001,
+   "session_id": "6c149f23-d85d-4ea5-a539-f5da1acffa81",
+   "duration_ms": 6524,
+   "cost_usd": 0.0008902000000000001
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1393,
+    "cache_read_input_tokens": 1216,
+    "output_tokens": 921,
+    "output_tokens_details": {
+     "thinking_tokens": 169
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 1393
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 921,
+      "cache_read_input_tokens": 1216,
+      "cache_creation_input_tokens": 1393,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 1393,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1317,
+     "outputTokens": 2277,
+     "thinkingTokens": 755,
+     "cacheReadInputTokens": 1836,
+     "cacheCreationInputTokens": 1989,
+     "webSearchRequests": 0,
+     "costUSD": 0.001537185,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.001537185,
+   "session_id": "6c149f23-d85d-4ea5-a539-f5da1acffa81",
+   "duration_ms": 4095,
+   "cost_usd": 0.0006469849999999999
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 973,
+    "cache_read_input_tokens": 2609,
+    "output_tokens": 228,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 973
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 228,
+      "cache_read_input_tokens": 2609,
+      "cache_creation_input_tokens": 973,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 973,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1319,
+     "outputTokens": 2505,
+     "thinkingTokens": 755,
+     "cacheReadInputTokens": 4445,
+     "cacheCreationInputTokens": 2962,
+     "webSearchRequests": 0,
+     "costUSD": 0.0017990999999999999,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.0017990999999999999,
+   "session_id": "6c149f23-d85d-4ea5-a539-f5da1acffa81",
+   "duration_ms": 2285,
+   "cost_usd": 0.00026191499999999993
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 274,
+    "cache_read_input_tokens": 3582,
+    "output_tokens": 11,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 274
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 11,
+      "cache_read_input_tokens": 3582,
+      "cache_creation_input_tokens": 274,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 274,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1321,
+     "outputTokens": 2516,
+     "thinkingTokens": 755,
+     "cacheReadInputTokens": 8027,
+     "cacheCreationInputTokens": 3236,
+     "webSearchRequests": 0,
+     "costUSD": 0.0018748699999999998,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.0018748699999999998,
+   "session_id": "6c149f23-d85d-4ea5-a539-f5da1acffa81",
+   "duration_ms": 1974,
+   "cost_usd": 7.576999999999996e-05
+  }
+ ],
+ "transcript": [
+  {
+   "turn": 1,
+   "reply": "\n{\"action\": \"write\", \"path\": \"duration.py\", \"content\": \"\\\"\\\"\\\"Parse compact duration strings such as '1h30m' into seconds.\\\"\\\"\\\"\\n\\nimport re\\n\\n# Each unit is optional, but the units that do appear must be in d, h, m, s\\n# order and each may appear at most once. [0-9] is used instead of \\\\d so\\n# that non-ASCII digits are rejected.\\n_DURATION_RE = re.compile(\\n    r\\\"(?:(?P<d>[0-9]+)d)?\\\"\\n    r\\\"(?:(?P<h>[0-9]+)h)?\\\"\\n    r\\\"(?:(?P<m>[0-9]+)m)?\\\"\\n    r\\\"(?:(?P<s>[0-9]+)s)?\\\"\\n)\\n\\n_UNIT_SECONDS = {\\\"d\\\": 86400, \\\"h\\\": 3600, \\\"m\\\": 60, \\\"s\\\": 1}\\n\\n\\ndef parse_duration(s):\\n    \\\"\\\"\\\"Return the number of seconds represented by the duration string ``s``.\\n\\n    Accepted units are d (days), h (hours), m (minutes) and s (seconds). Each\\n    unit may appear at most once and must be in that order, with a\n non-negative\\n    integer amount. Surrounding whitespace is allowed.\\n\\n    Raises ValueError for any other input, including an empty string, a bare\\n    number, a repeated or out-of-order unit, or a non-string argument.\\n    \\\"\\\"\\\"\\n    if not isinstance(s, str):\\n        raise ValueError(f\\\"duration must be a string, got {type(s).__name__}\\\")\\n\\n    text = s.strip()\\n    if not text:\\n        raise ValueError(\\\"empty duration\\\")\\n\\n    match = _DURATION_RE.fullmatch(text)\\n    if match is None or not any(match.group(name) for name in _UNIT_SECONDS):\\n        raise ValueError(f\\\"invalid duration: {s!r}\\\")\\n\\n    total = 0\\n    for unit, seconds in _UNIT_SECONDS.items():\\n        amount = match.group(unit)\\n        if amount is not None:\\n            total += int(amount) * seconds\\n    return total\\n\"}",
+   "result": "error: reply was not a JSON object with an \"action\" key"
+  },
+  {
+   "turn": 2,
+   "reply": "\n{\"action\": \"write\", \"path\": \"duration.py\", \"content\": \"\\\"\\\"\\\"Parse compact duration strings such as '1h30m' into seconds.\\\"\\\"\\\"\\n\\nimport re\\n\\n# Each unit is optional, but the units that do appear must be in d, h, m, s\\n# order and each may appear at most once. [0-9] is used instead of \\\\d so\\n# that non-ASCII digits are rejected.\\n_DURATION_RE = re.compile(\\n    r\\\"(?:(?P<d>[0-9]+)d)?\\\"\\n    r\\\"(?:(?P<h>[0-9]+)h)?\\\"\\n    r\\\"(?:(?P<m>[0-9]+)m)?\\\"\\n    r\\\"(?:(?P<s>[0-9]+)s)?\\\"\\n)\\n\\n_UNIT_SECONDS = {\\\"d\\\": 86400, \\\"h\\\": 3600, \\\"m\\\": 60, \\\"s\\\": 1}\\n\\n\\ndef parse_duration(s):\\n    \\\"\\\"\\\"Return the number of seconds represented by the duration string ``s``.\\n\\n    Accepted units are d (days), h (hours), m (minutes) and s (seconds). Each\\n    unit may appear at most once and must be in that order, with a\\n    non-negative integer amount. Surrounding whitespace is allowed.\\n\\n    Raises ValueError for any other input, including an empty string, a bare\\n    number, a repeated or out-of-order unit, or a non-string argument.\\n    \\\"\\\"\\\"\\n    if not isinstance(s, str):\\n        raise ValueError(f\\\"duration must be a string, got {type(s).__name__}\\\")\\n\\n    text = s.strip()\\n    if not text:\\n        raise ValueError(\\\"empty duration\\\")\\n\\n    match = _DURATION_RE.fullmatch(text)\\n    if match is None or not any(match.group(unit) for unit in _UNIT_SECONDS):\\n        raise ValueError(f\\\"invalid duration: {s!r}\\\")\\n\\n    total = 0\\n    for unit, seconds in _UNIT_SECONDS.items():\\n        amount = match.group(unit)\\n        if amount is not None:\\n            total += int(amount) * seconds\\n    return total\\n\"}",
+   "result": "wrote duration.py (1489 chars)"
+  },
+  {
+   "turn": 3,
+   "reply": "{\"action\": \"run\", \"args\": [\"-c\", \"from duration import parse_duration as p\\nassert p('1h30m')==5400\\nassert p('45s')==45\\nassert p('2h5s')==7205\\nassert p('1d2h')==93600\\nassert p('  10m ')==600\\nassert p('0s')==0\\nfor bad in ['', '   ', '30', '1h1h', '1m1h', 'h', '1.5h', '-1s', '1 h', '1x', '1h 30m']:\\n    try:\\n        p(bad)\\n    except ValueError:\\n        continue\\n    raise SystemExit('no error for %r' % bad)\\nprint('ok')\"]}",
+   "result": "exit code 0\nok\n"
+  },
+  {
+   "turn": 4,
+   "reply": "{\"action\": \"finish\"}",
+   "result": null
+  }
+ ],
+ "files": {
+  "duration.py": "\"\"\"Parse compact duration strings such as '1h30m' into seconds.\"\"\"\n\nimport re\n\n# Each unit is optional, but the units that do appear must be in d, h, m, s\n# order and each may appear at most once. [0-9] is used instead of \\d so\n# that non-ASCII digits are rejected.\n_DURATION_RE = re.compile(\n    r\"(?:(?P<d>[0-9]+)d)?\"\n    r\"(?:(?P<h>[0-9]+)h)?\"\n    r\"(?:(?P<m>[0-9]+)m)?\"\n    r\"(?:(?P<s>[0-9]+)s)?\"\n)\n\n_UNIT_SECONDS = {\"d\": 86400, \"h\": 3600, \"m\": 60, \"s\": 1}\n\n\ndef parse_duration(s):\n    \"\"\"Return the number of seconds represented by the duration string ``s``.\n\n    Accepted units are d (days), h (hours), m (minutes) and s (seconds). Each\n    unit may appear at most once and must be in that order, with a\n    non-negative integer amount. Surrounding whitespace is allowed.\n\n    Raises ValueError for any other input, including an empty string, a bare\n    number, a repeated or out-of-order unit, or a non-string argument.\n    \"\"\"\n    if not isinstance(s, str):\n        raise ValueError(f\"duration must be a string, got {type(s).__name__}\")\n\n    text = s.strip()\n    if not text:\n        raise ValueError(\"empty duration\")\n\n    match = _DURATION_RE.fullmatch(text)\n    if match is None or not any(match.group(unit) for unit in _UNIT_SECONDS):\n        raise ValueError(f\"invalid duration: {s!r}\")\n\n    total = 0\n    for unit, seconds in _UNIT_SECONDS.items():\n        amount = match.group(unit)\n        if amount is not None:\n            total += int(amount) * seconds\n    return total\n"
+ }
+}

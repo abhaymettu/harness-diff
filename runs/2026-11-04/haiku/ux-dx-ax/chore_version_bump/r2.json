@@ -1,0 +1,281 @@
+{
+ "schema": 1,
+ "experiment": "2026-11-04",
+ "model": "haiku",
+ "arm": "ux-dx-ax",
+ "arm_sha256": "96a8dc7dd7f99961cd057c4b1663e1173393d20969e596d9b1d1850203b0ed95",
+ "task": "chore_version_bump",
+ "category": "chore",
+ "run": 2,
+ "round": 2,
+ "slot": 0,
+ "battery": "v1",
+ "battery_sha256": "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe",
+ "max_turns": 4,
+ "repo_commit": "861e6d3b80ad1bd29a1ef103ac7c818890f4552c",
+ "python": "3.14.7",
+ "started_utc": "2026-11-04T07:39:59+00:00",
+ "outcome": "pass",
+ "check_detail": "all checks pass",
+ "ended": "turn_limit",
+ "turns_used": 4,
+ "cost_usd": 0.00453676,
+ "written_bytes": 401,
+ "py_written": 1,
+ "py_with_probe": 0,
+ "finished_utc": "2026-11-04T07:40:37+00:00",
+ "calls": [
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1320,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 49,
+    "output_tokens_details": {
+     "thinking_tokens": 34
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 1320
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 49,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 1320,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 1320,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1419,
+     "outputTokens": 67,
+     "cacheReadInputTokens": 0,
+     "cacheCreationInputTokens": 1320,
+     "webSearchRequests": 0,
+     "costUSD": 0.00034040000000000003,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "thinkingTokens": 34,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.00034040000000000003,
+   "session_id": "93b99364-1db7-40f9-85c9-9d53dfdde15e",
+   "duration_ms": 1705,
+   "cost_usd": 0.00034040000000000003
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 122,
+    "cache_read_input_tokens": 1320,
+    "output_tokens": 24,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 122
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 24,
+      "cache_read_input_tokens": 1320,
+      "cache_creation_input_tokens": 122,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 122,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1421,
+     "outputTokens": 91,
+     "thinkingTokens": 34,
+     "cacheReadInputTokens": 1320,
+     "cacheCreationInputTokens": 1442,
+     "webSearchRequests": 0,
+     "costUSD": 0.00038105,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.00038105,
+   "session_id": "93b99364-1db7-40f9-85c9-9d53dfdde15e",
+   "duration_ms": 1486,
+   "cost_usd": 4.0649999999999985e-05
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 122,
+    "cache_read_input_tokens": 1442,
+    "output_tokens": 4894,
+    "output_tokens_details": {
+     "thinking_tokens": 4405
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 122
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 4894,
+      "cache_read_input_tokens": 1442,
+      "cache_creation_input_tokens": 122,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 122,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1423,
+     "outputTokens": 4985,
+     "thinkingTokens": 4439,
+     "cacheReadInputTokens": 2762,
+     "cacheCreationInputTokens": 1564,
+     "webSearchRequests": 0,
+     "costUSD": 0.00285792,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.00285792,
+   "session_id": "93b99364-1db7-40f9-85c9-9d53dfdde15e",
+   "duration_ms": 21349,
+   "cost_usd": 0.00247687
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 4948,
+    "cache_read_input_tokens": 1564,
+    "output_tokens": 2089,
+    "output_tokens_details": {
+     "thinking_tokens": 1417
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 4948
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 2089,
+      "cache_read_input_tokens": 1564,
+      "cache_creation_input_tokens": 4948,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 4948,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1425,
+     "outputTokens": 7074,
+     "thinkingTokens": 5856,
+     "cacheReadInputTokens": 4326,
+     "cacheCreationInputTokens": 6512,
+     "webSearchRequests": 0,
+     "costUSD": 0.00453676,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.00453676,
+   "session_id": "93b99364-1db7-40f9-85c9-9d53dfdde15e",
+   "duration_ms": 9434,
+   "cost_usd": 0.00167884
+  }
+ ],
+ "transcript": [
+  {
+   "turn": 1,
+   "reply": "{\"action\": \"list\", \"path\": \".\"}",
+   "result": "CHANGELOG.md\nREADME.md\npyproject.toml\nsrc/fmt/__init__.py"
+  },
+  {
+   "turn": 2,
+   "reply": "{\"action\": \"read\", \"path\": \"CHANGELOG.md\"}",
+   "result": "# Changelog\n\n## 1.4.2 - 2026-09-30\n\n- Fix a crash on empty input.\n\n## 1.4.1 - 2026-08-02\n\n- First public release.\n"
+  },
+  {
+   "turn": 3,
+   "reply": "{\"action\": \"run\", \"args\": [\"-c\", \"import re,sys\\nP={}\\ndef one(p,pat,rep):\\n s=open(p,encoding='utf-8').read()\\n n=len(re.findall(pat,s,flags=re.M))\\n if n!=1: sys.exit(p+' matches: '+str(n))\\n P[p]=re.sub(pat,rep,s,count=1,flags=re.M)\\none('pyproject.toml',r'(^version\\\\s*=\\\\s*[\\\\'\\\"])1\\\\.4\\\\.2',r'\\\\g<1>1.5.0')\\none('src/fmt/__init__.py',r'(^__version__\\\\s*=\\\\s*[\\\\'\\\"])1\\\\.4\\\\.2',r'\\\\g<1>1.5.0')\\none('README.md',r'(?<![\\\\d.])1\\\\.4\\\\.2(?![\\\\d.])','1.5.0')\\ns=open('CHANGELOG.md',encoding='utf-8').read()\\nif s.count('# Changelog\\\\n\\\\n')!=1: sys.exit('changelog header')\\nP['CHANGELOG.md']=s.replace('# Changelog\\\\n\\\\n','# Changelog\\\\n\\\\n## 1.5.0 - 2026-11-04\\\\n\\\\n- Add the --json flag.\\\\n\\\\n',1)\\nfor p,t in P.items(): open(p,'w',encoding='utf-8').write(t)\\nprint('ok')\"]}",
+   "result": "exit code 1\nREADME.md matches: 2\n"
+  },
+  {
+   "turn": 4,
+   "reply": "{\"action\": \"run\", \"args\": [\"-c\", \"import re,sys\\nP={}\\ndef one(p,pat,rep):\\n s=open(p,encoding='utf-8').read()\\n n=len(re.findall(pat,s,flags=re.M))\\n if n!=1: sys.exit(p+' matches: '+str(n))\\n P[p]=re.sub(pat,rep,s,count=1,flags=re.M)\\none('pyproject.toml',r'(^version\\\\s*=\\\\s*[\\\\'\\\"])1\\\\.4\\\\.2',r'\\\\g<1>1.5.0')\\none('src/fmt/__init__.py',r'(^__version__\\\\s*=\\\\s*[\\\\'\\\"])1\\\\.4\\\\.2',r'\\\\g<1>1.5.0')\\npat=r'(?<![\\\\d.])1\\\\.4\\\\.2(?![\\\\d.])'\\nL=open('README.md',encoding='utf-8').read().split('\\\\n')\\nhits=[i for i,l in enumerate(L) if re.search(pat,l)]\\nc=[i for i in hits if re.search('version|release',L[i],re.I)]\\nif len(c)==1:\\n L[c[0]]=re.sub(pat,'1.5.0',L[c[0]])\\n P['README.md']='\\\\n'.join(L)\\nelse:\\n print('README skipped, matching lines:')\\n for i in hits: print(i+1,L[i])\\ns=open('CHANGELOG.md',encoding='utf-8').read()\\nif s.count('# Changelog\\\\n\\\\n')!=1: sys.exit('changelog header')\\nP['CHANGELOG.md']=s.replace('# Changelog\\\\n\\\\n','# Changelog\\\\n\\\\n## 1.5.0 - 2026-11-04\\\\n\\\\n- Add the --json flag.\\\\n\\\\n',1)\\nfor p,t in P.items(): open(p,'w',encoding='utf-8').write(t)\\nprint('written: '+', '.join(P))\"]}",
+   "result": "exit code 0\nwritten: pyproject.toml, src/fmt/__init__.py, README.md, CHANGELOG.md\n"
+  }
+ ],
+ "files": {
+  "CHANGELOG.md": "# Changelog\n\n## 1.5.0 - 2026-11-04\n\n- Add the --json flag.\n\n## 1.4.2 - 2026-09-30\n\n- Fix a crash on empty input.\n\n## 1.4.1 - 2026-08-02\n\n- First public release.\n",
+  "README.md": "# fmt\n\nCurrent version: 1.5.0\n\nRequires click 1.4.2 or newer.\n",
+  "pyproject.toml": "[project]\nname = \"fmt\"\nversion = \"1.5.0\"\nrequires-python = \">=3.10\"\ndependencies = [\"click>=1.4.2\"]\n",
+  "src/fmt/__init__.py": "__version__ = \"1.5.0\"\nMIN_SCHEMA = \"1.4.2\"  # schema version, not the package\n"
+ }
+}

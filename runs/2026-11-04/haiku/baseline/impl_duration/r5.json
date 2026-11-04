@@ -1,0 +1,279 @@
+{
+ "schema": 1,
+ "experiment": "2026-11-04",
+ "model": "haiku",
+ "arm": "baseline",
+ "arm_sha256": null,
+ "task": "impl_duration",
+ "category": "implement",
+ "run": 5,
+ "round": 1,
+ "slot": 2,
+ "battery": "v1",
+ "battery_sha256": "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe",
+ "max_turns": 4,
+ "repo_commit": "861e6d3b80ad1bd29a1ef103ac7c818890f4552c",
+ "python": "3.14.7",
+ "started_utc": "2026-11-04T07:23:16+00:00",
+ "outcome": "pass",
+ "check_detail": "11 cases pass",
+ "ended": "finish",
+ "turns_used": 4,
+ "cost_usd": 0.0017302550000000002,
+ "written_bytes": 1946,
+ "py_written": 2,
+ "py_with_probe": 0,
+ "finished_utc": "2026-11-04T07:23:36+00:00",
+ "calls": [
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 596,
+    "cache_read_input_tokens": 620,
+    "output_tokens": 1685,
+    "output_tokens_details": {
+     "thinking_tokens": 661
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 596
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 1685,
+      "cache_read_input_tokens": 620,
+      "cache_creation_input_tokens": 596,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 596,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1315,
+     "outputTokens": 1703,
+     "cacheReadInputTokens": 620,
+     "cacheCreationInputTokens": 596,
+     "webSearchRequests": 0,
+     "costUSD": 0.0010637,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "thinkingTokens": 661,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.0010637,
+   "session_id": "ded5ce3a-5558-4ed8-a396-714788a7c75a",
+   "duration_ms": 10494,
+   "cost_usd": 0.0010637
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1734,
+    "cache_read_input_tokens": 1216,
+    "output_tokens": 537,
+    "output_tokens_details": {
+     "thinking_tokens": 122
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 1734
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 537,
+      "cache_read_input_tokens": 1216,
+      "cache_creation_input_tokens": 1734,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 1734,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1317,
+     "outputTokens": 2240,
+     "thinkingTokens": 783,
+     "cacheReadInputTokens": 1836,
+     "cacheCreationInputTokens": 2330,
+     "webSearchRequests": 0,
+     "costUSD": 0.0015613100000000002,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.0015613100000000002,
+   "session_id": "ded5ce3a-5558-4ed8-a396-714788a7c75a",
+   "duration_ms": 3123,
+   "cost_usd": 0.0004976100000000001
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 592,
+    "cache_read_input_tokens": 2950,
+    "output_tokens": 23,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 592
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 23,
+      "cache_read_input_tokens": 2950,
+      "cache_creation_input_tokens": 592,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 592,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1319,
+     "outputTokens": 2263,
+     "thinkingTokens": 783,
+     "cacheReadInputTokens": 4786,
+     "cacheCreationInputTokens": 2922,
+     "webSearchRequests": 0,
+     "costUSD": 0.0016765100000000002,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.0016765100000000002,
+   "session_id": "ded5ce3a-5558-4ed8-a396-714788a7c75a",
+   "duration_ms": 1773,
+   "cost_usd": 0.00011519999999999998
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 101,
+    "cache_read_input_tokens": 3542,
+    "output_tokens": 11,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 101
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 11,
+      "cache_read_input_tokens": 3542,
+      "cache_creation_input_tokens": 101,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 101,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1321,
+     "outputTokens": 2274,
+     "thinkingTokens": 783,
+     "cacheReadInputTokens": 8328,
+     "cacheCreationInputTokens": 3023,
+     "webSearchRequests": 0,
+     "costUSD": 0.0017302550000000002,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.0017302550000000002,
+   "session_id": "ded5ce3a-5558-4ed8-a396-714788a7c75a",
+   "duration_ms": 1348,
+   "cost_usd": 5.374500000000001e-05
+  }
+ ],
+ "transcript": [
+  {
+   "turn": 1,
+   "reply": "\n<invoke/write>\n{\"action\": \"write\", \"path\": \"duration.py\", \"content\": \"\\\"\\\"\\\"Parse compact duration strings such as '1h30m' into seconds.\\\"\\\"\\\"\\n\\nimport re\\n\\n_SECONDS = {\\\"d\\\": 86400, \\\"h\\\": 3600, \\\"m\\\": 60, \\\"s\\\": 1}\\n\\n# Each unit is optional, but at least one must be present (checked below).\\n# Units must appear in d, h, m, s order and each at most once.\\n_PATTERN = re.compile(\\n    r\\\"(?:([0-9]+)d)?(?:([0-9]+)h)?(?:([0-9]+)m)?(?:([0-9]+)s)?\\\"\\n)\\n\\n\\ndef parse_duration(s):\\n    \\\"\\\"\\\"Return the number of seconds (int) represented by the duration string s.\\n\\n    Accepted units: d, h, m, s. Each unit appears at most once, in that order,\\n    with a non-negative integer amount. Surrounding whitespace is allowed.\\n\\n    Raises ValueError for anything else, including an empty string or a bare number.\\n    \\\"\\\"\\\"\\n    if not isinstance(s, str):\\n        raise ValueError(f\\\"expected a string, got {type(s).__name__}\\\")\\n\\n    match = _PATTERN.fullmatch(s.strip())\\n    if match is None or not any(match.groups()):\\n        raise ValueError(f\\\"invalid duration: {s!r}\\\")\\n\\n    total = 0\\n    for unit, amount in zip(\\\"dhms\\\", match.groups()):\\n        if amount is not None:\\n            total += int(amount) * _SECONDS[unit]\\n    return total\\n\"}\n\n{\"action\": \"write\", \"path\": \"test_duration.py\", \"content\": \"import unittest\\nfrom duration import parse_duration\\n\\n\\nclass TestParseDuration(unittest.TestCase):\\n    def test_valid(self):\\n        self.assertEqual(parse_duration('1h30m'), 5400)\\n        self.assertEqual(parse_duration('45s'), 45)\\n        self.assertEqual(parse_duration('2h5s'), 7205)\\n        self.assertEqual(parse_duration('1d2h'), 93600)\\n        self.assertEqual(parse_duration('0s'), 0)\\n        self.assertEqual(parse_duration('  3m  '), 180)\\n        self.assertIsInstance(parse_duration('1d'), int)\\n\\n    def test_invalid(self):\\n        for bad in ['', '   ', '90', '1h1h', '1m1h', '1h 30m', '1x', 'h', '-1s', '1.5s', '1d2h3m4s5s']:\\n            with self.subTest(bad=bad):\\n                with self.assertRaises(ValueError):\\n                    parse_duration(bad)\\n\\n\\nif __name__ == '__main__':\\n    unittest.main()\\n\"}\n\n{\"action\": \"run\", \"args\": [\"test_duration.py\"]}\n\n{\"action\": \"finish\"}",
+   "result": "wrote duration.py (1126 chars)"
+  },
+  {
+   "turn": 2,
+   "reply": "{\"action\": \"write\", \"path\": \"test_duration.py\", \"content\": \"import unittest\\nfrom duration import parse_duration\\n\\n\\nclass TestParseDuration(unittest.TestCase):\\n    def test_valid(self):\\n        self.assertEqual(parse_duration('1h30m'), 5400)\\n        self.assertEqual(parse_duration('45s'), 45)\\n        self.assertEqual(parse_duration('2h5s'), 7205)\\n        self.assertEqual(parse_duration('1d2h'), 93600)\\n        self.assertEqual(parse_duration('0s'), 0)\\n        self.assertEqual(parse_duration('  3m  '), 180)\\n        self.assertIsInstance(parse_duration('1d'), int)\\n\\n    def test_invalid(self):\\n        for bad in ['', '   ', '90', '1h1h', '1m1h', '1h 30m', '1x', 'h', '-1s', '1.5s', '1d2h3m4s5s']:\\n            with self.subTest(bad=bad):\\n                with self.assertRaises(ValueError):\\n                    parse_duration(bad)\\n\\n\\nif __name__ == '__main__':\\n    unittest.main()\\n\"}",
+   "result": "wrote test_duration.py (820 chars)"
+  },
+  {
+   "turn": 3,
+   "reply": "{\"action\": \"run\", \"args\": [\"test_duration.py\"]}",
+   "result": "exit code 0\n..\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n"
+  },
+  {
+   "turn": 4,
+   "reply": "{\"action\": \"finish\"}",
+   "result": null
+  }
+ ],
+ "files": {
+  "duration.py": "\"\"\"Parse compact duration strings such as '1h30m' into seconds.\"\"\"\n\nimport re\n\n_SECONDS = {\"d\": 86400, \"h\": 3600, \"m\": 60, \"s\": 1}\n\n# Each unit is optional, but at least one must be present (checked below).\n# Units must appear in d, h, m, s order and each at most once.\n_PATTERN = re.compile(\n    r\"(?:([0-9]+)d)?(?:([0-9]+)h)?(?:([0-9]+)m)?(?:([0-9]+)s)?\"\n)\n\n\ndef parse_duration(s):\n    \"\"\"Return the number of seconds (int) represented by the duration string s.\n\n    Accepted units: d, h, m, s. Each unit appears at most once, in that order,\n    with a non-negative integer amount. Surrounding whitespace is allowed.\n\n    Raises ValueError for anything else, including an empty string or a bare number.\n    \"\"\"\n    if not isinstance(s, str):\n        raise ValueError(f\"expected a string, got {type(s).__name__}\")\n\n    match = _PATTERN.fullmatch(s.strip())\n    if match is None or not any(match.groups()):\n        raise ValueError(f\"invalid duration: {s!r}\")\n\n    total = 0\n    for unit, amount in zip(\"dhms\", match.groups()):\n        if amount is not None:\n            total += int(amount) * _SECONDS[unit]\n    return total\n",
+  "test_duration.py": "import unittest\nfrom duration import parse_duration\n\n\nclass TestParseDuration(unittest.TestCase):\n    def test_valid(self):\n        self.assertEqual(parse_duration('1h30m'), 5400)\n        self.assertEqual(parse_duration('45s'), 45)\n        self.assertEqual(parse_duration('2h5s'), 7205)\n        self.assertEqual(parse_duration('1d2h'), 93600)\n        self.assertEqual(parse_duration('0s'), 0)\n        self.assertEqual(parse_duration('  3m  '), 180)\n        self.assertIsInstance(parse_duration('1d'), int)\n\n    def test_invalid(self):\n        for bad in ['', '   ', '90', '1h1h', '1m1h', '1h 30m', '1x', 'h', '-1s', '1.5s', '1d2h3m4s5s']:\n            with self.subTest(bad=bad):\n                with self.assertRaises(ValueError):\n                    parse_duration(bad)\n\n\nif __name__ == '__main__':\n    unittest.main()\n"
+ }
+}

@@ -1,0 +1,217 @@
+{
+ "schema": 1,
+ "experiment": "2026-11-04",
+ "model": "haiku",
+ "arm": "docs-vs-code",
+ "arm_sha256": "05397f4ceb09b6a1cc1b721d008bbb3d01f33bc4d6a8a00cb6e8c78c89fc37e6",
+ "task": "impl_lru",
+ "category": "implement",
+ "run": 2,
+ "round": 2,
+ "slot": 0,
+ "battery": "v1",
+ "battery_sha256": "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe",
+ "max_turns": 4,
+ "repo_commit": "861e6d3b80ad1bd29a1ef103ac7c818890f4552c",
+ "python": "3.14.7",
+ "started_utc": "2026-11-04T07:34:15+00:00",
+ "outcome": "pass",
+ "check_detail": "4 cases pass",
+ "ended": "finish",
+ "turns_used": 3,
+ "cost_usd": 0.0007542650000000001,
+ "written_bytes": 978,
+ "py_written": 1,
+ "py_with_probe": 0,
+ "finished_utc": "2026-11-04T07:34:25+00:00",
+ "calls": [
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1276,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 50,
+    "output_tokens_details": {
+     "thinking_tokens": 32
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 1276
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 50,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 1276,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 1276,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1373,
+     "outputTokens": 70,
+     "cacheReadInputTokens": 0,
+     "cacheCreationInputTokens": 1276,
+     "webSearchRequests": 0,
+     "costUSD": 0.0003318,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "thinkingTokens": 32,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.0003318,
+   "session_id": "f02fe1fe-9aa8-4296-b56c-57f6c17917ad",
+   "duration_ms": 1866,
+   "cost_usd": 0.0003318
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 92,
+    "cache_read_input_tokens": 1276,
+    "output_tokens": 594,
+    "output_tokens_details": {
+     "thinking_tokens": 178
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 92
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 594,
+      "cache_read_input_tokens": 1276,
+      "cache_creation_input_tokens": 92,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 92,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1375,
+     "outputTokens": 664,
+     "thinkingTokens": 210,
+     "cacheReadInputTokens": 1276,
+     "cacheCreationInputTokens": 1368,
+     "webSearchRequests": 0,
+     "costUSD": 0.00065326,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.00065326,
+   "session_id": "f02fe1fe-9aa8-4296-b56c-57f6c17917ad",
+   "duration_ms": 4025,
+   "cost_usd": 0.00032146000000000003
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 645,
+    "cache_read_input_tokens": 1368,
+    "output_tokens": 13,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 645
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 13,
+      "cache_read_input_tokens": 1368,
+      "cache_creation_input_tokens": 645,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 645,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1377,
+     "outputTokens": 677,
+     "thinkingTokens": 210,
+     "cacheReadInputTokens": 2644,
+     "cacheCreationInputTokens": 2013,
+     "webSearchRequests": 0,
+     "costUSD": 0.0007542650000000001,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.0007542650000000001,
+   "session_id": "f02fe1fe-9aa8-4296-b56c-57f6c17917ad",
+   "duration_ms": 1576,
+   "cost_usd": 0.00010100500000000004
+  }
+ ],
+ "transcript": [
+  {
+   "turn": 1,
+   "reply": "\n{\"action\": \"list\", \"path\": \".\"}",
+   "result": "(empty)"
+  },
+  {
+   "turn": 2,
+   "reply": "\n{\"action\": \"write\", \"path\": \"lru.py\", \"content\": \"from collections import OrderedDict\\n\\n\\nclass LRUCache:\\n    \\\"\\\"\\\"A fixed-capacity least-recently-used cache.\\n\\n    get() and put() both count as a use of the key. When inserting a new key\\n    would exceed capacity, the least recently used key is evicted first.\\n    \\\"\\\"\\\"\\n\\n    def __init__(self, capacity):\\n        self.capacity = capacity\\n        self._data = OrderedDict()\\n\\n    def get(self, key):\\n        \\\"\\\"\\\"Return the value for key, or None if absent. Counts as a use.\\\"\\\"\\\"\\n        if key not in self._data:\\n            return None\\n        self._data.move_to_end(key)\\n        return self._data[key]\\n\\n    def put(self, key, value):\\n        \\\"\\\"\\\"Insert or update key. Counts as a use.\\\"\\\"\\\"\\n        if key in self._data:\\n            self._data[key] = value\\n            self._data.move_to_end(key)\\n            return\\n        if len(self._data) >= self.capacity:\\n            self._data.popitem(last=False)\\n        self._data[key] = value\\n\\n    def __len__(self):\\n        return len(self._data)\\n\"}",
+   "result": "wrote lru.py (978 chars)"
+  },
+  {
+   "turn": 3,
+   "reply": "{\"action\": \"finish\"}",
+   "result": null
+  }
+ ],
+ "files": {
+  "lru.py": "from collections import OrderedDict\n\n\nclass LRUCache:\n    \"\"\"A fixed-capacity least-recently-used cache.\n\n    get() and put() both count as a use of the key. When inserting a new key\n    would exceed capacity, the least recently used key is evicted first.\n    \"\"\"\n\n    def __init__(self, capacity):\n        self.capacity = capacity\n        self._data = OrderedDict()\n\n    def get(self, key):\n        \"\"\"Return the value for key, or None if absent. Counts as a use.\"\"\"\n        if key not in self._data:\n            return None\n        self._data.move_to_end(key)\n        return self._data[key]\n\n    def put(self, key, value):\n        \"\"\"Insert or update key. Counts as a use.\"\"\"\n        if key in self._data:\n            self._data[key] = value\n            self._data.move_to_end(key)\n            return\n        if len(self._data) >= self.capacity:\n            self._data.popitem(last=False)\n        self._data[key] = value\n\n    def __len__(self):\n        return len(self._data)\n"
+ }
+}

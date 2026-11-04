@@ -1,0 +1,156 @@
+{
+ "schema": 1,
+ "experiment": "2026-11-04",
+ "model": "haiku",
+ "arm": "secondary-labels",
+ "arm_sha256": "63fe178250a4d9840342a73347f78bf4db983ceb94d2e1b2afd119577ac758f7",
+ "task": "impl_balanced",
+ "category": "implement",
+ "run": 1,
+ "round": 1,
+ "slot": 0,
+ "battery": "v1",
+ "battery_sha256": "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe",
+ "max_turns": 4,
+ "repo_commit": "861e6d3b80ad1bd29a1ef103ac7c818890f4552c",
+ "python": "3.14.7",
+ "started_utc": "2026-11-04T07:25:56+00:00",
+ "outcome": "pass",
+ "check_detail": "9 cases pass",
+ "ended": "finish",
+ "turns_used": 2,
+ "cost_usd": 0.00085898,
+ "written_bytes": 547,
+ "py_written": 1,
+ "py_with_probe": 0,
+ "finished_utc": "2026-11-04T07:26:05+00:00",
+ "calls": [
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1253,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 853,
+    "output_tokens_details": {
+     "thinking_tokens": 595
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 1253
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 853,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 1253,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 1253,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1350,
+     "outputTokens": 872,
+     "cacheReadInputTokens": 0,
+     "cacheCreationInputTokens": 1253,
+     "webSearchRequests": 0,
+     "costUSD": 0.000727625,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "thinkingTokens": 595,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.000727625,
+   "session_id": "0f551a7a-8932-4aed-8d5c-0365ebbbbf30",
+   "duration_ms": 6080,
+   "cost_usd": 0.000727625
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 905,
+    "cache_read_input_tokens": 1253,
+    "output_tokens": 11,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 905
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 11,
+      "cache_read_input_tokens": 1253,
+      "cache_creation_input_tokens": 905,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 905,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1352,
+     "outputTokens": 883,
+     "thinkingTokens": 595,
+     "cacheReadInputTokens": 1253,
+     "cacheCreationInputTokens": 2158,
+     "webSearchRequests": 0,
+     "costUSD": 0.00085898,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.00085898,
+   "session_id": "0f551a7a-8932-4aed-8d5c-0365ebbbbf30",
+   "duration_ms": 1304,
+   "cost_usd": 0.000131355
+  }
+ ],
+ "transcript": [
+  {
+   "turn": 1,
+   "reply": "\n{\"action\": \"write\", \"path\": \"brackets.py\", \"content\": \"def balanced(s):\\n    pairs = {')': '(', ']': '[', '}': '{'}\\n    stack = []\\n    i = 0\\n    n = len(s)\\n    while i < n:\\n        c = s[i]\\n        if c == '\\\"':\\n            i += 1\\n            while i < n and s[i] != '\\\"':\\n                i += 2 if s[i] == '\\\\\\\\' else 1\\n            if i >= n:\\n                return False\\n            i += 1\\n            continue\\n        if c in '([{':\\n            stack.append(c)\\n        elif c in pairs:\\n            if not stack or stack.pop() != pairs[c]:\\n                return False\\n        i += 1\\n    return not stack\\n\"}",
+   "result": "wrote brackets.py (547 chars)"
+  },
+  {
+   "turn": 2,
+   "reply": "{\"action\": \"finish\"}",
+   "result": null
+  }
+ ],
+ "files": {
+  "brackets.py": "def balanced(s):\n    pairs = {')': '(', ']': '[', '}': '{'}\n    stack = []\n    i = 0\n    n = len(s)\n    while i < n:\n        c = s[i]\n        if c == '\"':\n            i += 1\n            while i < n and s[i] != '\"':\n                i += 2 if s[i] == '\\\\' else 1\n            if i >= n:\n                return False\n            i += 1\n            continue\n        if c in '([{':\n            stack.append(c)\n        elif c in pairs:\n            if not stack or stack.pop() != pairs[c]:\n                return False\n        i += 1\n    return not stack\n"
+ }
+}

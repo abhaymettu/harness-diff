@@ -1,0 +1,156 @@
+{
+ "schema": 1,
+ "experiment": "2026-11-04",
+ "model": "haiku",
+ "arm": "baseline",
+ "arm_sha256": null,
+ "task": "impl_duration",
+ "category": "implement",
+ "run": 8,
+ "round": 2,
+ "slot": 2,
+ "battery": "v1",
+ "battery_sha256": "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe",
+ "max_turns": 4,
+ "repo_commit": "861e6d3b80ad1bd29a1ef103ac7c818890f4552c",
+ "python": "3.14.7",
+ "started_utc": "2026-11-04T07:35:16+00:00",
+ "outcome": "pass",
+ "check_detail": "11 cases pass",
+ "ended": "finish",
+ "turns_used": 2,
+ "cost_usd": 0.00084079,
+ "written_bytes": 1246,
+ "py_written": 1,
+ "py_with_probe": 0,
+ "finished_utc": "2026-11-04T07:35:25+00:00",
+ "calls": [
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 594,
+    "cache_read_input_tokens": 620,
+    "output_tokens": 811,
+    "output_tokens_details": {
+     "thinking_tokens": 189
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 594
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 811,
+      "cache_read_input_tokens": 620,
+      "cache_creation_input_tokens": 594,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 594,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1315,
+     "outputTokens": 829,
+     "cacheReadInputTokens": 620,
+     "cacheCreationInputTokens": 594,
+     "webSearchRequests": 0,
+     "costUSD": 0.00062645,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "thinkingTokens": 189,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.00062645,
+   "session_id": "6ebfadba-89a0-4422-beb8-448095ab8773",
+   "duration_ms": 4142,
+   "cost_usd": 0.00062645
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 856,
+    "cache_read_input_tokens": 1214,
+    "output_tokens": 190,
+    "output_tokens_details": {
+     "thinking_tokens": 176
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 856
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 190,
+      "cache_read_input_tokens": 1214,
+      "cache_creation_input_tokens": 856,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 856,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1317,
+     "outputTokens": 1019,
+     "thinkingTokens": 365,
+     "cacheReadInputTokens": 1834,
+     "cacheCreationInputTokens": 1450,
+     "webSearchRequests": 0,
+     "costUSD": 0.00084079,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.00084079,
+   "session_id": "6ebfadba-89a0-4422-beb8-448095ab8773",
+   "duration_ms": 3014,
+   "cost_usd": 0.00021434000000000004
+  }
+ ],
+ "transcript": [
+  {
+   "turn": 1,
+   "reply": "\n<invoke-file>\n{\"action\": \"write\", \"path\": \"duration.py\", \"content\": \"\\\"\\\"\\\"Parse compact duration strings such as '1h30m' into seconds.\\\"\\\"\\\"\\n\\nimport re\\n\\n_PATTERN = re.compile(\\n    r\\\"(?:([0-9]+)d)?(?:([0-9]+)h)?(?:([0-9]+)m)?(?:([0-9]+)s)?\\\"\\n)\\n_MULTIPLIERS = (86400, 3600, 60, 1)  # d, h, m, s\\n\\n\\ndef parse_duration(s):\\n    \\\"\\\"\\\"Return the number of seconds described by ``s`` as an int.\\n\\n    Accepts strings made of non-negative integer amounts followed by the\\n    units d, h, m, s. Each unit may appear at most once and must appear in\\n    that order. Surrounding whitespace is ignored. Anything else, including\\n    an empty string or a bare number, raises ValueError.\\n    \\\"\\\"\\\"\\n    if not isinstance(s, str):\\n        raise ValueError(f\\\"expected a string, got {type(s).__name__}\\\")\\n\\n    text = s.strip()\\n    match = _PATTERN.fullmatch(text)\\n    if not text or match is None or match.group(0) == \\\"\\\":\\n        raise ValueError(f\\\"invalid duration: {s!r}\\\")\\n\\n    # A bare number has no unit suffix; the pattern cannot match it\\n    # because every amount is followed by its unit, so reaching here\\n    # means at least one unit was present and matched in order.\\n    total = 0\\n    for amount, multiplier in zip(match.groups(), _MULTIPLIERS):\\n        if amount is not None:\\n            total += int(amount) * multiplier\\n    return total\\n\"}\n</invoke-file>\noted",
+   "result": "wrote duration.py (1246 chars)"
+  },
+  {
+   "turn": 2,
+   "reply": "\n{\"action\": \"finish\"}",
+   "result": null
+  }
+ ],
+ "files": {
+  "duration.py": "\"\"\"Parse compact duration strings such as '1h30m' into seconds.\"\"\"\n\nimport re\n\n_PATTERN = re.compile(\n    r\"(?:([0-9]+)d)?(?:([0-9]+)h)?(?:([0-9]+)m)?(?:([0-9]+)s)?\"\n)\n_MULTIPLIERS = (86400, 3600, 60, 1)  # d, h, m, s\n\n\ndef parse_duration(s):\n    \"\"\"Return the number of seconds described by ``s`` as an int.\n\n    Accepts strings made of non-negative integer amounts followed by the\n    units d, h, m, s. Each unit may appear at most once and must appear in\n    that order. Surrounding whitespace is ignored. Anything else, including\n    an empty string or a bare number, raises ValueError.\n    \"\"\"\n    if not isinstance(s, str):\n        raise ValueError(f\"expected a string, got {type(s).__name__}\")\n\n    text = s.strip()\n    match = _PATTERN.fullmatch(text)\n    if not text or match is None or match.group(0) == \"\":\n        raise ValueError(f\"invalid duration: {s!r}\")\n\n    # A bare number has no unit suffix; the pattern cannot match it\n    # because every amount is followed by its unit, so reaching here\n    # means at least one unit was present and matched in order.\n    total = 0\n    for amount, multiplier in zip(match.groups(), _MULTIPLIERS):\n        if amount is not None:\n            total += int(amount) * multiplier\n    return total\n"
+ }
+}

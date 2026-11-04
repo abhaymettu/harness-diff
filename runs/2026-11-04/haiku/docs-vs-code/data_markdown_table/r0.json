@@ -1,0 +1,279 @@
+{
+ "schema": 1,
+ "experiment": "2026-11-04",
+ "model": "haiku",
+ "arm": "docs-vs-code",
+ "arm_sha256": "05397f4ceb09b6a1cc1b721d008bbb3d01f33bc4d6a8a00cb6e8c78c89fc37e6",
+ "task": "data_markdown_table",
+ "category": "data",
+ "run": 0,
+ "round": 0,
+ "slot": 0,
+ "battery": "v1",
+ "battery_sha256": "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe",
+ "max_turns": 4,
+ "repo_commit": "861e6d3b80ad1bd29a1ef103ac7c818890f4552c",
+ "python": "3.14.7",
+ "started_utc": "2026-11-04T07:09:35+00:00",
+ "outcome": "pass",
+ "check_detail": "table.md matches",
+ "ended": "finish",
+ "turns_used": 4,
+ "cost_usd": 0.0015496350000000002,
+ "written_bytes": 1467,
+ "py_written": 1,
+ "py_with_probe": 0,
+ "finished_utc": "2026-11-04T07:09:52+00:00",
+ "calls": [
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1365,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 308,
+    "output_tokens_details": {
+     "thinking_tokens": 268
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 1365
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 308,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 1365,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 1365,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1459,
+     "outputTokens": 328,
+     "cacheReadInputTokens": 0,
+     "cacheCreationInputTokens": 1365,
+     "webSearchRequests": 0,
+     "costUSD": 0.000480525,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "thinkingTokens": 268,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.000480525,
+   "session_id": "0c1bf77d-cc2e-4cf4-903e-a9e06fb9c20e",
+   "duration_ms": 3017,
+   "cost_usd": 0.000480525
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 454,
+    "cache_read_input_tokens": 1365,
+    "output_tokens": 1323,
+    "output_tokens_details": {
+     "thinking_tokens": 698
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 454
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 1323,
+      "cache_read_input_tokens": 1365,
+      "cache_creation_input_tokens": 454,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 454,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1461,
+     "outputTokens": 1651,
+     "thinkingTokens": 966,
+     "cacheReadInputTokens": 1365,
+     "cacheCreationInputTokens": 1819,
+     "webSearchRequests": 0,
+     "costUSD": 0.0012126250000000002,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.0012126250000000002,
+   "session_id": "0c1bf77d-cc2e-4cf4-903e-a9e06fb9c20e",
+   "duration_ms": 7728,
+   "cost_usd": 0.0007321000000000002
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1373,
+    "cache_read_input_tokens": 1819,
+    "output_tokens": 24,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 1373
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 24,
+      "cache_read_input_tokens": 1819,
+      "cache_creation_input_tokens": 1373,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 1373,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1463,
+     "outputTokens": 1675,
+     "thinkingTokens": 966,
+     "cacheReadInputTokens": 3184,
+     "cacheCreationInputTokens": 3192,
+     "webSearchRequests": 0,
+     "costUSD": 0.0014146400000000002,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.0014146400000000002,
+   "session_id": "0c1bf77d-cc2e-4cf4-903e-a9e06fb9c20e",
+   "duration_ms": 1409,
+   "cost_usd": 0.00020201500000000005
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 67,
+    "cache_read_input_tokens": 3192,
+    "output_tokens": 189,
+    "output_tokens_details": {
+     "thinking_tokens": 178
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 67
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 189,
+      "cache_read_input_tokens": 3192,
+      "cache_creation_input_tokens": 67,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 67,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 1465,
+     "outputTokens": 1864,
+     "thinkingTokens": 1144,
+     "cacheReadInputTokens": 6376,
+     "cacheCreationInputTokens": 3259,
+     "webSearchRequests": 0,
+     "costUSD": 0.0015496350000000002,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.0015496350000000002,
+   "session_id": "0c1bf77d-cc2e-4cf4-903e-a9e06fb9c20e",
+   "duration_ms": 1715,
+   "cost_usd": 0.00013499499999999995
+  }
+ ],
+ "transcript": [
+  {
+   "turn": 1,
+   "reply": "\n<invoke:\n{\"action\": \"read\", \"path\": \"table.csv\"}\n</invoke>",
+   "result": "item,qty,price,note\nitem-1,10,99.27,x|y\nitem-2,476,54.95,x|y\nitem-3,384,87.39,fragile\nitem-4,339,0.32,x|y\nitem-5,454,86.43,x|y\nitem-6,429,50.10,\nitem-7,251,76.58,\nitem-8,325,11.21,fragile\n"
+  },
+  {
+   "turn": 2,
+   "reply": "\n<invoke:\n{\"action\": \"write\", \"path\": \"make_table.py\", \"content\": \"import csv\\n\\nwith open('table.csv', newline='') as f:\\n    rows = list(csv.reader(f))\\n\\nheader, body = rows[0], rows[1:]\\nncol = len(header)\\n\\ndef esc(s):\\n    return s.replace('|', '\\\\\\\\|')\\n\\ndef is_num(s):\\n    try:\\n        float(s.strip())\\n        return True\\n    except ValueError:\\n        return False\\n\\nnumeric = [all(is_num(r[i]) for r in body) for i in range(ncol)]\\n\\nhdr = [esc(c) for c in header]\\nbod = [[esc(c) for c in r] for r in body]\\n\\nwidths = []\\nfor i in range(ncol):\\n    w = max([len(hdr[i])] + [len(r[i]) for r in bod])\\n    widths.append(max(w, 3))\\n\\ndef fmt(cells):\\n    out = []\\n    for i, c in enumerate(cells):\\n        if numeric[i]:\\n            out.append(c.rjust(widths[i]))\\n        else:\\n            out.append(c.ljust(widths[i]))\\n    return '| ' + ' | '.join(out) + ' |'\\n\\nlines = [fmt(hdr)]\\nseps = []\\nfor i in range(ncol):\\n    if numeric[i]:\\n        seps.append('-' * (widths[i] - 1) + ':')\\n    else:\\n        seps.append('-' * widths[i])\\nlines.append('| ' + ' | '.join(seps) + ' |')\\nfor r in bod:\\n    lines.append(fmt(r))\\n\\nwith open('table.md', 'w', newline='') as f:\\n    f.write('\\\\n'.join(lines) + '\\\\n')\\n\"}",
+   "result": "wrote make_table.py (1117 chars)"
+  },
+  {
+   "turn": 3,
+   "reply": "{\"action\": \"run\", \"args\": [\"make_table.py\"]}",
+   "result": "exit code 0\n"
+  },
+  {
+   "turn": 4,
+   "reply": "{\"action\": \"finish\"}",
+   "result": null
+  }
+ ],
+ "files": {
+  "make_table.py": "import csv\n\nwith open('table.csv', newline='') as f:\n    rows = list(csv.reader(f))\n\nheader, body = rows[0], rows[1:]\nncol = len(header)\n\ndef esc(s):\n    return s.replace('|', '\\\\|')\n\ndef is_num(s):\n    try:\n        float(s.strip())\n        return True\n    except ValueError:\n        return False\n\nnumeric = [all(is_num(r[i]) for r in body) for i in range(ncol)]\n\nhdr = [esc(c) for c in header]\nbod = [[esc(c) for c in r] for r in body]\n\nwidths = []\nfor i in range(ncol):\n    w = max([len(hdr[i])] + [len(r[i]) for r in bod])\n    widths.append(max(w, 3))\n\ndef fmt(cells):\n    out = []\n    for i, c in enumerate(cells):\n        if numeric[i]:\n            out.append(c.rjust(widths[i]))\n        else:\n            out.append(c.ljust(widths[i]))\n    return '| ' + ' | '.join(out) + ' |'\n\nlines = [fmt(hdr)]\nseps = []\nfor i in range(ncol):\n    if numeric[i]:\n        seps.append('-' * (widths[i] - 1) + ':')\n    else:\n        seps.append('-' * widths[i])\nlines.append('| ' + ' | '.join(seps) + ' |')\nfor r in bod:\n    lines.append(fmt(r))\n\nwith open('table.md', 'w', newline='') as f:\n    f.write('\\n'.join(lines) + '\\n')\n",
+  "table.md": "| item   | qty | price | note    |\n| ------ | --: | ----: | ------- |\n| item-1 |  10 | 99.27 | x\\|y    |\n| item-2 | 476 | 54.95 | x\\|y    |\n| item-3 | 384 | 87.39 | fragile |\n| item-4 | 339 |  0.32 | x\\|y    |\n| item-5 | 454 | 86.43 | x\\|y    |\n| item-6 | 429 | 50.10 |         |\n| item-7 | 251 | 76.58 |         |\n| item-8 | 325 | 11.21 | fragile |\n"
+ }
+}
