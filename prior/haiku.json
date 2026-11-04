@@ -1,0 +1,128 @@
+{
+ "source": "github.com/abhaymettu/reliability-weather runs/2026-11-04 (battery v1, 4 turns, no AGENTS.md)",
+ "snapshot_utc": "2026-11-04T06:49:34+00:00",
+ "receipts": 93,
+ "receipts_sha256": "bbe9968a00aff6b9a8111f538a120ba9b3c507373ce278acb855fabf717abaf7",
+ "cells": {
+  "chore_add_cli": [
+   3,
+   3
+  ],
+  "chore_circular_import": [
+   3,
+   3
+  ],
+  "chore_rename": [
+   2,
+   3
+  ],
+  "chore_split_module": [
+   2,
+   3
+  ],
+  "chore_tests_green": [
+   3,
+   3
+  ],
+  "chore_version_bump": [
+   1,
+   3
+  ],
+  "data_config_merge": [
+   3,
+   3
+  ],
+  "data_dedupe_contacts": [
+   2,
+   3
+  ],
+  "data_find_todos": [
+   3,
+   3
+  ],
+  "data_inventory": [
+   3,
+   3
+  ],
+  "data_join_orders": [
+   3,
+   3
+  ],
+  "data_log_errors": [
+   3,
+   3
+  ],
+  "data_markdown_table": [
+   2,
+   2
+  ],
+  "data_sales_totals": [
+   2,
+   2
+  ],
+  "fix_bisect": [
+   3,
+   3
+  ],
+  "fix_csv_line": [
+   3,
+   3
+  ],
+  "fix_days_between": [
+   4,
+   4
+  ],
+  "fix_dedupe": [
+   4,
+   4
+  ],
+  "fix_flatten": [
+   3,
+   3
+  ],
+  "fix_median": [
+   4,
+   4
+  ],
+  "fix_roman": [
+   4,
+   4
+  ],
+  "fix_word_count": [
+   4,
+   4
+  ],
+  "impl_balanced": [
+   3,
+   3
+  ],
+  "impl_duration": [
+   3,
+   3
+  ],
+  "impl_lru": [
+   3,
+   3
+  ],
+  "impl_luhn": [
+   3,
+   3
+  ],
+  "impl_merge_intervals": [
+   3,
+   3
+  ],
+  "impl_rle": [
+   3,
+   3
+  ],
+  "impl_semver": [
+   3,
+   3
+  ],
+  "impl_slugify": [
+   3,
+   3
+  ]
+ }
+}

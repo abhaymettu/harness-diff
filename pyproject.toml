@@ -1,0 +1,17 @@
+[project]
+name = "harness-diff"
+version = "0.1.0"
+description = "Does an AGENTS.md change move a coding agent's pass rate by more than run-to-run noise?"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+
+[project.scripts]
+harness-diff = "harness_diff.cli:main"
+
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["harness_diff", "weather", "battery", "battery.v1"]

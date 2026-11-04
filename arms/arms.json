@@ -1,0 +1,82 @@
+{
+ "secondary-labels": {
+  "title": "\"Avoid unnecessary secondary labels\" (UI line)",
+  "source": "https://x.com/luinlee/status/2113085361836744764",
+  "reach": "7,752 likes, 10,578 bookmarks, 541,635 views",
+  "quoted": "post text",
+  "reach_when": "as scraped 2026-11-04 00:15 to 00:27 CT",
+  "sha256": "63fe178250a4d9840342a73347f78bf4db983ceb94d2e1b2afd119577ac758f7"
+ },
+ "ux-dx-ax": {
+  "title": "\"Elevate UX, DX and AX\" (two lines)",
+  "source": "https://x.com/Voxyz_ai/status/2113254050170843418",
+  "reach": "7,088 likes, 14,619 bookmarks, 739,905 views",
+  "quoted": "post text",
+  "reach_when": "as scraped 2026-11-04 00:15 to 00:27 CT",
+  "sha256": "96a8dc7dd7f99961cd057c4b1663e1173393d20969e596d9b1d1850203b0ed95"
+ },
+ "marcos-full": {
+  "title": "\"After ~60B tokens, my full AGENTS.md\" (7 rules)",
+  "source": "https://x.com/MarcosHernanz/status/2083954734487212511",
+  "reach": "10,789 likes, 20,021 bookmarks, 2,061,613 views",
+  "quoted": "transcribed from the post's image",
+  "reach_when": "as scraped 2026-11-04 00:15 to 00:27 CT",
+  "sha256": "3d8d5da954c2ea27f9e4b1474bb59b837685908b00d3c0bcb5f8efb0f3edb8fd"
+ },
+ "docs-vs-code": {
+  "title": "\"When docs and code disagree, follow the code\" (one-sentence fix)",
+  "source": "https://x.com/ai_database/status/2114184481951330365",
+  "reach": "6,313 likes, 9,352 bookmarks, 630,333 views",
+  "quoted": "English original quoted in the post; paper arXiv 2610.30571",
+  "reach_when": "as scraped 2026-11-04 00:15 to 00:27 CT",
+  "sha256": "05397f4ceb09b6a1cc1b721d008bbb3d01f33bc4d6a8a00cb6e8c78c89fc37e6"
+ },
+ "plain-english": {
+  "title": "\"Plain English, no agent slang\" (banned-word list)",
+  "source": "https://x.com/drummatick/status/2115102978848022571",
+  "reach": "2,384 likes, 2,833 bookmarks, 124,561 views",
+  "quoted": "transcribed from the post's image",
+  "reach_when": "as scraped 2026-11-04 00:15 to 00:27 CT",
+  "sha256": "842d7fda154d64eb1db004d0d3829ee9d77afae6a0c5d17cdbc8070ac7b5d3e3"
+ },
+ "karpathy": {
+  "title": "Karpathy-style CLAUDE.md (65 lines)",
+  "source": "https://x.com/Saccc_c/status/2058467100537090544",
+  "reach": "2,282 likes, 4,018 bookmarks, 392,637 views",
+  "quoted": "github.com/multica-ai/andrej-karpathy-skills CLAUDE.md at 2c60614 (no license, fetched, not committed)",
+  "reach_when": "as scraped 2026-11-04 00:15 to 00:27 CT",
+  "sha256": "694a2d721e41c385f3db492838c23299826df5ba9809e3b0721aac70021e196a"
+ },
+ "long-full": {
+  "title": "A real 52 KB AGENTS.md pair (pydantic-ai root + tests), probe rule last",
+  "source": "https://x.com/hartshorne/status/2117848891303612427",
+  "reach": "6 likes, 166 views",
+  "quoted": "pydantic/pydantic-ai AGENTS.md and tests/AGENTS.md at 7d1d3f0 (MIT), joined with Codex's separator",
+  "reach_when": "as scraped 2026-11-04 00:15 to 00:27 CT",
+  "sha256": "7ae958ae9fe92deb5879bff3e537285296b9e73adf7e38f314fb24fa3bda5aae"
+ },
+ "long-trunc32": {
+  "title": "The same file cut at 32 KiB, as Codex reads it",
+  "source": "https://x.com/hartshorne/status/2117848891303612427",
+  "reach": "6 likes, 166 views",
+  "quoted": "first 32,768 bytes of long-full (codex-rs DEFAULT_PROJECT_DOC_MAX_BYTES)",
+  "reach_when": "as scraped 2026-11-04 00:15 to 00:27 CT",
+  "sha256": "bc2afa3a44e801626b0db0668941798dfb4e38d67756d26461e255c187c9c65e"
+ },
+ "long-cut25": {
+  "title": "The same file with a random 25% of its blocks cut",
+  "source": "https://x.com/hartshorne/status/2117848891303612427",
+  "reach": "6 likes, 166 views",
+  "quoted": "long-full minus seeded random blank-line blocks until 25% of bytes are gone; probe kept",
+  "reach_when": "as scraped 2026-11-04 00:15 to 00:27 CT",
+  "sha256": "df61765fa8b85baf1f2f49a49234177c646ab8813ff7cbf3094337d7df5a47e4"
+ },
+ "probe-only": {
+  "title": "Positive control: one checkable rule",
+  "source": null,
+  "reach": null,
+  "quoted": "written for this study",
+  "reach_when": null,
+  "sha256": "1bf5e65637574e8529518fc6ac70d7444cf18e4b1517f49638199bac11537c98"
+ }
+}
