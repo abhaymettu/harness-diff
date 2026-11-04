@@ -21,7 +21,8 @@ from . import experiment, report, stats
 
 REPO = Path(__file__).resolve().parent.parent
 PRIOR = REPO / "prior"
-PER_RUN_USD = {"haiku": 0.001, "sonnet": 0.012, "deepseek-flash": 0.0014, "deepseek-v4-pro": 0.011}
+# Measured on battery v1 on 2026-11-04 (Flash at the peak price; off-peak is half).
+PER_RUN_USD = {"haiku": 0.0014, "sonnet": 0.012, "deepseek-flash": 0.0022, "deepseek-v4-pro": 0.011}
 
 
 def prior_for(model: str, exclude=()) -> list[float]:
