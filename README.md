@@ -97,6 +97,6 @@ Python 3.10 or newer, no dependencies. macOS only for now: the agent's code runs
 
 ```sh
 python3 scripts/build_arms.py                                  # arm texts, checked against their sha256 pins
-python3 -m unittest discover -s tests -t .                     # 15 tests
+python3 -m unittest discover -s tests -t .                     # 15 tests; one skips until the Karpathy arm is fetched
 python3 -m harness_diff.cli report experiments/2026-11-04.json # the table above, from the receipts in runs/
 ```

@@ -35,6 +35,8 @@ class Pins(unittest.TestCase):
             self.assertEqual(hashlib.sha256(path.read_bytes()).hexdigest(), m["sha256"], arm_id)
 
     def test_the_experiment_loads_against_its_pins(self):
+        if not (REPO / "arms/karpathy.md").exists():
+            self.skipTest("arms/karpathy.md is unlicensed and not committed; run scripts/build_arms.py to fetch it")
         exp = experiment.Experiment.load(REPO / "experiments/2026-11-04.json")
         self.assertEqual(exp.slots["haiku"]["baseline"], 3)
         self.assertEqual(len(exp.rows), 9)
