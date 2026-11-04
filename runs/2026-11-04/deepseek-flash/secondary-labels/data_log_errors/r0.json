@@ -1,0 +1,134 @@
+{
+ "schema": 1,
+ "experiment": "2026-11-04",
+ "model": "deepseek-flash",
+ "arm": "secondary-labels",
+ "arm_sha256": "63fe178250a4d9840342a73347f78bf4db983ceb94d2e1b2afd119577ac758f7",
+ "task": "data_log_errors",
+ "category": "data",
+ "run": 0,
+ "round": 0,
+ "slot": 0,
+ "battery": "v1",
+ "battery_sha256": "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe",
+ "max_turns": 4,
+ "repo_commit": "3760bfe9933864820da3f5f9697349332954330f",
+ "python": "3.14.7",
+ "started_utc": "2026-11-04T10:07:04+00:00",
+ "outcome": "pass",
+ "check_detail": "errors.csv matches",
+ "ended": "finish",
+ "turns_used": 4,
+ "cost_usd": 0.0009577979999999999,
+ "written_bytes": 63,
+ "py_written": 0,
+ "py_with_probe": 0,
+ "finished_utc": "2026-11-04T10:07:14+00:00",
+ "calls": [
+  {
+   "usage": {
+    "prompt_tokens": 354,
+    "completion_tokens": 489,
+    "total_tokens": 843,
+    "prompt_tokens_details": {
+     "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 427
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 226
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:07:04+00:00",
+   "peak": false,
+   "cost_usd": 0.00032768399999999996
+  },
+  {
+   "usage": {
+    "prompt_tokens": 1140,
+    "completion_tokens": 308,
+    "total_tokens": 1448,
+    "prompt_tokens_details": {
+     "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 84
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 884
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:07:08+00:00",
+   "peak": false,
+   "cost_usd": 0.000318168
+  },
+  {
+   "usage": {
+    "prompt_tokens": 1441,
+    "completion_tokens": 292,
+    "total_tokens": 1733,
+    "prompt_tokens_details": {
+     "cached_tokens": 1024
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 96
+    },
+    "prompt_cache_hit_tokens": 1024,
+    "prompt_cache_miss_tokens": 417
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:07:10+00:00",
+   "peak": false,
+   "cost_usd": 0.000240822
+  },
+  {
+   "usage": {
+    "prompt_tokens": 1714,
+    "completion_tokens": 35,
+    "total_tokens": 1749,
+    "prompt_tokens_details": {
+     "cached_tokens": 1408
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 27
+    },
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 306
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:07:13+00:00",
+   "peak": false,
+   "cost_usd": 7.112399999999999e-05
+  }
+ ],
+ "transcript": [
+  {
+   "turn": 1,
+   "reply": "{\"action\": \"run\", \"args\": [\"-c\", \"import pathlib; lines=pathlib.Path('app.log').read_text().splitlines(); print('\\\\n'.join(repr(x) for x in lines[:30])); print('TOTAL', len(lines))\"]}",
+   "result": "exit code 0\n'2026-11-01T00:00:00Z [WARN] search: event 0'\n'2026-11-01T00:01:00Z [WARN] cache: event 1'\n'2026-11-01T00:02:00Z [INFO] db: event 2'\n'2026-11-01T00:03:00Z [WARN] auth: event 3'\n'2026-11-01T00:04:00Z [WARN] cache: event 4'\n'2026-11-01T00:05:00Z [WARN] auth: event 5'\n'2026-11-01T00:06:00Z [ERROR] api: event 6'\n'2026-11-01T00:07:00Z [INFO] db: event 7'\n'2026-11-01T00:08:00Z [WARN] search: event 8'\n'2026-11-01T00:09:00Z [ERROR] search: event 9'\n'2026-11-01T00:10:00Z [ERROR] db: event 10'\n'2026-11-01T00:11:00Z [WARN] api: event 11'\n'2026-11-01T00:12:00Z [WARN] db: event 12'\n'2026-11-01T00:13:00Z [WARN] cache: event 13'\n'2026-11-01T00:14:00Z [INFO] billing: event 14'\n'2026-11-01T00:15:00Z [INFO] api: event 15'\n'2026-11-01T00:16:00Z [WARN] cache: event 16'\n'2026-11-01T00:17:00Z [WARN] api: event 17'\n'2026-11-01T00:18:00Z [INFO] db: event 18'\n'2026-11-01T00:19:00Z [INFO] auth: event 19'\n'2026-11-01T00:20:00Z [WARN] api: event 20'\n'2026-11-01T00:21:00Z [INFO] db: event 21'\n'2026-11-01T00:22:00Z [INFO] db: event 22'\n'2026-11-01T00:23:00Z [INFO] api: event 23'\n'2026-11-01T00:24:00Z [INFO] db: event 24'\n'2026-11-01T00:25:00Z [INFO] cache: event 25'\n'2026-11-01T00:26:00Z [INFO] api: event 26'\n'2026-11-01T00:27:00Z [INFO] db: event 27'\n'2026-11-01T00:28:00Z [INFO] api: event 28'\n'2026-11-01T00:29:00Z [INFO] cache: event 29'\nTOTAL 402\n"
+  },
+  {
+   "turn": 2,
+   "reply": "{\"action\": \"run\", \"args\": [\"-c\", \"import re,pathlib,collections; c=collections.Counter(); bad=[];\\nfor l in pathlib.Path('app.log').read_text().splitlines():\\n m=re.match(r'^(\\\\d{4}-\\\\d{2}-\\\\d{2}T\\\\d{2}:\\\\d{2}:\\\\d{2}Z) \\\\[([A-Z]+)\\\\] ([^:]+): ',l)\\n if not m: bad.append(l); continue\\n if m.group(2)=='ERROR': c[m.group(3)]+=1\\nrows=sorted(c.items(),key=lambda x:(-x[1],x[0])); pathlib.Path('errors.csv').write_text('module,errors\\\\n'+''.join(f'{k},{v}\\\\n' for k,v in rows)); print(rows); print('NONMATCH',len(bad)); print('\\\\n'.join(repr(b) for b in bad[:20]))\"]}",
+   "result": "exit code 0\n[('db', 20), ('api', 18), ('cache', 12), ('billing', 11), ('search', 9), ('auth', 7)]\nNONMATCH 1\n'    traceback continues [ERROR] db: not a real entry'\n"
+  },
+  {
+   "turn": 3,
+   "reply": "{\"action\": \"run\", \"args\": [\"-c\", \"import re,pathlib,collections; L=pathlib.Path('app.log').read_text().splitlines();\\nst=[l for l in L if re.match(r'^\\\\d{4}-\\\\d{2}-\\\\d{2}T',l)];\\nprint('startswith ts',len(st));\\nprint('levels',collections.Counter(re.findall(r'^\\\\S+ \\\\[([^\\\\]]*)\\\\]',l)[0] for l in st if re.match(r'^\\\\S+ \\\\[[^\\\\]]*\\\\]',l)));\\nprint('unparsed', [l for l in st if not re.match(r'^\\\\S+ \\\\[[^\\\\]]*\\\\] [^:]+: ',l)]);\\nprint(pathlib.Path('errors.csv').read_text())\"]}",
+   "result": "exit code 0\nstartswith ts 401\nlevels Counter({'INFO': 237, 'WARN': 87, 'ERROR': 77})\nunparsed []\nmodule,errors\ndb,20\napi,18\ncache,12\nbilling,11\nsearch,9\nauth,7\n\n"
+  },
+  {
+   "turn": 4,
+   "reply": "{\"action\": \"finish\"}",
+   "result": null
+  }
+ ],
+ "files": {
+  "errors.csv": "module,errors\ndb,20\napi,18\ncache,12\nbilling,11\nsearch,9\nauth,7\n"
+ }
+}

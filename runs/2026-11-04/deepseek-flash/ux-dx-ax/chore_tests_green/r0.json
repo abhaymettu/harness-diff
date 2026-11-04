@@ -1,0 +1,134 @@
+{
+ "schema": 1,
+ "experiment": "2026-11-04",
+ "model": "deepseek-flash",
+ "arm": "ux-dx-ax",
+ "arm_sha256": "96a8dc7dd7f99961cd057c4b1663e1173393d20969e596d9b1d1850203b0ed95",
+ "task": "chore_tests_green",
+ "category": "chore",
+ "run": 0,
+ "round": 0,
+ "slot": 0,
+ "battery": "v1",
+ "battery_sha256": "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe",
+ "max_turns": 4,
+ "repo_commit": "3760bfe9933864820da3f5f9697349332954330f",
+ "python": "3.14.7",
+ "started_utc": "2026-11-04T10:05:28+00:00",
+ "outcome": "fail",
+ "check_detail": "unit tests fail: \"~~^^^^^^^^^^^^^^^^^^^^^^^^\\nAssertionError: '5.00 USD' != '$0.05'\\n- 5.00 USD\\n+ $0.05\\n\\n\\n----------------------------------------------------------------------\\nRan 3 tests in 0.001s\\n\\nFAILED (failures=2)\\n\"",
+ "ended": "turn_limit",
+ "turns_used": 4,
+ "cost_usd": 0.002140206,
+ "written_bytes": 9316,
+ "py_written": 1,
+ "py_with_probe": 0,
+ "finished_utc": "2026-11-04T10:05:47+00:00",
+ "calls": [
+  {
+   "usage": {
+    "prompt_tokens": 356,
+    "completion_tokens": 43,
+    "total_tokens": 399,
+    "prompt_tokens_details": {
+     "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 7
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 228
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:05:28+00:00",
+   "peak": false,
+   "cost_usd": 6.0384e-05
+  },
+  {
+   "usage": {
+    "prompt_tokens": 449,
+    "completion_tokens": 80,
+    "total_tokens": 529,
+    "prompt_tokens_details": {
+     "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 14
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 193
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:05:30+00:00",
+   "peak": false,
+   "cost_usd": 7.7718e-05
+  },
+  {
+   "usage": {
+    "prompt_tokens": 542,
+    "completion_tokens": 49,
+    "total_tokens": 591,
+    "prompt_tokens_details": {
+     "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 37
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 158
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:05:31+00:00",
+   "peak": false,
+   "cost_usd": 5.4251999999999995e-05
+  },
+  {
+   "usage": {
+    "prompt_tokens": 574,
+    "completion_tokens": 3197,
+    "total_tokens": 3771,
+    "prompt_tokens_details": {
+     "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 645
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 190
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:05:32+00:00",
+   "peak": false,
+   "cost_usd": 0.001947852
+  }
+ ],
+ "transcript": [
+  {
+   "turn": 1,
+   "reply": "\n\n<\uff5c\uff5cDSML\uff5c\uff5c calls>\n<\uff5c\uff5cDSML\uff5c\uff5c invoke name=\"list\">\n<\uff5c\uff5cDSML\uff5c\uff5c parameter name=\"path\" string=\"true\">.</\uff5c\uff5cDSML\uff5c\uff5c parameter>\n</\uff5c\uff5cDSML\uff5c\uff5c invoke>\n</\uff5c\uff5cDSML\uff5c\uff5c calls>",
+   "result": "error: reply was not a JSON object with an \"action\" key"
+  },
+  {
+   "turn": 2,
+   "reply": "\n\n<\uff5c\uff5cDSML\uff5c\uff5c calls>\n<\uff5c\uff5cDSML\uff5c\uff5c invoke name=\"list\">\n<\uff5c\uff5cDSML\uff5c\uff5c parameter name=\"path\" string=\"true\">.</\uff5c\uff5cDSML\uff5c\uff5c parameter>\n</\uff5c\uff5cDSML\uff5c\uff5c invoke>\n</\uff5c\uff5cDSML\uff5c\uff5c calls>",
+   "result": "error: reply was not a JSON object with an \"action\" key"
+  },
+  {
+   "turn": 3,
+   "reply": "{\"action\": \"list\", \"path\": \".\"}",
+   "result": "money.py\ntest_money.py"
+  },
+  {
+   "turn": 4,
+   "reply": "{\"action\": \"write\", \"path\": \"money.py\", \"content\": \"\\\"\\\"\\\"A small, general-purpose money value object.\\n\\nMoney is stored as an exact :class:`~decimal.Decimal` amount together with a\\ncurrency code, so that no binary floating point error can ever leak into a\\nbalance.  Amounts can be built from ints, floats, strings (``\\\"10.00\\\"``,\\n``\\\"$10.00\\\"``, ``\\\"10.00 USD\\\"``) or other ``Money`` instances, and every\\noperation keeps the currency honest.\\n\\\"\\\"\\\"\\n\\nfrom __future__ import annotations\\n\\nfrom decimal import Decimal, ROUND_HALF_UP, InvalidOperation\\n\\n__all__ = [\\\"Money\\\", \\\"CurrencyMismatchError\\\"]\\n\\n\\nclass CurrencyMismatchError(ValueError):\\n    \\\"\\\"\\\"Raised when two different currencies are combined.\\\"\\\"\\\"\\n\\n\\n_SYMBOLS = {\\n    \\\"$\\\": \\\"USD\\\",\\n    \\\"\\\\u20ac\\\": \\\"EUR\\\",\\n    \\\"\\\\u00a3\\\": \\\"GBP\\\",\\n    \\\"\\\\u00a5\\\": \\\"JPY\\\",\\n}\\n\\n_TWOPLACES = Decimal(\\\"0.01\\\")\\n\\n\\ndef _to_decimal(value) -> Decimal:\\n    \\\"\\\"\\\"Coerce *value* to an exact Decimal without going through binary float.\\\"\\\"\\\"\\n    if isinstance(value, Money):\\n        return value.amount\\n    if isinstance(value, Decimal):\\n        return value\\n    if isinstance(value, bool):  # avoid True -> 1 surprises\\n        raise TypeError(\\\"bool is not a valid monetary amount\\\")\\n    if isinstance(value, int):\\n        return Decimal(value)\\n    if isinstance(value, float):\\n        # str() gives the shortest repr, i.e. what the human wrote.\\n        return Decimal(str(value))\\n    if isinstance(value, str):\\n        return Decimal(value.strip())\\n    raise TypeError(f\\\"cannot interpret {value!r} as a monetary amount\\\")\\n\\n\\ndef _parse(text: str):\\n    \\\"\\\"\\\"Split a textual amount into (Decimal, currency-or-None).\\\"\\\"\\\"\\n    raw = text.strip()\\n    if not raw:\\n        raise ValueError(\\\"empty monetary amount\\\")\\n\\n    currency = None\\n    for symbol, code in _SYMBOLS.items():\\n        if raw.startswith(symbol):\\n            currency = code\\n            raw = raw[len(symbol):].strip()\\n            break\\n        if raw.endswith(symbol):\\n            currency = code\\n            raw = raw[:-len(symbol)].strip()\\n            break\\n\\n    parts = raw.replace(\\\",\\\", \\\"\\\").split()\\n    numbers = []\\n    for part in parts:\\n        if part and (part[0].isdigit() or part[0] in \\\"+-.\\\"):\\n            numbers.append(part)\\n        elif part:\\n            if currency is not None:\\n                raise ValueError(f\\\"ambiguous currency in {text!r}\\\")\\n            currency = part.upper()\\n\\n    if len(numbers) != 1:\\n        raise ValueError(f\\\"cannot parse monetary amount {text!r}\\\")\\n    return Decimal(numbers[0]), currency\\n\\n\\nclass Money:\\n    \\\"\\\"\\\"An immutable amount of a single currency.\\\"\\\"\\\"\\n\\n    __slots__ = (\\\"_amount\\\", \\\"_currency\\\")\\n\\n    def __init__(self, amount=0, currency=None):\\n        if isinstance(amount, Money):\\n            currency = amount.currency if currency is None else currency\\n            try:\\n                value = _to_decimal(amount)\\n            except (InvalidOperation, ValueError) as exc:  # pragma: no cover\\n                raise ValueError(str(exc)) from None\\n        elif isinstance(amount, str):\\n            try:\\n                value, parsed = _parse(amount)\\n            except InvalidOperation:\\n                raise ValueError(f\\\"invalid monetary amount {amount!r}\\\") from None\\n            if currency is None:\\n                currency = parsed\\n        else:\\n            try:\\n                value = _to_decimal(amount)\\n            except InvalidOperation:\\n                raise ValueError(f\\\"invalid monetary amount {amount!r}\\\") from None\\n\\n        if currency is None:\\n            currency = \\\"USD\\\"\\n        if not isinstance(currency, str) or not currency.strip():\\n            raise ValueError(f\\\"invalid currency {currency!r}\\\")\\n\\n        object.__setattr__(self, \\\"_amount\\\", Decimal(value))\\n        object.__setattr__(self, \\\"_currency\\\", currency.strip().upper())\\n\\n    # ------------------------------------------------------------------ basics\\n    def __setattr__(self, name, value):  # immutable\\n        raise AttributeError(\\\"Money is immutable\\\")\\n\\n    @property\\n    def amount(self) -> Decimal:\\n        return self._amount\\n\\n    @property\\n    def currency(self) -> str:\\n        return self._currency\\n\\n    @property\\n    def cents(self) -> int:\\n        return int((self._amount * 100).to_integral_value(rounding=ROUND_HALF_UP))\\n\\n    def quantize(self) -> \\\"Money\\\":\\n        return Money(self._amount.quantize(_TWOPLACES, rounding=ROUND_HALF_UP),\\n                     self._currency)\\n\\n    def is_zero(self) -> bool:\\n        return self._amount == 0\\n\\n    def _require(self, other: \\\"Money\\\") -> \\\"Money\\\":\\n        if not isinstance(other, Money):\\n            raise TypeError(f\\\"expected Money, got {type(other).__name__}\\\")\\n        if other.currency != self._currency:\\n            raise CurrencyMismatchError(\\n                f\\\"cannot combine {self._currency} with {other.currency}\\\")\\n        return other\\n\\n    # ------------------------------------------------------------- arithmetic\\n    def __add__(self, other):\\n        if not isinstance(other, Money):\\n            return NotImplemented\\n        other = self._require(other)\\n        return Money(self._amount + other.amount, self._currency)\\n\\n    __radd__ = __add__\\n\\n    def __sub__(self, other):\\n        if not isinstance(other, Money):\\n            return NotImplemented\\n        other = self._require(other)\\n        return Money(self._amount - other.amount, self._currency)\\n\\n    def __rsub__(self, other):\\n        if not isinstance(other, Money):\\n            return NotImplemented\\n        return other - self\\n\\n    def __mul__(self, factor):\\n        if isinstance(factor, Money):\\n            return NotImplemented\\n        return Money(self._amount * _to_decimal(factor), self._currency)\\n\\n    __rmul__ = __mul__\\n\\n    def __truediv__(self, other):\\n        if isinstance(other, Money):\\n            other = self._require(other)\\n            return self._amount / other.amount\\n        return Money(self._amount / _to_decimal(other), self._currency)\\n\\n    def __floordiv__(self, other):\\n        if isinstance(other, Money):\\n            other = self._require(other)\\n            return int(self._amount // other.amount)\\n        return Money(self._amount // _to_decimal(other), self._currency)\\n\\n    def __neg__(self):\\n        return Money(-self._amount, self._currency)\\n\\n    def __pos__(self):\\n        return self\\n\\n    def __abs__(self):\\n        return Money(abs(self._amount), self._currency)\\n\\n    # ---------------------------------------------------------------- rounding\\n    def round(self, places: int = 2) -> \\\"Money\\\":\\n        exp = Decimal(1).scaleb(-places)\\n        return Money(self._amount.quantize(exp, rounding=ROUND_HALF_UP),\\n                     self._currency)\\n\\n    def allocate(self, ratios):\\n        \\\"\\\"\\\"Split into parts following *ratios*, distributing the remainder cents.\\n\\n        ``Money(0.05, \\\"USD\\\").allocate([1, 1, 1])`` -> 2c, 2c, 1c.\\n        \\\"\\\"\\\"\\n        if isinstance(ratios, int):\\n            ratios = [1] * ratios\\n        ratios = list(ratios)\\n        if not ratios:\\n            raise ValueError(\\\"cannot allocate to an empty list\\\")\\n        if any(r < 0 for r in ratios):\\n            raise ValueError(\\\"ratios must be non-negative\\\")\\n        total = sum(ratios)\\n        if total == 0:\\n            raise ValueError(\\\"ratios must not sum to zero\\\")\\n\\n        cents = self.cents\\n        sign = -1 if cents < 0 else 1\\n        cents = abs(cents)\\n\\n        shares = [cents * r // total for r in ratios]\\n        remainder = cents - sum(shares)\\n        step = 1 if total > 0 else -1\\n        for i in range(remainder):\\n            shares[i % len(shares)] += step\\n        return [Money(sign * s / 100, self._currency) for s in shares]\\n\\n    split = allocate\\n    distribute = allocate\\n\\n    # -------------------------------------------------------------- comparison\\n    def __eq__(self, other):\\n        if isinstance(other, Money):\\n            return (self._amount == other.amount\\n                    and self._currency == other.currency)\\n        if isinstance(other, (int, float, Decimal, str)):\\n            try:\\n                return self._amount == _to_decimal(other)\\n            except (TypeError, InvalidOperation, ValueError):\\n                return NotImplemented\\n        return NotImplemented\\n\\n    def __ne__(self, other):\\n        result = self.__eq__(other)\\n        if result is NotImplemented:\\n            return result\\n        return not result\\n\\n    def __lt__(self, other):\\n        other = self._require(other)\\n        return self._amount < other.amount\\n\\n    def __le__(self, other):\\n        other = self._require(other)\\n        return self._amount <= other.amount\\n\\n    def __gt__(self, other):\\n        other = self._require(other)\\n        return self._amount > other.amount\\n\\n    def __ge__(self, other):\\n        other = self._require(other)\\n        return self._amount >= other.amount\\n\\n    def __hash__(self):\\n        return hash((self._amount, self._currency))\\n\\n    def __bool__(self):\\n        return not self.is_zero()\\n\\n    # ------------------------------------------------------------------ output\\n    def __str__(self):\\n        return f\\\"{self._amount.quantize(_TWOPLACES, rounding=ROUND_HALF_UP)} {self._currency}\\\"\\n\\n    def __repr__(self):\\n        return f\\\"Money('{self._amount}', '{self._currency}')\\\"\\n\\n    def __format__(self, spec):\\n        if spec:\\n            return format(self._amount, spec)\\n        return str(self)\\n\\n    def __float__(self):\\n        return float(self._amount)\\n\\n    def __int__(self):\\n        return int(self._amount)\\n\"}",
+   "result": "wrote money.py (9316 chars)"
+  }
+ ],
+ "files": {
+  "money.py": "\"\"\"A small, general-purpose money value object.\n\nMoney is stored as an exact :class:`~decimal.Decimal` amount together with a\ncurrency code, so that no binary floating point error can ever leak into a\nbalance.  Amounts can be built from ints, floats, strings (``\"10.00\"``,\n``\"$10.00\"``, ``\"10.00 USD\"``) or other ``Money`` instances, and every\noperation keeps the currency honest.\n\"\"\"\n\nfrom __future__ import annotations\n\nfrom decimal import Decimal, ROUND_HALF_UP, InvalidOperation\n\n__all__ = [\"Money\", \"CurrencyMismatchError\"]\n\n\nclass CurrencyMismatchError(ValueError):\n    \"\"\"Raised when two different currencies are combined.\"\"\"\n\n\n_SYMBOLS = {\n    \"$\": \"USD\",\n    \"\\u20ac\": \"EUR\",\n    \"\\u00a3\": \"GBP\",\n    \"\\u00a5\": \"JPY\",\n}\n\n_TWOPLACES = Decimal(\"0.01\")\n\n\ndef _to_decimal(value) -> Decimal:\n    \"\"\"Coerce *value* to an exact Decimal without going through binary float.\"\"\"\n    if isinstance(value, Money):\n        return value.amount\n    if isinstance(value, Decimal):\n        return value\n    if isinstance(value, bool):  # avoid True -> 1 surprises\n        raise TypeError(\"bool is not a valid monetary amount\")\n    if isinstance(value, int):\n        return Decimal(value)\n    if isinstance(value, float):\n        # str() gives the shortest repr, i.e. what the human wrote.\n        return Decimal(str(value))\n    if isinstance(value, str):\n        return Decimal(value.strip())\n    raise TypeError(f\"cannot interpret {value!r} as a monetary amount\")\n\n\ndef _parse(text: str):\n    \"\"\"Split a textual amount into (Decimal, currency-or-None).\"\"\"\n    raw = text.strip()\n    if not raw:\n        raise ValueError(\"empty monetary amount\")\n\n    currency = None\n    for symbol, code in _SYMBOLS.items():\n        if raw.startswith(symbol):\n            currency = code\n            raw = raw[len(symbol):].strip()\n            break\n        if raw.endswith(symbol):\n            currency = code\n            raw = raw[:-len(symbol)].strip()\n            break\n\n    parts = raw.replace(\",\", \"\").split()\n    numbers = []\n    for part in parts:\n        if part and (part[0].isdigit() or part[0] in \"+-.\"):\n            numbers.append(part)\n        elif part:\n            if currency is not None:\n                raise ValueError(f\"ambiguous currency in {text!r}\")\n            currency = part.upper()\n\n    if len(numbers) != 1:\n        raise ValueError(f\"cannot parse monetary amount {text!r}\")\n    return Decimal(numbers[0]), currency\n\n\nclass Money:\n    \"\"\"An immutable amount of a single currency.\"\"\"\n\n    __slots__ = (\"_amount\", \"_currency\")\n\n    def __init__(self, amount=0, currency=None):\n        if isinstance(amount, Money):\n            currency = amount.currency if currency is None else currency\n            try:\n                value = _to_decimal(amount)\n            except (InvalidOperation, ValueError) as exc:  # pragma: no cover\n                raise ValueError(str(exc)) from None\n        elif isinstance(amount, str):\n            try:\n                value, parsed = _parse(amount)\n            except InvalidOperation:\n                raise ValueError(f\"invalid monetary amount {amount!r}\") from None\n            if currency is None:\n                currency = parsed\n        else:\n            try:\n                value = _to_decimal(amount)\n            except InvalidOperation:\n                raise ValueError(f\"invalid monetary amount {amount!r}\") from None\n\n        if currency is None:\n            currency = \"USD\"\n        if not isinstance(currency, str) or not currency.strip():\n            raise ValueError(f\"invalid currency {currency!r}\")\n\n        object.__setattr__(self, \"_amount\", Decimal(value))\n        object.__setattr__(self, \"_currency\", currency.strip().upper())\n\n    # ------------------------------------------------------------------ basics\n    def __setattr__(self, name, value):  # immutable\n        raise AttributeError(\"Money is immutable\")\n\n    @property\n    def amount(self) -> Decimal:\n        return self._amount\n\n    @property\n    def currency(self) -> str:\n        return self._currency\n\n    @property\n    def cents(self) -> int:\n        return int((self._amount * 100).to_integral_value(rounding=ROUND_HALF_UP))\n\n    def quantize(self) -> \"Money\":\n        return Money(self._amount.quantize(_TWOPLACES, rounding=ROUND_HALF_UP),\n                     self._currency)\n\n    def is_zero(self) -> bool:\n        return self._amount == 0\n\n    def _require(self, other: \"Money\") -> \"Money\":\n        if not isinstance(other, Money):\n            raise TypeError(f\"expected Money, got {type(other).__name__}\")\n        if other.currency != self._currency:\n            raise CurrencyMismatchError(\n                f\"cannot combine {self._currency} with {other.currency}\")\n        return other\n\n    # ------------------------------------------------------------- arithmetic\n    def __add__(self, other):\n        if not isinstance(other, Money):\n            return NotImplemented\n        other = self._require(other)\n        return Money(self._amount + other.amount, self._currency)\n\n    __radd__ = __add__\n\n    def __sub__(self, other):\n        if not isinstance(other, Money):\n            return NotImplemented\n        other = self._require(other)\n        return Money(self._amount - other.amount, self._currency)\n\n    def __rsub__(self, other):\n        if not isinstance(other, Money):\n            return NotImplemented\n        return other - self\n\n    def __mul__(self, factor):\n        if isinstance(factor, Money):\n            return NotImplemented\n        return Money(self._amount * _to_decimal(factor), self._currency)\n\n    __rmul__ = __mul__\n\n    def __truediv__(self, other):\n        if isinstance(other, Money):\n            other = self._require(other)\n            return self._amount / other.amount\n        return Money(self._amount / _to_decimal(other), self._currency)\n\n    def __floordiv__(self, other):\n        if isinstance(other, Money):\n            other = self._require(other)\n            return int(self._amount // other.amount)\n        return Money(self._amount // _to_decimal(other), self._currency)\n\n    def __neg__(self):\n        return Money(-self._amount, self._currency)\n\n    def __pos__(self):\n        return self\n\n    def __abs__(self):\n        return Money(abs(self._amount), self._currency)\n\n    # ---------------------------------------------------------------- rounding\n    def round(self, places: int = 2) -> \"Money\":\n        exp = Decimal(1).scaleb(-places)\n        return Money(self._amount.quantize(exp, rounding=ROUND_HALF_UP),\n                     self._currency)\n\n    def allocate(self, ratios):\n        \"\"\"Split into parts following *ratios*, distributing the remainder cents.\n\n        ``Money(0.05, \"USD\").allocate([1, 1, 1])`` -> 2c, 2c, 1c.\n        \"\"\"\n        if isinstance(ratios, int):\n            ratios = [1] * ratios\n        ratios = list(ratios)\n        if not ratios:\n            raise ValueError(\"cannot allocate to an empty list\")\n        if any(r < 0 for r in ratios):\n            raise ValueError(\"ratios must be non-negative\")\n        total = sum(ratios)\n        if total == 0:\n            raise ValueError(\"ratios must not sum to zero\")\n\n        cents = self.cents\n        sign = -1 if cents < 0 else 1\n        cents = abs(cents)\n\n        shares = [cents * r // total for r in ratios]\n        remainder = cents - sum(shares)\n        step = 1 if total > 0 else -1\n        for i in range(remainder):\n            shares[i % len(shares)] += step\n        return [Money(sign * s / 100, self._currency) for s in shares]\n\n    split = allocate\n    distribute = allocate\n\n    # -------------------------------------------------------------- comparison\n    def __eq__(self, other):\n        if isinstance(other, Money):\n            return (self._amount == other.amount\n                    and self._currency == other.currency)\n        if isinstance(other, (int, float, Decimal, str)):\n            try:\n                return self._amount == _to_decimal(other)\n            except (TypeError, InvalidOperation, ValueError):\n                return NotImplemented\n        return NotImplemented\n\n    def __ne__(self, other):\n        result = self.__eq__(other)\n        if result is NotImplemented:\n            return result\n        return not result\n\n    def __lt__(self, other):\n        other = self._require(other)\n        return self._amount < other.amount\n\n    def __le__(self, other):\n        other = self._require(other)\n        return self._amount <= other.amount\n\n    def __gt__(self, other):\n        other = self._require(other)\n        return self._amount > other.amount\n\n    def __ge__(self, other):\n        other = self._require(other)\n        return self._amount >= other.amount\n\n    def __hash__(self):\n        return hash((self._amount, self._currency))\n\n    def __bool__(self):\n        return not self.is_zero()\n\n    # ------------------------------------------------------------------ output\n    def __str__(self):\n        return f\"{self._amount.quantize(_TWOPLACES, rounding=ROUND_HALF_UP)} {self._currency}\"\n\n    def __repr__(self):\n        return f\"Money('{self._amount}', '{self._currency}')\"\n\n    def __format__(self, spec):\n        if spec:\n            return format(self._amount, spec)\n        return str(self)\n\n    def __float__(self):\n        return float(self._amount)\n\n    def __int__(self):\n        return int(self._amount)\n"
+ }
+}

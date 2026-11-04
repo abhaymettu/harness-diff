@@ -1,0 +1,134 @@
+{
+ "schema": 1,
+ "experiment": "2026-11-04",
+ "model": "deepseek-flash",
+ "arm": "karpathy",
+ "arm_sha256": "694a2d721e41c385f3db492838c23299826df5ba9809e3b0721aac70021e196a",
+ "task": "data_markdown_table",
+ "category": "data",
+ "run": 0,
+ "round": 0,
+ "slot": 0,
+ "battery": "v1",
+ "battery_sha256": "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe",
+ "max_turns": 4,
+ "repo_commit": "3760bfe9933864820da3f5f9697349332954330f",
+ "python": "3.14.7",
+ "started_utc": "2026-11-04T10:11:34+00:00",
+ "outcome": "fail",
+ "check_detail": "table.md differs from expected",
+ "ended": "turn_limit",
+ "turns_used": 4,
+ "cost_usd": 0.001756668,
+ "written_bytes": 345,
+ "py_written": 0,
+ "py_with_probe": 0,
+ "finished_utc": "2026-11-04T10:11:51+00:00",
+ "calls": [
+  {
+   "usage": {
+    "prompt_tokens": 913,
+    "completion_tokens": 22,
+    "total_tokens": 935,
+    "prompt_tokens_details": {
+     "cached_tokens": 768
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 9
+    },
+    "prompt_cache_hit_tokens": 768,
+    "prompt_cache_miss_tokens": 145
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:11:34+00:00",
+   "peak": false,
+   "cost_usd": 3.7254000000000006e-05
+  },
+  {
+   "usage": {
+    "prompt_tokens": 941,
+    "completion_tokens": 21,
+    "total_tokens": 962,
+    "prompt_tokens_details": {
+     "cached_tokens": 768
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 6
+    },
+    "prompt_cache_hit_tokens": 768,
+    "prompt_cache_miss_tokens": 173
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:11:35+00:00",
+   "peak": false,
+   "cost_usd": 4.0854e-05
+  },
+  {
+   "usage": {
+    "prompt_tokens": 1074,
+    "completion_tokens": 1260,
+    "total_tokens": 2334,
+    "prompt_tokens_details": {
+     "cached_tokens": 896
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 1060
+    },
+    "prompt_cache_hit_tokens": 896,
+    "prompt_cache_miss_tokens": 178
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:11:36+00:00",
+   "peak": false,
+   "cost_usd": 0.000785388
+  },
+  {
+   "usage": {
+    "prompt_tokens": 1294,
+    "completion_tokens": 1416,
+    "total_tokens": 2710,
+    "prompt_tokens_details": {
+     "cached_tokens": 1024
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 1216
+    },
+    "prompt_cache_hit_tokens": 1024,
+    "prompt_cache_miss_tokens": 270
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:11:44+00:00",
+   "peak": false,
+   "cost_usd": 0.000893172
+  }
+ ],
+ "transcript": [
+  {
+   "turn": 1,
+   "reply": "\n\n{\"action\": \"list\", \"path\": \".\"}",
+   "result": "table.csv"
+  },
+  {
+   "turn": 2,
+   "reply": "\n\n{\"action\": \"read\", \"path\": \"table.csv\"}",
+   "result": "item,qty,price,note\nitem-1,10,99.27,x|y\nitem-2,476,54.95,x|y\nitem-3,384,87.39,fragile\nitem-4,339,0.32,x|y\nitem-5,454,86.43,x|y\nitem-6,429,50.10,\nitem-7,251,76.58,\nitem-8,325,11.21,fragile\n"
+  },
+  {
+   "turn": 3,
+   "reply": "\n\n{\"action\": \"write\", \"path\": \"table.md\", \"content\": \"| item   | qty | price | note    |\\n| ------ | --: | ----: | ------- |\\n| item-1 |  10 | 99.27 | x\\\\|y    |\\n| item-2 | 476 | 54.95 | x\\\\|y    |\\n| item-3 | 384 | 87.39 | fragile |\\n| item-4 | 339 |  0.32 | x\\\\|y    |\\n| item-5 | 454 | 86.43 | x\\\\|y    |\\n| item-6 | 429 | 50.10 |         |\\n| item-7 | 251 | 76.58 |         |\\n| item-8 | 325 | 11.21 | fragile |\\n\"}",
+   "result": "wrote table.md (350 chars)"
+  },
+  {
+   "turn": 4,
+   "reply": "\n\n{\"action\": \"write\", \"path\": \"table.md\", \"content\": \"| item   | qty | price | note   |\\n| ------ | --: | ----: | ------- |\\n| item-1 |  10 | 99.27 | x\\\\|y   |\\n| item-2 | 476 | 54.95 | x\\\\|y   |\\n| item-3 | 384 | 87.39 | fragile |\\n| item-4 | 339 |  0.32 | x\\\\|y   |\\n| item-5 | 454 | 86.43 | x\\\\|y   |\\n| item-6 | 429 | 50.10 |         |\\n| item-7 | 251 | 76.58 |         |\\n| item-8 | 325 | 11.21 | fragile |\\n\"}",
+   "result": "wrote table.md (345 chars)"
+  }
+ ],
+ "files": {
+  "table.md": "| item   | qty | price | note   |\n| ------ | --: | ----: | ------- |\n| item-1 |  10 | 99.27 | x\\|y   |\n| item-2 | 476 | 54.95 | x\\|y   |\n| item-3 | 384 | 87.39 | fragile |\n| item-4 | 339 |  0.32 | x\\|y   |\n| item-5 | 454 | 86.43 | x\\|y   |\n| item-6 | 429 | 50.10 |         |\n| item-7 | 251 | 76.58 |         |\n| item-8 | 325 | 11.21 | fragile |\n"
+ }
+}

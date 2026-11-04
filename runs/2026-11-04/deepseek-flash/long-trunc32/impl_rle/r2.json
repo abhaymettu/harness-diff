@@ -1,0 +1,109 @@
+{
+ "schema": 1,
+ "experiment": "2026-11-04",
+ "model": "deepseek-flash",
+ "arm": "long-trunc32",
+ "arm_sha256": "bc2afa3a44e801626b0db0668941798dfb4e38d67756d26461e255c187c9c65e",
+ "task": "impl_rle",
+ "category": "implement",
+ "run": 2,
+ "round": 2,
+ "slot": 0,
+ "battery": "v1",
+ "battery_sha256": "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe",
+ "max_turns": 4,
+ "repo_commit": "3760bfe9933864820da3f5f9697349332954330f",
+ "python": "3.14.7",
+ "started_utc": "2026-11-04T10:24:38+00:00",
+ "outcome": "pass",
+ "check_detail": "7 cases pass",
+ "ended": "finish",
+ "turns_used": 3,
+ "cost_usd": 0.003931326,
+ "written_bytes": 1508,
+ "py_written": 1,
+ "py_with_probe": 0,
+ "finished_utc": "2026-11-04T10:25:02+00:00",
+ "calls": [
+  {
+   "usage": {
+    "prompt_tokens": 8102,
+    "completion_tokens": 5100,
+    "total_tokens": 13202,
+    "prompt_tokens_details": {
+     "cached_tokens": 7936
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 1523
+    },
+    "prompt_cache_hit_tokens": 7936,
+    "prompt_cache_miss_tokens": 166
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:24:38+00:00",
+   "peak": false,
+   "cost_usd": 0.003108708
+  },
+  {
+   "usage": {
+    "prompt_tokens": 11716,
+    "completion_tokens": 158,
+    "total_tokens": 11874,
+    "prompt_tokens_details": {
+     "cached_tokens": 7936
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 10
+    },
+    "prompt_cache_hit_tokens": 7936,
+    "prompt_cache_miss_tokens": 3780
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:24:59+00:00",
+   "peak": false,
+   "cost_usd": 0.000685608
+  },
+  {
+   "usage": {
+    "prompt_tokens": 11883,
+    "completion_tokens": 80,
+    "total_tokens": 11963,
+    "prompt_tokens_details": {
+     "cached_tokens": 11520
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 72
+    },
+    "prompt_cache_hit_tokens": 11520,
+    "prompt_cache_miss_tokens": 363
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:25:01+00:00",
+   "peak": false,
+   "cost_usd": 0.00013701
+  }
+ ],
+ "transcript": [
+  {
+   "turn": 1,
+   "reply": "{\"action\": \"write\", \"path\": \"rle.py\", \"content\": \"\\\"\\\"\\\"Run-length encoding helpers.\\\"\\\"\\\"\\n\\nfrom __future__ import annotations\\n\\n\\ndef encode(s: str) -> str:\\n    \\\"\\\"\\\"Encode *s* using run-length encoding.\\n\\n    Each run of identical characters is represented by the character, followed by\\n    the run length when it is greater than one. For example::\\n\\n        >>> encode('aaabcc')\\n        'a3bc2'\\n    \\\"\\\"\\\"\\n    encoded: list[str] = []\\n    i = 0\\n\\n    while i < len(s):\\n        j = i + 1\\n        while j < len(s) and s[j] == s[i]:\\n            j += 1\\n\\n        run_length = j - i\\n        if run_length == 1:\\n            encoded.append(s[i])\\n        else:\\n            encoded.append(f'{s[i]}{run_length}')\\n        i = j\\n\\n    return ''.join(encoded)\\n\\n\\ndef decode(s: str) -> str:\\n    \\\"\\\"\\\"Decode a run-length encoded string produced by :func:`encode`.\\n\\n    Run lengths may contain multiple digits. For example::\\n\\n        >>> decode('a3bc2')\\n        'aaabcc'\\n        >>> decode('a12')\\n        'aaaaaaaaaaaa'\\n    \\\"\\\"\\\"\\n    decoded: list[str] = []\\n    i = 0\\n\\n    while i < len(s):\\n        char = s[i]\\n        if not char.isalpha():\\n            raise ValueError(f'Invalid run-length encoded string: expected a letter at index {i}')\\n        i += 1\\n\\n        length_start = i\\n        while i < len(s) and s[i].isdigit():\\n            i += 1\\n\\n        run_length = int(s[length_start:i]) if i > length_start else 1\\n        if run_length < 1:\\n            raise ValueError(f'Invalid run length for {char!r}: {run_length}')\\n        decoded.append(char * run_length)\\n\\n    return ''.join(decoded)\\n\"}\n\n--- project-doc ---\n# Testing Guidelines\n\n## Testing philosophy\n\nEvery `async def` test runs via the anyio pytest plugin automatically (`anyio_mode = \"auto\"` in\n`pyproject.toml`); don't add `@pytest.mark.anyio`. The async backend defaults to asyncio. Use\n`uv run pytest <test-path> --anyio-backend=trio --record-mode=none` to run selected portable tests on Trio without duplicating the default suite. During the Trio migration,\nrun affected concurrency tests once per backend. Keep broad Trio runs manual or periodic; do not add a\nsecond backend to every ordinary CI matrix. The selector does not imply that every test or integration\nalready supports Trio. `tests/harness` and `tests/clai2` pin `anyio_backend` to asyncio in their `conftest.py`;\ndon't re-override it per file.\n\nVCR + public-API tests are the default. We test through the public API the way a user would (`Agent(...)`,\n`agent.run(...)`) against real provider responses recorded as cassettes \u2014 provider APIs are the ultimate judge of whether the code is correct when run as intended, and that user-facing correctness is what we care about, not behavior in isolated units.\n\nUnit tests still earn their place \u2014 for internal behavior that is definitory and worth pinning against drift. That includes behavior you can't reach or reliably trigger through the public API (pre-request guards, defensive branches no real model produces), but also behavior a VCR test wouldn't actually protect: our cassette matchers aren't always sensitive to the request body, so a changed internal payload can still match an existing recording and pass green \u2014 a unit test asserting the internal shape directly is what catches that regression. Each unit test should still say why it isn't (or can't be) a VCR test.\n\nRecording cassettes needs provider API keys and isn't trivial, so contributors routinely under-test the real behavior \u2014 writing the VCR test a contributor couldn't is core maintainer work.\n\nRecorded cassettes also double as a suite-wide prompt-cache prefix regression net. The cache-prefix invariant checks that consecutive requests extend the same serialized provider-cache prefix; tests that deliberately move it through compaction, dynamic tool disclosure, or history rewriting must use `@pytest.mark.moves_cache_prefix(reason=...)` on the test.\n\n`tests/test_history_append_only.py` (core) and `tests/harness/test_history_append_only.py` (Harness) check the same invariant without cassettes, over every capability the packages ship. A new capability is picked up automatically; if it can't be built with its defaults, give it a `FIXTURES` entry (or an `EXEMPT` entry saying why it can't run offline), and, in the Harness file, a `SCENARIOS` entry if it keeps state the conversation should change. A prefix move that is a bug goes in `KNOWN`, linked to the issue or PR that fixes it; a move that is documented behavior (compaction, a request-only tail) goes in `ALLOWED`, which pins how far it may move.\n\nTests without a cassette get the same check from `fail_function_model_prefix_violations` in `tests/conftest.py`: every request a `FunctionModel` or `TestModel` receives is rendered offline as the body `AnthropicModel` would send, and compared with the previous request of its run, or, for a run's first request, with the latest shorter request that starts with the same message. A test whose conversation moves the prefix on purpose (it changes the tools or instructions between steps, compacts or rewrites history, drops a request-scoped prompt, rewinds a fallback continuation) uses `@pytest.mark.moves_cache_prefix(reason=...)`, preferably with one of the shared reasons in `tests/function_model_prefix.py`. A move the framework shouldn't make is a bug, the counterpart of a `KNOWN` entry above: fix it rather than mark the test, or, when the fix belongs in its own PR, mark it with a reason that links the issue tracking the fix.\n\n## Test File Structure\n\n```python\nfrom __future__ import annotations\n\nimport pytest\nfrom inline_snapshot import snapshot\n\nfrom pydantic_ai import Agent\nfrom pydantic_ai.models import Model\n# ... other imports\n\npytestmark = pytest.mark.vcr\n\n\n# fixtures/helpers immediately before their test\n@pytest.fixture\ndef my_helper():\n    ...\n\n\n@pytest.mark.parametrize('model', ['openai', 'anthropic', 'google'], indirect=True)\n@pytest.mark.parametrize('stream', [False, True])\nasync def test_feature(model: Model, stream: bool):\n    ...\n```\n\n## Parametrization with Expectations\n\nFor cartesian product tests, use a dict to map parameter combinations to expected results:\n\n```python\nfrom cassetter import Cassette\n\nfrom pydantic_ai.models import Model\n\n# expectation can be a dataclass, for more complex cases\nEXPECTATIONS: dict[tuple[str, bool], str] = {\n    ('openai', False): 'expected output for openai non-streaming',\n    ('openai', True): 'expected output for openai streaming',\n    ('anthropic', False): 'expected output for anthropic non-streaming',\n    ('anthropic', True): 'expected output for anthropic streaming',\n}\n\n\n@pytest.mark.parametrize('model', ['openai', 'anthropic'], indirect=True)\n@pytest.mark.parametrize('stream', [False, True])\nasync def test_feature(model: Model, stream: bool, request: pytest.FixtureRequest, vcr: Cassette):\n    \"\"\"What the test is asserting.\n\n    Use the `request` fixture to access test parameter values.\n\n    Use the `vcr` to make assertions about the HTTP requests if needed.\n    To assert what the code actually sent \u2014 headers included \u2014 take the `request_capture` fixture\n    instead. It reads the wire rather than the recording, so it is preferred whenever a transport\n    can be injected.\n    \"\"\"\n    model_name = request.node.callspec.params['model']\n    expected = EXPECTATIONS[(model_name, stream)]\n\n    agent = Agent(model)\n    if stream:\n        async with agent.run_stream('hello') as result:\n            output = await result.get_output()\n    else:\n        result = await agent.run('hello')\n        output = result.output\n\n    assert output == expected\n```\n\nUse the `EXPECTATIONS` dict only for a pure cartesian output lookup keyed by `(model, stream)`. For feature-centric files where cases are heterogeneous \u2014 different inputs, expectations, and xfails per case, all run through one minimal comprehensive test \u2014 use a `@dataclass Case` with sensible defaults plus per-case overrides:\n\n```python\nfrom dataclasses import dataclass, field\n\nimport pytest\nfrom inline_snapshot import snapshot\n\nfrom pydantic_ai import Agent\nfrom pydantic_ai.messages import ModelMessage\n\n\n@dataclass(frozen=True)\nclass Case:\n    id: str\n    model: str\n    prompt: str = 'hello'\n    instructions: str | None = None\n    expected_messages: list[ModelMessage] = field(default_factory=list[ModelMessage])\n    marks: tuple[pytest.MarkDecorator, ...] = ()\n\n\nCASES = [\n    Case(\n        id='openai',\n        model='openai:gpt-5',\n        expected_messages=snapshot([...]),\n    ),\n    Case(\n        id='anthropic',\n        model='anthropic:claude-sonnet-4-5',\n        instructions='be terse',\n        expected_messages=snapshot([...]),\n        marks=(pytest.mark.skipif(not anthropic_available(), reason='anthropic not installed'),),\n    ),\n]\n\n\n@pytest.mark.parametrize('case', [pytest.param(c, id=c.id, marks=c.marks) for c in CASES])\nasync def test_feature(case: Case):\n    agent = Agent(case.model, instructions=case.instructions)\n    result = await agent.run(case.prompt)\n    assert result.all_messages() == case.expected_messages\n```\n\nEach case carries its own snapshot (not the central test body), so a reviewer can read the cases top to bottom and check that every expectation is realistic.\n\n## VCR Workflow\n\nRecord cassettes with `--record-mode=rewrite`, verify playback without the flag, and review diffs.\nFor detailed workflows see `.claude/skills/testing-skill/SKILL.md`.\n\n### Realtime WebSocket cassettes\n\nRealtime cassettes live in `tests/realtime/cassettes/<module>/<test>.yaml`. Record them with\n`uv run --env-file .env pytest --record-mode=rewrite <test>`; normal test runs replay them offline.\nUnlike HTTP cassettes, they contain raw WebSocket frames, with secrets scrubbed and audio payloads\ntruncated. The testing skill's `parse_cassette.py` is HTTP-only and does not apply to these cassettes.\n\n### Asserting what goes out on the wire\n\nFour mechanisms, and they are not interchangeable \u2014 pick by what the test's claim is about.\n\n**An httpx request hook \u2014 the boundary tap, and the first reach.** Request the `request_capture` fixture from `tests/conftest.py`, route the provider through `request_capture.client`, and assert on `request_capture.body(path_suffix)`; see `test_anthropic_code_execution_tool_container_reuse` in `tests/models/test_anthropic.py`. For an Anthropic model the `anthropic_model` factory does the routing, so `anthropic_model('claude-sonnet-4-5', capture=True)` is the whole setup. The fixture's client is an `httpx2.AsyncClient` carrying an `event_hooks={'request': [...]}` recorder, and event hooks run inside `AsyncClient.send`, above cassetter's transport patches, so the hook fires on replay too and observes the request the live code actually built \u2014 a field the code stops sending fails the assertion instead of hiding behind a frozen recording. It costs the cassette nothing: matching is untouched, so fields that legitimately vary stay free to vary, and it sees what a cassette will not, headers included (the recording hooks in `tests/cassette_hooks.py` strip `anthropic-*`, so the wire is the only place a test can assert beta gating). Snapshot a projection of the body rather than the body itself \u2014 `content_blocks`, `message_shape` and `cache_breakpoints`, in `tests/models/conftest.py`, pin the fields a claim rests on without churning on unrelated conversation-shape changes. The fixture is reachable from anywhere under `tests/`; those three projections are not. A test outside `tests/models/` imports them explicitly (`from tests.models.conftest import message_shape`) rather than re-implementing the comprehension inline. The shared fixture works only when the provider accepts `httpx2.AsyncClient` as its injected client. Check the provider signature before using it. `GroqProvider` requires legacy `httpx.AsyncClient`, and `HuggingFaceProvider` rejects `http_client` in favor of `hf_client`; capture those SDK boundaries with provider-specific clients. A provider on another transport taps its own send-time event for the same reason \u2014 see `_capture_bedrock_request_headers` in `tests/models/test_bedrock.py`, a botocore `before-send` handler.\n\n**Snapshot the request body \u2014 the review surface.** `single_request_body` in `tests/cassette_utils.py` decodes the request the *cassette* holds, so `assert single_request_body(vcr) == snapshot({...})` puts the whole outbound payload in the test body instead of leaving it buried in a long YAML. What it does not do is catch drift: the recording is frozen, so it keeps passing after the live code stops sending a field, and a recording can already disagree with what the code sends today. Its second job is at re-record time, where a changed payload surfaces as a snapshot diff. Where a hook is attached, snapshot what the hook captured instead \u2014 same review surface, and it is the request that is actually going out.\n\n**A per-test matcher \u2014 the gate for when you cannot tap the boundary.** Making a field part of the cassette match also fails when the live code drifts: a request that no longer carries the recorded value cannot match its recording, so replay errors instead of quietly passing. Reach for it when the test doesn't build its own model (a shared or `indirect` fixture supplies it), when one guard should cover a whole family of tests, or when the provider isn't on httpx. Opt the test in with `@pytest.mark.vcr(additional_matchers=['body'])`, which adds to the default `method` + `uri` match rather than replacing it; cassetter's matchers are `method`, `uri`, `headers`, `body` and `json_body`, and a module `vcr_config` override can set `match_on` for a whole directory (see `tests/harness/media/conftest.py`) or `ignore_json_paths` for fields that legitimately vary. Match on the fields the test's claim rests on, not on every field you snapshot \u2014 matching a field that legitimately varies makes the cassette brittle and buys no information, which is the cost a hook doesn't have.\n\n**Capture the render \u2014 for claims no single exchange holds.** When the SDK client is mocked outright so nothing goes over the wire, or the claim is that two renderings are byte-identical rather than that one recorded request looked a certain way, capture what the adapter produces and assert against that; see `test_tool_availability_delta_and_the_tools_cache_section` in `tests/test_tool_availability_portability.py`, and `rendered_requests` in `tests/models/test_anthropic_mid_conversation_system.py` for the per-request form. Where the requests do go out over httpx, the boundary tap gets the same evidence without reaching into adapter internals.\n\nDefault for a test that asserts an outbound field: take the capture fixture and assert on what it recorded, snapshotting a projection when the whole payload is worth reviewing. Fall back to snapshotting the cassette\n</\uff5c\uff5cDSML\uff5c\uff5c parameter>\n</\uff5c\uff5cDSML\uff5c\uff5c invoke>\n</\uff5c\uff5cDSML\uff5c\uff5c calls>",
+   "result": "wrote rle.py (1508 chars)"
+  },
+  {
+   "turn": 2,
+   "reply": "\n\n{\"action\": \"run\", \"args\": [\"-c\", \"from rle import encode, decode\\nassert encode('aaabcc') == 'a3bc2'\\nassert decode('a3bc2') == 'aaabcc'\\nassert decode('a12') == 'a'*12\\nassert encode('') == '' and decode('') == ''\\nassert encode('abc') == 'abc'\\nassert encode('a'*10 + 'b') == 'a10b'\\nassert decode(encode('a'*10+'b')) == 'a'*10+'b'\\nassert decode('a1') == 'a'\\nprint('ok')\"]}",
+   "result": "exit code 0\nok\n"
+  },
+  {
+   "turn": 3,
+   "reply": "{\"action\": \"finish\"}",
+   "result": null
+  }
+ ],
+ "files": {
+  "rle.py": "\"\"\"Run-length encoding helpers.\"\"\"\n\nfrom __future__ import annotations\n\n\ndef encode(s: str) -> str:\n    \"\"\"Encode *s* using run-length encoding.\n\n    Each run of identical characters is represented by the character, followed by\n    the run length when it is greater than one. For example::\n\n        >>> encode('aaabcc')\n        'a3bc2'\n    \"\"\"\n    encoded: list[str] = []\n    i = 0\n\n    while i < len(s):\n        j = i + 1\n        while j < len(s) and s[j] == s[i]:\n            j += 1\n\n        run_length = j - i\n        if run_length == 1:\n            encoded.append(s[i])\n        else:\n            encoded.append(f'{s[i]}{run_length}')\n        i = j\n\n    return ''.join(encoded)\n\n\ndef decode(s: str) -> str:\n    \"\"\"Decode a run-length encoded string produced by :func:`encode`.\n\n    Run lengths may contain multiple digits. For example::\n\n        >>> decode('a3bc2')\n        'aaabcc'\n        >>> decode('a12')\n        'aaaaaaaaaaaa'\n    \"\"\"\n    decoded: list[str] = []\n    i = 0\n\n    while i < len(s):\n        char = s[i]\n        if not char.isalpha():\n            raise ValueError(f'Invalid run-length encoded string: expected a letter at index {i}')\n        i += 1\n\n        length_start = i\n        while i < len(s) and s[i].isdigit():\n            i += 1\n\n        run_length = int(s[length_start:i]) if i > length_start else 1\n        if run_length < 1:\n            raise ValueError(f'Invalid run length for {char!r}: {run_length}')\n        decoded.append(char * run_length)\n\n    return ''.join(decoded)\n"
+ }
+}

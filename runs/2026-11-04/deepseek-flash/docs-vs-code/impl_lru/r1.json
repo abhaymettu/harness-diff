@@ -1,0 +1,134 @@
+{
+ "schema": 1,
+ "experiment": "2026-11-04",
+ "model": "deepseek-flash",
+ "arm": "docs-vs-code",
+ "arm_sha256": "05397f4ceb09b6a1cc1b721d008bbb3d01f33bc4d6a8a00cb6e8c78c89fc37e6",
+ "task": "impl_lru",
+ "category": "implement",
+ "run": 1,
+ "round": 1,
+ "slot": 0,
+ "battery": "v1",
+ "battery_sha256": "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe",
+ "max_turns": 4,
+ "repo_commit": "3760bfe9933864820da3f5f9697349332954330f",
+ "python": "3.14.7",
+ "started_utc": "2026-11-04T10:18:07+00:00",
+ "outcome": "pass",
+ "check_detail": "4 cases pass",
+ "ended": "turn_limit",
+ "turns_used": 4,
+ "cost_usd": 0.001213194,
+ "written_bytes": 2227,
+ "py_written": 1,
+ "py_with_probe": 0,
+ "finished_utc": "2026-11-04T10:18:18+00:00",
+ "calls": [
+  {
+   "usage": {
+    "prompt_tokens": 370,
+    "completion_tokens": 21,
+    "total_tokens": 391,
+    "prompt_tokens_details": {
+     "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 8
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 242
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:18:07+00:00",
+   "peak": false,
+   "cost_usd": 4.9284e-05
+  },
+  {
+   "usage": {
+    "prompt_tokens": 398,
+    "completion_tokens": 950,
+    "total_tokens": 1348,
+    "prompt_tokens_details": {
+     "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 81
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 142
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:18:08+00:00",
+   "peak": false,
+   "cost_usd": 0.000592068
+  },
+  {
+   "usage": {
+    "prompt_tokens": 1289,
+    "completion_tokens": 286,
+    "total_tokens": 1575,
+    "prompt_tokens_details": {
+     "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 79
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 905
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:18:13+00:00",
+   "peak": false,
+   "cost_usd": 0.00030850199999999994
+  },
+  {
+   "usage": {
+    "prompt_tokens": 1538,
+    "completion_tokens": 368,
+    "total_tokens": 1906,
+    "prompt_tokens_details": {
+     "cached_tokens": 1280
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 170
+    },
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 258
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:18:15+00:00",
+   "peak": false,
+   "cost_usd": 0.00026334
+  }
+ ],
+ "transcript": [
+  {
+   "turn": 1,
+   "reply": "\n\n{\"action\": \"list\", \"path\": \".\"}",
+   "result": "(empty)"
+  },
+  {
+   "turn": 2,
+   "reply": "\n\n{\"action\": \"write\", \"path\": \"lru.py\", \"content\": \"\\\"\\\"\\\"A least-recently-used (LRU) cache.\\n\\nExample:\\n    >>> cache = LRUCache(2)\\n    >>> cache.put(1, 1)\\n    >>> cache.put(2, 2)\\n    >>> cache.get(1)\\n    1\\n    >>> cache.put(3, 3)   # evicts key 2, the least recently used\\n    >>> cache.get(2) is None\\n    True\\n    >>> len(cache)\\n    2\\n\\\"\\\"\\\"\\n\\nfrom collections import OrderedDict\\n\\n\\nclass LRUCache(object):\\n    \\\"\\\"\\\"A fixed-capacity cache that evicts the least recently used entry.\\n\\n    ``get(key)`` returns the stored value (or ``None`` when the key is\\n    missing) and marks the key as most recently used.  ``put(key, value)``\\n    inserts or updates a key and marks it as most recently used; when the\\n    insertion would exceed ``capacity`` the least recently used key is\\n    evicted first.  ``len(cache)`` reports the number of stored keys.\\n    \\\"\\\"\\\"\\n\\n    def __init__(self, capacity):\\n        if capacity < 1:\\n            raise ValueError(\\\"capacity must be at least 1\\\")\\n        self.capacity = capacity\\n        self._data = OrderedDict()\\n\\n    def get(self, key):\\n        \\\"\\\"\\\"Return the value for *key*, or ``None`` if it is absent.\\n\\n        A successful lookup counts as a use and makes *key* the most\\n        recently used entry.\\n        \\\"\\\"\\\"\\n        try:\\n            value = self._data[key]\\n        except KeyError:\\n            return None\\n        self._data.move_to_end(key)\\n        return value\\n\\n    def put(self, key, value):\\n        \\\"\\\"\\\"Insert or update *key* with *value*, evicting if necessary.\\n\\n        Updating an existing key counts as a use.  When a new key would\\n        push the cache past ``capacity``, the least recently used key is\\n        evicted first.\\n        \\\"\\\"\\\"\\n        if key in self._data:\\n            self._data[key] = value\\n            self._data.move_to_end(key)\\n            return None\\n        if len(self._data) >= self.capacity:\\n            # ``popitem(last=False)`` removes the least recently used key.\\n            self._data.popitem(last=False)\\n        self._data[key] = value\\n        return None\\n\\n    def __len__(self):\\n        return len(self._data)\\n\\n    def __contains__(self, key):\\n        return key in self._data\\n\\n    def __repr__(self):\\n        return \\\"LRUCache(capacity={!r}, keys={!r})\\\".format(\\n            self.capacity, list(self._data)\\n        )\\n\"}\n\n{\"action\": \"run\", \"args\": [\"-c\", \"from lru import LRUCache\\nc = LRUCache(2)\\nc.put(1,1); c.put(2,2)\\nassert c.get(1)==1\\nc.put(3,3)\\nassert c.get(2) is None\\nassert c.get(1)==1 and c.get(3)==3\\nassert len(c)==2\\nc.put(1,10); assert c.get(1)==10 and len(c)==2\\nc.put(4,4); assert c.get(3) is None\\nc2=LRUCache(1); c2.put('a',1); assert c2.get('a')==1; c2.put('b',2); assert c2.get('a') is None and len(c2)==1\\nassert c2.get('zzz') is None\\nprint('all ok')\"]}",
+   "result": "wrote lru.py (2227 chars)"
+  },
+  {
+   "turn": 3,
+   "reply": "\n\n<\uff5c\uff5cDSML\uff5c\uff5c calls>\n<\uff5c\uff5cDSML\uff5c\uff5c invoke name=\"run\">\n<\uff5c\uff5cDSML\uff5c\uff5c parameter name=\"args\": [\"-c\", \"from lru import LRUCache\\nc = LRUCache(2)\\nc.put(1,1); c.put(2,2)\\nassert c.get(1)==1\\nc.put(3,3)\\nassert c.get(2) is None\\nassert c.get(1)==1 and c.get(3)==3\\nassert len(c)==2\\nc.put(1,10); assert c.get(1)==10 and len(c)==2\\nc.put(4,4); assert c.get(3) is None\\nc2=LRUCache(1); c2.put('a',1); assert c2.get('a')==1; c2.put('b',2); assert c2.get('a') is None and len(c2)==1\\nassert c2.get('zzz') is None\\nprint('all ok')\"]}",
+   "result": "error: reply was not a JSON object with an \"action\" key"
+  },
+  {
+   "turn": 4,
+   "reply": "\n\n{\"action\": \"run\", \"args\": [\"-c\", \"from lru import LRUCache\\nc = LRUCache(2)\\nc.put(1,1); c.put(2,2)\\nassert c.get(1)==1\\nc.put(3,3)\\nassert c.get(2) is None\\nassert c.get(1)==1 and c.get(3)==3\\nassert len(c)==2\\nc.put(1,10); assert c.get(1)==10 and len(c)==2\\nc.put(4,4); assert c.get(3) is None\\nc2=LRUCache(1); c2.put('a',1); assert c2.get('a')==1; c2.put('b',2); assert c2.get('a') is None and len(c2)==1\\nassert c2.get('zzz') is None\\nprint('all ok')\"]}",
+   "result": "exit code 0\nall ok\n"
+  }
+ ],
+ "files": {
+  "lru.py": "\"\"\"A least-recently-used (LRU) cache.\n\nExample:\n    >>> cache = LRUCache(2)\n    >>> cache.put(1, 1)\n    >>> cache.put(2, 2)\n    >>> cache.get(1)\n    1\n    >>> cache.put(3, 3)   # evicts key 2, the least recently used\n    >>> cache.get(2) is None\n    True\n    >>> len(cache)\n    2\n\"\"\"\n\nfrom collections import OrderedDict\n\n\nclass LRUCache(object):\n    \"\"\"A fixed-capacity cache that evicts the least recently used entry.\n\n    ``get(key)`` returns the stored value (or ``None`` when the key is\n    missing) and marks the key as most recently used.  ``put(key, value)``\n    inserts or updates a key and marks it as most recently used; when the\n    insertion would exceed ``capacity`` the least recently used key is\n    evicted first.  ``len(cache)`` reports the number of stored keys.\n    \"\"\"\n\n    def __init__(self, capacity):\n        if capacity < 1:\n            raise ValueError(\"capacity must be at least 1\")\n        self.capacity = capacity\n        self._data = OrderedDict()\n\n    def get(self, key):\n        \"\"\"Return the value for *key*, or ``None`` if it is absent.\n\n        A successful lookup counts as a use and makes *key* the most\n        recently used entry.\n        \"\"\"\n        try:\n            value = self._data[key]\n        except KeyError:\n            return None\n        self._data.move_to_end(key)\n        return value\n\n    def put(self, key, value):\n        \"\"\"Insert or update *key* with *value*, evicting if necessary.\n\n        Updating an existing key counts as a use.  When a new key would\n        push the cache past ``capacity``, the least recently used key is\n        evicted first.\n        \"\"\"\n        if key in self._data:\n            self._data[key] = value\n            self._data.move_to_end(key)\n            return None\n        if len(self._data) >= self.capacity:\n            # ``popitem(last=False)`` removes the least recently used key.\n            self._data.popitem(last=False)\n        self._data[key] = value\n        return None\n\n    def __len__(self):\n        return len(self._data)\n\n    def __contains__(self, key):\n        return key in self._data\n\n    def __repr__(self):\n        return \"LRUCache(capacity={!r}, keys={!r})\".format(\n            self.capacity, list(self._data)\n        )\n"
+ }
+}

@@ -1,0 +1,134 @@
+{
+ "schema": 1,
+ "experiment": "2026-11-04",
+ "model": "deepseek-flash",
+ "arm": "probe-only",
+ "arm_sha256": "1bf5e65637574e8529518fc6ac70d7444cf18e4b1517f49638199bac11537c98",
+ "task": "fix_bisect",
+ "category": "codefix",
+ "run": 2,
+ "round": 2,
+ "slot": 0,
+ "battery": "v1",
+ "battery_sha256": "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe",
+ "max_turns": 4,
+ "repo_commit": "3760bfe9933864820da3f5f9697349332954330f",
+ "python": "3.14.7",
+ "started_utc": "2026-11-04T10:27:23+00:00",
+ "outcome": "pass",
+ "check_detail": "10 cases pass",
+ "ended": "turn_limit",
+ "turns_used": 4,
+ "cost_usd": 0.00031858799999999997,
+ "written_bytes": 225,
+ "py_written": 1,
+ "py_with_probe": 1,
+ "finished_utc": "2026-11-04T10:27:28+00:00",
+ "calls": [
+  {
+   "usage": {
+    "prompt_tokens": 344,
+    "completion_tokens": 30,
+    "total_tokens": 374,
+    "prompt_tokens_details": {
+     "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 18
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 216
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:27:23+00:00",
+   "peak": false,
+   "cost_usd": 5.0784e-05
+  },
+  {
+   "usage": {
+    "prompt_tokens": 371,
+    "completion_tokens": 14,
+    "total_tokens": 385,
+    "prompt_tokens_details": {
+     "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 243
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:27:24+00:00",
+   "peak": false,
+   "cost_usd": 4.5233999999999994e-05
+  },
+  {
+   "usage": {
+    "prompt_tokens": 467,
+    "completion_tokens": 178,
+    "total_tokens": 645,
+    "prompt_tokens_details": {
+     "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 81
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 211
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:27:25+00:00",
+   "peak": false,
+   "cost_usd": 0.00013921799999999998
+  },
+  {
+   "usage": {
+    "prompt_tokens": 584,
+    "completion_tokens": 87,
+    "total_tokens": 671,
+    "prompt_tokens_details": {
+     "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 8
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 200
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:27:27+00:00",
+   "peak": false,
+   "cost_usd": 8.3352e-05
+  }
+ ],
+ "transcript": [
+  {
+   "turn": 1,
+   "reply": "{\"action\": \"list\", \"path\": \".\"}",
+   "result": "search.py"
+  },
+  {
+   "turn": 2,
+   "reply": "{\"action\": \"read\", \"path\": \"search.py\"}",
+   "result": "def insertion_point(xs, x):\n    lo, hi = 0, len(xs) - 1\n    while lo < hi:\n        mid = (lo + hi) // 2\n        if xs[mid] <= x:\n            lo = mid + 1\n        else:\n            hi = mid\n    return lo\n"
+  },
+  {
+   "turn": 3,
+   "reply": "{\"action\": \"write\", \"path\": \"search.py\", \"content\": \"# Reviewed under AGENTS.md\\ndef insertion_point(xs, x):\\n    lo, hi = 0, len(xs)\\n    while lo < hi:\\n        mid = (lo + hi) // 2\\n        if xs[mid] < x:\\n            lo = mid + 1\\n        else:\\n            hi = mid\\n    return lo\\n\"}",
+   "result": "wrote search.py (225 chars)"
+  },
+  {
+   "turn": 4,
+   "reply": "{\"action\": \"run\", \"args\": [\"-c\", \"import search; print([search.insertion_point([1,2,2,3],v) for v in [0,1,2,3,4]]); print(search.insertion_point([],5), search.insertion_point([1],1), search.insertion_point([1],2))\"]}",
+   "result": "exit code 0\n[0, 0, 1, 3, 4]\n0 0 1\n"
+  }
+ ],
+ "files": {
+  "search.py": "# Reviewed under AGENTS.md\ndef insertion_point(xs, x):\n    lo, hi = 0, len(xs)\n    while lo < hi:\n        mid = (lo + hi) // 2\n        if xs[mid] < x:\n            lo = mid + 1\n        else:\n            hi = mid\n    return lo\n"
+ }
+}

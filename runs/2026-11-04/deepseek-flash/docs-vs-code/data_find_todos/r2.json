@@ -1,0 +1,135 @@
+{
+ "schema": 1,
+ "experiment": "2026-11-04",
+ "model": "deepseek-flash",
+ "arm": "docs-vs-code",
+ "arm_sha256": "05397f4ceb09b6a1cc1b721d008bbb3d01f33bc4d6a8a00cb6e8c78c89fc37e6",
+ "task": "data_find_todos",
+ "category": "data",
+ "run": 2,
+ "round": 2,
+ "slot": 0,
+ "battery": "v1",
+ "battery_sha256": "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe",
+ "max_turns": 4,
+ "repo_commit": "3760bfe9933864820da3f5f9697349332954330f",
+ "python": "3.14.7",
+ "started_utc": "2026-11-04T10:23:31+00:00",
+ "outcome": "pass",
+ "check_detail": "todos.txt matches",
+ "ended": "turn_limit",
+ "turns_used": 4,
+ "cost_usd": 0.0006228719999999999,
+ "written_bytes": 1178,
+ "py_written": 1,
+ "py_with_probe": 0,
+ "finished_utc": "2026-11-04T10:23:38+00:00",
+ "calls": [
+  {
+   "usage": {
+    "prompt_tokens": 372,
+    "completion_tokens": 12,
+    "total_tokens": 384,
+    "prompt_tokens_details": {
+     "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 244
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:23:31+00:00",
+   "peak": false,
+   "cost_usd": 4.4183999999999996e-05
+  },
+  {
+   "usage": {
+    "prompt_tokens": 462,
+    "completion_tokens": 246,
+    "total_tokens": 708,
+    "prompt_tokens_details": {
+     "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 232
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 206
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:23:32+00:00",
+   "peak": false,
+   "cost_usd": 0.000179268
+  },
+  {
+   "usage": {
+    "prompt_tokens": 496,
+    "completion_tokens": 471,
+    "total_tokens": 967,
+    "prompt_tokens_details": {
+     "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 159
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 240
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:23:35+00:00",
+   "peak": false,
+   "cost_usd": 0.00031936799999999994
+  },
+  {
+   "usage": {
+    "prompt_tokens": 830,
+    "completion_tokens": 20,
+    "total_tokens": 850,
+    "prompt_tokens_details": {
+     "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 3
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 446
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:23:37+00:00",
+   "peak": false,
+   "cost_usd": 8.0052e-05
+  }
+ ],
+ "transcript": [
+  {
+   "turn": 1,
+   "reply": "{\"action\": \"list\", \"path\": \".\"}",
+   "result": "app/core/mod0.py\napp/core/mod1.py\napp/core/mod2.py\napp/mod0.py\napp/mod1.py\napp/mod2.py\nlib/mod0.py\nlib/mod1.py\nlib/mod2.py\nnotes.txt\ntests/mod0.py\ntests/mod1.py\ntests/mod2.py"
+  },
+  {
+   "turn": 2,
+   "reply": "{\"action\": \"read\", \"path\": \"notes.txt\"}",
+   "result": "TODO: this file is not Python\n"
+  },
+  {
+   "turn": 3,
+   "reply": "{\"action\": \"write\", \"path\": \"scan_todos.py\", \"content\": \"import os, tokenize, io\\n\\nroot = '.'\\nresults = []\\nfor dirpath, dirnames, filenames in os.walk(root):\\n    dirnames[:] = [d for d in dirnames if d not in ('.git', '__pycache__')]\\n    for fn in filenames:\\n        if not fn.endswith('.py'):\\n            continue\\n        full = os.path.join(dirpath, fn)\\n        rel = os.path.relpath(full, root).replace(os.sep, '/')\\n        with open(full, 'rb') as f:\\n            data = f.read()\\n        try:\\n            tokens = tokenize.tokenize(io.BytesIO(data).readline)\\n        except Exception:\\n            continue\\n        for tok in tokens:\\n            if tok.type == tokenize.COMMENT:\\n                if 'TODO' in tok.string:\\n                    results.append((rel, tok.start[0]))\\n\\nresults.sort(key=lambda x: (x[0], x[1]))\\nwith open('todos.txt', 'w') as f:\\n    for p, l in results:\\n        f.write('%s:%d\\\\n' % (p, l))\\nprint('\\\\n'.join('%s:%d' % r for r in results))\\n\"}",
+   "result": "wrote scan_todos.py (904 chars)"
+  },
+  {
+   "turn": 4,
+   "reply": "{\"action\": \"run\", \"args\": [\"scan_todos.py\"]}",
+   "result": "exit code 0\napp/core/mod2.py:2\napp/core/mod2.py:11\napp/core/mod2.py:16\napp/mod1.py:10\napp/mod2.py:9\napp/mod2.py:17\nlib/mod0.py:8\nlib/mod0.py:10\nlib/mod0.py:14\nlib/mod2.py:3\nlib/mod2.py:13\ntests/mod0.py:9\ntests/mod1.py:3\ntests/mod1.py:5\ntests/mod1.py:14\ntests/mod2.py:2\ntests/mod2.py:15\n"
+  }
+ ],
+ "files": {
+  "scan_todos.py": "import os, tokenize, io\n\nroot = '.'\nresults = []\nfor dirpath, dirnames, filenames in os.walk(root):\n    dirnames[:] = [d for d in dirnames if d not in ('.git', '__pycache__')]\n    for fn in filenames:\n        if not fn.endswith('.py'):\n            continue\n        full = os.path.join(dirpath, fn)\n        rel = os.path.relpath(full, root).replace(os.sep, '/')\n        with open(full, 'rb') as f:\n            data = f.read()\n        try:\n            tokens = tokenize.tokenize(io.BytesIO(data).readline)\n        except Exception:\n            continue\n        for tok in tokens:\n            if tok.type == tokenize.COMMENT:\n                if 'TODO' in tok.string:\n                    results.append((rel, tok.start[0]))\n\nresults.sort(key=lambda x: (x[0], x[1]))\nwith open('todos.txt', 'w') as f:\n    for p, l in results:\n        f.write('%s:%d\\n' % (p, l))\nprint('\\n'.join('%s:%d' % r for r in results))\n",
+  "todos.txt": "app/core/mod2.py:2\napp/core/mod2.py:11\napp/core/mod2.py:16\napp/mod1.py:10\napp/mod2.py:9\napp/mod2.py:17\nlib/mod0.py:8\nlib/mod0.py:10\nlib/mod0.py:14\nlib/mod2.py:3\nlib/mod2.py:13\ntests/mod0.py:9\ntests/mod1.py:3\ntests/mod1.py:5\ntests/mod1.py:14\ntests/mod2.py:2\ntests/mod2.py:15\n"
+ }
+}

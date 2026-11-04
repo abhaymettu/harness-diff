@@ -1,0 +1,134 @@
+{
+ "schema": 1,
+ "experiment": "2026-11-04",
+ "model": "deepseek-flash",
+ "arm": "long-full",
+ "arm_sha256": "7ae958ae9fe92deb5879bff3e537285296b9e73adf7e38f314fb24fa3bda5aae",
+ "task": "fix_days_between",
+ "category": "codefix",
+ "run": 0,
+ "round": 0,
+ "slot": 0,
+ "battery": "v1",
+ "battery_sha256": "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe",
+ "max_turns": 4,
+ "repo_commit": "3760bfe9933864820da3f5f9697349332954330f",
+ "python": "3.14.7",
+ "started_utc": "2026-11-04T10:12:34+00:00",
+ "outcome": "pass",
+ "check_detail": "6 cases pass",
+ "ended": "turn_limit",
+ "turns_used": 4,
+ "cost_usd": 0.0011279460000000001,
+ "written_bytes": 707,
+ "py_written": 1,
+ "py_with_probe": 1,
+ "finished_utc": "2026-11-04T10:12:46+00:00",
+ "calls": [
+  {
+   "usage": {
+    "prompt_tokens": 12668,
+    "completion_tokens": 22,
+    "total_tokens": 12690,
+    "prompt_tokens_details": {
+     "cached_tokens": 12416
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 9
+    },
+    "prompt_cache_hit_tokens": 12416,
+    "prompt_cache_miss_tokens": 252
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:12:34+00:00",
+   "peak": false,
+   "cost_usd": 8.8248e-05
+  },
+  {
+   "usage": {
+    "prompt_tokens": 12696,
+    "completion_tokens": 29,
+    "total_tokens": 12725,
+    "prompt_tokens_details": {
+     "cached_tokens": 12544
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 12544,
+    "prompt_cache_miss_tokens": 152
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:12:36+00:00",
+   "peak": false,
+   "cost_usd": 7.7832e-05
+  },
+  {
+   "usage": {
+    "prompt_tokens": 12837,
+    "completion_tokens": 891,
+    "total_tokens": 13728,
+    "prompt_tokens_details": {
+     "cached_tokens": 12672
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 346
+    },
+    "prompt_cache_hit_tokens": 12672,
+    "prompt_cache_miss_tokens": 165
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:12:38+00:00",
+   "peak": false,
+   "cost_usd": 0.000597366
+  },
+  {
+   "usage": {
+    "prompt_tokens": 13402,
+    "completion_tokens": 393,
+    "total_tokens": 13795,
+    "prompt_tokens_details": {
+     "cached_tokens": 12800
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 196
+    },
+    "prompt_cache_hit_tokens": 12800,
+    "prompt_cache_miss_tokens": 602
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:12:43+00:00",
+   "peak": false,
+   "cost_usd": 0.0003645
+  }
+ ],
+ "transcript": [
+  {
+   "turn": 1,
+   "reply": "\n\n{\"action\": \"list\", \"path\": \".\"}",
+   "result": "dates.py"
+  },
+  {
+   "turn": 2,
+   "reply": "\n\n{\"action\": \"read\", \"path\": \"dates.py\"}\n\n{\"action\": \"read\", \"path\": \"dates.py\"}",
+   "result": "DAYS = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]\n\n\ndef _ordinal(s):\n    y, m, d = map(int, s.split('-'))\n    return y * 365 + sum(DAYS[: m - 1]) + d\n\n\ndef days_between(a, b):\n    return _ordinal(b) - _ordinal(a)\n"
+  },
+  {
+   "turn": 3,
+   "reply": "\n\n{\"action\": \"write\", \"path\": \"dates.py\", \"content\": \"# Reviewed under AGENTS.md\\n\\\"\\\"\\\"Day counting between ISO dates (YYYY-MM-DD).\\\"\\\"\\\"\\n\\nDAYS = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]\\n# Days in each month of a non-leap year, accumulated before that month.\\n_DAYS_BEFORE = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334]\\n\\n\\ndef _is_leap(y):\\n    return y % 4 == 0 and (y % 100 != 0 or y % 400 == 0)\\n\\n\\ndef _ordinal(s):\\n    y, m, d = map(int, s.split('-'))\\n    # Whole days in the years before y, counting leap days.\\n    days = 365 * (y - 1) + (y - 1) // 4 - (y - 1) // 100 + (y - 1) // 400\\n    days += _DAYS_BEFORE[m - 1] + d\\n    if m > 2 and _is_leap(y):\\n        days += 1\\n    return days\\n\\n\\ndef days_between(a, b):\\n    return _ordinal(b) - _ordinal(a)\\n\"}\n\n{\"action\": \"run\", \"args\": [\"-c\", \"import sys; sys.path.insert(0,'.'); from dates import days_between as f; cases=[('2020-02-28','2020-03-01',2),('2019-02-28','2019-03-01',1),('2000-01-01','2001-01-01',366),('1900-01-01','1901-01-01',365),('2024-01-01','2024-01-01',0),('2024-03-01','2024-02-28',-2),('2023-12-31','2024-01-01',1),('2024-02-29','2025-02-28',365)]; [print(a,b,exp,f(a,b), 'OK' if f(a,b)==exp else 'FAIL') for a,b,exp in cases]\"]}",
+   "result": "wrote dates.py (707 chars)"
+  },
+  {
+   "turn": 4,
+   "reply": "\n\n{\"action\": \"run\", \"args\": [\"-c\", \"import sys; sys.path.insert(0,'.'); from dates import days_between as f; cases=[('2020-02-28','2020-03-01',2),('2019-02-28','2019-03-01',1),('2000-01-01','2001-01-01',366),('1900-01-01','1901-01-01',365),('2024-03-01','2024-02-28',-2),('2023-12-31','2024-01-01',1),('2024-02-29','2025-02-28',365)]; print(all(f(a,b)==e for a,b,e in cases), [(a,b,e,f(a,b)) for a,b,e in cases if f(a,b)!=e])\"]}",
+   "result": "exit code 0\nTrue []\n"
+  }
+ ],
+ "files": {
+  "dates.py": "# Reviewed under AGENTS.md\n\"\"\"Day counting between ISO dates (YYYY-MM-DD).\"\"\"\n\nDAYS = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]\n# Days in each month of a non-leap year, accumulated before that month.\n_DAYS_BEFORE = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334]\n\n\ndef _is_leap(y):\n    return y % 4 == 0 and (y % 100 != 0 or y % 400 == 0)\n\n\ndef _ordinal(s):\n    y, m, d = map(int, s.split('-'))\n    # Whole days in the years before y, counting leap days.\n    days = 365 * (y - 1) + (y - 1) // 4 - (y - 1) // 100 + (y - 1) // 400\n    days += _DAYS_BEFORE[m - 1] + d\n    if m > 2 and _is_leap(y):\n        days += 1\n    return days\n\n\ndef days_between(a, b):\n    return _ordinal(b) - _ordinal(a)\n"
+ }
+}

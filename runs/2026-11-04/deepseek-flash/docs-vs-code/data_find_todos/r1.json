@@ -1,0 +1,134 @@
+{
+ "schema": 1,
+ "experiment": "2026-11-04",
+ "model": "deepseek-flash",
+ "arm": "docs-vs-code",
+ "arm_sha256": "05397f4ceb09b6a1cc1b721d008bbb3d01f33bc4d6a8a00cb6e8c78c89fc37e6",
+ "task": "data_find_todos",
+ "category": "data",
+ "run": 1,
+ "round": 1,
+ "slot": 0,
+ "battery": "v1",
+ "battery_sha256": "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe",
+ "max_turns": 4,
+ "repo_commit": "3760bfe9933864820da3f5f9697349332954330f",
+ "python": "3.14.7",
+ "started_utc": "2026-11-04T10:16:40+00:00",
+ "outcome": "pass",
+ "check_detail": "todos.txt matches",
+ "ended": "turn_limit",
+ "turns_used": 4,
+ "cost_usd": 0.001217256,
+ "written_bytes": 274,
+ "py_written": 0,
+ "py_with_probe": 0,
+ "finished_utc": "2026-11-04T10:16:49+00:00",
+ "calls": [
+  {
+   "usage": {
+    "prompt_tokens": 372,
+    "completion_tokens": 20,
+    "total_tokens": 392,
+    "prompt_tokens_details": {
+     "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 7
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 244
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:16:40+00:00",
+   "peak": false,
+   "cost_usd": 4.8984000000000004e-05
+  },
+  {
+   "usage": {
+    "prompt_tokens": 463,
+    "completion_tokens": 228,
+    "total_tokens": 691,
+    "prompt_tokens_details": {
+     "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 18
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 207
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:16:41+00:00",
+   "peak": false,
+   "cost_usd": 0.000168618
+  },
+  {
+   "usage": {
+    "prompt_tokens": 766,
+    "completion_tokens": 1165,
+    "total_tokens": 1931,
+    "prompt_tokens_details": {
+     "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 923
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 510
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:16:42+00:00",
+   "peak": false,
+   "cost_usd": 0.000776268
+  },
+  {
+   "usage": {
+    "prompt_tokens": 1043,
+    "completion_tokens": 237,
+    "total_tokens": 1280,
+    "prompt_tokens_details": {
+     "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 141
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 531
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:16:47+00:00",
+   "peak": false,
+   "cost_usd": 0.00022338599999999998
+  }
+ ],
+ "transcript": [
+  {
+   "turn": 1,
+   "reply": "\n\n{\"action\": \"list\", \"path\": \".\"}",
+   "result": "app/core/mod0.py\napp/core/mod1.py\napp/core/mod2.py\napp/mod0.py\napp/mod1.py\napp/mod2.py\nlib/mod0.py\nlib/mod1.py\nlib/mod2.py\nnotes.txt\ntests/mod0.py\ntests/mod1.py\ntests/mod2.py"
+  },
+  {
+   "turn": 2,
+   "reply": "\n\n{\"action\": \"read\", \"path\": \"app/core/mod0.py\"}\n\n{\"action\": \"read\", \"path\": \"app/core/mod1.py\"}\n\n{\"action\": \"read\", \"path\": \"app/core/mod2.py\"}\n\n{\"action\": \"read\", \"path\": \"app/mod0.py\"}\n\n{\"action\": \"read\", \"path\": \"app/mod1.py\"}\n\n{\"action\": \"read\", \"path\": \"app/mod2.py\"}\n\n{\"action\": \"read\", \"path\": \"lib/mod0.py\"}\n\n{\"action\": \"read\", \"path\": \"lib/mod1.py\"}\n\n{\"action\": \"read\", \"path\": \"lib/mod2.py\"}\n\n{\"action\": \"read\", \"path\": \"tests/mod0.py\"}\n\n{\"action\": \"read\", \"path\": \"tests/mod1.py\"}\n\n{\"action\": \"read\", \"path\": \"tests/mod2.py\"}\n\n{\"action\": \"read\", \"path\": \"notes.txt\"}",
+   "result": "def f():\n    y = 1\n    y = 2\n    y = 3\n    y = 4\n    y = 5\n    y = 6\n    y = 7\n    y = 8\n    y = 9\n    y = 10\n    y = 11\n    y = 12\n    y = 13\n"
+  },
+  {
+   "turn": 3,
+   "reply": "\n\n{\"action\": \"run\", \"args\": [\"-c\", \"import os,tokenize,io\\nres=[]\\nfor root,dirs,files in os.walk('.'):\\n    for fn in files:\\n        if not fn.endswith('.py'): continue\\n        fp=os.path.join(root,fn)\\n        p=fp.replace(os.sep,'/')\\n        if p.startswith('./'): p=p[2:]\\n        src=open(fp,'rb').read()\\n        try:\\n            for t in tokenize.tokenize(io.BytesIO(src).readline):\\n                if t.type==tokenize.COMMENT and 'TODO' in t.string:\\n                    res.append((p,t.start[0]))\\n        except Exception: pass\\nres.sort()\\nopen('todos.txt','w').write(''.join('%s:%d\\\\n'%(p,l) for p,l in res))\\nprint('WROTE',len(res))\\nprint('---NOTES---')\\nprint(open('notes.txt').read())\\n\"]}",
+   "result": "exit code 0\nWROTE 17\n---NOTES---\nTODO: this file is not Python\n\n"
+  },
+  {
+   "turn": 4,
+   "reply": "\n\n{\"action\": \"run\", \"args\": [\"-c\", \"print(open('todos.txt').read())\\nimport glob\\nfor f in sorted(glob.glob('**/*.py',recursive=True)):\\n    print('=====',f)\\n    for i,l in enumerate(open(f),1):\\n        if '#' in l or 'TODO' in l: print(i,l.rstrip())\\n\"]}",
+   "result": "exit code 0\napp/core/mod2.py:2\napp/core/mod2.py:11\napp/core/mod2.py:16\napp/mod1.py:10\napp/mod2.py:9\napp/mod2.py:17\nlib/mod0.py:8\nlib/mod0.py:10\nlib/mod0.py:14\nlib/mod2.py:3\nlib/mod2.py:13\ntests/mod0.py:9\ntests/mod1.py:3\ntests/mod1.py:5\ntests/mod1.py:14\ntests/mod2.py:2\ntests/mod2.py:15\n\n===== app/core/mod0.py\n===== app/core/mod1.py\n===== app/core/mod2.py\n2     x = 1  # TODO: item app/core 2 1\n6     # todo lowercase is not counted 5\n11     x = 10  # TODO: item app/core 2 10\n13     msg = 'TODO in a string is not a comment 12'\n15     msg = 'TODO in a string is not a comment 14'\n16     x = 15  # TODO: item app/core 2 15\n===== app/mod0.py\n===== app/mod1.py\n10     x = 9  # TODO: item app 1 9\n12     # todo lowercase is not counted 11\n===== app/mod2.py\n8     # todo lowercase is not counted 7\n9     x = 8  # TODO: item app 2 8\n17     x = 16  # TODO: item app 2 16\n18     msg = 'TODO in a string is not a comment 17'\n===== lib/mod0.py\n8     x = 7  # TODO: item lib 0 7\n10     x = 9  # TODO: item lib 0 9\n12     # todo lowercase is not counted 11\n14     x = 13  # TODO: item lib 0 13\n16     # todo lowercase is not counted 15\n===== lib/mod1.py\n3     msg = 'TODO in a string is not a comment 2'\n6     msg = 'TODO in a string is not a comment 5'\n9     # todo lowercase is not counted 8\n===== lib/mod2.py\n3     x = 2  # TODO: item lib 2 2\n13     x = 12  # TODO: item lib 2 12\n===== tests/mod0.py\n9     x = 8  # TODO: item tests 0 8\n===== tests/mod1.py\n3     x = 2  # TODO: item tests 1 2\n5     x = 4  # TODO: item tests 1 4\n7     # todo lowercase is not counted 6\n14     x = 13  # TODO: item tests 1 13\n===== tests/mod2.py\n2     x = 1  # TODO: item tests 2 1\n5     msg = 'TODO in a string is not a comment 4'\n15     x = 14  # TODO: item tests 2 14\n"
+  }
+ ],
+ "files": {
+  "todos.txt": "app/core/mod2.py:2\napp/core/mod2.py:11\napp/core/mod2.py:16\napp/mod1.py:10\napp/mod2.py:9\napp/mod2.py:17\nlib/mod0.py:8\nlib/mod0.py:10\nlib/mod0.py:14\nlib/mod2.py:3\nlib/mod2.py:13\ntests/mod0.py:9\ntests/mod1.py:3\ntests/mod1.py:5\ntests/mod1.py:14\ntests/mod2.py:2\ntests/mod2.py:15\n"
+ }
+}

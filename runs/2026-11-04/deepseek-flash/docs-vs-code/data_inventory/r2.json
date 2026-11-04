@@ -1,0 +1,134 @@
+{
+ "schema": 1,
+ "experiment": "2026-11-04",
+ "model": "deepseek-flash",
+ "arm": "docs-vs-code",
+ "arm_sha256": "05397f4ceb09b6a1cc1b721d008bbb3d01f33bc4d6a8a00cb6e8c78c89fc37e6",
+ "task": "data_inventory",
+ "category": "data",
+ "run": 2,
+ "round": 2,
+ "slot": 0,
+ "battery": "v1",
+ "battery_sha256": "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe",
+ "max_turns": 4,
+ "repo_commit": "3760bfe9933864820da3f5f9697349332954330f",
+ "python": "3.14.7",
+ "started_utc": "2026-11-04T10:24:32+00:00",
+ "outcome": "fail",
+ "check_detail": "rejected.txt missing",
+ "ended": "turn_limit",
+ "turns_used": 4,
+ "cost_usd": 0.001146174,
+ "written_bytes": 73,
+ "py_written": 0,
+ "py_with_probe": 0,
+ "finished_utc": "2026-11-04T10:24:43+00:00",
+ "calls": [
+  {
+   "usage": {
+    "prompt_tokens": 403,
+    "completion_tokens": 19,
+    "total_tokens": 422,
+    "prompt_tokens_details": {
+     "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 7
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 147
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:24:32+00:00",
+   "peak": false,
+   "cost_usd": 3.4218000000000003e-05
+  },
+  {
+   "usage": {
+    "prompt_tokens": 435,
+    "completion_tokens": 710,
+    "total_tokens": 1145,
+    "prompt_tokens_details": {
+     "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 695
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 179
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:24:33+00:00",
+   "peak": false,
+   "cost_usd": 0.000453618
+  },
+  {
+   "usage": {
+    "prompt_tokens": 770,
+    "completion_tokens": 15,
+    "total_tokens": 785,
+    "prompt_tokens_details": {
+     "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 514
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:24:38+00:00",
+   "peak": false,
+   "cost_usd": 8.6868e-05
+  },
+  {
+   "usage": {
+    "prompt_tokens": 837,
+    "completion_tokens": 900,
+    "total_tokens": 1737,
+    "prompt_tokens_details": {
+     "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 783
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 197
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:24:39+00:00",
+   "peak": false,
+   "cost_usd": 0.00057147
+  }
+ ],
+ "transcript": [
+  {
+   "turn": 1,
+   "reply": "{\"action\": \"list\", \"path\": \".\"}",
+   "result": "inventory.json\ntransactions.txt"
+  },
+  {
+   "turn": 2,
+   "reply": "{\"action\": \"read\", \"path\": \"transactions.txt\"}",
+   "result": "remove drill 8\nremove bolt 3\nremove gizmo 1\nremove cable 6\nremove apple 7\nremove apple 9\nremove apple 4\nadd epoxy 9\nadd bolt 7\nremove drill 6\nremove gizmo 3\nremove gizmo 1\nadd apple 9\nadd drill 6\nadd cable 6\nadd apple 6\nadd cable 6\nadd cable 8\nremove bolt 2\nremove gizmo 8\nadd epoxy 1\nadd apple 8\nremove bolt 1\nadd epoxy 9\nremove cable 1\nremove apple 9\nadd apple 6\nremove bolt 3\nremove apple 6\nremove drill 9\nremove drill 4\nadd drill 9\nadd epoxy 7\nremove epoxy 6\nadd epoxy 4\nremove cable 9\nadd drill 6\nremove gizmo 1\nadd apple 4\nremove apple 2\nadd epoxy 8\nremove apple 4\nremove epoxy 2\nremove apple 9\nadd drill 2\nremove gizmo 8\nremove apple 6\nremove epoxy 8\nremove gizmo 4\nremove epoxy 7\nremove bolt 3\nremove gizmo 3\nadd epoxy 5\nremove apple 7\nremove cable 8\nadd apple 1\nremove epoxy 5\nremove drill 6\nremove drill 5\nremove epoxy 9\n"
+  },
+  {
+   "turn": 3,
+   "reply": "{\"action\": \"read\", \"path\": \"inventory.json\"}",
+   "result": "{\n  \"apple\": 1,\n  \"bolt\": 11,\n  \"cable\": 13,\n  \"drill\": 11,\n  \"epoxy\": 4\n}"
+  },
+  {
+   "turn": 4,
+   "reply": "{\"action\": \"write\", \"path\": \"inventory_after.json\", \"content\": \"{\\n  \\\"apple\\\": 5,\\n  \\\"bolt\\\": 6,\\n  \\\"cable\\\": 9,\\n  \\\"drill\\\": 6,\\n  \\\"epoxy\\\": 10\\n}\\n\"}\n{\"action\": \"write\", \"path\": \"rejected.txt\", \"content\": \"3\\n5\\n6\\n7\\n10\\n11\\n12\\n20\\n31\\n38\\n46\\n47\\n49\\n52\\n54\\n\"}",
+   "result": "wrote inventory_after.json (73 chars)"
+  }
+ ],
+ "files": {
+  "inventory_after.json": "{\n  \"apple\": 5,\n  \"bolt\": 6,\n  \"cable\": 9,\n  \"drill\": 6,\n  \"epoxy\": 10\n}\n"
+ }
+}

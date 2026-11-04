@@ -84,8 +84,9 @@ def cmd_run(a) -> int:
 
 
 def fmt_row(r: dict) -> str:
+    lo, hi = max(r["lo"], -1.0), min(r["hi"], 1.0)  # a normal interval can pass 100 pp; no effect can
     return (f"| {r['id']} | {100 * r['rate_control']:.1f}% | {100 * r['rate_treatment']:.1f}% | "
-            f"{100 * r['effect']:+.1f} pp | [{100 * r['lo']:+.1f}, {100 * r['hi']:+.1f}] | "
+            f"{100 * r['effect']:+.1f} pp | [{100 * lo:+.1f}, {100 * hi:+.1f}] | "
             f"{r['runs_control']} / {r['runs_treatment']} | {r['verdict']} |")
 
 

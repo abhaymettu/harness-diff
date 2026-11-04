@@ -1,0 +1,134 @@
+{
+ "schema": 1,
+ "experiment": "2026-11-04",
+ "model": "deepseek-flash",
+ "arm": "long-full",
+ "arm_sha256": "7ae958ae9fe92deb5879bff3e537285296b9e73adf7e38f314fb24fa3bda5aae",
+ "task": "fix_days_between",
+ "category": "codefix",
+ "run": 4,
+ "round": 2,
+ "slot": 0,
+ "battery": "v1",
+ "battery_sha256": "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe",
+ "max_turns": 4,
+ "repo_commit": "3760bfe9933864820da3f5f9697349332954330f",
+ "python": "3.14.7",
+ "started_utc": "2026-11-04T10:28:53+00:00",
+ "outcome": "pass",
+ "check_detail": "6 cases pass",
+ "ended": "turn_limit",
+ "turns_used": 4,
+ "cost_usd": 0.0008943120000000001,
+ "written_bytes": 591,
+ "py_written": 1,
+ "py_with_probe": 1,
+ "finished_utc": "2026-11-04T10:29:01+00:00",
+ "calls": [
+  {
+   "usage": {
+    "prompt_tokens": 12668,
+    "completion_tokens": 20,
+    "total_tokens": 12688,
+    "prompt_tokens_details": {
+     "cached_tokens": 12416
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 7
+    },
+    "prompt_cache_hit_tokens": 12416,
+    "prompt_cache_miss_tokens": 252
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:28:53+00:00",
+   "peak": false,
+   "cost_usd": 8.7048e-05
+  },
+  {
+   "usage": {
+    "prompt_tokens": 12696,
+    "completion_tokens": 14,
+    "total_tokens": 12710,
+    "prompt_tokens_details": {
+     "cached_tokens": 12544
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 12544,
+    "prompt_cache_miss_tokens": 152
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:28:54+00:00",
+   "peak": false,
+   "cost_usd": 6.883200000000001e-05
+  },
+  {
+   "usage": {
+    "prompt_tokens": 12822,
+    "completion_tokens": 729,
+    "total_tokens": 13551,
+    "prompt_tokens_details": {
+     "cached_tokens": 12672
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 293
+    },
+    "prompt_cache_hit_tokens": 12672,
+    "prompt_cache_miss_tokens": 150
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:28:55+00:00",
+   "peak": false,
+   "cost_usd": 0.000497916
+  },
+  {
+   "usage": {
+    "prompt_tokens": 13278,
+    "completion_tokens": 186,
+    "total_tokens": 13464,
+    "prompt_tokens_details": {
+     "cached_tokens": 12672
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 45
+    },
+    "prompt_cache_hit_tokens": 12672,
+    "prompt_cache_miss_tokens": 606
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:28:59+00:00",
+   "peak": false,
+   "cost_usd": 0.000240516
+  }
+ ],
+ "transcript": [
+  {
+   "turn": 1,
+   "reply": "\n\n{\"action\": \"list\", \"path\": \".\"}",
+   "result": "dates.py"
+  },
+  {
+   "turn": 2,
+   "reply": "{\"action\": \"read\", \"path\": \"dates.py\"}",
+   "result": "DAYS = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]\n\n\ndef _ordinal(s):\n    y, m, d = map(int, s.split('-'))\n    return y * 365 + sum(DAYS[: m - 1]) + d\n\n\ndef days_between(a, b):\n    return _ordinal(b) - _ordinal(a)\n"
+  },
+  {
+   "turn": 3,
+   "reply": "\n\n{\"action\": \"write\", \"path\": \"dates.py\", \"content\": \"# Reviewed under AGENTS.md\\nDAYS = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]\\n\\n\\ndef _is_leap(y):\\n    return y % 4 == 0 and (y % 100 != 0 or y % 400 == 0)\\n\\n\\ndef _ordinal(s):\\n    y, m, d = map(int, s.split('-'))\\n    # Count leaps by elapsed whole years so 0000-03-01..0000-12-31 is day 0's neighbourhood;\\n    # only differences of ordinals are used, so the constant offset is irrelevant.\\n    leaps = (y - 1) // 4 - (y - 1) // 100 + (y - 1) // 400\\n    return y * 365 + leaps + sum(DAYS[: m - 1]) + d + (_is_leap(y) and m > 2)\\n\\n\\ndef days_between(a, b):\\n    return _ordinal(b) - _ordinal(a)\\n\"}\n\n{\"action\": \"run\", \"args\": [\"-c\", \"import dates; print(dates.days_between('2024-02-28','2024-03-01'), dates.days_between('2024-01-01','2025-01-01'), dates.days_between('2023-01-01','2024-01-01'), dates.days_between('2024-03-01','2024-02-28'), dates.days_between('2000-01-01','2000-03-01'), dates.days_between('1900-01-01','1900-03-01'), dates.days_between('2024-01-01','2024-01-01'))\"]}",
+   "result": "wrote dates.py (591 chars)"
+  },
+  {
+   "turn": 4,
+   "reply": "\n\n{\"action\": \"run\", \"args\": [\"-c\", \"import random, datetime, dates; random.seed(0); bad=0\\nfor _ in range(20000):\\n    a=datetime.date(1,1,1)+datetime.timedelta(days=random.randrange(0,3652058))\\n    b=datetime.date(1,1,1)+datetime.timedelta(days=random.randrange(0,3652058))\\n    if dates.days_between(str(a),str(b)) != (b-a).days: bad+=1; print(a,b); break\\nprint('bad',bad)\"]}",
+   "result": "exit code 0\nbad 0\n"
+  }
+ ],
+ "files": {
+  "dates.py": "# Reviewed under AGENTS.md\nDAYS = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]\n\n\ndef _is_leap(y):\n    return y % 4 == 0 and (y % 100 != 0 or y % 400 == 0)\n\n\ndef _ordinal(s):\n    y, m, d = map(int, s.split('-'))\n    # Count leaps by elapsed whole years so 0000-03-01..0000-12-31 is day 0's neighbourhood;\n    # only differences of ordinals are used, so the constant offset is irrelevant.\n    leaps = (y - 1) // 4 - (y - 1) // 100 + (y - 1) // 400\n    return y * 365 + leaps + sum(DAYS[: m - 1]) + d + (_is_leap(y) and m > 2)\n\n\ndef days_between(a, b):\n    return _ordinal(b) - _ordinal(a)\n"
+ }
+}

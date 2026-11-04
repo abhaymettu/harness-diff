@@ -1,0 +1,134 @@
+{
+ "schema": 1,
+ "experiment": "2026-11-04",
+ "model": "deepseek-flash",
+ "arm": "docs-vs-code",
+ "arm_sha256": "05397f4ceb09b6a1cc1b721d008bbb3d01f33bc4d6a8a00cb6e8c78c89fc37e6",
+ "task": "fix_csv_line",
+ "category": "codefix",
+ "run": 0,
+ "round": 0,
+ "slot": 0,
+ "battery": "v1",
+ "battery_sha256": "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe",
+ "max_turns": 4,
+ "repo_commit": "3760bfe9933864820da3f5f9697349332954330f",
+ "python": "3.14.7",
+ "started_utc": "2026-11-04T10:07:00+00:00",
+ "outcome": "pass",
+ "check_detail": "6 cases pass",
+ "ended": "finish",
+ "turns_used": 4,
+ "cost_usd": 0.000796872,
+ "written_bytes": 1003,
+ "py_written": 1,
+ "py_with_probe": 0,
+ "finished_utc": "2026-11-04T10:07:10+00:00",
+ "calls": [
+  {
+   "usage": {
+    "prompt_tokens": 363,
+    "completion_tokens": 23,
+    "total_tokens": 386,
+    "prompt_tokens_details": {
+     "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 235
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:07:00+00:00",
+   "peak": false,
+   "cost_usd": 4.9433999999999995e-05
+  },
+  {
+   "usage": {
+    "prompt_tokens": 401,
+    "completion_tokens": 34,
+    "total_tokens": 435,
+    "prompt_tokens_details": {
+     "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 6
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 145
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:07:01+00:00",
+   "peak": false,
+   "cost_usd": 4.2918e-05
+  },
+  {
+   "usage": {
+    "prompt_tokens": 462,
+    "completion_tokens": 641,
+    "total_tokens": 1103,
+    "prompt_tokens_details": {
+     "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 282
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 206
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:07:03+00:00",
+   "peak": false,
+   "cost_usd": 0.00041626799999999997
+  },
+  {
+   "usage": {
+    "prompt_tokens": 842,
+    "completion_tokens": 364,
+    "total_tokens": 1206,
+    "prompt_tokens_details": {
+     "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 240
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 458
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:07:06+00:00",
+   "peak": false,
+   "cost_usd": 0.000288252
+  }
+ ],
+ "transcript": [
+  {
+   "turn": 1,
+   "reply": "{\"action\": \"list\", \"path\": \".\"}\n\n{\"action\": \"list\", \"path\": \".\"}",
+   "result": "parse.py"
+  },
+  {
+   "turn": 2,
+   "reply": "{\"action\": \"read\", \"path\": \"parse.py\"}\n\n{\"action\": \"read\", \"path\": \"parse.py\"}",
+   "result": "def split_csv(line):\n    return [f.strip('\"') for f in line.split(',')]\n"
+  },
+  {
+   "turn": 3,
+   "reply": "{\"action\": \"write\", \"path\": \"parse.py\", \"content\": \"def split_csv(line):\\n    \\\"\\\"\\\"Split one CSV line into fields.\\n\\n    Fields may be wrapped in double quotes.  Inside quotes a comma is a\\n    literal character and a doubled quote (\\\"\\\") represents one quote\\n    character.  The surrounding quotes are not part of the field value.\\n    \\\"\\\"\\\"\\n    fields = []\\n    current = []\\n    in_quotes = False\\n    i = 0\\n    length = len(line)\\n\\n    while i < length:\\n        ch = line[i]\\n        if in_quotes:\\n            if ch == '\\\"':\\n                if i + 1 < length and line[i + 1] == '\\\"':\\n                    current.append('\\\"')\\n                    i += 2\\n                    continue\\n                in_quotes = False\\n            else:\\n                current.append(ch)\\n        else:\\n            if ch == ',':\\n                fields.append(''.join(current))\\n                current = []\\n            elif ch == '\\\"':\\n                in_quotes = True\\n            else:\\n                current.append(ch)\\n        i += 1\\n\\n    fields.append(''.join(current))\\n    return fields\\n\"}\n\n{\"action\": \"run\", \"args\": [\"-c\", \"from parse import split_csv as s; print(s('a,\\\"b,c\\\",d')); print(s('\\\"he said \\\"\\\"hi\\\"\\\"\\\",2')); print(s('')); print(s('a,')); print(s('\\\"\\\",\\\"\\\"'))\"]}",
+   "result": "wrote parse.py (1003 chars)"
+  },
+  {
+   "turn": 4,
+   "reply": "{\"action\": \"finish\", \"note\": \"Inconsistency found: the original code used f.strip('\\\"'), which removes any number of leading/trailing quote characters rather than only the wrapping quotes, so it disagrees with the documented behavior that only the surrounding quotes are excluded from the value (e.g. a field like '\\\"\\\"\\\"x' would be over-stripped). Also, the project AGENTS.md is the only documentation present; there is no separate README, so no further doc/code discrepancies were found. The rewritten split_csv now follows the documented quoting rules.\"}",
+   "result": null
+  }
+ ],
+ "files": {
+  "parse.py": "def split_csv(line):\n    \"\"\"Split one CSV line into fields.\n\n    Fields may be wrapped in double quotes.  Inside quotes a comma is a\n    literal character and a doubled quote (\"\") represents one quote\n    character.  The surrounding quotes are not part of the field value.\n    \"\"\"\n    fields = []\n    current = []\n    in_quotes = False\n    i = 0\n    length = len(line)\n\n    while i < length:\n        ch = line[i]\n        if in_quotes:\n            if ch == '\"':\n                if i + 1 < length and line[i + 1] == '\"':\n                    current.append('\"')\n                    i += 2\n                    continue\n                in_quotes = False\n            else:\n                current.append(ch)\n        else:\n            if ch == ',':\n                fields.append(''.join(current))\n                current = []\n            elif ch == '\"':\n                in_quotes = True\n            else:\n                current.append(ch)\n        i += 1\n\n    fields.append(''.join(current))\n    return fields\n"
+ }
+}

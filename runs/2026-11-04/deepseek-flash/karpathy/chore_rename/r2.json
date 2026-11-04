@@ -1,0 +1,141 @@
+{
+ "schema": 1,
+ "experiment": "2026-11-04",
+ "model": "deepseek-flash",
+ "arm": "karpathy",
+ "arm_sha256": "694a2d721e41c385f3db492838c23299826df5ba9809e3b0721aac70021e196a",
+ "task": "chore_rename",
+ "category": "chore",
+ "run": 2,
+ "round": 2,
+ "slot": 0,
+ "battery": "v1",
+ "battery_sha256": "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe",
+ "max_turns": 4,
+ "repo_commit": "3760bfe9933864820da3f5f9697349332954330f",
+ "python": "3.14.7",
+ "started_utc": "2026-11-04T10:27:49+00:00",
+ "outcome": "pass",
+ "check_detail": "all checks pass",
+ "ended": "turn_limit",
+ "turns_used": 4,
+ "cost_usd": 0.000910116,
+ "written_bytes": 3389,
+ "py_written": 3,
+ "py_with_probe": 0,
+ "finished_utc": "2026-11-04T10:27:59+00:00",
+ "calls": [
+  {
+   "usage": {
+    "prompt_tokens": 818,
+    "completion_tokens": 21,
+    "total_tokens": 839,
+    "prompt_tokens_details": {
+     "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 8
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 178
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:27:49+00:00",
+   "peak": false,
+   "cost_usd": 4.122e-05
+  },
+  {
+   "usage": {
+    "prompt_tokens": 868,
+    "completion_tokens": 156,
+    "total_tokens": 1024,
+    "prompt_tokens_details": {
+     "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 6
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 228
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:27:50+00:00",
+   "peak": false,
+   "cost_usd": 0.00012972
+  },
+  {
+   "usage": {
+    "prompt_tokens": 1176,
+    "completion_tokens": 38,
+    "total_tokens": 1214,
+    "prompt_tokens_details": {
+     "cached_tokens": 768
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 21
+    },
+    "prompt_cache_hit_tokens": 768,
+    "prompt_cache_miss_tokens": 408
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:27:51+00:00",
+   "peak": false,
+   "cost_usd": 8.6304e-05
+  },
+  {
+   "usage": {
+    "prompt_tokens": 1268,
+    "completion_tokens": 1022,
+    "total_tokens": 2290,
+    "prompt_tokens_details": {
+     "cached_tokens": 1024
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 863
+    },
+    "prompt_cache_hit_tokens": 1024,
+    "prompt_cache_miss_tokens": 244
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:27:53+00:00",
+   "peak": false,
+   "cost_usd": 0.000652872
+  }
+ ],
+ "transcript": [
+  {
+   "turn": 1,
+   "reply": "\n\n{\"action\": \"list\", \"path\": \".\"}",
+   "result": "main.py\nshop/__init__.py\nshop/cart.py\nshop/pricing.py\nshop/report.py"
+  },
+  {
+   "turn": 2,
+   "reply": "\n\n<\uff5c\uff5cDSML\uff5c\uff5c calls>\n{\"action\": \"read\", \"path\": \"shop/pricing.py\"}\n\n<\uff5c\uff5cDSML\uff5c\uff5c calls>\n<\uff5c\uff5cDSML\uff5c\uff5c invoke name=\"read\">\n<\uff5c\uff5cDSML\uff5c\uff5c parameter name=\"path\" string=\"true\">shop/cart.py</\uff5c\uff5cDSML\uff5c\uff5c parameter>\n</\uff5c\uff5cDSML\uff5c\uff5c invoke>\n<\uff5c\uff5cDSML\uff5c\uff5c invoke name=\"read\">\n<\uff5c\uff5cDSML\uff5c\uff5c parameter name=\"path\" string=\"true\">shop/report.py</\uff5c\uff5cDSML\uff5c\uff5c parameter>\n</\uff5c\uff5cDSML\uff5c\uff5c invoke>\n<\uff5c\uff5cDSML\uff5c\uff5c invoke name=\"read\">\n<\uff5c\uff5cDSML\uff5c\uff5c parameter name=\"path\" string=\"true\">main.py</\uff5c\uff5cDSML\uff5c\uff5c parameter>\n</\uff5c\uff5cDSML\uff5c\uff5c invoke>\n<\uff5c\uff5cDSML\uff5c\uff5c invoke name=\"read\">\n<\uff5c\uff5cDSML\uff5c\uff5c parameter name=\"path\" string=\"true\">shop/__init__.py</\uff5c\uff5cDSML\uff5c\uff5c parameter>\n</\uff5c\uff5cDSML\uff5c\uff5c invoke>\n</\uff5c\uff5cDSML\uff5c\uff5c calls>",
+   "result": "def calc(items, tax=0.0):\n    \"\"\"Total of (price, qty) pairs plus tax.\"\"\"\n    sub = sum(p * q for p, q in items)\n    return round(sub * (1 + tax), 2)\n"
+  },
+  {
+   "turn": 3,
+   "reply": "\n\n{\"action\": \"read\", \"path\": \"shop/cart.py\"}",
+   "result": "from shop.pricing import calc\n\n\nclass Cart:\n    def __init__(self):\n        self.items = []\n\n    def add(self, price, qty=1):\n        self.items.append((price, qty))\n\n    def total(self, tax=0.0):\n        return calc(self.items, tax)\n"
+  },
+  {
+   "turn": 4,
+   "reply": "\n\n{\"action\": \"run\", \"args\": [\"-c\", \"import re,pathlib,py_compile\\nfiles=sorted(pathlib.Path('.').rglob('*.py'))\\nfor p in files:\\n    t=p.read_text()\\n    n=re.sub(r'\\\\bcalc\\\\b','compute_total',t)\\n    if n!=t:\\n        p.write_text(n)\\n        print('UPDATED:',p)\\nprint('=== VERIFY ===')\\nfor p in files:\\n    py_compile.compile(str(p),doraise=True)\\nprint('all compile ok')\\nfor p in files:\\n    print('---',p)\\n    print(p.read_text())\"]}",
+   "result": "exit code 0\nUPDATED: shop/cart.py\nUPDATED: shop/pricing.py\nUPDATED: shop/report.py\n=== VERIFY ===\nall compile ok\n--- main.py\nfrom shop.cart import Cart\n\nc = Cart()\nc.add(2.5, 2)\nc.add(1.0)\nprint(c.total(0.1))\n\n--- shop/__init__.py\n\n--- shop/cart.py\nfrom shop.pricing import compute_total\n\n\nclass Cart:\n    def __init__(self):\n        self.items = []\n\n    def add(self, price, qty=1):\n        self.items.append((price, qty))\n\n    def total(self, tax=0.0):\n        return compute_total(self.items, tax)\n\n--- shop/pricing.py\ndef compute_total(items, tax=0.0):\n    \"\"\"Total of (price, qty) pairs plus tax.\"\"\"\n    sub = sum(p * q for p, q in items)\n    return round(sub * (1 + tax), 2)\n\n--- shop/report.py\nfrom shop import pricing\n\n\ndef line(items):\n    return f'total={pricing.compute_total(items)}'\n\n"
+  }
+ ],
+ "files": {
+  "__pycache__/main.cpython-314.pyc": "+\u000e\n\u0000\u0000\u0000\u0000\ufffd\b\ufffdjT\u0000\u0000\u0000\ufffd\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0005\u0000\u0000\u0000\u0000\u0000\u0000\u0000\ufffd\u0000\u0000\u0000\ufffd\u0000^\u0000R\u0001I\u0000H\u0001t\u0001\u001f\u0000]\u0001!\u00004\u0000\u0000\u0000\u0000\u0000\u0000\u0000t\u0002]\u0002P\u0007\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000R\u0002^\u00024\u0002\u0000\u0000\u0000\u0000\u0000\u0000\u001f\u0000]\u0002P\u0007\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000R\u00034\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u001f\u0000]\u0004!\u0000]\u0002P\u000b\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000R\u00044\u0001\u0000\u0000\u0000\u0000\u0000\u00004\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u001f\u0000R\u0005#\u0000)\u0006\ufffd\u0000\u0000\u0000\u0000)\u0001\ufffd\u0004Cartg\u0000\u0000\u0000\u0000\u0000\u0000\u0004@g\u0000\u0000\u0000\u0000\u0000\u0000\ufffd?g\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd?N)\u0006\ufffd\tshop.cartr\u0003\u0000\u0000\u0000\ufffd\u0001c\ufffd\u0003add\ufffd\u0005print\ufffd\u0005total\ufffd\u0000\ufffd\u0000\u0000\u0000\u0000\ufffd\u0007main.py\ufffd\b<module>r\f\u0000\u0000\u0000\u0001\u0000\u0000\u0000s7\u0000\u0000\u0000\ufffd\u0003\u0001\u0001\u0001\ufffd\u0000\u001a\ufffd\u0004\b\ufffdF\ufffd\u0001\ufffd\u0000\u0001\ufffd\u0005\ufffd\u0005\ufffdc\ufffd1\ufffd\n\ufffd\u0000\u0001\ufffd\u0005\ufffd\u0005\ufffdc\ufffd\n\ufffd\u0000\u0005\ufffda\ufffdg\ufffdg\ufffdc\ufffdl\ufffd\u0000\u0013r\n\u0000\u0000\u0000",
+  "shop/__pycache__/__init__.cpython-314.pyc": "+\u000e\n\u0000\u0000\u0000\u0000\ufffd\b\ufffdj\u0000\u0000\u0000\u0000\ufffd\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\ufffd\u0006\u0000\u0000\u0000\ufffd\u0000R\u0000#\u0000)\u0001N\ufffd\u0000r\u0002\u0000\u0000\u0000\ufffd\u0000\u0000\u0000\u0000\ufffd\u0010shop/__init__.py\ufffd\b<module>r\u0005\u0000\u0000\u0000\u0001\u0000\u0000\u0000s\u0005\u0000\u0000\u0000\ufffd\u0003\u0001\u0001\u0001r\u0003\u0000\u0000\u0000",
+  "shop/__pycache__/cart.cpython-314.pyc": "+\u000e\n\u0000\u0000\u0000\u0000\ufffd\b\ufffdj\ufffd\u0000\u0000\u0000\ufffd\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0004\u0000\u0000\u0000\u0000\u0000\u0000\u0000\ufffd&\u0000\u0000\u0000\ufffd\u0000^\u0000R\u0001I\u0000H\u0001t\u0001\u001f\u0000\u0015\u0000!\u0000R\u0002\u0017\u0000R\u00034\u0002\u0000\u0000\u0000\u0000\u0000\u0000t\u0002R\u0004#\u0000)\u0005\ufffd\u0000\u0000\u0000\u0000)\u0001\ufffd\ncompute_totalc\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0002\u0000\u0000\u0000\u0000\u0000\u0000\u0000\ufffd:\u0000\u0000\u0000a\u0000\ufffd\u0000]\u0000t\u0001R\u0000t\u0002^\u0004t\u0003\u0016\u0000o\u0000R\u0001\u0017\u0000t\u0004R\u0006R\u0002\u0017\u0000l\u0001t\u0005R\u0007R\u0003\u0017\u0000l\u0001t\u0006R\u0004t\u0007V\u0000t\bR\u0005#\u0000)\b\ufffd\u0004Cartc\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0002\u0000\u0000\u0000\u0003\u0000\u0000\b\ufffd\u0014\u0000\u0000\u0000\ufffd\u0000.\u0000V\u0000n\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000R\u0000#\u0000\ufffd\u0001N\ufffd\u0001\ufffd\u0005items)\u0001\ufffd\u0004selfs\u0001\u0000\u0000\u0000&\ufffd\fshop/cart.py\ufffd\b__init__\ufffd\nCart.__init__\u0005\u0000\u0000\u0000s\t\u0000\u0000\u0000\ufffd\u0000\ufffd\u0015\u0017\ufffd\u0004\ufffd\n\ufffd\u0000\u0000\u0000\u0000c\u0003\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0004\u0000\u0000\u0000\u0003\u0000\u0000\b\ufffd>\u0000\u0000\u0000\ufffd\u0000V\u0000P\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000P\u0003\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000W\u00123\u00024\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u001f\u0000R\u0000#\u0000r\u0007\u0000\u0000\u0000)\u0002r\t\u0000\u0000\u0000\ufffd\u0006append)\u0003r\n\u0000\u0000\u0000\ufffd\u0005price\ufffd\u0003qtys\u0003\u0000\u0000\u0000&&&r\u000b\u0000\u0000\u0000\ufffd\u0003add\ufffd\bCart.add\b\u0000\u0000\u0000s\u0016\u0000\u0000\u0000\ufffd\u0000\ufffd\b\f\ufffd\n\ufffd\n\ufffd\b\u0019\ufffd\b\u0019\ufffd5\ufffd,\ufffd\b'r\u000e\u0000\u0000\u0000c\u0002\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0004\u0000\u0000\u0000\u0003\u0000\u0000\b\ufffd.\u0000\u0000\u0000\ufffd\u0000\\\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000V\u0000P\u0002\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000V\u00014\u0002\u0000\u0000\u0000\u0000\u0000\u0000#\u0000r\u0007\u0000\u0000\u0000)\u0002r\u0003\u0000\u0000\u0000r\t\u0000\u0000\u0000)\u0002r\n\u0000\u0000\u0000\ufffd\u0003taxs\u0002\u0000\u0000\u0000&&r\u000b\u0000\u0000\u0000\ufffd\u0005total\ufffd\nCart.total\u000b\u0000\u0000\u0000s\u0013\u0000\u0000\u0000\ufffd\u0000\ufffd\u000f\u001c\ufffdT\ufffdZ\ufffdZ\ufffd\u0013\ufffd\u000f-\ufffd\b-r\u000e\u0000\u0000\u0000r\b\u0000\u0000\u0000N)\u0001\ufffd\u0001\u0000\u0000\u0000)\u0001g\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000)\t\ufffd\b__name__\ufffd\n__module__\ufffd\f__qualname__\ufffd\u000f__firstlineno__r\f\u0000\u0000\u0000r\u0013\u0000\u0000\u0000r\u0017\u0000\u0000\u0000\ufffd\u0015__static_attributes__\ufffd\u0011__classdictcell__)\u0001\ufffd\n__classdict__s\u0001\u0000\u0000\u0000@r\u000b\u0000\u0000\u0000r\u0005\u0000\u0000\u0000r\u0005\u0000\u0000\u0000\u0004\u0000\u0000\u0000s\u0019\u0000\u0000\u0000\ufffd\ufffd\u0000\ufffd\u0000\ufffd\u0002\u0001\u0005\u0018\ufffd\u0006\u0001\u0005(\ufffd\u0006\u0001\u0005.\ufffd\u0000\u0001\u0005.r\u000e\u0000\u0000\u0000r\u0005\u0000\u0000\u0000N)\u0003\ufffd\fshop.pricingr\u0003\u0000\u0000\u0000r\u0005\u0000\u0000\u0000\ufffd\u0000r\u000e\u0000\u0000\u0000r\u000b\u0000\u0000\u0000\ufffd\b<module>r#\u0000\u0000\u0000\u0001\u0000\u0000\u0000s\u0012\u0000\u0000\u0000\ufffd\u0003\u0001\u0001\u0001\ufffd\u0000&\ufffd\u0006\b\u0001.\ufffd\u0000\b\u0001.r\u000e\u0000\u0000\u0000",
+  "shop/__pycache__/pricing.cpython-314.pyc": "+\u000e\n\u0000\u0000\u0000\u0000\ufffd\b\ufffdj\ufffd\u0000\u0000\u0000\ufffd\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0002\u0000\u0000\u0000\u0000\u0000\u0000\u0000\ufffd\u0010\u0000\u0000\u0000\ufffd\u0000R\u0003R\u0001\u0017\u0000l\u0001t\u0000R\u0002#\u0000)\u0004\ufffd\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000c\u0002\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0005\u0000\u0000\u0000\u0003\u0000\u0000\u0004\ufffdZ\u0000\u0000\u0000\ufffd\u0000\\\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000R\u0001\u0017\u0000V\u0000\u0010\u00004\u0000\u0000\u0000\u0000\u0000\u0000\u00004\u0001\u0000\u0000\u0000\u0000\u0000\u0000p\u0002\\\u0003\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000V\u0002^\u0001V\u0001,\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000,\u0005\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000^\u00024\u0002\u0000\u0000\u0000\u0000\u0000\u0000#\u0000)\u0002z%Total of (price, qty) pairs plus tax.c\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0003\u0000\u0000\u00003\u0000\u0000\u0000\ufffd6\u0000\u0000\u0000\"\u0000\u001f\u0000\ufffd\u0000T\u0000F\u000f\u0000\u0000w\u0002\u0000\u0000r\u0012W\u0012,\u0005\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000x\u0000\ufffd\u0005\u001f\u0000K\u0011\u0000\u0000\t\u0000\u001e\u0000R\u0000#\u00005\u0003i\u0001)\u0001N\ufffd\u0000)\u0003\ufffd\u0002.0\ufffd\u0001p\ufffd\u0001qs\u0003\u0000\u0000\u0000&  \ufffd\u000fshop/pricing.py\ufffd\t<genexpr>\ufffd compute_total.<locals>.<genexpr>\u0003\u0000\u0000\u0000s\u0016\u0000\u0000\u0000\ufffd\u0000\ufffd\u0000\ufffd\n&\ufffd\u0005\ufffd\u0004\ufffd\u0001\ufffda\ufffde\ufffde\ufffd\u0005\ufffds\u0004\u0000\u0000\u0000\ufffd\u0017\u0019\u0001)\u0002\ufffd\u0003sum\ufffd\u0005round)\u0003\ufffd\u0005items\ufffd\u0003tax\ufffd\u0003subs\u0003\u0000\u0000\u0000&& r\t\u0000\u0000\u0000\ufffd\ncompute_totalr\u0011\u0000\u0000\u0000\u0001\u0000\u0000\u0000s'\u0000\u0000\u0000\ufffd\u0000\ufffd\n\n\ufffd\n&\ufffd\u0005\ufffd\n&\ufffd\n&\ufffdC\ufffd\u000b\u0010\ufffd\u0013\ufffd\u0001\ufffdC\ufffd\u0007\ufffd\u001f\ufffd!\ufffd\u000b$\ufffd\u0004$\ufffd\u0000\u0000\u0000\u0000N)\u0001r\u0002\u0000\u0000\u0000)\u0001r\u0011\u0000\u0000\u0000r\u0005\u0000\u0000\u0000r\u0012\u0000\u0000\u0000r\t\u0000\u0000\u0000\ufffd\b<module>r\u0013\u0000\u0000\u0000\u0001\u0000\u0000\u0000s\n\u0000\u0000\u0000\ufffd\u0003\u0001\u0001\u0001\ufffd\u0002\u0003\u0001%r\u0012\u0000\u0000\u0000",
+  "shop/__pycache__/report.cpython-314.pyc": "+\u000e\n\u0000\u0000\u0000\u0000\ufffd\b\ufffdj_\u0000\u0000\u0000\ufffd\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0002\u0000\u0000\u0000\u0000\u0000\u0000\u0000\ufffd\u0018\u0000\u0000\u0000\ufffd\u0000^\u0000R\u0001I\u0000H\u0001t\u0001\u001f\u0000R\u0002\u0017\u0000t\u0002R\u0003#\u0000)\u0004\ufffd\u0000\u0000\u0000\u0000)\u0001\ufffd\u0007pricingc\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0004\u0000\u0000\u0000\u0003\u0000\u0000\u0000\ufffd4\u0000\u0000\u0000\ufffd\u0000R\u0000\\\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000P\u0002\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000!\u0000V\u00004\u0001\u0000\u0000\u0000\u0000\u0000\u0000\f\u00002\u0002#\u0000)\u0001z\u0006total=)\u0002r\u0003\u0000\u0000\u0000\ufffd\ncompute_total)\u0001\ufffd\u0005itemss\u0001\u0000\u0000\u0000&\ufffd\u000eshop/report.py\ufffd\u0004liner\b\u0000\u0000\u0000\u0004\u0000\u0000\u0000s\u001b\u0000\u0000\u0000\ufffd\u0000\ufffd\n\u0013\ufffdG\ufffd\u0014)\ufffd\u0014)\ufffd%\ufffd\u00140\ufffd\u00131\ufffd\u000b2\ufffd\u00042\ufffd\u0000\u0000\u0000\u0000N)\u0003\ufffd\u0004shopr\u0003\u0000\u0000\u0000r\b\u0000\u0000\u0000\ufffd\u0000r\t\u0000\u0000\u0000r\u0007\u0000\u0000\u0000\ufffd\b<module>r\f\u0000\u0000\u0000\u0001\u0000\u0000\u0000s\n\u0000\u0000\u0000\ufffd\u0003\u0001\u0001\u0001\ufffd\u0000\u0018\ufffd\u0006\u0001\u00013r\t\u0000\u0000\u0000",
+  "shop/cart.py": "from shop.pricing import compute_total\n\n\nclass Cart:\n    def __init__(self):\n        self.items = []\n\n    def add(self, price, qty=1):\n        self.items.append((price, qty))\n\n    def total(self, tax=0.0):\n        return compute_total(self.items, tax)\n",
+  "shop/pricing.py": "def compute_total(items, tax=0.0):\n    \"\"\"Total of (price, qty) pairs plus tax.\"\"\"\n    sub = sum(p * q for p, q in items)\n    return round(sub * (1 + tax), 2)\n",
+  "shop/report.py": "from shop import pricing\n\n\ndef line(items):\n    return f'total={pricing.compute_total(items)}'\n"
+ }
+}

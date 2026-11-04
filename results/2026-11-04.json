@@ -219,12 +219,372 @@
  },
  "deepseek-flash": {
   "model": "deepseek-flash",
-  "complete_rounds": [],
-  "runs": 0,
-  "served": [],
-  "cost_usd": 0,
+  "complete_rounds": [
+   0,
+   1,
+   2
+  ],
+  "runs": 1260,
+  "served": [
+   "deepseek-flash"
+  ],
+  "cost_usd": 1.3787,
   "z_rows": 2.7729212946086625,
-  "rows": [],
-  "controls": []
+  "rows": [
+   {
+    "id": "secondary-labels",
+    "control": "baseline",
+    "treatment": "secondary-labels",
+    "outcome": "pass",
+    "tasks": 30,
+    "runs_control": 270,
+    "runs_treatment": 90,
+    "rate_control": 0.8444444444444446,
+    "rate_treatment": 0.8666666666666667,
+    "effect": 0.022222222222222143,
+    "lo": -0.09364234176178948,
+    "hi": 0.13808678620623377,
+    "verdict": "too small to see",
+    "turns": [
+     0.05185185185185188,
+     -0.011014022263490984,
+     0.11471772596719473
+    ],
+    "written_bytes": [
+     -53.2,
+     -157.71833518210522,
+     51.318335182105216
+    ]
+   },
+   {
+    "id": "ux-dx-ax",
+    "control": "baseline",
+    "treatment": "ux-dx-ax",
+    "outcome": "pass",
+    "tasks": 30,
+    "runs_control": 270,
+    "runs_treatment": 90,
+    "rate_control": 0.8444444444444446,
+    "rate_treatment": 0.8333333333333334,
+    "effect": -0.01111111111111119,
+    "lo": -0.1274594540843614,
+    "hi": 0.10523723186213904,
+    "verdict": "too small to see",
+    "turns": [
+     0.07407407407407408,
+     -0.002405562626576388,
+     0.15055371077472457
+    ],
+    "written_bytes": [
+     -33.2111111111111,
+     -238.77696015296908,
+     172.35473793074686
+    ]
+   },
+   {
+    "id": "marcos-full",
+    "control": "baseline",
+    "treatment": "marcos-full",
+    "outcome": "pass",
+    "tasks": 30,
+    "runs_control": 270,
+    "runs_treatment": 90,
+    "rate_control": 0.8444444444444446,
+    "rate_treatment": 0.8666666666666668,
+    "effect": 0.02222222222222226,
+    "lo": -0.09266867270149759,
+    "hi": 0.13711311714594213,
+    "verdict": "too small to see",
+    "turns": [
+     0.018518518518518528,
+     -0.061001221202243994,
+     0.09803825823928106
+    ],
+    "written_bytes": [
+     -54.2,
+     -141.54278374351347,
+     33.14278374351346
+    ]
+   },
+   {
+    "id": "docs-vs-code",
+    "control": "baseline",
+    "treatment": "docs-vs-code",
+    "outcome": "pass",
+    "tasks": 30,
+    "runs_control": 270,
+    "runs_treatment": 90,
+    "rate_control": 0.8444444444444446,
+    "rate_treatment": 0.7555555555555556,
+    "effect": -0.08888888888888893,
+    "lo": -0.20838106060053824,
+    "hi": 0.030603282822760383,
+    "verdict": "too small to see",
+    "turns": [
+     0.2185185185185185,
+     0.1731852919985719,
+     0.2638517450384651
+    ],
+    "written_bytes": [
+     155.16666666666663,
+     16.84706254346719,
+     293.48627078986607
+    ]
+   },
+   {
+    "id": "plain-english",
+    "control": "baseline",
+    "treatment": "plain-english",
+    "outcome": "pass",
+    "tasks": 30,
+    "runs_control": 270,
+    "runs_treatment": 90,
+    "rate_control": 0.8444444444444446,
+    "rate_treatment": 0.9222222222222222,
+    "effect": 0.07777777777777763,
+    "lo": -0.034841736514639315,
+    "hi": 0.19039729207019457,
+    "verdict": "too small to see",
+    "turns": [
+     0.04074074074074073,
+     -0.009551958551533554,
+     0.09103344003301501
+    ],
+    "written_bytes": [
+     80.41111111111108,
+     -6.488027771236787,
+     167.31024999345897
+    ]
+   },
+   {
+    "id": "karpathy",
+    "control": "baseline",
+    "treatment": "karpathy",
+    "outcome": "pass",
+    "tasks": 30,
+    "runs_control": 270,
+    "runs_treatment": 90,
+    "rate_control": 0.8444444444444446,
+    "rate_treatment": 0.8666666666666667,
+    "effect": 0.022222222222222143,
+    "lo": -0.09344826362891771,
+    "hi": 0.137892708073362,
+    "verdict": "too small to see",
+    "turns": [
+     0.0962962962962963,
+     0.03732287895516031,
+     0.15526971363743228
+    ],
+    "written_bytes": [
+     -93.97777777777779,
+     -180.72591493005444,
+     -7.229640625501119
+    ]
+   },
+   {
+    "id": "long-file",
+    "control": "baseline",
+    "treatment": "long-full",
+    "exclude_tasks": [
+     "chore_version_bump"
+    ],
+    "outcome": "pass",
+    "tasks": 29,
+    "runs_control": 261,
+    "runs_treatment": 174,
+    "rate_control": 0.8505747126436783,
+    "rate_treatment": 0.8045977011494254,
+    "effect": -0.045977011494252956,
+    "lo": -0.1429931995596499,
+    "hi": 0.051039176571144,
+    "verdict": "too small to see",
+    "turns": [
+     0.10536398467432952,
+     0.053093747057404564,
+     0.15763422229125446
+    ],
+    "written_bytes": [
+     170.78160919540227,
+     66.87250795632843,
+     274.6907104344761
+    ],
+    "all_tasks": {
+     "tasks": 30,
+     "effect": -0.055555555555555476,
+     "lo": -0.15243743853995687,
+     "hi": 0.04132632742884592
+    }
+   },
+   {
+    "id": "cut-25",
+    "control": "long-full",
+    "treatment": "long-cut25",
+    "exclude_tasks": [
+     "chore_version_bump"
+    ],
+    "outcome": "pass",
+    "tasks": 29,
+    "runs_control": 174,
+    "runs_treatment": 87,
+    "rate_control": 0.8045977011494254,
+    "rate_treatment": 0.8390804597701149,
+    "effect": 0.03448275862068953,
+    "lo": -0.09865475754916705,
+    "hi": 0.16762027479054611,
+    "verdict": "too small to see",
+    "turns": [
+     -0.06321839080459772,
+     -0.13463707906355366,
+     0.008200297454358199
+    ],
+    "written_bytes": [
+     -66.91954022988506,
+     -180.52413832098222,
+     46.68505786121209
+    ],
+    "all_tasks": {
+     "tasks": 30,
+     "effect": 0.0333333333333331,
+     "lo": -0.09908797398521615,
+     "hi": 0.16575464065188236
+    }
+   },
+   {
+    "id": "trunc-32k",
+    "control": "long-full",
+    "treatment": "long-trunc32",
+    "exclude_tasks": [
+     "chore_version_bump"
+    ],
+    "outcome": "pass",
+    "tasks": 29,
+    "runs_control": 174,
+    "runs_treatment": 87,
+    "rate_control": 0.8045977011494254,
+    "rate_treatment": 0.8850574712643677,
+    "effect": 0.08045977011494236,
+    "lo": -0.05267774605491422,
+    "hi": 0.21359728628479896,
+    "verdict": "too small to see",
+    "turns": [
+     -0.0057471264367816195,
+     -0.07716581469573754,
+     0.0656715618221743
+    ],
+    "written_bytes": [
+     -76.96551724137932,
+     -190.296996531343,
+     36.36596204858438
+    ],
+    "all_tasks": {
+     "tasks": 30,
+     "effect": 0.06666666666666643,
+     "lo": -0.06510789047391372,
+     "hi": 0.19844122380724658
+    }
+   }
+  ],
+  "controls": [
+   {
+    "id": "placebo",
+    "control": "baseline@0",
+    "treatment": "baseline@1",
+    "outcome": "pass",
+    "tasks": 30,
+    "runs_control": 90,
+    "runs_treatment": 90,
+    "rate_control": 0.8222222222222223,
+    "rate_treatment": 0.888888888888889,
+    "effect": 0.06666666666666667,
+    "lo": -0.037681254830545394,
+    "hi": 0.1710145881638787,
+    "verdict": "too small to see",
+    "turns": [
+     -1.4802973661668754e-17,
+     -0.07851945160357637,
+     0.07851945160357635
+    ],
+    "written_bytes": [
+     49.46666666666667,
+     -29.700541021567005,
+     128.63387435490034
+    ]
+   },
+   {
+    "id": "probe",
+    "outcome": "probe",
+    "control": "baseline",
+    "treatment": "probe-only",
+    "tasks": 26,
+    "runs_control": 215,
+    "runs_treatment": 74,
+    "rate_control": 0.0,
+    "rate_treatment": 1.0,
+    "effect": 1.0,
+    "lo": 0.8801110498251934,
+    "hi": 1.1198889501748066,
+    "verdict": "helps",
+    "turns": [
+     0.0740740740740741,
+     -0.011201346511499594,
+     0.1593494946596478
+    ],
+    "written_bytes": [
+     10.000000000000002,
+     -56.29642378562801,
+     76.29642378562801
+    ]
+   },
+   {
+    "id": "probe-buried",
+    "outcome": "probe",
+    "control": "probe-only",
+    "treatment": "long-full",
+    "tasks": 27,
+    "runs_control": 77,
+    "runs_treatment": 137,
+    "rate_control": 1.0,
+    "rate_treatment": 0.8944444444444444,
+    "effect": -0.10555555555555561,
+    "lo": -0.19608291414080214,
+    "hi": -0.015028196970309077,
+    "verdict": "hurts",
+    "turns": [
+     0.02777777777777777,
+     -0.059467735087234914,
+     0.11502329064279046
+    ],
+    "written_bytes": [
+     153.31111111111113,
+     47.58796486529913,
+     259.03425735692315
+    ]
+   },
+   {
+    "id": "probe-cut-25",
+    "outcome": "probe",
+    "control": "long-full",
+    "treatment": "long-cut25",
+    "tasks": 27,
+    "runs_control": 136,
+    "runs_treatment": 72,
+    "rate_control": 0.9129629629629629,
+    "rate_treatment": 0.8456790123456791,
+    "effect": -0.06728395061728382,
+    "lo": -0.17271757345164357,
+    "hi": 0.038149672217075936,
+    "verdict": "too small to see",
+    "turns": [
+     -0.06111111111111113,
+     -0.13014917642810186,
+     0.007926954205879591
+    ],
+    "written_bytes": [
+     -62.311111111111124,
+     -172.22494677622876,
+     47.60272455400652
+    ]
+   }
+  ]
  }
 }

@@ -1,0 +1,134 @@
+{
+ "schema": 1,
+ "experiment": "2026-11-04",
+ "model": "deepseek-flash",
+ "arm": "secondary-labels",
+ "arm_sha256": "63fe178250a4d9840342a73347f78bf4db983ceb94d2e1b2afd119577ac758f7",
+ "task": "fix_days_between",
+ "category": "codefix",
+ "run": 0,
+ "round": 0,
+ "slot": 0,
+ "battery": "v1",
+ "battery_sha256": "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe",
+ "max_turns": 4,
+ "repo_commit": "3760bfe9933864820da3f5f9697349332954330f",
+ "python": "3.14.7",
+ "started_utc": "2026-11-04T10:07:36+00:00",
+ "outcome": "pass",
+ "check_detail": "6 cases pass",
+ "ended": "turn_limit",
+ "turns_used": 4,
+ "cost_usd": 0.000337938,
+ "written_bytes": 153,
+ "py_written": 1,
+ "py_with_probe": 0,
+ "finished_utc": "2026-11-04T10:07:41+00:00",
+ "calls": [
+  {
+   "usage": {
+    "prompt_tokens": 319,
+    "completion_tokens": 28,
+    "total_tokens": 347,
+    "prompt_tokens_details": {
+     "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 16
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 191
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:07:36+00:00",
+   "peak": false,
+   "cost_usd": 4.5834e-05
+  },
+  {
+   "usage": {
+    "prompt_tokens": 346,
+    "completion_tokens": 20,
+    "total_tokens": 366,
+    "prompt_tokens_details": {
+     "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 6
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 218
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:07:37+00:00",
+   "peak": false,
+   "cost_usd": 4.5084e-05
+  },
+  {
+   "usage": {
+    "prompt_tokens": 472,
+    "completion_tokens": 198,
+    "total_tokens": 670,
+    "prompt_tokens_details": {
+     "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 120
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 216
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:07:38+00:00",
+   "peak": false,
+   "cost_usd": 0.000151968
+  },
+  {
+   "usage": {
+    "prompt_tokens": 570,
+    "completion_tokens": 110,
+    "total_tokens": 680,
+    "prompt_tokens_details": {
+     "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 19
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 186
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:07:40+00:00",
+   "peak": false,
+   "cost_usd": 9.5052e-05
+  }
+ ],
+ "transcript": [
+  {
+   "turn": 1,
+   "reply": "{\"action\": \"list\", \"path\": \".\"}",
+   "result": "dates.py"
+  },
+  {
+   "turn": 2,
+   "reply": "{\"action\": \"read\", \"path\": \"dates.py\"}",
+   "result": "DAYS = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]\n\n\ndef _ordinal(s):\n    y, m, d = map(int, s.split('-'))\n    return y * 365 + sum(DAYS[: m - 1]) + d\n\n\ndef days_between(a, b):\n    return _ordinal(b) - _ordinal(a)\n"
+  },
+  {
+   "turn": 3,
+   "reply": "{\"action\": \"write\", \"path\": \"dates.py\", \"content\": \"from datetime import date\\n\\n\\ndef _ordinal(s):\\n    return date.fromisoformat(s).toordinal()\\n\\n\\ndef days_between(a, b):\\n    return _ordinal(b) - _ordinal(a)\\n\"}\n\n</br>",
+   "result": "wrote dates.py (153 chars)"
+  },
+  {
+   "turn": 4,
+   "reply": "{\"action\": \"run\", \"args\": [\"-c\", \"from dates import days_between as d; print(d('2020-02-28','2020-03-01'), d('2021-02-28','2021-03-01'), d('2024-02-28','2024-03-01'), d('2020-03-01','2020-02-28'))\"]}",
+   "result": "exit code 0\n2 1 2 -2\n"
+  }
+ ],
+ "files": {
+  "dates.py": "from datetime import date\n\n\ndef _ordinal(s):\n    return date.fromisoformat(s).toordinal()\n\n\ndef days_between(a, b):\n    return _ordinal(b) - _ordinal(a)\n"
+ }
+}

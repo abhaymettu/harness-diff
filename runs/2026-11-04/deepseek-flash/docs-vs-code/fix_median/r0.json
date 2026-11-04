@@ -1,0 +1,134 @@
+{
+ "schema": 1,
+ "experiment": "2026-11-04",
+ "model": "deepseek-flash",
+ "arm": "docs-vs-code",
+ "arm_sha256": "05397f4ceb09b6a1cc1b721d008bbb3d01f33bc4d6a8a00cb6e8c78c89fc37e6",
+ "task": "fix_median",
+ "category": "codefix",
+ "run": 0,
+ "round": 0,
+ "slot": 0,
+ "battery": "v1",
+ "battery_sha256": "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe",
+ "max_turns": 4,
+ "repo_commit": "3760bfe9933864820da3f5f9697349332954330f",
+ "python": "3.14.7",
+ "started_utc": "2026-11-04T10:08:38+00:00",
+ "outcome": "pass",
+ "check_detail": "7 cases pass",
+ "ended": "turn_limit",
+ "turns_used": 4,
+ "cost_usd": 0.000669888,
+ "written_bytes": 247,
+ "py_written": 1,
+ "py_with_probe": 0,
+ "finished_utc": "2026-11-04T10:08:46+00:00",
+ "calls": [
+  {
+   "usage": {
+    "prompt_tokens": 354,
+    "completion_tokens": 20,
+    "total_tokens": 374,
+    "prompt_tokens_details": {
+     "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 7
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 226
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:08:38+00:00",
+   "peak": false,
+   "cost_usd": 4.6284e-05
+  },
+  {
+   "usage": {
+    "prompt_tokens": 382,
+    "completion_tokens": 15,
+    "total_tokens": 397,
+    "prompt_tokens_details": {
+     "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 254
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:08:39+00:00",
+   "peak": false,
+   "cost_usd": 4.7484e-05
+  },
+  {
+   "usage": {
+    "prompt_tokens": 429,
+    "completion_tokens": 141,
+    "total_tokens": 570,
+    "prompt_tokens_details": {
+     "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 31
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 173
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:08:40+00:00",
+   "peak": false,
+   "cost_usd": 0.000111318
+  },
+  {
+   "usage": {
+    "prompt_tokens": 559,
+    "completion_tokens": 729,
+    "total_tokens": 1288,
+    "prompt_tokens_details": {
+     "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 547
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 175
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:08:41+00:00",
+   "peak": false,
+   "cost_usd": 0.00046480199999999995
+  }
+ ],
+ "transcript": [
+  {
+   "turn": 1,
+   "reply": "\n\n{\"action\": \"list\", \"path\": \".\"}",
+   "result": "stats.py"
+  },
+  {
+   "turn": 2,
+   "reply": "\n\n{\"action\": \"read\", \"path\": \"stats.py\"}",
+   "result": "def median(xs):\n    xs.sort()\n    return xs[len(xs) // 2]\n"
+  },
+  {
+   "turn": 3,
+   "reply": "\n\n{\"action\": \"write\", \"path\": \"stats.py\", \"content\": \"def median(xs):\\n    if not xs:\\n        raise ValueError(\\\"median() arg is an empty sequence\\\")\\n    ordered = sorted(xs)\\n    n = len(ordered)\\n    mid = n // 2\\n    if n % 2:\\n        return ordered[mid]\\n    return (ordered[mid - 1] + ordered[mid]) / 2\\n\"}\n{\"action\": \"finish\"}",
+   "result": "wrote stats.py (247 chars)"
+  },
+  {
+   "turn": 4,
+   "reply": "Fixed `stats.py`: `median` now raises `ValueError` for an empty list, uses `sorted()` so the caller's list is not mutated, returns the middle element for odd lengths, and returns the mean of the two middle values for even lengths.\n\nInconsistencies found between the documentation and the existing code:\n1. **Non-mutation:** The documentation says `median` must not modify its argument, but the code called `xs.sort()`, which sorts the list in place.\n2. **Even-length behavior:** The documentation says an even-length list should return the mean of the two middle values, but the code returned only the upper middle element (`xs[len(xs) // 2]`).\n3. **Empty input:** The documentation says an empty list should raise `ValueError`, but the code raised an `IndexError` from indexing into an empty list instead.",
+   "result": "error: reply was not a JSON object with an \"action\" key"
+  }
+ ],
+ "files": {
+  "stats.py": "def median(xs):\n    if not xs:\n        raise ValueError(\"median() arg is an empty sequence\")\n    ordered = sorted(xs)\n    n = len(ordered)\n    mid = n // 2\n    if n % 2:\n        return ordered[mid]\n    return (ordered[mid - 1] + ordered[mid]) / 2\n"
+ }
+}

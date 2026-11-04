@@ -1,0 +1,107 @@
+{
+ "schema": 1,
+ "experiment": "2026-11-04",
+ "model": "deepseek-flash",
+ "arm": "docs-vs-code",
+ "arm_sha256": "05397f4ceb09b6a1cc1b721d008bbb3d01f33bc4d6a8a00cb6e8c78c89fc37e6",
+ "task": "fix_flatten",
+ "category": "codefix",
+ "run": 2,
+ "round": 2,
+ "slot": 0,
+ "battery": "v1",
+ "battery_sha256": "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe",
+ "max_turns": 4,
+ "repo_commit": "3760bfe9933864820da3f5f9697349332954330f",
+ "python": "3.14.7",
+ "started_utc": "2026-11-04T10:29:05+00:00",
+ "outcome": "fail",
+ "check_detail": "flatten(['ab', ['cd']]): expected ['ab', 'cd'], got err 'RecursionError'",
+ "ended": "finish",
+ "turns_used": 3,
+ "cost_usd": 0.000258036,
+ "written_bytes": 0,
+ "py_written": 0,
+ "py_with_probe": 0,
+ "finished_utc": "2026-11-04T10:29:09+00:00",
+ "calls": [
+  {
+   "usage": {
+    "prompt_tokens": 345,
+    "completion_tokens": 20,
+    "total_tokens": 365,
+    "prompt_tokens_details": {
+     "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 7
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 217
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:29:05+00:00",
+   "peak": false,
+   "cost_usd": 4.4934e-05
+  },
+  {
+   "usage": {
+    "prompt_tokens": 373,
+    "completion_tokens": 21,
+    "total_tokens": 394,
+    "prompt_tokens_details": {
+     "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 6
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 245
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:29:06+00:00",
+   "peak": false,
+   "cost_usd": 4.9734e-05
+  },
+  {
+   "usage": {
+    "prompt_tokens": 444,
+    "completion_tokens": 224,
+    "total_tokens": 668,
+    "prompt_tokens_details": {
+     "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 135
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 188
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:29:06+00:00",
+   "peak": false,
+   "cost_usd": 0.000163368
+  }
+ ],
+ "transcript": [
+  {
+   "turn": 1,
+   "reply": "\n\n{\"action\": \"list\", \"path\": \".\"}",
+   "result": "nest.py"
+  },
+  {
+   "turn": 2,
+   "reply": "\n\n{\"action\": \"read\", \"path\": \"nest.py\"}",
+   "result": "def flatten(x):\n    out = []\n    for item in x:\n        if hasattr(item, '__iter__'):\n            out.extend(flatten(item))\n        else:\n            out.append(item)\n    return out\n"
+  },
+  {
+   "turn": 3,
+   "reply": "\n\n{\"action\": \"write\", \"path\": \"nest.py\", \"content\": \"def flatten(x):\n    out = []\n    for item in x:\n        if isinstance(item, (str, bytes, dict)):\n            out.append(item)\n        elif hasattr(item, '__iter__'):\n            out.extend(flatten(item))\n        else:\n            out.append(item)\n    return out\n\"}\n\n{\"action\": \"finish\"}",
+   "result": null
+  }
+ ],
+ "files": {}
+}

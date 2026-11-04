@@ -1,0 +1,135 @@
+{
+ "schema": 1,
+ "experiment": "2026-11-04",
+ "model": "deepseek-flash",
+ "arm": "baseline",
+ "arm_sha256": null,
+ "task": "fix_days_between",
+ "category": "codefix",
+ "run": 3,
+ "round": 1,
+ "slot": 0,
+ "battery": "v1",
+ "battery_sha256": "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe",
+ "max_turns": 4,
+ "repo_commit": "3760bfe9933864820da3f5f9697349332954330f",
+ "python": "3.14.7",
+ "started_utc": "2026-11-04T10:17:02+00:00",
+ "outcome": "pass",
+ "check_detail": "6 cases pass",
+ "ended": "turn_limit",
+ "turns_used": 4,
+ "cost_usd": 0.0006202739999999999,
+ "written_bytes": 1112,
+ "py_written": 2,
+ "py_with_probe": 0,
+ "finished_utc": "2026-11-04T10:17:09+00:00",
+ "calls": [
+  {
+   "usage": {
+    "prompt_tokens": 286,
+    "completion_tokens": 15,
+    "total_tokens": 301,
+    "prompt_tokens_details": {
+     "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 158
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:17:02+00:00",
+   "peak": false,
+   "cost_usd": 3.3084000000000004e-05
+  },
+  {
+   "usage": {
+    "prompt_tokens": 413,
+    "completion_tokens": 442,
+    "total_tokens": 855,
+    "prompt_tokens_details": {
+     "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 166
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 157
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:17:03+00:00",
+   "peak": false,
+   "cost_usd": 0.00028951799999999995
+  },
+  {
+   "usage": {
+    "prompt_tokens": 709,
+    "completion_tokens": 307,
+    "total_tokens": 1016,
+    "prompt_tokens_details": {
+     "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 55
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 325
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:17:06+00:00",
+   "peak": false,
+   "cost_usd": 0.00023410199999999998
+  },
+  {
+   "usage": {
+    "prompt_tokens": 983,
+    "completion_tokens": 17,
+    "total_tokens": 1000,
+    "prompt_tokens_details": {
+     "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 343
+   },
+   "model": "deepseek-flash",
+   "system_fingerprint": "bc19ba97cbe016479903222bb1578db6",
+   "at_utc": "2026-11-04T10:17:08+00:00",
+   "peak": false,
+   "cost_usd": 6.356999999999999e-05
+  }
+ ],
+ "transcript": [
+  {
+   "turn": 1,
+   "reply": "\n\n{\"action\": \"read\", \"path\": \"dates.py\"}",
+   "result": "DAYS = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]\n\n\ndef _ordinal(s):\n    y, m, d = map(int, s.split('-'))\n    return y * 365 + sum(DAYS[: m - 1]) + d\n\n\ndef days_between(a, b):\n    return _ordinal(b) - _ordinal(a)\n"
+  },
+  {
+   "turn": 2,
+   "reply": "{\"action\": \"write\", \"path\": \"dates.py\", \"content\": \"DAYS = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]\\n\\n\\ndef _is_leap(y):\\n    return y % 4 == 0 and (y % 100 != 0 or y % 400 == 0)\\n\\n\\ndef _ordinal(s):\\n    y, m, d = map(int, s.split('-'))\\n    # Days in all complete years before year y (proleptic Gregorian).\\n    days = (y - 1) * 365 + (y - 1) // 4 - (y - 1) // 100 + (y - 1) // 400\\n    # Days in complete months of year y.\\n    days += sum(DAYS[: m - 1])\\n    # Leap day adjustment for the current year.\\n    if m > 2 and _is_leap(y):\\n        days += 1\\n    return days + d\\n\\n\\ndef days_between(a, b):\\n    return _ordinal(b) - _ordinal(a)\\n\"}",
+   "result": "wrote dates.py (583 chars)"
+  },
+  {
+   "turn": 3,
+   "reply": "\n\n{\"action\": \"write\", \"path\": \"test_dates.py\", \"content\": \"from dates import days_between\\n\\nassert days_between('2020-01-01', '2020-03-01') == 60\\nassert days_between('2019-01-01', '2019-03-01') == 59\\nassert days_between('2000-01-01', '2000-03-01') == 60\\nassert days_between('1900-01-01', '1900-03-01') == 59\\nassert days_between('2020-02-28', '2020-03-01') == 2\\nassert days_between('2019-02-28', '2019-03-01') == 1\\nassert days_between('2020-03-01', '2020-01-01') == -60\\nassert days_between('2020-01-01', '2020-01-01') == 0\\nassert days_between('2024-02-29', '2025-02-28') == 365\\nprint('ok')\\n\"}",
+   "result": "wrote test_dates.py (529 chars)"
+  },
+  {
+   "turn": 4,
+   "reply": "{\"action\": \"run\", \"args\": [\"test_dates.py\"]}",
+   "result": "exit code 0\nok\n"
+  }
+ ],
+ "files": {
+  "dates.py": "DAYS = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]\n\n\ndef _is_leap(y):\n    return y % 4 == 0 and (y % 100 != 0 or y % 400 == 0)\n\n\ndef _ordinal(s):\n    y, m, d = map(int, s.split('-'))\n    # Days in all complete years before year y (proleptic Gregorian).\n    days = (y - 1) * 365 + (y - 1) // 4 - (y - 1) // 100 + (y - 1) // 400\n    # Days in complete months of year y.\n    days += sum(DAYS[: m - 1])\n    # Leap day adjustment for the current year.\n    if m > 2 and _is_leap(y):\n        days += 1\n    return days + d\n\n\ndef days_between(a, b):\n    return _ordinal(b) - _ordinal(a)\n",
+  "test_dates.py": "from dates import days_between\n\nassert days_between('2020-01-01', '2020-03-01') == 60\nassert days_between('2019-01-01', '2019-03-01') == 59\nassert days_between('2000-01-01', '2000-03-01') == 60\nassert days_between('1900-01-01', '1900-03-01') == 59\nassert days_between('2020-02-28', '2020-03-01') == 2\nassert days_between('2019-02-28', '2019-03-01') == 1\nassert days_between('2020-03-01', '2020-01-01') == -60\nassert days_between('2020-01-01', '2020-01-01') == 0\nassert days_between('2024-02-29', '2025-02-28') == 365\nprint('ok')\n"
+ }
+}
