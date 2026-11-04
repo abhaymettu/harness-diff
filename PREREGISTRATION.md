@@ -169,4 +169,13 @@ in section 4, so a machine without `claude-batch` runs the same experiment; byte
 check runs, so files the check itself creates are not counted. Not changed: a run that hits an infrastructure error
 records $0 for the calls it made before the error, so the spend counter can run slightly under the true figure.
 
-Deviations after the freeze: none yet.
+Deviations after the freeze:
+
+- 2026-11-04 10:35 UTC. Both caps stopped their model in round 3, as section 10 allows: Haiku cost $0.0014 per run
+  and DeepSeek $0.0011 off-peak, against $0.001 and $0.0007 estimated from an 8-run pilot on two easy tasks. The
+  analysis uses rounds 0 to 2 (n = 9 for the baseline, 6 for `long-full` on Flash, 3 otherwise), and the detectable
+  effects at that n are restated in the README. This is the planned behaviour, logged because it cost power.
+- DeepSeek spend reached $1.56 against the $1.50 cap: the runs already in flight when the cap was crossed finished.
+  The Claude total was $1.41 against $1.40 for the same reason. The night's total is $2.97 at list price.
+- `harness-diff report` clips a displayed interval at 100 pp (the probe control's normal interval ran past it). The
+  stored results keep the unclipped values.
